@@ -9,6 +9,10 @@ const
   SAMD21_Family* = "samd21a"
   SAMD21_Variant* = "SAMD21G18A"
 
+switch("arm.any.gcc.exe", "arm-none-eabi-gcc")
+switch("arm.any.gcc.linkerexe", "arm-none-eabi-gcc")
+switch("gcc.options.linker", "") # Prevent Nim from passing -ldl
+
 switch("define", "danger")
 switch("define", "useMalloc")
 switch("define", "noSignalHandler")
@@ -25,13 +29,10 @@ switch("outdir", "./build")
 const startupFile = joinPath("./lib/atmel", SAMD21_Family, "/gcc/gcc/startup_samd21.c")
 switch("define", "startupFile:" & startupFile)
 
-switch("arm.any.gcc.exe", "arm-none-eabi-gcc")
-switch("arm.any.gcc.linkerexe", "arm-none-eabi-gcc")
-switch("gcc.options.linker", "") # Prevent Nim from passing -ldl
-
 switch("passC", "-W -Wall -Wextra -Wundef -Werror")
 switch("passC", "-mthumb -mcpu=cortex-m0plus")
-switch("passC", "--specs=nosys.specs") # Link against Newlib's syscall stubs
+switch("passC", "-nostdlib")
+switch("passC", "--specs=nano.specs") # Use newlib-nano header at compile-time
 
 # https://interrupt.memfault.com/blog/best-and-worst-gcc-clang-compiler-flags
 switch("passC", "-ffunction-sections -fdata-sections")
@@ -49,12 +50,9 @@ switch("passC", "-I" & joinPath("./lib/atmel", SAMD21_Family, "include"))
 
 switch("passL", "-W -Wall -Wextra -Wundef -Werror")
 switch("passL", "-mthumb -mcpu=cortex-m0plus")
-switch("passL", "--specs=nosys.specs")
+switch("passL", "--specs=nano.specs") # Link against newlib-nano libc
+switch("passL", "--specs=nosys.specs") # Link against libnosys syscall stubs
 switch("passL", "-Wl,--gc-sections")
 
-let linkerScript = joinPath(
-  "./lib/atmel",
-  SAMD21_Family,
-  &"/gcc/gcc/{SAMD21_Variant.toLowerAscii}_flash.ld"
-)
-switch("passL", "-Wl,--script=" & linkerScript)
+const linkerScript = &"./lib/linker/{SAMD21_Variant.toLowerAscii}.ld"
+switch("passL", "-T" & linkerScript)

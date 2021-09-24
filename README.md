@@ -46,10 +46,15 @@ TODO
    CMSIS refers to as the *device.h* header file), here `atsamdg18a21.nim`, for
    your variant. See instructions in the `device/README.md` (TODO) file.
 
-2. Change imports of `atsamd21g18a` in the `main.nim` and `core_cm0plus.nim`
+2. You will need to modify the linker script under the `lib/linker` directory.
+   Thankfully, Thea Flowers' great
+   [blog post](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/)
+   should help with that.
+
+3. Change imports of `atsamd21g18a` in the `main.nim` and `core_cm0plus.nim`
    files for your newly generated file.
 
-3. Change the `SAMD21_Family` and `SAMD21_Variant` constants in `config.nims`.
+4. Change the `SAMD21_Family` and `SAMD21_Variant` constants in `config.nims`.
 
 Note: for families other than `samd21a`, you will need to get the device support
 pack from https://packs.download.microchip.com/ and extract the `include` and
