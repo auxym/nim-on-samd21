@@ -1,3 +1,22 @@
+/* This file is copyright (c) 2020 Alethea Katherine Flowers / Winterbloom
+ * The original license is provided in the LICENSE file that accompanies
+ * this file.
+ *
+ * The author of the nim-on-samd21 repository only made the following trivial
+ * changes:
+ *
+ *    - Create the "end" symbol required by the libnosys (Newlib)
+ *      implementation of sbrk;
+ *
+ *    - Remove absolute symbols that are only used by the Gemini
+ *      firmware.
+ *
+ * Huge thanks to Thea for her awesome blog post:
+ * https://blog.thea.codes/the-most-thoroughly-commented-linker-script/
+ *
+ * The original file, with aforementioned modifications, follows.
+ */
+
 /*
    The Most Thoroughly Commented Linker Script in The World
 
@@ -521,36 +540,7 @@ SECTIONS
    . = ALIGN(4);
    PROVIDE(_heap_start = .);
    _end = . ;
+
+   /* Newlib libnosys references `end` in its implementation of _sbrk */
+   end = . ;
 }
-
-/*
-   Absolute symbol definitions.
-
-   This section defines some useful absolute symbols for the application
-   to use.
-*/
-
-/*
-   Symbols for the settings section in the NVM memory block.
-
-   Gemini uses the first half of the NVM block for user settings.
-   This symbol is used by the settings module to know where to
-   load and save settings.
-
-   References:
-   * ../src/gem_settings_load_save.c
-*/
-_nvm_settings_base_address = ORIGIN(nvm);
-_nvm_settings_length = LENGTH(nvm) / 2;
-
-/*
-   Symbols for the calibration/look-up table in the NVM memory block.
-
-   Gemini uses the other half of the NVM block to store the factory-
-   calibrated look-up table for translating ADC -> frequency/DAC codes.
-
-   References:
-   * ../src/gem_ramp_table_load_save.c
-*/
-_nvm_lut_base_address = ORIGIN(nvm) + LENGTH(nvm) / 2;
-_nvm_lut_length = LENGTH(nvm) / 2;

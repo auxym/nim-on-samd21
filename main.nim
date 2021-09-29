@@ -33,6 +33,9 @@ proc main(): int {.exportc.} =
   LED_pin.setHigh
   let pressed: bool = not Button1_Pin.read()
 
+  # Allocate a seq to ensure that malloc() works
+  var a = newSeqOfCap[int](48)
+
   while true:
     delay(500)
     LED_Pin.toggle
