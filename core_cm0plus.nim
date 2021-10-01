@@ -70,12 +70,13 @@ proc NVIC_SystemReset*()
 
 when Vendor_SysTickConfig == 0:
   proc SysTick_Config_impl(ticks: uint32): uint32
+    # Note: returns 1 when failed, 0 when succeeded
     {.importc: "SysTick_Config", header: headerStr.}
 
-  proc SysTick_Config*(ticks: 0..0xFFFFFF): bool =
+  proc SysTick_Config*(ticks: 0..0x1000000): bool =
     # Result should always be true, since we check the input range at compile
     # time.
-    SysTick_Config_impl(uint32(ticks)).bool
+    not SysTick_Config_impl(uint32(ticks)).bool
 
 when isMainModule:
   # Just tests to make sure everything compiles
