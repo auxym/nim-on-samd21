@@ -52,40 +52,40 @@ type IRQn* = enum
 # Type definitions for peripheral registers
 ################################################################################
 type AC_SCALER_Type = object
-  p: ptr uint8
+  loc: int
 
 type AC_COMPCTRL_Type = object
-  p: ptr uint32
+  loc: int
 
 type AC_WINCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type AC_STATUSC_Type = object
-  p: ptr uint8
+  loc: int
 
 type AC_STATUSB_Type = object
-  p: ptr uint8
+  loc: int
 
 type AC_STATUSA_Type = object
-  p: ptr uint8
+  loc: int
 
 type AC_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type AC_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type AC_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type AC_EVCTRL_Type = object
-  p: ptr uint16
+  loc: int
 
 type AC_CTRLB_Type = object
-  p: ptr uint8
+  loc: int
 
 type AC_CTRLA_Type = object
-  p: ptr uint8
+  loc: int
 
 type AC_Type = object
   CTRLA*: AC_CTRLA_Type
@@ -104,64 +104,64 @@ type AC_Type = object
   SCALER1*: AC_SCALER_Type
 
 type ADC_DBGCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type ADC_CALIB_Type = object
-  p: ptr uint16
+  loc: int
 
 type ADC_OFFSETCORR_Type = object
-  p: ptr uint16
+  loc: int
 
 type ADC_GAINCORR_Type = object
-  p: ptr uint16
+  loc: int
 
 type ADC_WINUT_Type = object
-  p: ptr uint16
+  loc: int
 
 type ADC_WINLT_Type = object
-  p: ptr uint16
+  loc: int
 
 type ADC_RESULT_Type = object
-  p: ptr uint16
+  loc: int
 
 type ADC_STATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type ADC_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type ADC_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type ADC_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type ADC_EVCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type ADC_INPUTCTRL_Type = object
-  p: ptr uint32
+  loc: int
 
 type ADC_SWTRIG_Type = object
-  p: ptr uint8
+  loc: int
 
 type ADC_WINCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type ADC_CTRLB_Type = object
-  p: ptr uint16
+  loc: int
 
 type ADC_SAMPCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type ADC_AVGCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type ADC_REFCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type ADC_CTRLA_Type = object
-  p: ptr uint8
+  loc: int
 
 type ADC_Type = object
   CTRLA*: ADC_CTRLA_Type
@@ -186,31 +186,31 @@ type ADC_Type = object
   DBGCTRL*: ADC_DBGCTRL_Type
 
 type DAC_DATABUF_Type = object
-  p: ptr uint16
+  loc: int
 
 type DAC_DATA_Type = object
-  p: ptr uint16
+  loc: int
 
 type DAC_STATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type DAC_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type DAC_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type DAC_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type DAC_EVCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type DAC_CTRLB_Type = object
-  p: ptr uint8
+  loc: int
 
 type DAC_CTRLA_Type = object
-  p: ptr uint8
+  loc: int
 
 type DAC_Type = object
   CTRLA*: DAC_CTRLA_Type
@@ -224,73 +224,73 @@ type DAC_Type = object
   DATABUF*: DAC_DATABUF_Type
 
 type DMAC_CHSTATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type DMAC_CHINTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type DMAC_CHINTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type DMAC_CHINTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type DMAC_CHCTRLB_Type = object
-  p: ptr uint32
+  loc: int
 
 type DMAC_CHCTRLA_Type = object
-  p: ptr uint8
+  loc: int
 
 type DMAC_CHID_Type = object
-  p: ptr uint8
+  loc: int
 
 type DMAC_WRBADDR_Type = object
-  p: ptr uint32
+  loc: int
 
 type DMAC_BASEADDR_Type = object
-  p: ptr uint32
+  loc: int
 
 type DMAC_ACTIVE_Type = object
-  p: ptr uint32
+  loc: int
 
 type DMAC_PENDCH_Type = object
-  p: ptr uint32
+  loc: int
 
 type DMAC_BUSYCH_Type = object
-  p: ptr uint32
+  loc: int
 
 type DMAC_INTSTATUS_Type = object
-  p: ptr uint32
+  loc: int
 
 type DMAC_INTPEND_Type = object
-  p: ptr uint16
+  loc: int
 
 type DMAC_PRICTRL0_Type = object
-  p: ptr uint32
+  loc: int
 
 type DMAC_SWTRIGCTRL_Type = object
-  p: ptr uint32
+  loc: int
 
 type DMAC_QOSCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type DMAC_DBGCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type DMAC_CRCSTATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type DMAC_CRCCHKSUM_Type = object
-  p: ptr uint32
+  loc: int
 
 type DMAC_CRCDATAIN_Type = object
-  p: ptr uint32
+  loc: int
 
 type DMAC_CRCCTRL_Type = object
-  p: ptr uint16
+  loc: int
 
 type DMAC_CTRL_Type = object
-  p: ptr uint16
+  loc: int
 
 type DMAC_Type = object
   CTRL*: DMAC_CTRL_Type
@@ -318,67 +318,67 @@ type DMAC_Type = object
   CHSTATUS*: DMAC_CHSTATUS_Type
 
 type DSU_CID3_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_CID2_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_CID1_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_CID0_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_PID3_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_PID2_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_PID1_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_PID0_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_PID4_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_MEMTYPE_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_END_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_ENTRY1_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_ENTRY_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_DID_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_DCC_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_DATA_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_LENGTH_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_ADDR_Type = object
-  p: ptr uint32
+  loc: int
 
 type DSU_STATUSB_Type = object
-  p: ptr uint8
+  loc: int
 
 type DSU_STATUSA_Type = object
-  p: ptr uint8
+  loc: int
 
 type DSU_CTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type DSU_Type = object
   CTRL*: DSU_CTRL_Type
@@ -405,34 +405,34 @@ type DSU_Type = object
   CID3*: DSU_CID3_Type
 
 type EIC_CONFIG_Type = object
-  p: ptr uint32
+  loc: int
 
 type EIC_WAKEUP_Type = object
-  p: ptr uint32
+  loc: int
 
 type EIC_INTFLAG_Type = object
-  p: ptr uint32
+  loc: int
 
 type EIC_INTENSET_Type = object
-  p: ptr uint32
+  loc: int
 
 type EIC_INTENCLR_Type = object
-  p: ptr uint32
+  loc: int
 
 type EIC_EVCTRL_Type = object
-  p: ptr uint32
+  loc: int
 
 type EIC_NMIFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type EIC_NMICTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type EIC_STATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type EIC_CTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type EIC_Type = object
   CTRL*: EIC_CTRL_Type
@@ -448,25 +448,25 @@ type EIC_Type = object
   CONFIG1*: EIC_CONFIG_Type
 
 type EVSYS_INTFLAG_Type = object
-  p: ptr uint32
+  loc: int
 
 type EVSYS_INTENSET_Type = object
-  p: ptr uint32
+  loc: int
 
 type EVSYS_INTENCLR_Type = object
-  p: ptr uint32
+  loc: int
 
 type EVSYS_CHSTATUS_Type = object
-  p: ptr uint32
+  loc: int
 
 type EVSYS_USER_Type = object
-  p: ptr uint16
+  loc: int
 
 type EVSYS_CHANNEL_Type = object
-  p: ptr uint32
+  loc: int
 
 type EVSYS_CTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type EVSYS_Type = object
   CTRL*: EVSYS_CTRL_Type
@@ -478,19 +478,19 @@ type EVSYS_Type = object
   INTFLAG*: EVSYS_INTFLAG_Type
 
 type GCLK_GENDIV_Type = object
-  p: ptr uint32
+  loc: int
 
 type GCLK_GENCTRL_Type = object
-  p: ptr uint32
+  loc: int
 
 type GCLK_CLKCTRL_Type = object
-  p: ptr uint16
+  loc: int
 
 type GCLK_STATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type GCLK_CTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type GCLK_Type = object
   CTRL*: GCLK_CTRL_Type
@@ -500,13 +500,13 @@ type GCLK_Type = object
   GENDIV*: GCLK_GENDIV_Type
 
 type HMATRIX_SFR_Type = object
-  p: ptr uint32
+  loc: int
 
 type HMATRIX_PRBS_Type = object
-  p: ptr uint32
+  loc: int
 
 type HMATRIX_PRAS_Type = object
-  p: ptr uint32
+  loc: int
 
 type HMATRIX_Type = object
   PRAS0*: HMATRIX_PRAS_Type
@@ -559,28 +559,28 @@ type HMATRIX_Type = object
   SFR15*: HMATRIX_SFR_Type
 
 type I2S_DATA_Type = object
-  p: ptr uint32
+  loc: int
 
 type I2S_SERCTRL_Type = object
-  p: ptr uint32
+  loc: int
 
 type I2S_SYNCBUSY_Type = object
-  p: ptr uint16
+  loc: int
 
 type I2S_INTFLAG_Type = object
-  p: ptr uint16
+  loc: int
 
 type I2S_INTENSET_Type = object
-  p: ptr uint16
+  loc: int
 
 type I2S_INTENCLR_Type = object
-  p: ptr uint16
+  loc: int
 
 type I2S_CLKCTRL_Type = object
-  p: ptr uint32
+  loc: int
 
 type I2S_CTRLA_Type = object
-  p: ptr uint8
+  loc: int
 
 type I2S_Type = object
   CTRLA*: I2S_CTRLA_Type
@@ -596,79 +596,79 @@ type I2S_Type = object
   DATA1*: I2S_DATA_Type
 
 type MTB_CID3_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_CID2_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_CID1_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_CID0_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_PID3_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_PID2_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_PID1_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_PID0_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_PID7_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_PID6_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_PID5_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_PID4_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_DEVTYPE_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_DEVID_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_DEVARCH_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_AUTHSTATUS_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_LOCKSTATUS_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_LOCKACCESS_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_CLAIMCLR_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_CLAIMSET_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_ITCTRL_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_BASE_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_FLOW_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_MASTER_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_POSITION_Type = object
-  p: ptr uint32
+  loc: int
 
 type MTB_Type = object
   POSITION*: MTB_POSITION_Type
@@ -698,31 +698,31 @@ type MTB_Type = object
   CID3*: MTB_CID3_Type
 
 type NVMCTRL_LOCK_Type = object
-  p: ptr uint16
+  loc: int
 
 type NVMCTRL_ADDR_Type = object
-  p: ptr uint32
+  loc: int
 
 type NVMCTRL_STATUS_Type = object
-  p: ptr uint16
+  loc: int
 
 type NVMCTRL_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type NVMCTRL_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type NVMCTRL_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type NVMCTRL_PARAM_Type = object
-  p: ptr uint32
+  loc: int
 
 type NVMCTRL_CTRLB_Type = object
-  p: ptr uint32
+  loc: int
 
 type NVMCTRL_CTRLA_Type = object
-  p: ptr uint16
+  loc: int
 
 type NVMCTRL_Type = object
   CTRLA*: NVMCTRL_CTRLA_Type
@@ -736,56 +736,56 @@ type NVMCTRL_Type = object
   LOCK*: NVMCTRL_LOCK_Type
 
 type PAC0_WPSET_Type = object
-  p: ptr uint32
+  loc: int
 
 type PAC0_WPCLR_Type = object
-  p: ptr uint32
+  loc: int
 
 type PAC0_Type = object
   WPCLR*: PAC0_WPCLR_Type
   WPSET*: PAC0_WPSET_Type
 
 type PM_RCAUSE_Type = object
-  p: ptr uint8
+  loc: int
 
 type PM_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type PM_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type PM_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type PM_APBCMASK_Type = object
-  p: ptr uint32
+  loc: int
 
 type PM_APBBMASK_Type = object
-  p: ptr uint32
+  loc: int
 
 type PM_APBAMASK_Type = object
-  p: ptr uint32
+  loc: int
 
 type PM_AHBMASK_Type = object
-  p: ptr uint32
+  loc: int
 
 type PM_APBCSEL_Type = object
-  p: ptr uint8
+  loc: int
 
 type PM_APBBSEL_Type = object
-  p: ptr uint8
+  loc: int
 
 type PM_APBASEL_Type = object
-  p: ptr uint8
+  loc: int
 
 type PM_CPUSEL_Type = object
-  p: ptr uint8
+  loc: int
 
 type PM_SLEEP_Type = object
-  p: ptr uint8
+  loc: int
 
 type PM_CTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type PM_Type = object
   CTRL*: PM_CTRL_Type
@@ -804,43 +804,43 @@ type PM_Type = object
   RCAUSE*: PM_RCAUSE_Type
 
 type PORT_PINCFG0_Type = object
-  p: ptr uint8
+  loc: int
 
 type PORT_PMUX0_Type = object
-  p: ptr uint8
+  loc: int
 
 type PORT_WRCONFIG_Type = object
-  p: ptr uint32
+  loc: int
 
 type PORT_CTRL_Type = object
-  p: ptr uint32
+  loc: int
 
 type PORT_IN_Type = object
-  p: ptr uint32
+  loc: int
 
 type PORT_OUTTGL_Type = object
-  p: ptr uint32
+  loc: int
 
 type PORT_OUTSET_Type = object
-  p: ptr uint32
+  loc: int
 
 type PORT_OUTCLR_Type = object
-  p: ptr uint32
+  loc: int
 
 type PORT_OUT_Type = object
-  p: ptr uint32
+  loc: int
 
 type PORT_DIRTGL_Type = object
-  p: ptr uint32
+  loc: int
 
 type PORT_DIRSET_Type = object
-  p: ptr uint32
+  loc: int
 
 type PORT_DIRCLR_Type = object
-  p: ptr uint32
+  loc: int
 
 type PORT_DIR_Type = object
-  p: ptr uint32
+  loc: int
 
 type PORT_Type = object
   DIR0*: PORT_DIR_Type
@@ -963,37 +963,37 @@ type PORT_Type = object
   PINCFG1_31*: PORT_PINCFG0_Type
 
 type RtcMode0_COMP_Type = object
-  p: ptr uint32
+  loc: int
 
 type RtcMode0_COUNT_Type = object
-  p: ptr uint32
+  loc: int
 
 type RtcMode0_FREQCORR_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode0_DBGCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode0_STATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode0_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode0_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode0_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode0_EVCTRL_Type = object
-  p: ptr uint16
+  loc: int
 
 type RtcMode0_READREQ_Type = object
-  p: ptr uint16
+  loc: int
 
 type RtcMode0_CTRL_Type = object
-  p: ptr uint16
+  loc: int
 
 type RtcMode0_Type = object
   CTRL*: RtcMode0_CTRL_Type
@@ -1009,40 +1009,40 @@ type RtcMode0_Type = object
   COMP0*: RtcMode0_COMP_Type
 
 type RtcMode1_COMP_Type = object
-  p: ptr uint16
+  loc: int
 
 type RtcMode1_PER_Type = object
-  p: ptr uint16
+  loc: int
 
 type RtcMode1_COUNT_Type = object
-  p: ptr uint16
+  loc: int
 
 type RtcMode1_FREQCORR_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode1_DBGCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode1_STATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode1_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode1_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode1_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode1_EVCTRL_Type = object
-  p: ptr uint16
+  loc: int
 
 type RtcMode1_READREQ_Type = object
-  p: ptr uint16
+  loc: int
 
 type RtcMode1_CTRL_Type = object
-  p: ptr uint16
+  loc: int
 
 type RtcMode1_Type = object
   CTRL*: RtcMode1_CTRL_Type
@@ -1060,40 +1060,40 @@ type RtcMode1_Type = object
   COMP1*: RtcMode1_COMP_Type
 
 type RtcMode2_MASK_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode2_ALARM_Type = object
-  p: ptr uint32
+  loc: int
 
 type RtcMode2_CLOCK_Type = object
-  p: ptr uint32
+  loc: int
 
 type RtcMode2_FREQCORR_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode2_DBGCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode2_STATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode2_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode2_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode2_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type RtcMode2_EVCTRL_Type = object
-  p: ptr uint16
+  loc: int
 
 type RtcMode2_READREQ_Type = object
-  p: ptr uint16
+  loc: int
 
 type RtcMode2_CTRL_Type = object
-  p: ptr uint16
+  loc: int
 
 type RtcMode2_Type = object
   CTRL*: RtcMode2_CTRL_Type
@@ -1115,37 +1115,37 @@ type RTC_Type = object
   MODE2*: RtcMode2_Type
 
 type SercomI2cm_DBGCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomI2cm_DATA_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomI2cm_ADDR_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomI2cm_SYNCBUSY_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomI2cm_STATUS_Type = object
-  p: ptr uint16
+  loc: int
 
 type SercomI2cm_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomI2cm_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomI2cm_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomI2cm_BAUD_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomI2cm_CTRLB_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomI2cm_CTRLA_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomI2cm_Type = object
   CTRLA*: SercomI2cm_CTRLA_Type
@@ -1161,31 +1161,31 @@ type SercomI2cm_Type = object
   DBGCTRL*: SercomI2cm_DBGCTRL_Type
 
 type SercomI2cs_DATA_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomI2cs_ADDR_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomI2cs_SYNCBUSY_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomI2cs_STATUS_Type = object
-  p: ptr uint16
+  loc: int
 
 type SercomI2cs_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomI2cs_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomI2cs_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomI2cs_CTRLB_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomI2cs_CTRLA_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomI2cs_Type = object
   CTRLA*: SercomI2cs_CTRLA_Type
@@ -1199,37 +1199,37 @@ type SercomI2cs_Type = object
   DATA*: SercomI2cs_DATA_Type
 
 type SercomSpi_DBGCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomSpi_DATA_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomSpi_ADDR_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomSpi_SYNCBUSY_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomSpi_STATUS_Type = object
-  p: ptr uint16
+  loc: int
 
 type SercomSpi_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomSpi_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomSpi_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomSpi_BAUD_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomSpi_CTRLB_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomSpi_CTRLA_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomSpi_Type = object
   CTRLA*: SercomSpi_CTRLA_Type
@@ -1245,46 +1245,46 @@ type SercomSpi_Type = object
   DBGCTRL*: SercomSpi_DBGCTRL_Type
 
 type SercomUsart_DBGCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomUsart_DATA_Type = object
-  p: ptr uint16
+  loc: int
 
 type SercomUsart_SYNCBUSY_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomUsart_STATUS_Type = object
-  p: ptr uint16
+  loc: int
 
 type SercomUsart_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomUsart_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomUsart_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomUsart_RXPL_Type = object
-  p: ptr uint8
+  loc: int
 
 type SercomUsart_BAUD_USARTFP_MODE_Type = object
-  p: ptr uint16
+  loc: int
 
 type SercomUsart_BAUD_FRACFP_MODE_Type = object
-  p: ptr uint16
+  loc: int
 
 type SercomUsart_BAUD_FRAC_MODE_Type = object
-  p: ptr uint16
+  loc: int
 
 type SercomUsart_BAUD_Type = object
-  p: ptr uint16
+  loc: int
 
 type SercomUsart_CTRLB_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomUsart_CTRLA_Type = object
-  p: ptr uint32
+  loc: int
 
 type SercomUsart_Type = object
   CTRLA*: SercomUsart_CTRLA_Type
@@ -1309,64 +1309,64 @@ type SERCOM0_Type = object
   USART*: SercomUsart_Type
 
 type SYSCTRL_DPLLSTATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type SYSCTRL_DPLLCTRLB_Type = object
-  p: ptr uint32
+  loc: int
 
 type SYSCTRL_DPLLRATIO_Type = object
-  p: ptr uint32
+  loc: int
 
 type SYSCTRL_DPLLCTRLA_Type = object
-  p: ptr uint8
+  loc: int
 
 type SYSCTRL_VREF_Type = object
-  p: ptr uint32
+  loc: int
 
 type SYSCTRL_VREG_Type = object
-  p: ptr uint16
+  loc: int
 
 type SYSCTRL_BOD33_Type = object
-  p: ptr uint32
+  loc: int
 
 type SYSCTRL_DFLLSYNC_Type = object
-  p: ptr uint8
+  loc: int
 
 type SYSCTRL_DFLLMUL_Type = object
-  p: ptr uint32
+  loc: int
 
 type SYSCTRL_DFLLVAL_Type = object
-  p: ptr uint32
+  loc: int
 
 type SYSCTRL_DFLLCTRL_Type = object
-  p: ptr uint16
+  loc: int
 
 type SYSCTRL_OSC8M_Type = object
-  p: ptr uint32
+  loc: int
 
 type SYSCTRL_OSCULP32K_Type = object
-  p: ptr uint8
+  loc: int
 
 type SYSCTRL_OSC32K_Type = object
-  p: ptr uint32
+  loc: int
 
 type SYSCTRL_XOSC32K_Type = object
-  p: ptr uint16
+  loc: int
 
 type SYSCTRL_XOSC_Type = object
-  p: ptr uint16
+  loc: int
 
 type SYSCTRL_PCLKSR_Type = object
-  p: ptr uint32
+  loc: int
 
 type SYSCTRL_INTFLAG_Type = object
-  p: ptr uint32
+  loc: int
 
 type SYSCTRL_INTENSET_Type = object
-  p: ptr uint32
+  loc: int
 
 type SYSCTRL_INTENCLR_Type = object
-  p: ptr uint32
+  loc: int
 
 type SYSCTRL_Type = object
   INTENCLR*: SYSCTRL_INTENCLR_Type
@@ -1391,46 +1391,46 @@ type SYSCTRL_Type = object
   DPLLSTATUS*: SYSCTRL_DPLLSTATUS_Type
 
 type TcCount8_CC_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount8_PER_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount8_COUNT_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount8_STATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount8_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount8_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount8_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount8_EVCTRL_Type = object
-  p: ptr uint16
+  loc: int
 
 type TcCount8_DBGCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount8_CTRLC_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount8_CTRLBSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount8_CTRLBCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount8_READREQ_Type = object
-  p: ptr uint16
+  loc: int
 
 type TcCount8_CTRLA_Type = object
-  p: ptr uint16
+  loc: int
 
 type TcCount8_Type = object
   CTRLA*: TcCount8_CTRLA_Type
@@ -1450,43 +1450,43 @@ type TcCount8_Type = object
   CC1*: TcCount8_CC_Type
 
 type TcCount16_CC_Type = object
-  p: ptr uint16
+  loc: int
 
 type TcCount16_COUNT_Type = object
-  p: ptr uint16
+  loc: int
 
 type TcCount16_STATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount16_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount16_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount16_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount16_EVCTRL_Type = object
-  p: ptr uint16
+  loc: int
 
 type TcCount16_DBGCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount16_CTRLC_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount16_CTRLBSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount16_CTRLBCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount16_READREQ_Type = object
-  p: ptr uint16
+  loc: int
 
 type TcCount16_CTRLA_Type = object
-  p: ptr uint16
+  loc: int
 
 type TcCount16_Type = object
   CTRLA*: TcCount16_CTRLA_Type
@@ -1505,43 +1505,43 @@ type TcCount16_Type = object
   CC1*: TcCount16_CC_Type
 
 type TcCount32_CC_Type = object
-  p: ptr uint32
+  loc: int
 
 type TcCount32_COUNT_Type = object
-  p: ptr uint32
+  loc: int
 
 type TcCount32_STATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount32_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount32_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount32_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount32_EVCTRL_Type = object
-  p: ptr uint16
+  loc: int
 
 type TcCount32_DBGCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount32_CTRLC_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount32_CTRLBSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount32_CTRLBCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type TcCount32_READREQ_Type = object
-  p: ptr uint16
+  loc: int
 
 type TcCount32_CTRLA_Type = object
-  p: ptr uint16
+  loc: int
 
 type TcCount32_Type = object
   CTRLA*: TcCount32_CTRLA_Type
@@ -1565,118 +1565,118 @@ type TC3_Type = object
   COUNT32*: TcCount32_Type
 
 type TCC0_CCB_DITH6_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_CCB_DITH5_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_CCB_DITH4_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_CCB_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_PERB_DITH6_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_PERB_DITH5_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_PERB_DITH4_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_PERB_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_WAVEB_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_PATTB_Type = object
-  p: ptr uint16
+  loc: int
 
 type TCC0_CC_DITH6_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_CC_DITH5_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_CC_DITH4_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_CC_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_PER_DITH6_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_PER_DITH5_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_PER_DITH4_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_PER_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_WAVE_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_PATT_Type = object
-  p: ptr uint16
+  loc: int
 
 type TCC0_COUNT_DITH6_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_COUNT_DITH5_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_COUNT_DITH4_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_COUNT_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_STATUS_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_INTFLAG_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_INTENSET_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_INTENCLR_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_EVCTRL_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_DBGCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type TCC0_DRVCTRL_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_WEXCTRL_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_FCTRLB_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_FCTRLA_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_SYNCBUSY_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_CTRLBSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type TCC0_CTRLBCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type TCC0_CTRLA_Type = object
-  p: ptr uint32
+  loc: int
 
 type TCC0_Type = object
   CTRLA*: TCC0_CTRLA_Type
@@ -1743,67 +1743,67 @@ type TCC0_Type = object
   CCB3_DITH6*: TCC0_CCB_DITH6_Type
 
 type UsbDevice_EPINTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbDevice_EPINTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbDevice_EPINTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbDevice_EPSTATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbDevice_EPSTATUSSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbDevice_EPSTATUSCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbDevice_EPCFG_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbDevice_PADCAL_Type = object
-  p: ptr uint16
+  loc: int
 
 type UsbDevice_DESCADD_Type = object
-  p: ptr uint32
+  loc: int
 
 type UsbDevice_EPINTSMRY_Type = object
-  p: ptr uint16
+  loc: int
 
 type UsbDevice_INTFLAG_Type = object
-  p: ptr uint16
+  loc: int
 
 type UsbDevice_INTENSET_Type = object
-  p: ptr uint16
+  loc: int
 
 type UsbDevice_INTENCLR_Type = object
-  p: ptr uint16
+  loc: int
 
 type UsbDevice_FNUM_Type = object
-  p: ptr uint16
+  loc: int
 
 type UsbDevice_FSMSTATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbDevice_STATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbDevice_DADD_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbDevice_CTRLB_Type = object
-  p: ptr uint16
+  loc: int
 
 type UsbDevice_QOSCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbDevice_SYNCBUSY_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbDevice_CTRLA_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbDevice_Type = object
   CTRLA*: UsbDevice_CTRLA_Type
@@ -1878,73 +1878,73 @@ type UsbDevice_Type = object
   EPINTENSET7*: UsbDevice_EPINTENSET_Type
 
 type UsbHost_PINTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_PINTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_PINTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_PSTATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_PSTATUSSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_PSTATUSCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_BINTERVAL_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_PCFG_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_PADCAL_Type = object
-  p: ptr uint16
+  loc: int
 
 type UsbHost_DESCADD_Type = object
-  p: ptr uint32
+  loc: int
 
 type UsbHost_PINTSMRY_Type = object
-  p: ptr uint16
+  loc: int
 
 type UsbHost_INTFLAG_Type = object
-  p: ptr uint16
+  loc: int
 
 type UsbHost_INTENSET_Type = object
-  p: ptr uint16
+  loc: int
 
 type UsbHost_INTENCLR_Type = object
-  p: ptr uint16
+  loc: int
 
 type UsbHost_FLENHIGH_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_FNUM_Type = object
-  p: ptr uint16
+  loc: int
 
 type UsbHost_FSMSTATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_STATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_HSOFC_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_CTRLB_Type = object
-  p: ptr uint16
+  loc: int
 
 type UsbHost_QOSCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_SYNCBUSY_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_CTRLA_Type = object
-  p: ptr uint8
+  loc: int
 
 type UsbHost_Type = object
   CTRLA*: UsbHost_CTRLA_Type
@@ -2032,28 +2032,28 @@ type USB_Type = object
   HOST*: UsbHost_Type
 
 type WDT_CLEAR_Type = object
-  p: ptr uint8
+  loc: int
 
 type WDT_STATUS_Type = object
-  p: ptr uint8
+  loc: int
 
 type WDT_INTFLAG_Type = object
-  p: ptr uint8
+  loc: int
 
 type WDT_INTENSET_Type = object
-  p: ptr uint8
+  loc: int
 
 type WDT_INTENCLR_Type = object
-  p: ptr uint8
+  loc: int
 
 type WDT_EWCTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type WDT_CONFIG_Type = object
-  p: ptr uint8
+  loc: int
 
 type WDT_CTRL_Type = object
-  p: ptr uint8
+  loc: int
 
 type WDT_Type = object
   CTRL*: WDT_CTRL_Type
@@ -2069,1440 +2069,1440 @@ type WDT_Type = object
 ################################################################################
 # Peripheral object instances
 ################################################################################
-let AC* = AC_Type(
-  CTRLA: AC_CTRLA_Type(p: cast[ptr uint8](0x42004400)),
-  CTRLB: AC_CTRLB_Type(p: cast[ptr uint8](0x42004401)),
-  EVCTRL: AC_EVCTRL_Type(p: cast[ptr uint16](0x42004402)),
-  INTENCLR: AC_INTENCLR_Type(p: cast[ptr uint8](0x42004404)),
-  INTENSET: AC_INTENSET_Type(p: cast[ptr uint8](0x42004405)),
-  INTFLAG: AC_INTFLAG_Type(p: cast[ptr uint8](0x42004406)),
-  STATUSA: AC_STATUSA_Type(p: cast[ptr uint8](0x42004408)),
-  STATUSB: AC_STATUSB_Type(p: cast[ptr uint8](0x42004409)),
-  STATUSC: AC_STATUSC_Type(p: cast[ptr uint8](0x4200440a)),
-  WINCTRL: AC_WINCTRL_Type(p: cast[ptr uint8](0x4200440c)),
-  COMPCTRL0: AC_COMPCTRL_Type(p: cast[ptr uint32](0x42004410)),
-  COMPCTRL1: AC_COMPCTRL_Type(p: cast[ptr uint32](0x42004414)),
-  SCALER0: AC_SCALER_Type(p: cast[ptr uint8](0x42004420)),
-  SCALER1: AC_SCALER_Type(p: cast[ptr uint8](0x42004421)),
+const AC* = AC_Type(
+  CTRLA: AC_CTRLA_Type(loc: 0x42004400),
+  CTRLB: AC_CTRLB_Type(loc: 0x42004401),
+  EVCTRL: AC_EVCTRL_Type(loc: 0x42004402),
+  INTENCLR: AC_INTENCLR_Type(loc: 0x42004404),
+  INTENSET: AC_INTENSET_Type(loc: 0x42004405),
+  INTFLAG: AC_INTFLAG_Type(loc: 0x42004406),
+  STATUSA: AC_STATUSA_Type(loc: 0x42004408),
+  STATUSB: AC_STATUSB_Type(loc: 0x42004409),
+  STATUSC: AC_STATUSC_Type(loc: 0x4200440a),
+  WINCTRL: AC_WINCTRL_Type(loc: 0x4200440c),
+  COMPCTRL0: AC_COMPCTRL_Type(loc: 0x42004410),
+  COMPCTRL1: AC_COMPCTRL_Type(loc: 0x42004414),
+  SCALER0: AC_SCALER_Type(loc: 0x42004420),
+  SCALER1: AC_SCALER_Type(loc: 0x42004421),
 )
 
-let ADC* = ADC_Type(
-  CTRLA: ADC_CTRLA_Type(p: cast[ptr uint8](0x42004000)),
-  REFCTRL: ADC_REFCTRL_Type(p: cast[ptr uint8](0x42004001)),
-  AVGCTRL: ADC_AVGCTRL_Type(p: cast[ptr uint8](0x42004002)),
-  SAMPCTRL: ADC_SAMPCTRL_Type(p: cast[ptr uint8](0x42004003)),
-  CTRLB: ADC_CTRLB_Type(p: cast[ptr uint16](0x42004004)),
-  WINCTRL: ADC_WINCTRL_Type(p: cast[ptr uint8](0x42004008)),
-  SWTRIG: ADC_SWTRIG_Type(p: cast[ptr uint8](0x4200400c)),
-  INPUTCTRL: ADC_INPUTCTRL_Type(p: cast[ptr uint32](0x42004010)),
-  EVCTRL: ADC_EVCTRL_Type(p: cast[ptr uint8](0x42004014)),
-  INTENCLR: ADC_INTENCLR_Type(p: cast[ptr uint8](0x42004016)),
-  INTENSET: ADC_INTENSET_Type(p: cast[ptr uint8](0x42004017)),
-  INTFLAG: ADC_INTFLAG_Type(p: cast[ptr uint8](0x42004018)),
-  STATUS: ADC_STATUS_Type(p: cast[ptr uint8](0x42004019)),
-  RESULT: ADC_RESULT_Type(p: cast[ptr uint16](0x4200401a)),
-  WINLT: ADC_WINLT_Type(p: cast[ptr uint16](0x4200401c)),
-  WINUT: ADC_WINUT_Type(p: cast[ptr uint16](0x42004020)),
-  GAINCORR: ADC_GAINCORR_Type(p: cast[ptr uint16](0x42004024)),
-  OFFSETCORR: ADC_OFFSETCORR_Type(p: cast[ptr uint16](0x42004026)),
-  CALIB: ADC_CALIB_Type(p: cast[ptr uint16](0x42004028)),
-  DBGCTRL: ADC_DBGCTRL_Type(p: cast[ptr uint8](0x4200402a)),
+const ADC* = ADC_Type(
+  CTRLA: ADC_CTRLA_Type(loc: 0x42004000),
+  REFCTRL: ADC_REFCTRL_Type(loc: 0x42004001),
+  AVGCTRL: ADC_AVGCTRL_Type(loc: 0x42004002),
+  SAMPCTRL: ADC_SAMPCTRL_Type(loc: 0x42004003),
+  CTRLB: ADC_CTRLB_Type(loc: 0x42004004),
+  WINCTRL: ADC_WINCTRL_Type(loc: 0x42004008),
+  SWTRIG: ADC_SWTRIG_Type(loc: 0x4200400c),
+  INPUTCTRL: ADC_INPUTCTRL_Type(loc: 0x42004010),
+  EVCTRL: ADC_EVCTRL_Type(loc: 0x42004014),
+  INTENCLR: ADC_INTENCLR_Type(loc: 0x42004016),
+  INTENSET: ADC_INTENSET_Type(loc: 0x42004017),
+  INTFLAG: ADC_INTFLAG_Type(loc: 0x42004018),
+  STATUS: ADC_STATUS_Type(loc: 0x42004019),
+  RESULT: ADC_RESULT_Type(loc: 0x4200401a),
+  WINLT: ADC_WINLT_Type(loc: 0x4200401c),
+  WINUT: ADC_WINUT_Type(loc: 0x42004020),
+  GAINCORR: ADC_GAINCORR_Type(loc: 0x42004024),
+  OFFSETCORR: ADC_OFFSETCORR_Type(loc: 0x42004026),
+  CALIB: ADC_CALIB_Type(loc: 0x42004028),
+  DBGCTRL: ADC_DBGCTRL_Type(loc: 0x4200402a),
 )
 
-let DAC* = DAC_Type(
-  CTRLA: DAC_CTRLA_Type(p: cast[ptr uint8](0x42004800)),
-  CTRLB: DAC_CTRLB_Type(p: cast[ptr uint8](0x42004801)),
-  EVCTRL: DAC_EVCTRL_Type(p: cast[ptr uint8](0x42004802)),
-  INTENCLR: DAC_INTENCLR_Type(p: cast[ptr uint8](0x42004804)),
-  INTENSET: DAC_INTENSET_Type(p: cast[ptr uint8](0x42004805)),
-  INTFLAG: DAC_INTFLAG_Type(p: cast[ptr uint8](0x42004806)),
-  STATUS: DAC_STATUS_Type(p: cast[ptr uint8](0x42004807)),
-  DATA: DAC_DATA_Type(p: cast[ptr uint16](0x42004808)),
-  DATABUF: DAC_DATABUF_Type(p: cast[ptr uint16](0x4200480c)),
+const DAC* = DAC_Type(
+  CTRLA: DAC_CTRLA_Type(loc: 0x42004800),
+  CTRLB: DAC_CTRLB_Type(loc: 0x42004801),
+  EVCTRL: DAC_EVCTRL_Type(loc: 0x42004802),
+  INTENCLR: DAC_INTENCLR_Type(loc: 0x42004804),
+  INTENSET: DAC_INTENSET_Type(loc: 0x42004805),
+  INTFLAG: DAC_INTFLAG_Type(loc: 0x42004806),
+  STATUS: DAC_STATUS_Type(loc: 0x42004807),
+  DATA: DAC_DATA_Type(loc: 0x42004808),
+  DATABUF: DAC_DATABUF_Type(loc: 0x4200480c),
 )
 
-let DMAC* = DMAC_Type(
-  CTRL: DMAC_CTRL_Type(p: cast[ptr uint16](0x41004800)),
-  CRCCTRL: DMAC_CRCCTRL_Type(p: cast[ptr uint16](0x41004802)),
-  CRCDATAIN: DMAC_CRCDATAIN_Type(p: cast[ptr uint32](0x41004804)),
-  CRCCHKSUM: DMAC_CRCCHKSUM_Type(p: cast[ptr uint32](0x41004808)),
-  CRCSTATUS: DMAC_CRCSTATUS_Type(p: cast[ptr uint8](0x4100480c)),
-  DBGCTRL: DMAC_DBGCTRL_Type(p: cast[ptr uint8](0x4100480d)),
-  QOSCTRL: DMAC_QOSCTRL_Type(p: cast[ptr uint8](0x4100480e)),
-  SWTRIGCTRL: DMAC_SWTRIGCTRL_Type(p: cast[ptr uint32](0x41004810)),
-  PRICTRL0: DMAC_PRICTRL0_Type(p: cast[ptr uint32](0x41004814)),
-  INTPEND: DMAC_INTPEND_Type(p: cast[ptr uint16](0x41004820)),
-  INTSTATUS: DMAC_INTSTATUS_Type(p: cast[ptr uint32](0x41004824)),
-  BUSYCH: DMAC_BUSYCH_Type(p: cast[ptr uint32](0x41004828)),
-  PENDCH: DMAC_PENDCH_Type(p: cast[ptr uint32](0x4100482c)),
-  ACTIVE: DMAC_ACTIVE_Type(p: cast[ptr uint32](0x41004830)),
-  BASEADDR: DMAC_BASEADDR_Type(p: cast[ptr uint32](0x41004834)),
-  WRBADDR: DMAC_WRBADDR_Type(p: cast[ptr uint32](0x41004838)),
-  CHID: DMAC_CHID_Type(p: cast[ptr uint8](0x4100483f)),
-  CHCTRLA: DMAC_CHCTRLA_Type(p: cast[ptr uint8](0x41004840)),
-  CHCTRLB: DMAC_CHCTRLB_Type(p: cast[ptr uint32](0x41004844)),
-  CHINTENCLR: DMAC_CHINTENCLR_Type(p: cast[ptr uint8](0x4100484c)),
-  CHINTENSET: DMAC_CHINTENSET_Type(p: cast[ptr uint8](0x4100484d)),
-  CHINTFLAG: DMAC_CHINTFLAG_Type(p: cast[ptr uint8](0x4100484e)),
-  CHSTATUS: DMAC_CHSTATUS_Type(p: cast[ptr uint8](0x4100484f)),
+const DMAC* = DMAC_Type(
+  CTRL: DMAC_CTRL_Type(loc: 0x41004800),
+  CRCCTRL: DMAC_CRCCTRL_Type(loc: 0x41004802),
+  CRCDATAIN: DMAC_CRCDATAIN_Type(loc: 0x41004804),
+  CRCCHKSUM: DMAC_CRCCHKSUM_Type(loc: 0x41004808),
+  CRCSTATUS: DMAC_CRCSTATUS_Type(loc: 0x4100480c),
+  DBGCTRL: DMAC_DBGCTRL_Type(loc: 0x4100480d),
+  QOSCTRL: DMAC_QOSCTRL_Type(loc: 0x4100480e),
+  SWTRIGCTRL: DMAC_SWTRIGCTRL_Type(loc: 0x41004810),
+  PRICTRL0: DMAC_PRICTRL0_Type(loc: 0x41004814),
+  INTPEND: DMAC_INTPEND_Type(loc: 0x41004820),
+  INTSTATUS: DMAC_INTSTATUS_Type(loc: 0x41004824),
+  BUSYCH: DMAC_BUSYCH_Type(loc: 0x41004828),
+  PENDCH: DMAC_PENDCH_Type(loc: 0x4100482c),
+  ACTIVE: DMAC_ACTIVE_Type(loc: 0x41004830),
+  BASEADDR: DMAC_BASEADDR_Type(loc: 0x41004834),
+  WRBADDR: DMAC_WRBADDR_Type(loc: 0x41004838),
+  CHID: DMAC_CHID_Type(loc: 0x4100483f),
+  CHCTRLA: DMAC_CHCTRLA_Type(loc: 0x41004840),
+  CHCTRLB: DMAC_CHCTRLB_Type(loc: 0x41004844),
+  CHINTENCLR: DMAC_CHINTENCLR_Type(loc: 0x4100484c),
+  CHINTENSET: DMAC_CHINTENSET_Type(loc: 0x4100484d),
+  CHINTFLAG: DMAC_CHINTFLAG_Type(loc: 0x4100484e),
+  CHSTATUS: DMAC_CHSTATUS_Type(loc: 0x4100484f),
 )
 
-let DSU* = DSU_Type(
-  CTRL: DSU_CTRL_Type(p: cast[ptr uint8](0x41002000)),
-  STATUSA: DSU_STATUSA_Type(p: cast[ptr uint8](0x41002001)),
-  STATUSB: DSU_STATUSB_Type(p: cast[ptr uint8](0x41002002)),
-  ADDR: DSU_ADDR_Type(p: cast[ptr uint32](0x41002004)),
-  LENGTH: DSU_LENGTH_Type(p: cast[ptr uint32](0x41002008)),
-  DATA: DSU_DATA_Type(p: cast[ptr uint32](0x4100200c)),
-  DCC0: DSU_DCC_Type(p: cast[ptr uint32](0x41002010)),
-  DCC1: DSU_DCC_Type(p: cast[ptr uint32](0x41002014)),
-  DID: DSU_DID_Type(p: cast[ptr uint32](0x41002018)),
-  ENTRY: DSU_ENTRY_Type(p: cast[ptr uint32](0x41003000)),
-  ENTRY1: DSU_ENTRY1_Type(p: cast[ptr uint32](0x41003004)),
-  END: DSU_END_Type(p: cast[ptr uint32](0x41003008)),
-  MEMTYPE: DSU_MEMTYPE_Type(p: cast[ptr uint32](0x41003fcc)),
-  PID4: DSU_PID4_Type(p: cast[ptr uint32](0x41003fd0)),
-  PID0: DSU_PID0_Type(p: cast[ptr uint32](0x41003fe0)),
-  PID1: DSU_PID1_Type(p: cast[ptr uint32](0x41003fe4)),
-  PID2: DSU_PID2_Type(p: cast[ptr uint32](0x41003fe8)),
-  PID3: DSU_PID3_Type(p: cast[ptr uint32](0x41003fec)),
-  CID0: DSU_CID0_Type(p: cast[ptr uint32](0x41003ff0)),
-  CID1: DSU_CID1_Type(p: cast[ptr uint32](0x41003ff4)),
-  CID2: DSU_CID2_Type(p: cast[ptr uint32](0x41003ff8)),
-  CID3: DSU_CID3_Type(p: cast[ptr uint32](0x41003ffc)),
+const DSU* = DSU_Type(
+  CTRL: DSU_CTRL_Type(loc: 0x41002000),
+  STATUSA: DSU_STATUSA_Type(loc: 0x41002001),
+  STATUSB: DSU_STATUSB_Type(loc: 0x41002002),
+  ADDR: DSU_ADDR_Type(loc: 0x41002004),
+  LENGTH: DSU_LENGTH_Type(loc: 0x41002008),
+  DATA: DSU_DATA_Type(loc: 0x4100200c),
+  DCC0: DSU_DCC_Type(loc: 0x41002010),
+  DCC1: DSU_DCC_Type(loc: 0x41002014),
+  DID: DSU_DID_Type(loc: 0x41002018),
+  ENTRY: DSU_ENTRY_Type(loc: 0x41003000),
+  ENTRY1: DSU_ENTRY1_Type(loc: 0x41003004),
+  END: DSU_END_Type(loc: 0x41003008),
+  MEMTYPE: DSU_MEMTYPE_Type(loc: 0x41003fcc),
+  PID4: DSU_PID4_Type(loc: 0x41003fd0),
+  PID0: DSU_PID0_Type(loc: 0x41003fe0),
+  PID1: DSU_PID1_Type(loc: 0x41003fe4),
+  PID2: DSU_PID2_Type(loc: 0x41003fe8),
+  PID3: DSU_PID3_Type(loc: 0x41003fec),
+  CID0: DSU_CID0_Type(loc: 0x41003ff0),
+  CID1: DSU_CID1_Type(loc: 0x41003ff4),
+  CID2: DSU_CID2_Type(loc: 0x41003ff8),
+  CID3: DSU_CID3_Type(loc: 0x41003ffc),
 )
 
-let EIC* = EIC_Type(
-  CTRL: EIC_CTRL_Type(p: cast[ptr uint8](0x40001800)),
-  STATUS: EIC_STATUS_Type(p: cast[ptr uint8](0x40001801)),
-  NMICTRL: EIC_NMICTRL_Type(p: cast[ptr uint8](0x40001802)),
-  NMIFLAG: EIC_NMIFLAG_Type(p: cast[ptr uint8](0x40001803)),
-  EVCTRL: EIC_EVCTRL_Type(p: cast[ptr uint32](0x40001804)),
-  INTENCLR: EIC_INTENCLR_Type(p: cast[ptr uint32](0x40001808)),
-  INTENSET: EIC_INTENSET_Type(p: cast[ptr uint32](0x4000180c)),
-  INTFLAG: EIC_INTFLAG_Type(p: cast[ptr uint32](0x40001810)),
-  WAKEUP: EIC_WAKEUP_Type(p: cast[ptr uint32](0x40001814)),
-  CONFIG0: EIC_CONFIG_Type(p: cast[ptr uint32](0x40001818)),
-  CONFIG1: EIC_CONFIG_Type(p: cast[ptr uint32](0x4000181c)),
+const EIC* = EIC_Type(
+  CTRL: EIC_CTRL_Type(loc: 0x40001800),
+  STATUS: EIC_STATUS_Type(loc: 0x40001801),
+  NMICTRL: EIC_NMICTRL_Type(loc: 0x40001802),
+  NMIFLAG: EIC_NMIFLAG_Type(loc: 0x40001803),
+  EVCTRL: EIC_EVCTRL_Type(loc: 0x40001804),
+  INTENCLR: EIC_INTENCLR_Type(loc: 0x40001808),
+  INTENSET: EIC_INTENSET_Type(loc: 0x4000180c),
+  INTFLAG: EIC_INTFLAG_Type(loc: 0x40001810),
+  WAKEUP: EIC_WAKEUP_Type(loc: 0x40001814),
+  CONFIG0: EIC_CONFIG_Type(loc: 0x40001818),
+  CONFIG1: EIC_CONFIG_Type(loc: 0x4000181c),
 )
 
-let EVSYS* = EVSYS_Type(
-  CTRL: EVSYS_CTRL_Type(p: cast[ptr uint8](0x42000400)),
-  CHANNEL: EVSYS_CHANNEL_Type(p: cast[ptr uint32](0x42000404)),
-  USER: EVSYS_USER_Type(p: cast[ptr uint16](0x42000408)),
-  CHSTATUS: EVSYS_CHSTATUS_Type(p: cast[ptr uint32](0x4200040c)),
-  INTENCLR: EVSYS_INTENCLR_Type(p: cast[ptr uint32](0x42000410)),
-  INTENSET: EVSYS_INTENSET_Type(p: cast[ptr uint32](0x42000414)),
-  INTFLAG: EVSYS_INTFLAG_Type(p: cast[ptr uint32](0x42000418)),
+const EVSYS* = EVSYS_Type(
+  CTRL: EVSYS_CTRL_Type(loc: 0x42000400),
+  CHANNEL: EVSYS_CHANNEL_Type(loc: 0x42000404),
+  USER: EVSYS_USER_Type(loc: 0x42000408),
+  CHSTATUS: EVSYS_CHSTATUS_Type(loc: 0x4200040c),
+  INTENCLR: EVSYS_INTENCLR_Type(loc: 0x42000410),
+  INTENSET: EVSYS_INTENSET_Type(loc: 0x42000414),
+  INTFLAG: EVSYS_INTFLAG_Type(loc: 0x42000418),
 )
 
-let GCLK* = GCLK_Type(
-  CTRL: GCLK_CTRL_Type(p: cast[ptr uint8](0x40000c00)),
-  STATUS: GCLK_STATUS_Type(p: cast[ptr uint8](0x40000c01)),
-  CLKCTRL: GCLK_CLKCTRL_Type(p: cast[ptr uint16](0x40000c02)),
-  GENCTRL: GCLK_GENCTRL_Type(p: cast[ptr uint32](0x40000c04)),
-  GENDIV: GCLK_GENDIV_Type(p: cast[ptr uint32](0x40000c08)),
+const GCLK* = GCLK_Type(
+  CTRL: GCLK_CTRL_Type(loc: 0x40000c00),
+  STATUS: GCLK_STATUS_Type(loc: 0x40000c01),
+  CLKCTRL: GCLK_CLKCTRL_Type(loc: 0x40000c02),
+  GENCTRL: GCLK_GENCTRL_Type(loc: 0x40000c04),
+  GENDIV: GCLK_GENDIV_Type(loc: 0x40000c08),
 )
 
-let HMATRIX* = HMATRIX_Type(
-  PRAS0: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x41007080)),
-  PRBS0: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x41007084)),
-  PRAS1: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x41007088)),
-  PRBS1: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x4100708c)),
-  PRAS2: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x41007090)),
-  PRBS2: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x41007094)),
-  PRAS3: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x41007098)),
-  PRBS3: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x4100709c)),
-  PRAS4: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x410070a0)),
-  PRBS4: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x410070a4)),
-  PRAS5: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x410070a8)),
-  PRBS5: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x410070ac)),
-  PRAS6: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x410070b0)),
-  PRBS6: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x410070b4)),
-  PRAS7: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x410070b8)),
-  PRBS7: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x410070bc)),
-  PRAS8: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x410070c0)),
-  PRBS8: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x410070c4)),
-  PRAS9: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x410070c8)),
-  PRBS9: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x410070cc)),
-  PRAS10: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x410070d0)),
-  PRBS10: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x410070d4)),
-  PRAS11: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x410070d8)),
-  PRBS11: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x410070dc)),
-  PRAS12: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x410070e0)),
-  PRBS12: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x410070e4)),
-  PRAS13: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x410070e8)),
-  PRBS13: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x410070ec)),
-  PRAS14: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x410070f0)),
-  PRBS14: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x410070f4)),
-  PRAS15: HMATRIX_PRAS_Type(p: cast[ptr uint32](0x410070f8)),
-  PRBS15: HMATRIX_PRBS_Type(p: cast[ptr uint32](0x410070fc)),
-  SFR0: HMATRIX_SFR_Type(p: cast[ptr uint32](0x41007110)),
-  SFR1: HMATRIX_SFR_Type(p: cast[ptr uint32](0x41007114)),
-  SFR2: HMATRIX_SFR_Type(p: cast[ptr uint32](0x41007118)),
-  SFR3: HMATRIX_SFR_Type(p: cast[ptr uint32](0x4100711c)),
-  SFR4: HMATRIX_SFR_Type(p: cast[ptr uint32](0x41007120)),
-  SFR5: HMATRIX_SFR_Type(p: cast[ptr uint32](0x41007124)),
-  SFR6: HMATRIX_SFR_Type(p: cast[ptr uint32](0x41007128)),
-  SFR7: HMATRIX_SFR_Type(p: cast[ptr uint32](0x4100712c)),
-  SFR8: HMATRIX_SFR_Type(p: cast[ptr uint32](0x41007130)),
-  SFR9: HMATRIX_SFR_Type(p: cast[ptr uint32](0x41007134)),
-  SFR10: HMATRIX_SFR_Type(p: cast[ptr uint32](0x41007138)),
-  SFR11: HMATRIX_SFR_Type(p: cast[ptr uint32](0x4100713c)),
-  SFR12: HMATRIX_SFR_Type(p: cast[ptr uint32](0x41007140)),
-  SFR13: HMATRIX_SFR_Type(p: cast[ptr uint32](0x41007144)),
-  SFR14: HMATRIX_SFR_Type(p: cast[ptr uint32](0x41007148)),
-  SFR15: HMATRIX_SFR_Type(p: cast[ptr uint32](0x4100714c)),
+const HMATRIX* = HMATRIX_Type(
+  PRAS0: HMATRIX_PRAS_Type(loc: 0x41007080),
+  PRBS0: HMATRIX_PRBS_Type(loc: 0x41007084),
+  PRAS1: HMATRIX_PRAS_Type(loc: 0x41007088),
+  PRBS1: HMATRIX_PRBS_Type(loc: 0x4100708c),
+  PRAS2: HMATRIX_PRAS_Type(loc: 0x41007090),
+  PRBS2: HMATRIX_PRBS_Type(loc: 0x41007094),
+  PRAS3: HMATRIX_PRAS_Type(loc: 0x41007098),
+  PRBS3: HMATRIX_PRBS_Type(loc: 0x4100709c),
+  PRAS4: HMATRIX_PRAS_Type(loc: 0x410070a0),
+  PRBS4: HMATRIX_PRBS_Type(loc: 0x410070a4),
+  PRAS5: HMATRIX_PRAS_Type(loc: 0x410070a8),
+  PRBS5: HMATRIX_PRBS_Type(loc: 0x410070ac),
+  PRAS6: HMATRIX_PRAS_Type(loc: 0x410070b0),
+  PRBS6: HMATRIX_PRBS_Type(loc: 0x410070b4),
+  PRAS7: HMATRIX_PRAS_Type(loc: 0x410070b8),
+  PRBS7: HMATRIX_PRBS_Type(loc: 0x410070bc),
+  PRAS8: HMATRIX_PRAS_Type(loc: 0x410070c0),
+  PRBS8: HMATRIX_PRBS_Type(loc: 0x410070c4),
+  PRAS9: HMATRIX_PRAS_Type(loc: 0x410070c8),
+  PRBS9: HMATRIX_PRBS_Type(loc: 0x410070cc),
+  PRAS10: HMATRIX_PRAS_Type(loc: 0x410070d0),
+  PRBS10: HMATRIX_PRBS_Type(loc: 0x410070d4),
+  PRAS11: HMATRIX_PRAS_Type(loc: 0x410070d8),
+  PRBS11: HMATRIX_PRBS_Type(loc: 0x410070dc),
+  PRAS12: HMATRIX_PRAS_Type(loc: 0x410070e0),
+  PRBS12: HMATRIX_PRBS_Type(loc: 0x410070e4),
+  PRAS13: HMATRIX_PRAS_Type(loc: 0x410070e8),
+  PRBS13: HMATRIX_PRBS_Type(loc: 0x410070ec),
+  PRAS14: HMATRIX_PRAS_Type(loc: 0x410070f0),
+  PRBS14: HMATRIX_PRBS_Type(loc: 0x410070f4),
+  PRAS15: HMATRIX_PRAS_Type(loc: 0x410070f8),
+  PRBS15: HMATRIX_PRBS_Type(loc: 0x410070fc),
+  SFR0: HMATRIX_SFR_Type(loc: 0x41007110),
+  SFR1: HMATRIX_SFR_Type(loc: 0x41007114),
+  SFR2: HMATRIX_SFR_Type(loc: 0x41007118),
+  SFR3: HMATRIX_SFR_Type(loc: 0x4100711c),
+  SFR4: HMATRIX_SFR_Type(loc: 0x41007120),
+  SFR5: HMATRIX_SFR_Type(loc: 0x41007124),
+  SFR6: HMATRIX_SFR_Type(loc: 0x41007128),
+  SFR7: HMATRIX_SFR_Type(loc: 0x4100712c),
+  SFR8: HMATRIX_SFR_Type(loc: 0x41007130),
+  SFR9: HMATRIX_SFR_Type(loc: 0x41007134),
+  SFR10: HMATRIX_SFR_Type(loc: 0x41007138),
+  SFR11: HMATRIX_SFR_Type(loc: 0x4100713c),
+  SFR12: HMATRIX_SFR_Type(loc: 0x41007140),
+  SFR13: HMATRIX_SFR_Type(loc: 0x41007144),
+  SFR14: HMATRIX_SFR_Type(loc: 0x41007148),
+  SFR15: HMATRIX_SFR_Type(loc: 0x4100714c),
 )
 
-let I2S* = I2S_Type(
-  CTRLA: I2S_CTRLA_Type(p: cast[ptr uint8](0x42005000)),
-  CLKCTRL0: I2S_CLKCTRL_Type(p: cast[ptr uint32](0x42005004)),
-  CLKCTRL1: I2S_CLKCTRL_Type(p: cast[ptr uint32](0x42005008)),
-  INTENCLR: I2S_INTENCLR_Type(p: cast[ptr uint16](0x4200500c)),
-  INTENSET: I2S_INTENSET_Type(p: cast[ptr uint16](0x42005010)),
-  INTFLAG: I2S_INTFLAG_Type(p: cast[ptr uint16](0x42005014)),
-  SYNCBUSY: I2S_SYNCBUSY_Type(p: cast[ptr uint16](0x42005018)),
-  SERCTRL0: I2S_SERCTRL_Type(p: cast[ptr uint32](0x42005020)),
-  SERCTRL1: I2S_SERCTRL_Type(p: cast[ptr uint32](0x42005024)),
-  DATA0: I2S_DATA_Type(p: cast[ptr uint32](0x42005030)),
-  DATA1: I2S_DATA_Type(p: cast[ptr uint32](0x42005034)),
+const I2S* = I2S_Type(
+  CTRLA: I2S_CTRLA_Type(loc: 0x42005000),
+  CLKCTRL0: I2S_CLKCTRL_Type(loc: 0x42005004),
+  CLKCTRL1: I2S_CLKCTRL_Type(loc: 0x42005008),
+  INTENCLR: I2S_INTENCLR_Type(loc: 0x4200500c),
+  INTENSET: I2S_INTENSET_Type(loc: 0x42005010),
+  INTFLAG: I2S_INTFLAG_Type(loc: 0x42005014),
+  SYNCBUSY: I2S_SYNCBUSY_Type(loc: 0x42005018),
+  SERCTRL0: I2S_SERCTRL_Type(loc: 0x42005020),
+  SERCTRL1: I2S_SERCTRL_Type(loc: 0x42005024),
+  DATA0: I2S_DATA_Type(loc: 0x42005030),
+  DATA1: I2S_DATA_Type(loc: 0x42005034),
 )
 
-let MTB* = MTB_Type(
-  POSITION: MTB_POSITION_Type(p: cast[ptr uint32](0x41006000)),
-  MASTER: MTB_MASTER_Type(p: cast[ptr uint32](0x41006004)),
-  FLOW: MTB_FLOW_Type(p: cast[ptr uint32](0x41006008)),
-  BASE: MTB_BASE_Type(p: cast[ptr uint32](0x4100600c)),
-  ITCTRL: MTB_ITCTRL_Type(p: cast[ptr uint32](0x41006f00)),
-  CLAIMSET: MTB_CLAIMSET_Type(p: cast[ptr uint32](0x41006fa0)),
-  CLAIMCLR: MTB_CLAIMCLR_Type(p: cast[ptr uint32](0x41006fa4)),
-  LOCKACCESS: MTB_LOCKACCESS_Type(p: cast[ptr uint32](0x41006fb0)),
-  LOCKSTATUS: MTB_LOCKSTATUS_Type(p: cast[ptr uint32](0x41006fb4)),
-  AUTHSTATUS: MTB_AUTHSTATUS_Type(p: cast[ptr uint32](0x41006fb8)),
-  DEVARCH: MTB_DEVARCH_Type(p: cast[ptr uint32](0x41006fbc)),
-  DEVID: MTB_DEVID_Type(p: cast[ptr uint32](0x41006fc8)),
-  DEVTYPE: MTB_DEVTYPE_Type(p: cast[ptr uint32](0x41006fcc)),
-  PID4: MTB_PID4_Type(p: cast[ptr uint32](0x41006fd0)),
-  PID5: MTB_PID5_Type(p: cast[ptr uint32](0x41006fd4)),
-  PID6: MTB_PID6_Type(p: cast[ptr uint32](0x41006fd8)),
-  PID7: MTB_PID7_Type(p: cast[ptr uint32](0x41006fdc)),
-  PID0: MTB_PID0_Type(p: cast[ptr uint32](0x41006fe0)),
-  PID1: MTB_PID1_Type(p: cast[ptr uint32](0x41006fe4)),
-  PID2: MTB_PID2_Type(p: cast[ptr uint32](0x41006fe8)),
-  PID3: MTB_PID3_Type(p: cast[ptr uint32](0x41006fec)),
-  CID0: MTB_CID0_Type(p: cast[ptr uint32](0x41006ff0)),
-  CID1: MTB_CID1_Type(p: cast[ptr uint32](0x41006ff4)),
-  CID2: MTB_CID2_Type(p: cast[ptr uint32](0x41006ff8)),
-  CID3: MTB_CID3_Type(p: cast[ptr uint32](0x41006ffc)),
+const MTB* = MTB_Type(
+  POSITION: MTB_POSITION_Type(loc: 0x41006000),
+  MASTER: MTB_MASTER_Type(loc: 0x41006004),
+  FLOW: MTB_FLOW_Type(loc: 0x41006008),
+  BASE: MTB_BASE_Type(loc: 0x4100600c),
+  ITCTRL: MTB_ITCTRL_Type(loc: 0x41006f00),
+  CLAIMSET: MTB_CLAIMSET_Type(loc: 0x41006fa0),
+  CLAIMCLR: MTB_CLAIMCLR_Type(loc: 0x41006fa4),
+  LOCKACCESS: MTB_LOCKACCESS_Type(loc: 0x41006fb0),
+  LOCKSTATUS: MTB_LOCKSTATUS_Type(loc: 0x41006fb4),
+  AUTHSTATUS: MTB_AUTHSTATUS_Type(loc: 0x41006fb8),
+  DEVARCH: MTB_DEVARCH_Type(loc: 0x41006fbc),
+  DEVID: MTB_DEVID_Type(loc: 0x41006fc8),
+  DEVTYPE: MTB_DEVTYPE_Type(loc: 0x41006fcc),
+  PID4: MTB_PID4_Type(loc: 0x41006fd0),
+  PID5: MTB_PID5_Type(loc: 0x41006fd4),
+  PID6: MTB_PID6_Type(loc: 0x41006fd8),
+  PID7: MTB_PID7_Type(loc: 0x41006fdc),
+  PID0: MTB_PID0_Type(loc: 0x41006fe0),
+  PID1: MTB_PID1_Type(loc: 0x41006fe4),
+  PID2: MTB_PID2_Type(loc: 0x41006fe8),
+  PID3: MTB_PID3_Type(loc: 0x41006fec),
+  CID0: MTB_CID0_Type(loc: 0x41006ff0),
+  CID1: MTB_CID1_Type(loc: 0x41006ff4),
+  CID2: MTB_CID2_Type(loc: 0x41006ff8),
+  CID3: MTB_CID3_Type(loc: 0x41006ffc),
 )
 
-let NVMCTRL* = NVMCTRL_Type(
-  CTRLA: NVMCTRL_CTRLA_Type(p: cast[ptr uint16](0x41004000)),
-  CTRLB: NVMCTRL_CTRLB_Type(p: cast[ptr uint32](0x41004004)),
-  PARAM: NVMCTRL_PARAM_Type(p: cast[ptr uint32](0x41004008)),
-  INTENCLR: NVMCTRL_INTENCLR_Type(p: cast[ptr uint8](0x4100400c)),
-  INTENSET: NVMCTRL_INTENSET_Type(p: cast[ptr uint8](0x41004010)),
-  INTFLAG: NVMCTRL_INTFLAG_Type(p: cast[ptr uint8](0x41004014)),
-  STATUS: NVMCTRL_STATUS_Type(p: cast[ptr uint16](0x41004018)),
-  ADDR: NVMCTRL_ADDR_Type(p: cast[ptr uint32](0x4100401c)),
-  LOCK: NVMCTRL_LOCK_Type(p: cast[ptr uint16](0x41004020)),
+const NVMCTRL* = NVMCTRL_Type(
+  CTRLA: NVMCTRL_CTRLA_Type(loc: 0x41004000),
+  CTRLB: NVMCTRL_CTRLB_Type(loc: 0x41004004),
+  PARAM: NVMCTRL_PARAM_Type(loc: 0x41004008),
+  INTENCLR: NVMCTRL_INTENCLR_Type(loc: 0x4100400c),
+  INTENSET: NVMCTRL_INTENSET_Type(loc: 0x41004010),
+  INTFLAG: NVMCTRL_INTFLAG_Type(loc: 0x41004014),
+  STATUS: NVMCTRL_STATUS_Type(loc: 0x41004018),
+  ADDR: NVMCTRL_ADDR_Type(loc: 0x4100401c),
+  LOCK: NVMCTRL_LOCK_Type(loc: 0x41004020),
 )
 
-let PAC0* = PAC0_Type(
-  WPCLR: PAC0_WPCLR_Type(p: cast[ptr uint32](0x40000000)),
-  WPSET: PAC0_WPSET_Type(p: cast[ptr uint32](0x40000004)),
+const PAC0* = PAC0_Type(
+  WPCLR: PAC0_WPCLR_Type(loc: 0x40000000),
+  WPSET: PAC0_WPSET_Type(loc: 0x40000004),
 )
 
-let PAC1* = PAC0_Type(
-  WPCLR: PAC0_WPCLR_Type(p: cast[ptr uint32](0x41000000)),
-  WPSET: PAC0_WPSET_Type(p: cast[ptr uint32](0x41000004)),
+const PAC1* = PAC0_Type(
+  WPCLR: PAC0_WPCLR_Type(loc: 0x41000000),
+  WPSET: PAC0_WPSET_Type(loc: 0x41000004),
 )
 
-let PAC2* = PAC0_Type(
-  WPCLR: PAC0_WPCLR_Type(p: cast[ptr uint32](0x42000000)),
-  WPSET: PAC0_WPSET_Type(p: cast[ptr uint32](0x42000004)),
+const PAC2* = PAC0_Type(
+  WPCLR: PAC0_WPCLR_Type(loc: 0x42000000),
+  WPSET: PAC0_WPSET_Type(loc: 0x42000004),
 )
 
-let PM* = PM_Type(
-  CTRL: PM_CTRL_Type(p: cast[ptr uint8](0x40000400)),
-  SLEEP: PM_SLEEP_Type(p: cast[ptr uint8](0x40000401)),
-  CPUSEL: PM_CPUSEL_Type(p: cast[ptr uint8](0x40000408)),
-  APBASEL: PM_APBASEL_Type(p: cast[ptr uint8](0x40000409)),
-  APBBSEL: PM_APBBSEL_Type(p: cast[ptr uint8](0x4000040a)),
-  APBCSEL: PM_APBCSEL_Type(p: cast[ptr uint8](0x4000040b)),
-  AHBMASK: PM_AHBMASK_Type(p: cast[ptr uint32](0x40000414)),
-  APBAMASK: PM_APBAMASK_Type(p: cast[ptr uint32](0x40000418)),
-  APBBMASK: PM_APBBMASK_Type(p: cast[ptr uint32](0x4000041c)),
-  APBCMASK: PM_APBCMASK_Type(p: cast[ptr uint32](0x40000420)),
-  INTENCLR: PM_INTENCLR_Type(p: cast[ptr uint8](0x40000434)),
-  INTENSET: PM_INTENSET_Type(p: cast[ptr uint8](0x40000435)),
-  INTFLAG: PM_INTFLAG_Type(p: cast[ptr uint8](0x40000436)),
-  RCAUSE: PM_RCAUSE_Type(p: cast[ptr uint8](0x40000438)),
+const PM* = PM_Type(
+  CTRL: PM_CTRL_Type(loc: 0x40000400),
+  SLEEP: PM_SLEEP_Type(loc: 0x40000401),
+  CPUSEL: PM_CPUSEL_Type(loc: 0x40000408),
+  APBASEL: PM_APBASEL_Type(loc: 0x40000409),
+  APBBSEL: PM_APBBSEL_Type(loc: 0x4000040a),
+  APBCSEL: PM_APBCSEL_Type(loc: 0x4000040b),
+  AHBMASK: PM_AHBMASK_Type(loc: 0x40000414),
+  APBAMASK: PM_APBAMASK_Type(loc: 0x40000418),
+  APBBMASK: PM_APBBMASK_Type(loc: 0x4000041c),
+  APBCMASK: PM_APBCMASK_Type(loc: 0x40000420),
+  INTENCLR: PM_INTENCLR_Type(loc: 0x40000434),
+  INTENSET: PM_INTENSET_Type(loc: 0x40000435),
+  INTFLAG: PM_INTFLAG_Type(loc: 0x40000436),
+  RCAUSE: PM_RCAUSE_Type(loc: 0x40000438),
 )
 
-let PORT* = PORT_Type(
-  DIR0: PORT_DIR_Type(p: cast[ptr uint32](0x41004400)),
-  DIRCLR0: PORT_DIRCLR_Type(p: cast[ptr uint32](0x41004404)),
-  DIRSET0: PORT_DIRSET_Type(p: cast[ptr uint32](0x41004408)),
-  DIRTGL0: PORT_DIRTGL_Type(p: cast[ptr uint32](0x4100440c)),
-  OUT0: PORT_OUT_Type(p: cast[ptr uint32](0x41004410)),
-  OUTCLR0: PORT_OUTCLR_Type(p: cast[ptr uint32](0x41004414)),
-  OUTSET0: PORT_OUTSET_Type(p: cast[ptr uint32](0x41004418)),
-  OUTTGL0: PORT_OUTTGL_Type(p: cast[ptr uint32](0x4100441c)),
-  IN0: PORT_IN_Type(p: cast[ptr uint32](0x41004420)),
-  CTRL0: PORT_CTRL_Type(p: cast[ptr uint32](0x41004424)),
-  WRCONFIG0: PORT_WRCONFIG_Type(p: cast[ptr uint32](0x41004428)),
-  PMUX0_0: PORT_PMUX0_Type(p: cast[ptr uint8](0x41004430)),
-  PMUX0_1: PORT_PMUX0_Type(p: cast[ptr uint8](0x41004431)),
-  PMUX0_2: PORT_PMUX0_Type(p: cast[ptr uint8](0x41004432)),
-  PMUX0_3: PORT_PMUX0_Type(p: cast[ptr uint8](0x41004433)),
-  PMUX0_4: PORT_PMUX0_Type(p: cast[ptr uint8](0x41004434)),
-  PMUX0_5: PORT_PMUX0_Type(p: cast[ptr uint8](0x41004435)),
-  PMUX0_6: PORT_PMUX0_Type(p: cast[ptr uint8](0x41004436)),
-  PMUX0_7: PORT_PMUX0_Type(p: cast[ptr uint8](0x41004437)),
-  PMUX0_8: PORT_PMUX0_Type(p: cast[ptr uint8](0x41004438)),
-  PMUX0_9: PORT_PMUX0_Type(p: cast[ptr uint8](0x41004439)),
-  PMUX0_10: PORT_PMUX0_Type(p: cast[ptr uint8](0x4100443a)),
-  PMUX0_11: PORT_PMUX0_Type(p: cast[ptr uint8](0x4100443b)),
-  PMUX0_12: PORT_PMUX0_Type(p: cast[ptr uint8](0x4100443c)),
-  PMUX0_13: PORT_PMUX0_Type(p: cast[ptr uint8](0x4100443d)),
-  PMUX0_14: PORT_PMUX0_Type(p: cast[ptr uint8](0x4100443e)),
-  PMUX0_15: PORT_PMUX0_Type(p: cast[ptr uint8](0x4100443f)),
-  PINCFG0_0: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004440)),
-  PINCFG0_1: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004441)),
-  PINCFG0_2: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004442)),
-  PINCFG0_3: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004443)),
-  PINCFG0_4: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004444)),
-  PINCFG0_5: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004445)),
-  PINCFG0_6: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004446)),
-  PINCFG0_7: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004447)),
-  PINCFG0_8: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004448)),
-  PINCFG0_9: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004449)),
-  PINCFG0_10: PORT_PINCFG0_Type(p: cast[ptr uint8](0x4100444a)),
-  PINCFG0_11: PORT_PINCFG0_Type(p: cast[ptr uint8](0x4100444b)),
-  PINCFG0_12: PORT_PINCFG0_Type(p: cast[ptr uint8](0x4100444c)),
-  PINCFG0_13: PORT_PINCFG0_Type(p: cast[ptr uint8](0x4100444d)),
-  PINCFG0_14: PORT_PINCFG0_Type(p: cast[ptr uint8](0x4100444e)),
-  PINCFG0_15: PORT_PINCFG0_Type(p: cast[ptr uint8](0x4100444f)),
-  PINCFG0_16: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004450)),
-  PINCFG0_17: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004451)),
-  PINCFG0_18: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004452)),
-  PINCFG0_19: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004453)),
-  PINCFG0_20: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004454)),
-  PINCFG0_21: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004455)),
-  PINCFG0_22: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004456)),
-  PINCFG0_23: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004457)),
-  PINCFG0_24: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004458)),
-  PINCFG0_25: PORT_PINCFG0_Type(p: cast[ptr uint8](0x41004459)),
-  PINCFG0_26: PORT_PINCFG0_Type(p: cast[ptr uint8](0x4100445a)),
-  PINCFG0_27: PORT_PINCFG0_Type(p: cast[ptr uint8](0x4100445b)),
-  PINCFG0_28: PORT_PINCFG0_Type(p: cast[ptr uint8](0x4100445c)),
-  PINCFG0_29: PORT_PINCFG0_Type(p: cast[ptr uint8](0x4100445d)),
-  PINCFG0_30: PORT_PINCFG0_Type(p: cast[ptr uint8](0x4100445e)),
-  PINCFG0_31: PORT_PINCFG0_Type(p: cast[ptr uint8](0x4100445f)),
-  DIR1: PORT_DIR_Type(p: cast[ptr uint32](0x41004480)),
-  DIRCLR1: PORT_DIRCLR_Type(p: cast[ptr uint32](0x41004484)),
-  DIRSET1: PORT_DIRSET_Type(p: cast[ptr uint32](0x41004488)),
-  DIRTGL1: PORT_DIRTGL_Type(p: cast[ptr uint32](0x4100448c)),
-  OUT1: PORT_OUT_Type(p: cast[ptr uint32](0x41004490)),
-  OUTCLR1: PORT_OUTCLR_Type(p: cast[ptr uint32](0x41004494)),
-  OUTSET1: PORT_OUTSET_Type(p: cast[ptr uint32](0x41004498)),
-  OUTTGL1: PORT_OUTTGL_Type(p: cast[ptr uint32](0x4100449c)),
-  IN1: PORT_IN_Type(p: cast[ptr uint32](0x410044a0)),
-  CTRL1: PORT_CTRL_Type(p: cast[ptr uint32](0x410044a4)),
-  WRCONFIG1: PORT_WRCONFIG_Type(p: cast[ptr uint32](0x410044a8)),
-  PMUX1_0: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044b0)),
-  PMUX1_1: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044b1)),
-  PMUX1_2: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044b2)),
-  PMUX1_3: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044b3)),
-  PMUX1_4: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044b4)),
-  PMUX1_5: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044b5)),
-  PMUX1_6: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044b6)),
-  PMUX1_7: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044b7)),
-  PMUX1_8: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044b8)),
-  PMUX1_9: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044b9)),
-  PMUX1_10: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044ba)),
-  PMUX1_11: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044bb)),
-  PMUX1_12: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044bc)),
-  PMUX1_13: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044bd)),
-  PMUX1_14: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044be)),
-  PMUX1_15: PORT_PMUX0_Type(p: cast[ptr uint8](0x410044bf)),
-  PINCFG1_0: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044c0)),
-  PINCFG1_1: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044c1)),
-  PINCFG1_2: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044c2)),
-  PINCFG1_3: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044c3)),
-  PINCFG1_4: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044c4)),
-  PINCFG1_5: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044c5)),
-  PINCFG1_6: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044c6)),
-  PINCFG1_7: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044c7)),
-  PINCFG1_8: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044c8)),
-  PINCFG1_9: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044c9)),
-  PINCFG1_10: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044ca)),
-  PINCFG1_11: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044cb)),
-  PINCFG1_12: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044cc)),
-  PINCFG1_13: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044cd)),
-  PINCFG1_14: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044ce)),
-  PINCFG1_15: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044cf)),
-  PINCFG1_16: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044d0)),
-  PINCFG1_17: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044d1)),
-  PINCFG1_18: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044d2)),
-  PINCFG1_19: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044d3)),
-  PINCFG1_20: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044d4)),
-  PINCFG1_21: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044d5)),
-  PINCFG1_22: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044d6)),
-  PINCFG1_23: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044d7)),
-  PINCFG1_24: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044d8)),
-  PINCFG1_25: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044d9)),
-  PINCFG1_26: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044da)),
-  PINCFG1_27: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044db)),
-  PINCFG1_28: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044dc)),
-  PINCFG1_29: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044dd)),
-  PINCFG1_30: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044de)),
-  PINCFG1_31: PORT_PINCFG0_Type(p: cast[ptr uint8](0x410044df)),
+const PORT* = PORT_Type(
+  DIR0: PORT_DIR_Type(loc: 0x41004400),
+  DIRCLR0: PORT_DIRCLR_Type(loc: 0x41004404),
+  DIRSET0: PORT_DIRSET_Type(loc: 0x41004408),
+  DIRTGL0: PORT_DIRTGL_Type(loc: 0x4100440c),
+  OUT0: PORT_OUT_Type(loc: 0x41004410),
+  OUTCLR0: PORT_OUTCLR_Type(loc: 0x41004414),
+  OUTSET0: PORT_OUTSET_Type(loc: 0x41004418),
+  OUTTGL0: PORT_OUTTGL_Type(loc: 0x4100441c),
+  IN0: PORT_IN_Type(loc: 0x41004420),
+  CTRL0: PORT_CTRL_Type(loc: 0x41004424),
+  WRCONFIG0: PORT_WRCONFIG_Type(loc: 0x41004428),
+  PMUX0_0: PORT_PMUX0_Type(loc: 0x41004430),
+  PMUX0_1: PORT_PMUX0_Type(loc: 0x41004431),
+  PMUX0_2: PORT_PMUX0_Type(loc: 0x41004432),
+  PMUX0_3: PORT_PMUX0_Type(loc: 0x41004433),
+  PMUX0_4: PORT_PMUX0_Type(loc: 0x41004434),
+  PMUX0_5: PORT_PMUX0_Type(loc: 0x41004435),
+  PMUX0_6: PORT_PMUX0_Type(loc: 0x41004436),
+  PMUX0_7: PORT_PMUX0_Type(loc: 0x41004437),
+  PMUX0_8: PORT_PMUX0_Type(loc: 0x41004438),
+  PMUX0_9: PORT_PMUX0_Type(loc: 0x41004439),
+  PMUX0_10: PORT_PMUX0_Type(loc: 0x4100443a),
+  PMUX0_11: PORT_PMUX0_Type(loc: 0x4100443b),
+  PMUX0_12: PORT_PMUX0_Type(loc: 0x4100443c),
+  PMUX0_13: PORT_PMUX0_Type(loc: 0x4100443d),
+  PMUX0_14: PORT_PMUX0_Type(loc: 0x4100443e),
+  PMUX0_15: PORT_PMUX0_Type(loc: 0x4100443f),
+  PINCFG0_0: PORT_PINCFG0_Type(loc: 0x41004440),
+  PINCFG0_1: PORT_PINCFG0_Type(loc: 0x41004441),
+  PINCFG0_2: PORT_PINCFG0_Type(loc: 0x41004442),
+  PINCFG0_3: PORT_PINCFG0_Type(loc: 0x41004443),
+  PINCFG0_4: PORT_PINCFG0_Type(loc: 0x41004444),
+  PINCFG0_5: PORT_PINCFG0_Type(loc: 0x41004445),
+  PINCFG0_6: PORT_PINCFG0_Type(loc: 0x41004446),
+  PINCFG0_7: PORT_PINCFG0_Type(loc: 0x41004447),
+  PINCFG0_8: PORT_PINCFG0_Type(loc: 0x41004448),
+  PINCFG0_9: PORT_PINCFG0_Type(loc: 0x41004449),
+  PINCFG0_10: PORT_PINCFG0_Type(loc: 0x4100444a),
+  PINCFG0_11: PORT_PINCFG0_Type(loc: 0x4100444b),
+  PINCFG0_12: PORT_PINCFG0_Type(loc: 0x4100444c),
+  PINCFG0_13: PORT_PINCFG0_Type(loc: 0x4100444d),
+  PINCFG0_14: PORT_PINCFG0_Type(loc: 0x4100444e),
+  PINCFG0_15: PORT_PINCFG0_Type(loc: 0x4100444f),
+  PINCFG0_16: PORT_PINCFG0_Type(loc: 0x41004450),
+  PINCFG0_17: PORT_PINCFG0_Type(loc: 0x41004451),
+  PINCFG0_18: PORT_PINCFG0_Type(loc: 0x41004452),
+  PINCFG0_19: PORT_PINCFG0_Type(loc: 0x41004453),
+  PINCFG0_20: PORT_PINCFG0_Type(loc: 0x41004454),
+  PINCFG0_21: PORT_PINCFG0_Type(loc: 0x41004455),
+  PINCFG0_22: PORT_PINCFG0_Type(loc: 0x41004456),
+  PINCFG0_23: PORT_PINCFG0_Type(loc: 0x41004457),
+  PINCFG0_24: PORT_PINCFG0_Type(loc: 0x41004458),
+  PINCFG0_25: PORT_PINCFG0_Type(loc: 0x41004459),
+  PINCFG0_26: PORT_PINCFG0_Type(loc: 0x4100445a),
+  PINCFG0_27: PORT_PINCFG0_Type(loc: 0x4100445b),
+  PINCFG0_28: PORT_PINCFG0_Type(loc: 0x4100445c),
+  PINCFG0_29: PORT_PINCFG0_Type(loc: 0x4100445d),
+  PINCFG0_30: PORT_PINCFG0_Type(loc: 0x4100445e),
+  PINCFG0_31: PORT_PINCFG0_Type(loc: 0x4100445f),
+  DIR1: PORT_DIR_Type(loc: 0x41004480),
+  DIRCLR1: PORT_DIRCLR_Type(loc: 0x41004484),
+  DIRSET1: PORT_DIRSET_Type(loc: 0x41004488),
+  DIRTGL1: PORT_DIRTGL_Type(loc: 0x4100448c),
+  OUT1: PORT_OUT_Type(loc: 0x41004490),
+  OUTCLR1: PORT_OUTCLR_Type(loc: 0x41004494),
+  OUTSET1: PORT_OUTSET_Type(loc: 0x41004498),
+  OUTTGL1: PORT_OUTTGL_Type(loc: 0x4100449c),
+  IN1: PORT_IN_Type(loc: 0x410044a0),
+  CTRL1: PORT_CTRL_Type(loc: 0x410044a4),
+  WRCONFIG1: PORT_WRCONFIG_Type(loc: 0x410044a8),
+  PMUX1_0: PORT_PMUX0_Type(loc: 0x410044b0),
+  PMUX1_1: PORT_PMUX0_Type(loc: 0x410044b1),
+  PMUX1_2: PORT_PMUX0_Type(loc: 0x410044b2),
+  PMUX1_3: PORT_PMUX0_Type(loc: 0x410044b3),
+  PMUX1_4: PORT_PMUX0_Type(loc: 0x410044b4),
+  PMUX1_5: PORT_PMUX0_Type(loc: 0x410044b5),
+  PMUX1_6: PORT_PMUX0_Type(loc: 0x410044b6),
+  PMUX1_7: PORT_PMUX0_Type(loc: 0x410044b7),
+  PMUX1_8: PORT_PMUX0_Type(loc: 0x410044b8),
+  PMUX1_9: PORT_PMUX0_Type(loc: 0x410044b9),
+  PMUX1_10: PORT_PMUX0_Type(loc: 0x410044ba),
+  PMUX1_11: PORT_PMUX0_Type(loc: 0x410044bb),
+  PMUX1_12: PORT_PMUX0_Type(loc: 0x410044bc),
+  PMUX1_13: PORT_PMUX0_Type(loc: 0x410044bd),
+  PMUX1_14: PORT_PMUX0_Type(loc: 0x410044be),
+  PMUX1_15: PORT_PMUX0_Type(loc: 0x410044bf),
+  PINCFG1_0: PORT_PINCFG0_Type(loc: 0x410044c0),
+  PINCFG1_1: PORT_PINCFG0_Type(loc: 0x410044c1),
+  PINCFG1_2: PORT_PINCFG0_Type(loc: 0x410044c2),
+  PINCFG1_3: PORT_PINCFG0_Type(loc: 0x410044c3),
+  PINCFG1_4: PORT_PINCFG0_Type(loc: 0x410044c4),
+  PINCFG1_5: PORT_PINCFG0_Type(loc: 0x410044c5),
+  PINCFG1_6: PORT_PINCFG0_Type(loc: 0x410044c6),
+  PINCFG1_7: PORT_PINCFG0_Type(loc: 0x410044c7),
+  PINCFG1_8: PORT_PINCFG0_Type(loc: 0x410044c8),
+  PINCFG1_9: PORT_PINCFG0_Type(loc: 0x410044c9),
+  PINCFG1_10: PORT_PINCFG0_Type(loc: 0x410044ca),
+  PINCFG1_11: PORT_PINCFG0_Type(loc: 0x410044cb),
+  PINCFG1_12: PORT_PINCFG0_Type(loc: 0x410044cc),
+  PINCFG1_13: PORT_PINCFG0_Type(loc: 0x410044cd),
+  PINCFG1_14: PORT_PINCFG0_Type(loc: 0x410044ce),
+  PINCFG1_15: PORT_PINCFG0_Type(loc: 0x410044cf),
+  PINCFG1_16: PORT_PINCFG0_Type(loc: 0x410044d0),
+  PINCFG1_17: PORT_PINCFG0_Type(loc: 0x410044d1),
+  PINCFG1_18: PORT_PINCFG0_Type(loc: 0x410044d2),
+  PINCFG1_19: PORT_PINCFG0_Type(loc: 0x410044d3),
+  PINCFG1_20: PORT_PINCFG0_Type(loc: 0x410044d4),
+  PINCFG1_21: PORT_PINCFG0_Type(loc: 0x410044d5),
+  PINCFG1_22: PORT_PINCFG0_Type(loc: 0x410044d6),
+  PINCFG1_23: PORT_PINCFG0_Type(loc: 0x410044d7),
+  PINCFG1_24: PORT_PINCFG0_Type(loc: 0x410044d8),
+  PINCFG1_25: PORT_PINCFG0_Type(loc: 0x410044d9),
+  PINCFG1_26: PORT_PINCFG0_Type(loc: 0x410044da),
+  PINCFG1_27: PORT_PINCFG0_Type(loc: 0x410044db),
+  PINCFG1_28: PORT_PINCFG0_Type(loc: 0x410044dc),
+  PINCFG1_29: PORT_PINCFG0_Type(loc: 0x410044dd),
+  PINCFG1_30: PORT_PINCFG0_Type(loc: 0x410044de),
+  PINCFG1_31: PORT_PINCFG0_Type(loc: 0x410044df),
 )
 
-let PORT_IOBUS* = PORT_Type(
-  DIR0: PORT_DIR_Type(p: cast[ptr uint32](0x60000000)),
-  DIRCLR0: PORT_DIRCLR_Type(p: cast[ptr uint32](0x60000004)),
-  DIRSET0: PORT_DIRSET_Type(p: cast[ptr uint32](0x60000008)),
-  DIRTGL0: PORT_DIRTGL_Type(p: cast[ptr uint32](0x6000000c)),
-  OUT0: PORT_OUT_Type(p: cast[ptr uint32](0x60000010)),
-  OUTCLR0: PORT_OUTCLR_Type(p: cast[ptr uint32](0x60000014)),
-  OUTSET0: PORT_OUTSET_Type(p: cast[ptr uint32](0x60000018)),
-  OUTTGL0: PORT_OUTTGL_Type(p: cast[ptr uint32](0x6000001c)),
-  IN0: PORT_IN_Type(p: cast[ptr uint32](0x60000020)),
-  CTRL0: PORT_CTRL_Type(p: cast[ptr uint32](0x60000024)),
-  WRCONFIG0: PORT_WRCONFIG_Type(p: cast[ptr uint32](0x60000028)),
-  PMUX0_0: PORT_PMUX0_Type(p: cast[ptr uint8](0x60000030)),
-  PMUX0_1: PORT_PMUX0_Type(p: cast[ptr uint8](0x60000031)),
-  PMUX0_2: PORT_PMUX0_Type(p: cast[ptr uint8](0x60000032)),
-  PMUX0_3: PORT_PMUX0_Type(p: cast[ptr uint8](0x60000033)),
-  PMUX0_4: PORT_PMUX0_Type(p: cast[ptr uint8](0x60000034)),
-  PMUX0_5: PORT_PMUX0_Type(p: cast[ptr uint8](0x60000035)),
-  PMUX0_6: PORT_PMUX0_Type(p: cast[ptr uint8](0x60000036)),
-  PMUX0_7: PORT_PMUX0_Type(p: cast[ptr uint8](0x60000037)),
-  PMUX0_8: PORT_PMUX0_Type(p: cast[ptr uint8](0x60000038)),
-  PMUX0_9: PORT_PMUX0_Type(p: cast[ptr uint8](0x60000039)),
-  PMUX0_10: PORT_PMUX0_Type(p: cast[ptr uint8](0x6000003a)),
-  PMUX0_11: PORT_PMUX0_Type(p: cast[ptr uint8](0x6000003b)),
-  PMUX0_12: PORT_PMUX0_Type(p: cast[ptr uint8](0x6000003c)),
-  PMUX0_13: PORT_PMUX0_Type(p: cast[ptr uint8](0x6000003d)),
-  PMUX0_14: PORT_PMUX0_Type(p: cast[ptr uint8](0x6000003e)),
-  PMUX0_15: PORT_PMUX0_Type(p: cast[ptr uint8](0x6000003f)),
-  PINCFG0_0: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000040)),
-  PINCFG0_1: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000041)),
-  PINCFG0_2: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000042)),
-  PINCFG0_3: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000043)),
-  PINCFG0_4: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000044)),
-  PINCFG0_5: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000045)),
-  PINCFG0_6: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000046)),
-  PINCFG0_7: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000047)),
-  PINCFG0_8: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000048)),
-  PINCFG0_9: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000049)),
-  PINCFG0_10: PORT_PINCFG0_Type(p: cast[ptr uint8](0x6000004a)),
-  PINCFG0_11: PORT_PINCFG0_Type(p: cast[ptr uint8](0x6000004b)),
-  PINCFG0_12: PORT_PINCFG0_Type(p: cast[ptr uint8](0x6000004c)),
-  PINCFG0_13: PORT_PINCFG0_Type(p: cast[ptr uint8](0x6000004d)),
-  PINCFG0_14: PORT_PINCFG0_Type(p: cast[ptr uint8](0x6000004e)),
-  PINCFG0_15: PORT_PINCFG0_Type(p: cast[ptr uint8](0x6000004f)),
-  PINCFG0_16: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000050)),
-  PINCFG0_17: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000051)),
-  PINCFG0_18: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000052)),
-  PINCFG0_19: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000053)),
-  PINCFG0_20: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000054)),
-  PINCFG0_21: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000055)),
-  PINCFG0_22: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000056)),
-  PINCFG0_23: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000057)),
-  PINCFG0_24: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000058)),
-  PINCFG0_25: PORT_PINCFG0_Type(p: cast[ptr uint8](0x60000059)),
-  PINCFG0_26: PORT_PINCFG0_Type(p: cast[ptr uint8](0x6000005a)),
-  PINCFG0_27: PORT_PINCFG0_Type(p: cast[ptr uint8](0x6000005b)),
-  PINCFG0_28: PORT_PINCFG0_Type(p: cast[ptr uint8](0x6000005c)),
-  PINCFG0_29: PORT_PINCFG0_Type(p: cast[ptr uint8](0x6000005d)),
-  PINCFG0_30: PORT_PINCFG0_Type(p: cast[ptr uint8](0x6000005e)),
-  PINCFG0_31: PORT_PINCFG0_Type(p: cast[ptr uint8](0x6000005f)),
-  DIR1: PORT_DIR_Type(p: cast[ptr uint32](0x60000080)),
-  DIRCLR1: PORT_DIRCLR_Type(p: cast[ptr uint32](0x60000084)),
-  DIRSET1: PORT_DIRSET_Type(p: cast[ptr uint32](0x60000088)),
-  DIRTGL1: PORT_DIRTGL_Type(p: cast[ptr uint32](0x6000008c)),
-  OUT1: PORT_OUT_Type(p: cast[ptr uint32](0x60000090)),
-  OUTCLR1: PORT_OUTCLR_Type(p: cast[ptr uint32](0x60000094)),
-  OUTSET1: PORT_OUTSET_Type(p: cast[ptr uint32](0x60000098)),
-  OUTTGL1: PORT_OUTTGL_Type(p: cast[ptr uint32](0x6000009c)),
-  IN1: PORT_IN_Type(p: cast[ptr uint32](0x600000a0)),
-  CTRL1: PORT_CTRL_Type(p: cast[ptr uint32](0x600000a4)),
-  WRCONFIG1: PORT_WRCONFIG_Type(p: cast[ptr uint32](0x600000a8)),
-  PMUX1_0: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000b0)),
-  PMUX1_1: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000b1)),
-  PMUX1_2: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000b2)),
-  PMUX1_3: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000b3)),
-  PMUX1_4: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000b4)),
-  PMUX1_5: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000b5)),
-  PMUX1_6: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000b6)),
-  PMUX1_7: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000b7)),
-  PMUX1_8: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000b8)),
-  PMUX1_9: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000b9)),
-  PMUX1_10: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000ba)),
-  PMUX1_11: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000bb)),
-  PMUX1_12: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000bc)),
-  PMUX1_13: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000bd)),
-  PMUX1_14: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000be)),
-  PMUX1_15: PORT_PMUX0_Type(p: cast[ptr uint8](0x600000bf)),
-  PINCFG1_0: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000c0)),
-  PINCFG1_1: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000c1)),
-  PINCFG1_2: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000c2)),
-  PINCFG1_3: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000c3)),
-  PINCFG1_4: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000c4)),
-  PINCFG1_5: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000c5)),
-  PINCFG1_6: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000c6)),
-  PINCFG1_7: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000c7)),
-  PINCFG1_8: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000c8)),
-  PINCFG1_9: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000c9)),
-  PINCFG1_10: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000ca)),
-  PINCFG1_11: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000cb)),
-  PINCFG1_12: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000cc)),
-  PINCFG1_13: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000cd)),
-  PINCFG1_14: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000ce)),
-  PINCFG1_15: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000cf)),
-  PINCFG1_16: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000d0)),
-  PINCFG1_17: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000d1)),
-  PINCFG1_18: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000d2)),
-  PINCFG1_19: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000d3)),
-  PINCFG1_20: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000d4)),
-  PINCFG1_21: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000d5)),
-  PINCFG1_22: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000d6)),
-  PINCFG1_23: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000d7)),
-  PINCFG1_24: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000d8)),
-  PINCFG1_25: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000d9)),
-  PINCFG1_26: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000da)),
-  PINCFG1_27: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000db)),
-  PINCFG1_28: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000dc)),
-  PINCFG1_29: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000dd)),
-  PINCFG1_30: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000de)),
-  PINCFG1_31: PORT_PINCFG0_Type(p: cast[ptr uint8](0x600000df)),
+const PORT_IOBUS* = PORT_Type(
+  DIR0: PORT_DIR_Type(loc: 0x60000000),
+  DIRCLR0: PORT_DIRCLR_Type(loc: 0x60000004),
+  DIRSET0: PORT_DIRSET_Type(loc: 0x60000008),
+  DIRTGL0: PORT_DIRTGL_Type(loc: 0x6000000c),
+  OUT0: PORT_OUT_Type(loc: 0x60000010),
+  OUTCLR0: PORT_OUTCLR_Type(loc: 0x60000014),
+  OUTSET0: PORT_OUTSET_Type(loc: 0x60000018),
+  OUTTGL0: PORT_OUTTGL_Type(loc: 0x6000001c),
+  IN0: PORT_IN_Type(loc: 0x60000020),
+  CTRL0: PORT_CTRL_Type(loc: 0x60000024),
+  WRCONFIG0: PORT_WRCONFIG_Type(loc: 0x60000028),
+  PMUX0_0: PORT_PMUX0_Type(loc: 0x60000030),
+  PMUX0_1: PORT_PMUX0_Type(loc: 0x60000031),
+  PMUX0_2: PORT_PMUX0_Type(loc: 0x60000032),
+  PMUX0_3: PORT_PMUX0_Type(loc: 0x60000033),
+  PMUX0_4: PORT_PMUX0_Type(loc: 0x60000034),
+  PMUX0_5: PORT_PMUX0_Type(loc: 0x60000035),
+  PMUX0_6: PORT_PMUX0_Type(loc: 0x60000036),
+  PMUX0_7: PORT_PMUX0_Type(loc: 0x60000037),
+  PMUX0_8: PORT_PMUX0_Type(loc: 0x60000038),
+  PMUX0_9: PORT_PMUX0_Type(loc: 0x60000039),
+  PMUX0_10: PORT_PMUX0_Type(loc: 0x6000003a),
+  PMUX0_11: PORT_PMUX0_Type(loc: 0x6000003b),
+  PMUX0_12: PORT_PMUX0_Type(loc: 0x6000003c),
+  PMUX0_13: PORT_PMUX0_Type(loc: 0x6000003d),
+  PMUX0_14: PORT_PMUX0_Type(loc: 0x6000003e),
+  PMUX0_15: PORT_PMUX0_Type(loc: 0x6000003f),
+  PINCFG0_0: PORT_PINCFG0_Type(loc: 0x60000040),
+  PINCFG0_1: PORT_PINCFG0_Type(loc: 0x60000041),
+  PINCFG0_2: PORT_PINCFG0_Type(loc: 0x60000042),
+  PINCFG0_3: PORT_PINCFG0_Type(loc: 0x60000043),
+  PINCFG0_4: PORT_PINCFG0_Type(loc: 0x60000044),
+  PINCFG0_5: PORT_PINCFG0_Type(loc: 0x60000045),
+  PINCFG0_6: PORT_PINCFG0_Type(loc: 0x60000046),
+  PINCFG0_7: PORT_PINCFG0_Type(loc: 0x60000047),
+  PINCFG0_8: PORT_PINCFG0_Type(loc: 0x60000048),
+  PINCFG0_9: PORT_PINCFG0_Type(loc: 0x60000049),
+  PINCFG0_10: PORT_PINCFG0_Type(loc: 0x6000004a),
+  PINCFG0_11: PORT_PINCFG0_Type(loc: 0x6000004b),
+  PINCFG0_12: PORT_PINCFG0_Type(loc: 0x6000004c),
+  PINCFG0_13: PORT_PINCFG0_Type(loc: 0x6000004d),
+  PINCFG0_14: PORT_PINCFG0_Type(loc: 0x6000004e),
+  PINCFG0_15: PORT_PINCFG0_Type(loc: 0x6000004f),
+  PINCFG0_16: PORT_PINCFG0_Type(loc: 0x60000050),
+  PINCFG0_17: PORT_PINCFG0_Type(loc: 0x60000051),
+  PINCFG0_18: PORT_PINCFG0_Type(loc: 0x60000052),
+  PINCFG0_19: PORT_PINCFG0_Type(loc: 0x60000053),
+  PINCFG0_20: PORT_PINCFG0_Type(loc: 0x60000054),
+  PINCFG0_21: PORT_PINCFG0_Type(loc: 0x60000055),
+  PINCFG0_22: PORT_PINCFG0_Type(loc: 0x60000056),
+  PINCFG0_23: PORT_PINCFG0_Type(loc: 0x60000057),
+  PINCFG0_24: PORT_PINCFG0_Type(loc: 0x60000058),
+  PINCFG0_25: PORT_PINCFG0_Type(loc: 0x60000059),
+  PINCFG0_26: PORT_PINCFG0_Type(loc: 0x6000005a),
+  PINCFG0_27: PORT_PINCFG0_Type(loc: 0x6000005b),
+  PINCFG0_28: PORT_PINCFG0_Type(loc: 0x6000005c),
+  PINCFG0_29: PORT_PINCFG0_Type(loc: 0x6000005d),
+  PINCFG0_30: PORT_PINCFG0_Type(loc: 0x6000005e),
+  PINCFG0_31: PORT_PINCFG0_Type(loc: 0x6000005f),
+  DIR1: PORT_DIR_Type(loc: 0x60000080),
+  DIRCLR1: PORT_DIRCLR_Type(loc: 0x60000084),
+  DIRSET1: PORT_DIRSET_Type(loc: 0x60000088),
+  DIRTGL1: PORT_DIRTGL_Type(loc: 0x6000008c),
+  OUT1: PORT_OUT_Type(loc: 0x60000090),
+  OUTCLR1: PORT_OUTCLR_Type(loc: 0x60000094),
+  OUTSET1: PORT_OUTSET_Type(loc: 0x60000098),
+  OUTTGL1: PORT_OUTTGL_Type(loc: 0x6000009c),
+  IN1: PORT_IN_Type(loc: 0x600000a0),
+  CTRL1: PORT_CTRL_Type(loc: 0x600000a4),
+  WRCONFIG1: PORT_WRCONFIG_Type(loc: 0x600000a8),
+  PMUX1_0: PORT_PMUX0_Type(loc: 0x600000b0),
+  PMUX1_1: PORT_PMUX0_Type(loc: 0x600000b1),
+  PMUX1_2: PORT_PMUX0_Type(loc: 0x600000b2),
+  PMUX1_3: PORT_PMUX0_Type(loc: 0x600000b3),
+  PMUX1_4: PORT_PMUX0_Type(loc: 0x600000b4),
+  PMUX1_5: PORT_PMUX0_Type(loc: 0x600000b5),
+  PMUX1_6: PORT_PMUX0_Type(loc: 0x600000b6),
+  PMUX1_7: PORT_PMUX0_Type(loc: 0x600000b7),
+  PMUX1_8: PORT_PMUX0_Type(loc: 0x600000b8),
+  PMUX1_9: PORT_PMUX0_Type(loc: 0x600000b9),
+  PMUX1_10: PORT_PMUX0_Type(loc: 0x600000ba),
+  PMUX1_11: PORT_PMUX0_Type(loc: 0x600000bb),
+  PMUX1_12: PORT_PMUX0_Type(loc: 0x600000bc),
+  PMUX1_13: PORT_PMUX0_Type(loc: 0x600000bd),
+  PMUX1_14: PORT_PMUX0_Type(loc: 0x600000be),
+  PMUX1_15: PORT_PMUX0_Type(loc: 0x600000bf),
+  PINCFG1_0: PORT_PINCFG0_Type(loc: 0x600000c0),
+  PINCFG1_1: PORT_PINCFG0_Type(loc: 0x600000c1),
+  PINCFG1_2: PORT_PINCFG0_Type(loc: 0x600000c2),
+  PINCFG1_3: PORT_PINCFG0_Type(loc: 0x600000c3),
+  PINCFG1_4: PORT_PINCFG0_Type(loc: 0x600000c4),
+  PINCFG1_5: PORT_PINCFG0_Type(loc: 0x600000c5),
+  PINCFG1_6: PORT_PINCFG0_Type(loc: 0x600000c6),
+  PINCFG1_7: PORT_PINCFG0_Type(loc: 0x600000c7),
+  PINCFG1_8: PORT_PINCFG0_Type(loc: 0x600000c8),
+  PINCFG1_9: PORT_PINCFG0_Type(loc: 0x600000c9),
+  PINCFG1_10: PORT_PINCFG0_Type(loc: 0x600000ca),
+  PINCFG1_11: PORT_PINCFG0_Type(loc: 0x600000cb),
+  PINCFG1_12: PORT_PINCFG0_Type(loc: 0x600000cc),
+  PINCFG1_13: PORT_PINCFG0_Type(loc: 0x600000cd),
+  PINCFG1_14: PORT_PINCFG0_Type(loc: 0x600000ce),
+  PINCFG1_15: PORT_PINCFG0_Type(loc: 0x600000cf),
+  PINCFG1_16: PORT_PINCFG0_Type(loc: 0x600000d0),
+  PINCFG1_17: PORT_PINCFG0_Type(loc: 0x600000d1),
+  PINCFG1_18: PORT_PINCFG0_Type(loc: 0x600000d2),
+  PINCFG1_19: PORT_PINCFG0_Type(loc: 0x600000d3),
+  PINCFG1_20: PORT_PINCFG0_Type(loc: 0x600000d4),
+  PINCFG1_21: PORT_PINCFG0_Type(loc: 0x600000d5),
+  PINCFG1_22: PORT_PINCFG0_Type(loc: 0x600000d6),
+  PINCFG1_23: PORT_PINCFG0_Type(loc: 0x600000d7),
+  PINCFG1_24: PORT_PINCFG0_Type(loc: 0x600000d8),
+  PINCFG1_25: PORT_PINCFG0_Type(loc: 0x600000d9),
+  PINCFG1_26: PORT_PINCFG0_Type(loc: 0x600000da),
+  PINCFG1_27: PORT_PINCFG0_Type(loc: 0x600000db),
+  PINCFG1_28: PORT_PINCFG0_Type(loc: 0x600000dc),
+  PINCFG1_29: PORT_PINCFG0_Type(loc: 0x600000dd),
+  PINCFG1_30: PORT_PINCFG0_Type(loc: 0x600000de),
+  PINCFG1_31: PORT_PINCFG0_Type(loc: 0x600000df),
 )
 
-let RTC* = RTC_Type(
+const RTC* = RTC_Type(
   MODE0: RtcMode0_Type(
-    CTRL: RtcMode0_CTRL_Type(p: cast[ptr uint16](0x40001400)),
-    READREQ: RtcMode0_READREQ_Type(p: cast[ptr uint16](0x40001402)),
-    EVCTRL: RtcMode0_EVCTRL_Type(p: cast[ptr uint16](0x40001404)),
-    INTENCLR: RtcMode0_INTENCLR_Type(p: cast[ptr uint8](0x40001406)),
-    INTENSET: RtcMode0_INTENSET_Type(p: cast[ptr uint8](0x40001407)),
-    INTFLAG: RtcMode0_INTFLAG_Type(p: cast[ptr uint8](0x40001408)),
-    STATUS: RtcMode0_STATUS_Type(p: cast[ptr uint8](0x4000140a)),
-    DBGCTRL: RtcMode0_DBGCTRL_Type(p: cast[ptr uint8](0x4000140b)),
-    FREQCORR: RtcMode0_FREQCORR_Type(p: cast[ptr uint8](0x4000140c)),
-    COUNT: RtcMode0_COUNT_Type(p: cast[ptr uint32](0x40001410)),
-    COMP0: RtcMode0_COMP_Type(p: cast[ptr uint32](0x40001418)),
+    CTRL: RtcMode0_CTRL_Type(loc: 0x40001400),
+    READREQ: RtcMode0_READREQ_Type(loc: 0x40001402),
+    EVCTRL: RtcMode0_EVCTRL_Type(loc: 0x40001404),
+    INTENCLR: RtcMode0_INTENCLR_Type(loc: 0x40001406),
+    INTENSET: RtcMode0_INTENSET_Type(loc: 0x40001407),
+    INTFLAG: RtcMode0_INTFLAG_Type(loc: 0x40001408),
+    STATUS: RtcMode0_STATUS_Type(loc: 0x4000140a),
+    DBGCTRL: RtcMode0_DBGCTRL_Type(loc: 0x4000140b),
+    FREQCORR: RtcMode0_FREQCORR_Type(loc: 0x4000140c),
+    COUNT: RtcMode0_COUNT_Type(loc: 0x40001410),
+    COMP0: RtcMode0_COMP_Type(loc: 0x40001418),
   ),
   MODE1: RtcMode1_Type(
-    CTRL: RtcMode1_CTRL_Type(p: cast[ptr uint16](0x40001400)),
-    READREQ: RtcMode1_READREQ_Type(p: cast[ptr uint16](0x40001402)),
-    EVCTRL: RtcMode1_EVCTRL_Type(p: cast[ptr uint16](0x40001404)),
-    INTENCLR: RtcMode1_INTENCLR_Type(p: cast[ptr uint8](0x40001406)),
-    INTENSET: RtcMode1_INTENSET_Type(p: cast[ptr uint8](0x40001407)),
-    INTFLAG: RtcMode1_INTFLAG_Type(p: cast[ptr uint8](0x40001408)),
-    STATUS: RtcMode1_STATUS_Type(p: cast[ptr uint8](0x4000140a)),
-    DBGCTRL: RtcMode1_DBGCTRL_Type(p: cast[ptr uint8](0x4000140b)),
-    FREQCORR: RtcMode1_FREQCORR_Type(p: cast[ptr uint8](0x4000140c)),
-    COUNT: RtcMode1_COUNT_Type(p: cast[ptr uint16](0x40001410)),
-    PER: RtcMode1_PER_Type(p: cast[ptr uint16](0x40001414)),
-    COMP0: RtcMode1_COMP_Type(p: cast[ptr uint16](0x40001418)),
-    COMP1: RtcMode1_COMP_Type(p: cast[ptr uint16](0x4000141a)),
+    CTRL: RtcMode1_CTRL_Type(loc: 0x40001400),
+    READREQ: RtcMode1_READREQ_Type(loc: 0x40001402),
+    EVCTRL: RtcMode1_EVCTRL_Type(loc: 0x40001404),
+    INTENCLR: RtcMode1_INTENCLR_Type(loc: 0x40001406),
+    INTENSET: RtcMode1_INTENSET_Type(loc: 0x40001407),
+    INTFLAG: RtcMode1_INTFLAG_Type(loc: 0x40001408),
+    STATUS: RtcMode1_STATUS_Type(loc: 0x4000140a),
+    DBGCTRL: RtcMode1_DBGCTRL_Type(loc: 0x4000140b),
+    FREQCORR: RtcMode1_FREQCORR_Type(loc: 0x4000140c),
+    COUNT: RtcMode1_COUNT_Type(loc: 0x40001410),
+    PER: RtcMode1_PER_Type(loc: 0x40001414),
+    COMP0: RtcMode1_COMP_Type(loc: 0x40001418),
+    COMP1: RtcMode1_COMP_Type(loc: 0x4000141a),
   ),
   MODE2: RtcMode2_Type(
-    CTRL: RtcMode2_CTRL_Type(p: cast[ptr uint16](0x40001400)),
-    READREQ: RtcMode2_READREQ_Type(p: cast[ptr uint16](0x40001402)),
-    EVCTRL: RtcMode2_EVCTRL_Type(p: cast[ptr uint16](0x40001404)),
-    INTENCLR: RtcMode2_INTENCLR_Type(p: cast[ptr uint8](0x40001406)),
-    INTENSET: RtcMode2_INTENSET_Type(p: cast[ptr uint8](0x40001407)),
-    INTFLAG: RtcMode2_INTFLAG_Type(p: cast[ptr uint8](0x40001408)),
-    STATUS: RtcMode2_STATUS_Type(p: cast[ptr uint8](0x4000140a)),
-    DBGCTRL: RtcMode2_DBGCTRL_Type(p: cast[ptr uint8](0x4000140b)),
-    FREQCORR: RtcMode2_FREQCORR_Type(p: cast[ptr uint8](0x4000140c)),
-    CLOCK: RtcMode2_CLOCK_Type(p: cast[ptr uint32](0x40001410)),
-    ALARM0: RtcMode2_ALARM_Type(p: cast[ptr uint32](0x40001418)),
-    MASK0: RtcMode2_MASK_Type(p: cast[ptr uint8](0x4000141c)),
+    CTRL: RtcMode2_CTRL_Type(loc: 0x40001400),
+    READREQ: RtcMode2_READREQ_Type(loc: 0x40001402),
+    EVCTRL: RtcMode2_EVCTRL_Type(loc: 0x40001404),
+    INTENCLR: RtcMode2_INTENCLR_Type(loc: 0x40001406),
+    INTENSET: RtcMode2_INTENSET_Type(loc: 0x40001407),
+    INTFLAG: RtcMode2_INTFLAG_Type(loc: 0x40001408),
+    STATUS: RtcMode2_STATUS_Type(loc: 0x4000140a),
+    DBGCTRL: RtcMode2_DBGCTRL_Type(loc: 0x4000140b),
+    FREQCORR: RtcMode2_FREQCORR_Type(loc: 0x4000140c),
+    CLOCK: RtcMode2_CLOCK_Type(loc: 0x40001410),
+    ALARM0: RtcMode2_ALARM_Type(loc: 0x40001418),
+    MASK0: RtcMode2_MASK_Type(loc: 0x4000141c),
   ),
 )
 
-let SERCOM0* = SERCOM0_Type(
+const SERCOM0* = SERCOM0_Type(
   I2CM: SercomI2cm_Type(
-    CTRLA: SercomI2cm_CTRLA_Type(p: cast[ptr uint32](0x42000800)),
-    CTRLB: SercomI2cm_CTRLB_Type(p: cast[ptr uint32](0x42000804)),
-    BAUD: SercomI2cm_BAUD_Type(p: cast[ptr uint32](0x4200080c)),
-    INTENCLR: SercomI2cm_INTENCLR_Type(p: cast[ptr uint8](0x42000814)),
-    INTENSET: SercomI2cm_INTENSET_Type(p: cast[ptr uint8](0x42000816)),
-    INTFLAG: SercomI2cm_INTFLAG_Type(p: cast[ptr uint8](0x42000818)),
-    STATUS: SercomI2cm_STATUS_Type(p: cast[ptr uint16](0x4200081a)),
-    SYNCBUSY: SercomI2cm_SYNCBUSY_Type(p: cast[ptr uint32](0x4200081c)),
-    ADDR: SercomI2cm_ADDR_Type(p: cast[ptr uint32](0x42000824)),
-    DATA: SercomI2cm_DATA_Type(p: cast[ptr uint8](0x42000828)),
-    DBGCTRL: SercomI2cm_DBGCTRL_Type(p: cast[ptr uint8](0x42000830)),
+    CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42000800),
+    CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42000804),
+    BAUD: SercomI2cm_BAUD_Type(loc: 0x4200080c),
+    INTENCLR: SercomI2cm_INTENCLR_Type(loc: 0x42000814),
+    INTENSET: SercomI2cm_INTENSET_Type(loc: 0x42000816),
+    INTFLAG: SercomI2cm_INTFLAG_Type(loc: 0x42000818),
+    STATUS: SercomI2cm_STATUS_Type(loc: 0x4200081a),
+    SYNCBUSY: SercomI2cm_SYNCBUSY_Type(loc: 0x4200081c),
+    ADDR: SercomI2cm_ADDR_Type(loc: 0x42000824),
+    DATA: SercomI2cm_DATA_Type(loc: 0x42000828),
+    DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42000830),
   ),
   I2CS: SercomI2cs_Type(
-    CTRLA: SercomI2cs_CTRLA_Type(p: cast[ptr uint32](0x42000800)),
-    CTRLB: SercomI2cs_CTRLB_Type(p: cast[ptr uint32](0x42000804)),
-    INTENCLR: SercomI2cs_INTENCLR_Type(p: cast[ptr uint8](0x42000814)),
-    INTENSET: SercomI2cs_INTENSET_Type(p: cast[ptr uint8](0x42000816)),
-    INTFLAG: SercomI2cs_INTFLAG_Type(p: cast[ptr uint8](0x42000818)),
-    STATUS: SercomI2cs_STATUS_Type(p: cast[ptr uint16](0x4200081a)),
-    SYNCBUSY: SercomI2cs_SYNCBUSY_Type(p: cast[ptr uint32](0x4200081c)),
-    ADDR: SercomI2cs_ADDR_Type(p: cast[ptr uint32](0x42000824)),
-    DATA: SercomI2cs_DATA_Type(p: cast[ptr uint8](0x42000828)),
+    CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42000800),
+    CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42000804),
+    INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42000814),
+    INTENSET: SercomI2cs_INTENSET_Type(loc: 0x42000816),
+    INTFLAG: SercomI2cs_INTFLAG_Type(loc: 0x42000818),
+    STATUS: SercomI2cs_STATUS_Type(loc: 0x4200081a),
+    SYNCBUSY: SercomI2cs_SYNCBUSY_Type(loc: 0x4200081c),
+    ADDR: SercomI2cs_ADDR_Type(loc: 0x42000824),
+    DATA: SercomI2cs_DATA_Type(loc: 0x42000828),
   ),
   SPI: SercomSpi_Type(
-    CTRLA: SercomSpi_CTRLA_Type(p: cast[ptr uint32](0x42000800)),
-    CTRLB: SercomSpi_CTRLB_Type(p: cast[ptr uint32](0x42000804)),
-    BAUD: SercomSpi_BAUD_Type(p: cast[ptr uint8](0x4200080c)),
-    INTENCLR: SercomSpi_INTENCLR_Type(p: cast[ptr uint8](0x42000814)),
-    INTENSET: SercomSpi_INTENSET_Type(p: cast[ptr uint8](0x42000816)),
-    INTFLAG: SercomSpi_INTFLAG_Type(p: cast[ptr uint8](0x42000818)),
-    STATUS: SercomSpi_STATUS_Type(p: cast[ptr uint16](0x4200081a)),
-    SYNCBUSY: SercomSpi_SYNCBUSY_Type(p: cast[ptr uint32](0x4200081c)),
-    ADDR: SercomSpi_ADDR_Type(p: cast[ptr uint32](0x42000824)),
-    DATA: SercomSpi_DATA_Type(p: cast[ptr uint32](0x42000828)),
-    DBGCTRL: SercomSpi_DBGCTRL_Type(p: cast[ptr uint8](0x42000830)),
+    CTRLA: SercomSpi_CTRLA_Type(loc: 0x42000800),
+    CTRLB: SercomSpi_CTRLB_Type(loc: 0x42000804),
+    BAUD: SercomSpi_BAUD_Type(loc: 0x4200080c),
+    INTENCLR: SercomSpi_INTENCLR_Type(loc: 0x42000814),
+    INTENSET: SercomSpi_INTENSET_Type(loc: 0x42000816),
+    INTFLAG: SercomSpi_INTFLAG_Type(loc: 0x42000818),
+    STATUS: SercomSpi_STATUS_Type(loc: 0x4200081a),
+    SYNCBUSY: SercomSpi_SYNCBUSY_Type(loc: 0x4200081c),
+    ADDR: SercomSpi_ADDR_Type(loc: 0x42000824),
+    DATA: SercomSpi_DATA_Type(loc: 0x42000828),
+    DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42000830),
   ),
   USART: SercomUsart_Type(
-    CTRLA: SercomUsart_CTRLA_Type(p: cast[ptr uint32](0x42000800)),
-    CTRLB: SercomUsart_CTRLB_Type(p: cast[ptr uint32](0x42000804)),
-    BAUD: SercomUsart_BAUD_Type(p: cast[ptr uint16](0x4200080c)),
-    BAUD_FRAC_MODE: SercomUsart_BAUD_FRAC_MODE_Type(p: cast[ptr uint16](0x4200080c)),
-    BAUD_FRACFP_MODE: SercomUsart_BAUD_FRACFP_MODE_Type(p: cast[ptr uint16](0x4200080c)),
-    BAUD_USARTFP_MODE: SercomUsart_BAUD_USARTFP_MODE_Type(p: cast[ptr uint16](0x4200080c)),
-    RXPL: SercomUsart_RXPL_Type(p: cast[ptr uint8](0x4200080e)),
-    INTENCLR: SercomUsart_INTENCLR_Type(p: cast[ptr uint8](0x42000814)),
-    INTENSET: SercomUsart_INTENSET_Type(p: cast[ptr uint8](0x42000816)),
-    INTFLAG: SercomUsart_INTFLAG_Type(p: cast[ptr uint8](0x42000818)),
-    STATUS: SercomUsart_STATUS_Type(p: cast[ptr uint16](0x4200081a)),
-    SYNCBUSY: SercomUsart_SYNCBUSY_Type(p: cast[ptr uint32](0x4200081c)),
-    DATA: SercomUsart_DATA_Type(p: cast[ptr uint16](0x42000828)),
-    DBGCTRL: SercomUsart_DBGCTRL_Type(p: cast[ptr uint8](0x42000830)),
+    CTRLA: SercomUsart_CTRLA_Type(loc: 0x42000800),
+    CTRLB: SercomUsart_CTRLB_Type(loc: 0x42000804),
+    BAUD: SercomUsart_BAUD_Type(loc: 0x4200080c),
+    BAUD_FRAC_MODE: SercomUsart_BAUD_FRAC_MODE_Type(loc: 0x4200080c),
+    BAUD_FRACFP_MODE: SercomUsart_BAUD_FRACFP_MODE_Type(loc: 0x4200080c),
+    BAUD_USARTFP_MODE: SercomUsart_BAUD_USARTFP_MODE_Type(loc: 0x4200080c),
+    RXPL: SercomUsart_RXPL_Type(loc: 0x4200080e),
+    INTENCLR: SercomUsart_INTENCLR_Type(loc: 0x42000814),
+    INTENSET: SercomUsart_INTENSET_Type(loc: 0x42000816),
+    INTFLAG: SercomUsart_INTFLAG_Type(loc: 0x42000818),
+    STATUS: SercomUsart_STATUS_Type(loc: 0x4200081a),
+    SYNCBUSY: SercomUsart_SYNCBUSY_Type(loc: 0x4200081c),
+    DATA: SercomUsart_DATA_Type(loc: 0x42000828),
+    DBGCTRL: SercomUsart_DBGCTRL_Type(loc: 0x42000830),
   ),
 )
 
-let SERCOM1* = SERCOM0_Type(
+const SERCOM1* = SERCOM0_Type(
   I2CM: SercomI2cm_Type(
-    CTRLA: SercomI2cm_CTRLA_Type(p: cast[ptr uint32](0x42000c00)),
-    CTRLB: SercomI2cm_CTRLB_Type(p: cast[ptr uint32](0x42000c04)),
-    BAUD: SercomI2cm_BAUD_Type(p: cast[ptr uint32](0x42000c0c)),
-    INTENCLR: SercomI2cm_INTENCLR_Type(p: cast[ptr uint8](0x42000c14)),
-    INTENSET: SercomI2cm_INTENSET_Type(p: cast[ptr uint8](0x42000c16)),
-    INTFLAG: SercomI2cm_INTFLAG_Type(p: cast[ptr uint8](0x42000c18)),
-    STATUS: SercomI2cm_STATUS_Type(p: cast[ptr uint16](0x42000c1a)),
-    SYNCBUSY: SercomI2cm_SYNCBUSY_Type(p: cast[ptr uint32](0x42000c1c)),
-    ADDR: SercomI2cm_ADDR_Type(p: cast[ptr uint32](0x42000c24)),
-    DATA: SercomI2cm_DATA_Type(p: cast[ptr uint8](0x42000c28)),
-    DBGCTRL: SercomI2cm_DBGCTRL_Type(p: cast[ptr uint8](0x42000c30)),
+    CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42000c00),
+    CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42000c04),
+    BAUD: SercomI2cm_BAUD_Type(loc: 0x42000c0c),
+    INTENCLR: SercomI2cm_INTENCLR_Type(loc: 0x42000c14),
+    INTENSET: SercomI2cm_INTENSET_Type(loc: 0x42000c16),
+    INTFLAG: SercomI2cm_INTFLAG_Type(loc: 0x42000c18),
+    STATUS: SercomI2cm_STATUS_Type(loc: 0x42000c1a),
+    SYNCBUSY: SercomI2cm_SYNCBUSY_Type(loc: 0x42000c1c),
+    ADDR: SercomI2cm_ADDR_Type(loc: 0x42000c24),
+    DATA: SercomI2cm_DATA_Type(loc: 0x42000c28),
+    DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42000c30),
   ),
   I2CS: SercomI2cs_Type(
-    CTRLA: SercomI2cs_CTRLA_Type(p: cast[ptr uint32](0x42000c00)),
-    CTRLB: SercomI2cs_CTRLB_Type(p: cast[ptr uint32](0x42000c04)),
-    INTENCLR: SercomI2cs_INTENCLR_Type(p: cast[ptr uint8](0x42000c14)),
-    INTENSET: SercomI2cs_INTENSET_Type(p: cast[ptr uint8](0x42000c16)),
-    INTFLAG: SercomI2cs_INTFLAG_Type(p: cast[ptr uint8](0x42000c18)),
-    STATUS: SercomI2cs_STATUS_Type(p: cast[ptr uint16](0x42000c1a)),
-    SYNCBUSY: SercomI2cs_SYNCBUSY_Type(p: cast[ptr uint32](0x42000c1c)),
-    ADDR: SercomI2cs_ADDR_Type(p: cast[ptr uint32](0x42000c24)),
-    DATA: SercomI2cs_DATA_Type(p: cast[ptr uint8](0x42000c28)),
+    CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42000c00),
+    CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42000c04),
+    INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42000c14),
+    INTENSET: SercomI2cs_INTENSET_Type(loc: 0x42000c16),
+    INTFLAG: SercomI2cs_INTFLAG_Type(loc: 0x42000c18),
+    STATUS: SercomI2cs_STATUS_Type(loc: 0x42000c1a),
+    SYNCBUSY: SercomI2cs_SYNCBUSY_Type(loc: 0x42000c1c),
+    ADDR: SercomI2cs_ADDR_Type(loc: 0x42000c24),
+    DATA: SercomI2cs_DATA_Type(loc: 0x42000c28),
   ),
   SPI: SercomSpi_Type(
-    CTRLA: SercomSpi_CTRLA_Type(p: cast[ptr uint32](0x42000c00)),
-    CTRLB: SercomSpi_CTRLB_Type(p: cast[ptr uint32](0x42000c04)),
-    BAUD: SercomSpi_BAUD_Type(p: cast[ptr uint8](0x42000c0c)),
-    INTENCLR: SercomSpi_INTENCLR_Type(p: cast[ptr uint8](0x42000c14)),
-    INTENSET: SercomSpi_INTENSET_Type(p: cast[ptr uint8](0x42000c16)),
-    INTFLAG: SercomSpi_INTFLAG_Type(p: cast[ptr uint8](0x42000c18)),
-    STATUS: SercomSpi_STATUS_Type(p: cast[ptr uint16](0x42000c1a)),
-    SYNCBUSY: SercomSpi_SYNCBUSY_Type(p: cast[ptr uint32](0x42000c1c)),
-    ADDR: SercomSpi_ADDR_Type(p: cast[ptr uint32](0x42000c24)),
-    DATA: SercomSpi_DATA_Type(p: cast[ptr uint32](0x42000c28)),
-    DBGCTRL: SercomSpi_DBGCTRL_Type(p: cast[ptr uint8](0x42000c30)),
+    CTRLA: SercomSpi_CTRLA_Type(loc: 0x42000c00),
+    CTRLB: SercomSpi_CTRLB_Type(loc: 0x42000c04),
+    BAUD: SercomSpi_BAUD_Type(loc: 0x42000c0c),
+    INTENCLR: SercomSpi_INTENCLR_Type(loc: 0x42000c14),
+    INTENSET: SercomSpi_INTENSET_Type(loc: 0x42000c16),
+    INTFLAG: SercomSpi_INTFLAG_Type(loc: 0x42000c18),
+    STATUS: SercomSpi_STATUS_Type(loc: 0x42000c1a),
+    SYNCBUSY: SercomSpi_SYNCBUSY_Type(loc: 0x42000c1c),
+    ADDR: SercomSpi_ADDR_Type(loc: 0x42000c24),
+    DATA: SercomSpi_DATA_Type(loc: 0x42000c28),
+    DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42000c30),
   ),
   USART: SercomUsart_Type(
-    CTRLA: SercomUsart_CTRLA_Type(p: cast[ptr uint32](0x42000c00)),
-    CTRLB: SercomUsart_CTRLB_Type(p: cast[ptr uint32](0x42000c04)),
-    BAUD: SercomUsart_BAUD_Type(p: cast[ptr uint16](0x42000c0c)),
-    BAUD_FRAC_MODE: SercomUsart_BAUD_FRAC_MODE_Type(p: cast[ptr uint16](0x42000c0c)),
-    BAUD_FRACFP_MODE: SercomUsart_BAUD_FRACFP_MODE_Type(p: cast[ptr uint16](0x42000c0c)),
-    BAUD_USARTFP_MODE: SercomUsart_BAUD_USARTFP_MODE_Type(p: cast[ptr uint16](0x42000c0c)),
-    RXPL: SercomUsart_RXPL_Type(p: cast[ptr uint8](0x42000c0e)),
-    INTENCLR: SercomUsart_INTENCLR_Type(p: cast[ptr uint8](0x42000c14)),
-    INTENSET: SercomUsart_INTENSET_Type(p: cast[ptr uint8](0x42000c16)),
-    INTFLAG: SercomUsart_INTFLAG_Type(p: cast[ptr uint8](0x42000c18)),
-    STATUS: SercomUsart_STATUS_Type(p: cast[ptr uint16](0x42000c1a)),
-    SYNCBUSY: SercomUsart_SYNCBUSY_Type(p: cast[ptr uint32](0x42000c1c)),
-    DATA: SercomUsart_DATA_Type(p: cast[ptr uint16](0x42000c28)),
-    DBGCTRL: SercomUsart_DBGCTRL_Type(p: cast[ptr uint8](0x42000c30)),
+    CTRLA: SercomUsart_CTRLA_Type(loc: 0x42000c00),
+    CTRLB: SercomUsart_CTRLB_Type(loc: 0x42000c04),
+    BAUD: SercomUsart_BAUD_Type(loc: 0x42000c0c),
+    BAUD_FRAC_MODE: SercomUsart_BAUD_FRAC_MODE_Type(loc: 0x42000c0c),
+    BAUD_FRACFP_MODE: SercomUsart_BAUD_FRACFP_MODE_Type(loc: 0x42000c0c),
+    BAUD_USARTFP_MODE: SercomUsart_BAUD_USARTFP_MODE_Type(loc: 0x42000c0c),
+    RXPL: SercomUsart_RXPL_Type(loc: 0x42000c0e),
+    INTENCLR: SercomUsart_INTENCLR_Type(loc: 0x42000c14),
+    INTENSET: SercomUsart_INTENSET_Type(loc: 0x42000c16),
+    INTFLAG: SercomUsart_INTFLAG_Type(loc: 0x42000c18),
+    STATUS: SercomUsart_STATUS_Type(loc: 0x42000c1a),
+    SYNCBUSY: SercomUsart_SYNCBUSY_Type(loc: 0x42000c1c),
+    DATA: SercomUsart_DATA_Type(loc: 0x42000c28),
+    DBGCTRL: SercomUsart_DBGCTRL_Type(loc: 0x42000c30),
   ),
 )
 
-let SERCOM2* = SERCOM0_Type(
+const SERCOM2* = SERCOM0_Type(
   I2CM: SercomI2cm_Type(
-    CTRLA: SercomI2cm_CTRLA_Type(p: cast[ptr uint32](0x42001000)),
-    CTRLB: SercomI2cm_CTRLB_Type(p: cast[ptr uint32](0x42001004)),
-    BAUD: SercomI2cm_BAUD_Type(p: cast[ptr uint32](0x4200100c)),
-    INTENCLR: SercomI2cm_INTENCLR_Type(p: cast[ptr uint8](0x42001014)),
-    INTENSET: SercomI2cm_INTENSET_Type(p: cast[ptr uint8](0x42001016)),
-    INTFLAG: SercomI2cm_INTFLAG_Type(p: cast[ptr uint8](0x42001018)),
-    STATUS: SercomI2cm_STATUS_Type(p: cast[ptr uint16](0x4200101a)),
-    SYNCBUSY: SercomI2cm_SYNCBUSY_Type(p: cast[ptr uint32](0x4200101c)),
-    ADDR: SercomI2cm_ADDR_Type(p: cast[ptr uint32](0x42001024)),
-    DATA: SercomI2cm_DATA_Type(p: cast[ptr uint8](0x42001028)),
-    DBGCTRL: SercomI2cm_DBGCTRL_Type(p: cast[ptr uint8](0x42001030)),
+    CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42001000),
+    CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42001004),
+    BAUD: SercomI2cm_BAUD_Type(loc: 0x4200100c),
+    INTENCLR: SercomI2cm_INTENCLR_Type(loc: 0x42001014),
+    INTENSET: SercomI2cm_INTENSET_Type(loc: 0x42001016),
+    INTFLAG: SercomI2cm_INTFLAG_Type(loc: 0x42001018),
+    STATUS: SercomI2cm_STATUS_Type(loc: 0x4200101a),
+    SYNCBUSY: SercomI2cm_SYNCBUSY_Type(loc: 0x4200101c),
+    ADDR: SercomI2cm_ADDR_Type(loc: 0x42001024),
+    DATA: SercomI2cm_DATA_Type(loc: 0x42001028),
+    DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42001030),
   ),
   I2CS: SercomI2cs_Type(
-    CTRLA: SercomI2cs_CTRLA_Type(p: cast[ptr uint32](0x42001000)),
-    CTRLB: SercomI2cs_CTRLB_Type(p: cast[ptr uint32](0x42001004)),
-    INTENCLR: SercomI2cs_INTENCLR_Type(p: cast[ptr uint8](0x42001014)),
-    INTENSET: SercomI2cs_INTENSET_Type(p: cast[ptr uint8](0x42001016)),
-    INTFLAG: SercomI2cs_INTFLAG_Type(p: cast[ptr uint8](0x42001018)),
-    STATUS: SercomI2cs_STATUS_Type(p: cast[ptr uint16](0x4200101a)),
-    SYNCBUSY: SercomI2cs_SYNCBUSY_Type(p: cast[ptr uint32](0x4200101c)),
-    ADDR: SercomI2cs_ADDR_Type(p: cast[ptr uint32](0x42001024)),
-    DATA: SercomI2cs_DATA_Type(p: cast[ptr uint8](0x42001028)),
+    CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42001000),
+    CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42001004),
+    INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42001014),
+    INTENSET: SercomI2cs_INTENSET_Type(loc: 0x42001016),
+    INTFLAG: SercomI2cs_INTFLAG_Type(loc: 0x42001018),
+    STATUS: SercomI2cs_STATUS_Type(loc: 0x4200101a),
+    SYNCBUSY: SercomI2cs_SYNCBUSY_Type(loc: 0x4200101c),
+    ADDR: SercomI2cs_ADDR_Type(loc: 0x42001024),
+    DATA: SercomI2cs_DATA_Type(loc: 0x42001028),
   ),
   SPI: SercomSpi_Type(
-    CTRLA: SercomSpi_CTRLA_Type(p: cast[ptr uint32](0x42001000)),
-    CTRLB: SercomSpi_CTRLB_Type(p: cast[ptr uint32](0x42001004)),
-    BAUD: SercomSpi_BAUD_Type(p: cast[ptr uint8](0x4200100c)),
-    INTENCLR: SercomSpi_INTENCLR_Type(p: cast[ptr uint8](0x42001014)),
-    INTENSET: SercomSpi_INTENSET_Type(p: cast[ptr uint8](0x42001016)),
-    INTFLAG: SercomSpi_INTFLAG_Type(p: cast[ptr uint8](0x42001018)),
-    STATUS: SercomSpi_STATUS_Type(p: cast[ptr uint16](0x4200101a)),
-    SYNCBUSY: SercomSpi_SYNCBUSY_Type(p: cast[ptr uint32](0x4200101c)),
-    ADDR: SercomSpi_ADDR_Type(p: cast[ptr uint32](0x42001024)),
-    DATA: SercomSpi_DATA_Type(p: cast[ptr uint32](0x42001028)),
-    DBGCTRL: SercomSpi_DBGCTRL_Type(p: cast[ptr uint8](0x42001030)),
+    CTRLA: SercomSpi_CTRLA_Type(loc: 0x42001000),
+    CTRLB: SercomSpi_CTRLB_Type(loc: 0x42001004),
+    BAUD: SercomSpi_BAUD_Type(loc: 0x4200100c),
+    INTENCLR: SercomSpi_INTENCLR_Type(loc: 0x42001014),
+    INTENSET: SercomSpi_INTENSET_Type(loc: 0x42001016),
+    INTFLAG: SercomSpi_INTFLAG_Type(loc: 0x42001018),
+    STATUS: SercomSpi_STATUS_Type(loc: 0x4200101a),
+    SYNCBUSY: SercomSpi_SYNCBUSY_Type(loc: 0x4200101c),
+    ADDR: SercomSpi_ADDR_Type(loc: 0x42001024),
+    DATA: SercomSpi_DATA_Type(loc: 0x42001028),
+    DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42001030),
   ),
   USART: SercomUsart_Type(
-    CTRLA: SercomUsart_CTRLA_Type(p: cast[ptr uint32](0x42001000)),
-    CTRLB: SercomUsart_CTRLB_Type(p: cast[ptr uint32](0x42001004)),
-    BAUD: SercomUsart_BAUD_Type(p: cast[ptr uint16](0x4200100c)),
-    BAUD_FRAC_MODE: SercomUsart_BAUD_FRAC_MODE_Type(p: cast[ptr uint16](0x4200100c)),
-    BAUD_FRACFP_MODE: SercomUsart_BAUD_FRACFP_MODE_Type(p: cast[ptr uint16](0x4200100c)),
-    BAUD_USARTFP_MODE: SercomUsart_BAUD_USARTFP_MODE_Type(p: cast[ptr uint16](0x4200100c)),
-    RXPL: SercomUsart_RXPL_Type(p: cast[ptr uint8](0x4200100e)),
-    INTENCLR: SercomUsart_INTENCLR_Type(p: cast[ptr uint8](0x42001014)),
-    INTENSET: SercomUsart_INTENSET_Type(p: cast[ptr uint8](0x42001016)),
-    INTFLAG: SercomUsart_INTFLAG_Type(p: cast[ptr uint8](0x42001018)),
-    STATUS: SercomUsart_STATUS_Type(p: cast[ptr uint16](0x4200101a)),
-    SYNCBUSY: SercomUsart_SYNCBUSY_Type(p: cast[ptr uint32](0x4200101c)),
-    DATA: SercomUsart_DATA_Type(p: cast[ptr uint16](0x42001028)),
-    DBGCTRL: SercomUsart_DBGCTRL_Type(p: cast[ptr uint8](0x42001030)),
+    CTRLA: SercomUsart_CTRLA_Type(loc: 0x42001000),
+    CTRLB: SercomUsart_CTRLB_Type(loc: 0x42001004),
+    BAUD: SercomUsart_BAUD_Type(loc: 0x4200100c),
+    BAUD_FRAC_MODE: SercomUsart_BAUD_FRAC_MODE_Type(loc: 0x4200100c),
+    BAUD_FRACFP_MODE: SercomUsart_BAUD_FRACFP_MODE_Type(loc: 0x4200100c),
+    BAUD_USARTFP_MODE: SercomUsart_BAUD_USARTFP_MODE_Type(loc: 0x4200100c),
+    RXPL: SercomUsart_RXPL_Type(loc: 0x4200100e),
+    INTENCLR: SercomUsart_INTENCLR_Type(loc: 0x42001014),
+    INTENSET: SercomUsart_INTENSET_Type(loc: 0x42001016),
+    INTFLAG: SercomUsart_INTFLAG_Type(loc: 0x42001018),
+    STATUS: SercomUsart_STATUS_Type(loc: 0x4200101a),
+    SYNCBUSY: SercomUsart_SYNCBUSY_Type(loc: 0x4200101c),
+    DATA: SercomUsart_DATA_Type(loc: 0x42001028),
+    DBGCTRL: SercomUsart_DBGCTRL_Type(loc: 0x42001030),
   ),
 )
 
-let SERCOM3* = SERCOM0_Type(
+const SERCOM3* = SERCOM0_Type(
   I2CM: SercomI2cm_Type(
-    CTRLA: SercomI2cm_CTRLA_Type(p: cast[ptr uint32](0x42001400)),
-    CTRLB: SercomI2cm_CTRLB_Type(p: cast[ptr uint32](0x42001404)),
-    BAUD: SercomI2cm_BAUD_Type(p: cast[ptr uint32](0x4200140c)),
-    INTENCLR: SercomI2cm_INTENCLR_Type(p: cast[ptr uint8](0x42001414)),
-    INTENSET: SercomI2cm_INTENSET_Type(p: cast[ptr uint8](0x42001416)),
-    INTFLAG: SercomI2cm_INTFLAG_Type(p: cast[ptr uint8](0x42001418)),
-    STATUS: SercomI2cm_STATUS_Type(p: cast[ptr uint16](0x4200141a)),
-    SYNCBUSY: SercomI2cm_SYNCBUSY_Type(p: cast[ptr uint32](0x4200141c)),
-    ADDR: SercomI2cm_ADDR_Type(p: cast[ptr uint32](0x42001424)),
-    DATA: SercomI2cm_DATA_Type(p: cast[ptr uint8](0x42001428)),
-    DBGCTRL: SercomI2cm_DBGCTRL_Type(p: cast[ptr uint8](0x42001430)),
+    CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42001400),
+    CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42001404),
+    BAUD: SercomI2cm_BAUD_Type(loc: 0x4200140c),
+    INTENCLR: SercomI2cm_INTENCLR_Type(loc: 0x42001414),
+    INTENSET: SercomI2cm_INTENSET_Type(loc: 0x42001416),
+    INTFLAG: SercomI2cm_INTFLAG_Type(loc: 0x42001418),
+    STATUS: SercomI2cm_STATUS_Type(loc: 0x4200141a),
+    SYNCBUSY: SercomI2cm_SYNCBUSY_Type(loc: 0x4200141c),
+    ADDR: SercomI2cm_ADDR_Type(loc: 0x42001424),
+    DATA: SercomI2cm_DATA_Type(loc: 0x42001428),
+    DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42001430),
   ),
   I2CS: SercomI2cs_Type(
-    CTRLA: SercomI2cs_CTRLA_Type(p: cast[ptr uint32](0x42001400)),
-    CTRLB: SercomI2cs_CTRLB_Type(p: cast[ptr uint32](0x42001404)),
-    INTENCLR: SercomI2cs_INTENCLR_Type(p: cast[ptr uint8](0x42001414)),
-    INTENSET: SercomI2cs_INTENSET_Type(p: cast[ptr uint8](0x42001416)),
-    INTFLAG: SercomI2cs_INTFLAG_Type(p: cast[ptr uint8](0x42001418)),
-    STATUS: SercomI2cs_STATUS_Type(p: cast[ptr uint16](0x4200141a)),
-    SYNCBUSY: SercomI2cs_SYNCBUSY_Type(p: cast[ptr uint32](0x4200141c)),
-    ADDR: SercomI2cs_ADDR_Type(p: cast[ptr uint32](0x42001424)),
-    DATA: SercomI2cs_DATA_Type(p: cast[ptr uint8](0x42001428)),
+    CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42001400),
+    CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42001404),
+    INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42001414),
+    INTENSET: SercomI2cs_INTENSET_Type(loc: 0x42001416),
+    INTFLAG: SercomI2cs_INTFLAG_Type(loc: 0x42001418),
+    STATUS: SercomI2cs_STATUS_Type(loc: 0x4200141a),
+    SYNCBUSY: SercomI2cs_SYNCBUSY_Type(loc: 0x4200141c),
+    ADDR: SercomI2cs_ADDR_Type(loc: 0x42001424),
+    DATA: SercomI2cs_DATA_Type(loc: 0x42001428),
   ),
   SPI: SercomSpi_Type(
-    CTRLA: SercomSpi_CTRLA_Type(p: cast[ptr uint32](0x42001400)),
-    CTRLB: SercomSpi_CTRLB_Type(p: cast[ptr uint32](0x42001404)),
-    BAUD: SercomSpi_BAUD_Type(p: cast[ptr uint8](0x4200140c)),
-    INTENCLR: SercomSpi_INTENCLR_Type(p: cast[ptr uint8](0x42001414)),
-    INTENSET: SercomSpi_INTENSET_Type(p: cast[ptr uint8](0x42001416)),
-    INTFLAG: SercomSpi_INTFLAG_Type(p: cast[ptr uint8](0x42001418)),
-    STATUS: SercomSpi_STATUS_Type(p: cast[ptr uint16](0x4200141a)),
-    SYNCBUSY: SercomSpi_SYNCBUSY_Type(p: cast[ptr uint32](0x4200141c)),
-    ADDR: SercomSpi_ADDR_Type(p: cast[ptr uint32](0x42001424)),
-    DATA: SercomSpi_DATA_Type(p: cast[ptr uint32](0x42001428)),
-    DBGCTRL: SercomSpi_DBGCTRL_Type(p: cast[ptr uint8](0x42001430)),
+    CTRLA: SercomSpi_CTRLA_Type(loc: 0x42001400),
+    CTRLB: SercomSpi_CTRLB_Type(loc: 0x42001404),
+    BAUD: SercomSpi_BAUD_Type(loc: 0x4200140c),
+    INTENCLR: SercomSpi_INTENCLR_Type(loc: 0x42001414),
+    INTENSET: SercomSpi_INTENSET_Type(loc: 0x42001416),
+    INTFLAG: SercomSpi_INTFLAG_Type(loc: 0x42001418),
+    STATUS: SercomSpi_STATUS_Type(loc: 0x4200141a),
+    SYNCBUSY: SercomSpi_SYNCBUSY_Type(loc: 0x4200141c),
+    ADDR: SercomSpi_ADDR_Type(loc: 0x42001424),
+    DATA: SercomSpi_DATA_Type(loc: 0x42001428),
+    DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42001430),
   ),
   USART: SercomUsart_Type(
-    CTRLA: SercomUsart_CTRLA_Type(p: cast[ptr uint32](0x42001400)),
-    CTRLB: SercomUsart_CTRLB_Type(p: cast[ptr uint32](0x42001404)),
-    BAUD: SercomUsart_BAUD_Type(p: cast[ptr uint16](0x4200140c)),
-    BAUD_FRAC_MODE: SercomUsart_BAUD_FRAC_MODE_Type(p: cast[ptr uint16](0x4200140c)),
-    BAUD_FRACFP_MODE: SercomUsart_BAUD_FRACFP_MODE_Type(p: cast[ptr uint16](0x4200140c)),
-    BAUD_USARTFP_MODE: SercomUsart_BAUD_USARTFP_MODE_Type(p: cast[ptr uint16](0x4200140c)),
-    RXPL: SercomUsart_RXPL_Type(p: cast[ptr uint8](0x4200140e)),
-    INTENCLR: SercomUsart_INTENCLR_Type(p: cast[ptr uint8](0x42001414)),
-    INTENSET: SercomUsart_INTENSET_Type(p: cast[ptr uint8](0x42001416)),
-    INTFLAG: SercomUsart_INTFLAG_Type(p: cast[ptr uint8](0x42001418)),
-    STATUS: SercomUsart_STATUS_Type(p: cast[ptr uint16](0x4200141a)),
-    SYNCBUSY: SercomUsart_SYNCBUSY_Type(p: cast[ptr uint32](0x4200141c)),
-    DATA: SercomUsart_DATA_Type(p: cast[ptr uint16](0x42001428)),
-    DBGCTRL: SercomUsart_DBGCTRL_Type(p: cast[ptr uint8](0x42001430)),
+    CTRLA: SercomUsart_CTRLA_Type(loc: 0x42001400),
+    CTRLB: SercomUsart_CTRLB_Type(loc: 0x42001404),
+    BAUD: SercomUsart_BAUD_Type(loc: 0x4200140c),
+    BAUD_FRAC_MODE: SercomUsart_BAUD_FRAC_MODE_Type(loc: 0x4200140c),
+    BAUD_FRACFP_MODE: SercomUsart_BAUD_FRACFP_MODE_Type(loc: 0x4200140c),
+    BAUD_USARTFP_MODE: SercomUsart_BAUD_USARTFP_MODE_Type(loc: 0x4200140c),
+    RXPL: SercomUsart_RXPL_Type(loc: 0x4200140e),
+    INTENCLR: SercomUsart_INTENCLR_Type(loc: 0x42001414),
+    INTENSET: SercomUsart_INTENSET_Type(loc: 0x42001416),
+    INTFLAG: SercomUsart_INTFLAG_Type(loc: 0x42001418),
+    STATUS: SercomUsart_STATUS_Type(loc: 0x4200141a),
+    SYNCBUSY: SercomUsart_SYNCBUSY_Type(loc: 0x4200141c),
+    DATA: SercomUsart_DATA_Type(loc: 0x42001428),
+    DBGCTRL: SercomUsart_DBGCTRL_Type(loc: 0x42001430),
   ),
 )
 
-let SERCOM4* = SERCOM0_Type(
+const SERCOM4* = SERCOM0_Type(
   I2CM: SercomI2cm_Type(
-    CTRLA: SercomI2cm_CTRLA_Type(p: cast[ptr uint32](0x42001800)),
-    CTRLB: SercomI2cm_CTRLB_Type(p: cast[ptr uint32](0x42001804)),
-    BAUD: SercomI2cm_BAUD_Type(p: cast[ptr uint32](0x4200180c)),
-    INTENCLR: SercomI2cm_INTENCLR_Type(p: cast[ptr uint8](0x42001814)),
-    INTENSET: SercomI2cm_INTENSET_Type(p: cast[ptr uint8](0x42001816)),
-    INTFLAG: SercomI2cm_INTFLAG_Type(p: cast[ptr uint8](0x42001818)),
-    STATUS: SercomI2cm_STATUS_Type(p: cast[ptr uint16](0x4200181a)),
-    SYNCBUSY: SercomI2cm_SYNCBUSY_Type(p: cast[ptr uint32](0x4200181c)),
-    ADDR: SercomI2cm_ADDR_Type(p: cast[ptr uint32](0x42001824)),
-    DATA: SercomI2cm_DATA_Type(p: cast[ptr uint8](0x42001828)),
-    DBGCTRL: SercomI2cm_DBGCTRL_Type(p: cast[ptr uint8](0x42001830)),
+    CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42001800),
+    CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42001804),
+    BAUD: SercomI2cm_BAUD_Type(loc: 0x4200180c),
+    INTENCLR: SercomI2cm_INTENCLR_Type(loc: 0x42001814),
+    INTENSET: SercomI2cm_INTENSET_Type(loc: 0x42001816),
+    INTFLAG: SercomI2cm_INTFLAG_Type(loc: 0x42001818),
+    STATUS: SercomI2cm_STATUS_Type(loc: 0x4200181a),
+    SYNCBUSY: SercomI2cm_SYNCBUSY_Type(loc: 0x4200181c),
+    ADDR: SercomI2cm_ADDR_Type(loc: 0x42001824),
+    DATA: SercomI2cm_DATA_Type(loc: 0x42001828),
+    DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42001830),
   ),
   I2CS: SercomI2cs_Type(
-    CTRLA: SercomI2cs_CTRLA_Type(p: cast[ptr uint32](0x42001800)),
-    CTRLB: SercomI2cs_CTRLB_Type(p: cast[ptr uint32](0x42001804)),
-    INTENCLR: SercomI2cs_INTENCLR_Type(p: cast[ptr uint8](0x42001814)),
-    INTENSET: SercomI2cs_INTENSET_Type(p: cast[ptr uint8](0x42001816)),
-    INTFLAG: SercomI2cs_INTFLAG_Type(p: cast[ptr uint8](0x42001818)),
-    STATUS: SercomI2cs_STATUS_Type(p: cast[ptr uint16](0x4200181a)),
-    SYNCBUSY: SercomI2cs_SYNCBUSY_Type(p: cast[ptr uint32](0x4200181c)),
-    ADDR: SercomI2cs_ADDR_Type(p: cast[ptr uint32](0x42001824)),
-    DATA: SercomI2cs_DATA_Type(p: cast[ptr uint8](0x42001828)),
+    CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42001800),
+    CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42001804),
+    INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42001814),
+    INTENSET: SercomI2cs_INTENSET_Type(loc: 0x42001816),
+    INTFLAG: SercomI2cs_INTFLAG_Type(loc: 0x42001818),
+    STATUS: SercomI2cs_STATUS_Type(loc: 0x4200181a),
+    SYNCBUSY: SercomI2cs_SYNCBUSY_Type(loc: 0x4200181c),
+    ADDR: SercomI2cs_ADDR_Type(loc: 0x42001824),
+    DATA: SercomI2cs_DATA_Type(loc: 0x42001828),
   ),
   SPI: SercomSpi_Type(
-    CTRLA: SercomSpi_CTRLA_Type(p: cast[ptr uint32](0x42001800)),
-    CTRLB: SercomSpi_CTRLB_Type(p: cast[ptr uint32](0x42001804)),
-    BAUD: SercomSpi_BAUD_Type(p: cast[ptr uint8](0x4200180c)),
-    INTENCLR: SercomSpi_INTENCLR_Type(p: cast[ptr uint8](0x42001814)),
-    INTENSET: SercomSpi_INTENSET_Type(p: cast[ptr uint8](0x42001816)),
-    INTFLAG: SercomSpi_INTFLAG_Type(p: cast[ptr uint8](0x42001818)),
-    STATUS: SercomSpi_STATUS_Type(p: cast[ptr uint16](0x4200181a)),
-    SYNCBUSY: SercomSpi_SYNCBUSY_Type(p: cast[ptr uint32](0x4200181c)),
-    ADDR: SercomSpi_ADDR_Type(p: cast[ptr uint32](0x42001824)),
-    DATA: SercomSpi_DATA_Type(p: cast[ptr uint32](0x42001828)),
-    DBGCTRL: SercomSpi_DBGCTRL_Type(p: cast[ptr uint8](0x42001830)),
+    CTRLA: SercomSpi_CTRLA_Type(loc: 0x42001800),
+    CTRLB: SercomSpi_CTRLB_Type(loc: 0x42001804),
+    BAUD: SercomSpi_BAUD_Type(loc: 0x4200180c),
+    INTENCLR: SercomSpi_INTENCLR_Type(loc: 0x42001814),
+    INTENSET: SercomSpi_INTENSET_Type(loc: 0x42001816),
+    INTFLAG: SercomSpi_INTFLAG_Type(loc: 0x42001818),
+    STATUS: SercomSpi_STATUS_Type(loc: 0x4200181a),
+    SYNCBUSY: SercomSpi_SYNCBUSY_Type(loc: 0x4200181c),
+    ADDR: SercomSpi_ADDR_Type(loc: 0x42001824),
+    DATA: SercomSpi_DATA_Type(loc: 0x42001828),
+    DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42001830),
   ),
   USART: SercomUsart_Type(
-    CTRLA: SercomUsart_CTRLA_Type(p: cast[ptr uint32](0x42001800)),
-    CTRLB: SercomUsart_CTRLB_Type(p: cast[ptr uint32](0x42001804)),
-    BAUD: SercomUsart_BAUD_Type(p: cast[ptr uint16](0x4200180c)),
-    BAUD_FRAC_MODE: SercomUsart_BAUD_FRAC_MODE_Type(p: cast[ptr uint16](0x4200180c)),
-    BAUD_FRACFP_MODE: SercomUsart_BAUD_FRACFP_MODE_Type(p: cast[ptr uint16](0x4200180c)),
-    BAUD_USARTFP_MODE: SercomUsart_BAUD_USARTFP_MODE_Type(p: cast[ptr uint16](0x4200180c)),
-    RXPL: SercomUsart_RXPL_Type(p: cast[ptr uint8](0x4200180e)),
-    INTENCLR: SercomUsart_INTENCLR_Type(p: cast[ptr uint8](0x42001814)),
-    INTENSET: SercomUsart_INTENSET_Type(p: cast[ptr uint8](0x42001816)),
-    INTFLAG: SercomUsart_INTFLAG_Type(p: cast[ptr uint8](0x42001818)),
-    STATUS: SercomUsart_STATUS_Type(p: cast[ptr uint16](0x4200181a)),
-    SYNCBUSY: SercomUsart_SYNCBUSY_Type(p: cast[ptr uint32](0x4200181c)),
-    DATA: SercomUsart_DATA_Type(p: cast[ptr uint16](0x42001828)),
-    DBGCTRL: SercomUsart_DBGCTRL_Type(p: cast[ptr uint8](0x42001830)),
+    CTRLA: SercomUsart_CTRLA_Type(loc: 0x42001800),
+    CTRLB: SercomUsart_CTRLB_Type(loc: 0x42001804),
+    BAUD: SercomUsart_BAUD_Type(loc: 0x4200180c),
+    BAUD_FRAC_MODE: SercomUsart_BAUD_FRAC_MODE_Type(loc: 0x4200180c),
+    BAUD_FRACFP_MODE: SercomUsart_BAUD_FRACFP_MODE_Type(loc: 0x4200180c),
+    BAUD_USARTFP_MODE: SercomUsart_BAUD_USARTFP_MODE_Type(loc: 0x4200180c),
+    RXPL: SercomUsart_RXPL_Type(loc: 0x4200180e),
+    INTENCLR: SercomUsart_INTENCLR_Type(loc: 0x42001814),
+    INTENSET: SercomUsart_INTENSET_Type(loc: 0x42001816),
+    INTFLAG: SercomUsart_INTFLAG_Type(loc: 0x42001818),
+    STATUS: SercomUsart_STATUS_Type(loc: 0x4200181a),
+    SYNCBUSY: SercomUsart_SYNCBUSY_Type(loc: 0x4200181c),
+    DATA: SercomUsart_DATA_Type(loc: 0x42001828),
+    DBGCTRL: SercomUsart_DBGCTRL_Type(loc: 0x42001830),
   ),
 )
 
-let SERCOM5* = SERCOM0_Type(
+const SERCOM5* = SERCOM0_Type(
   I2CM: SercomI2cm_Type(
-    CTRLA: SercomI2cm_CTRLA_Type(p: cast[ptr uint32](0x42001c00)),
-    CTRLB: SercomI2cm_CTRLB_Type(p: cast[ptr uint32](0x42001c04)),
-    BAUD: SercomI2cm_BAUD_Type(p: cast[ptr uint32](0x42001c0c)),
-    INTENCLR: SercomI2cm_INTENCLR_Type(p: cast[ptr uint8](0x42001c14)),
-    INTENSET: SercomI2cm_INTENSET_Type(p: cast[ptr uint8](0x42001c16)),
-    INTFLAG: SercomI2cm_INTFLAG_Type(p: cast[ptr uint8](0x42001c18)),
-    STATUS: SercomI2cm_STATUS_Type(p: cast[ptr uint16](0x42001c1a)),
-    SYNCBUSY: SercomI2cm_SYNCBUSY_Type(p: cast[ptr uint32](0x42001c1c)),
-    ADDR: SercomI2cm_ADDR_Type(p: cast[ptr uint32](0x42001c24)),
-    DATA: SercomI2cm_DATA_Type(p: cast[ptr uint8](0x42001c28)),
-    DBGCTRL: SercomI2cm_DBGCTRL_Type(p: cast[ptr uint8](0x42001c30)),
+    CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42001c00),
+    CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42001c04),
+    BAUD: SercomI2cm_BAUD_Type(loc: 0x42001c0c),
+    INTENCLR: SercomI2cm_INTENCLR_Type(loc: 0x42001c14),
+    INTENSET: SercomI2cm_INTENSET_Type(loc: 0x42001c16),
+    INTFLAG: SercomI2cm_INTFLAG_Type(loc: 0x42001c18),
+    STATUS: SercomI2cm_STATUS_Type(loc: 0x42001c1a),
+    SYNCBUSY: SercomI2cm_SYNCBUSY_Type(loc: 0x42001c1c),
+    ADDR: SercomI2cm_ADDR_Type(loc: 0x42001c24),
+    DATA: SercomI2cm_DATA_Type(loc: 0x42001c28),
+    DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42001c30),
   ),
   I2CS: SercomI2cs_Type(
-    CTRLA: SercomI2cs_CTRLA_Type(p: cast[ptr uint32](0x42001c00)),
-    CTRLB: SercomI2cs_CTRLB_Type(p: cast[ptr uint32](0x42001c04)),
-    INTENCLR: SercomI2cs_INTENCLR_Type(p: cast[ptr uint8](0x42001c14)),
-    INTENSET: SercomI2cs_INTENSET_Type(p: cast[ptr uint8](0x42001c16)),
-    INTFLAG: SercomI2cs_INTFLAG_Type(p: cast[ptr uint8](0x42001c18)),
-    STATUS: SercomI2cs_STATUS_Type(p: cast[ptr uint16](0x42001c1a)),
-    SYNCBUSY: SercomI2cs_SYNCBUSY_Type(p: cast[ptr uint32](0x42001c1c)),
-    ADDR: SercomI2cs_ADDR_Type(p: cast[ptr uint32](0x42001c24)),
-    DATA: SercomI2cs_DATA_Type(p: cast[ptr uint8](0x42001c28)),
+    CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42001c00),
+    CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42001c04),
+    INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42001c14),
+    INTENSET: SercomI2cs_INTENSET_Type(loc: 0x42001c16),
+    INTFLAG: SercomI2cs_INTFLAG_Type(loc: 0x42001c18),
+    STATUS: SercomI2cs_STATUS_Type(loc: 0x42001c1a),
+    SYNCBUSY: SercomI2cs_SYNCBUSY_Type(loc: 0x42001c1c),
+    ADDR: SercomI2cs_ADDR_Type(loc: 0x42001c24),
+    DATA: SercomI2cs_DATA_Type(loc: 0x42001c28),
   ),
   SPI: SercomSpi_Type(
-    CTRLA: SercomSpi_CTRLA_Type(p: cast[ptr uint32](0x42001c00)),
-    CTRLB: SercomSpi_CTRLB_Type(p: cast[ptr uint32](0x42001c04)),
-    BAUD: SercomSpi_BAUD_Type(p: cast[ptr uint8](0x42001c0c)),
-    INTENCLR: SercomSpi_INTENCLR_Type(p: cast[ptr uint8](0x42001c14)),
-    INTENSET: SercomSpi_INTENSET_Type(p: cast[ptr uint8](0x42001c16)),
-    INTFLAG: SercomSpi_INTFLAG_Type(p: cast[ptr uint8](0x42001c18)),
-    STATUS: SercomSpi_STATUS_Type(p: cast[ptr uint16](0x42001c1a)),
-    SYNCBUSY: SercomSpi_SYNCBUSY_Type(p: cast[ptr uint32](0x42001c1c)),
-    ADDR: SercomSpi_ADDR_Type(p: cast[ptr uint32](0x42001c24)),
-    DATA: SercomSpi_DATA_Type(p: cast[ptr uint32](0x42001c28)),
-    DBGCTRL: SercomSpi_DBGCTRL_Type(p: cast[ptr uint8](0x42001c30)),
+    CTRLA: SercomSpi_CTRLA_Type(loc: 0x42001c00),
+    CTRLB: SercomSpi_CTRLB_Type(loc: 0x42001c04),
+    BAUD: SercomSpi_BAUD_Type(loc: 0x42001c0c),
+    INTENCLR: SercomSpi_INTENCLR_Type(loc: 0x42001c14),
+    INTENSET: SercomSpi_INTENSET_Type(loc: 0x42001c16),
+    INTFLAG: SercomSpi_INTFLAG_Type(loc: 0x42001c18),
+    STATUS: SercomSpi_STATUS_Type(loc: 0x42001c1a),
+    SYNCBUSY: SercomSpi_SYNCBUSY_Type(loc: 0x42001c1c),
+    ADDR: SercomSpi_ADDR_Type(loc: 0x42001c24),
+    DATA: SercomSpi_DATA_Type(loc: 0x42001c28),
+    DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42001c30),
   ),
   USART: SercomUsart_Type(
-    CTRLA: SercomUsart_CTRLA_Type(p: cast[ptr uint32](0x42001c00)),
-    CTRLB: SercomUsart_CTRLB_Type(p: cast[ptr uint32](0x42001c04)),
-    BAUD: SercomUsart_BAUD_Type(p: cast[ptr uint16](0x42001c0c)),
-    BAUD_FRAC_MODE: SercomUsart_BAUD_FRAC_MODE_Type(p: cast[ptr uint16](0x42001c0c)),
-    BAUD_FRACFP_MODE: SercomUsart_BAUD_FRACFP_MODE_Type(p: cast[ptr uint16](0x42001c0c)),
-    BAUD_USARTFP_MODE: SercomUsart_BAUD_USARTFP_MODE_Type(p: cast[ptr uint16](0x42001c0c)),
-    RXPL: SercomUsart_RXPL_Type(p: cast[ptr uint8](0x42001c0e)),
-    INTENCLR: SercomUsart_INTENCLR_Type(p: cast[ptr uint8](0x42001c14)),
-    INTENSET: SercomUsart_INTENSET_Type(p: cast[ptr uint8](0x42001c16)),
-    INTFLAG: SercomUsart_INTFLAG_Type(p: cast[ptr uint8](0x42001c18)),
-    STATUS: SercomUsart_STATUS_Type(p: cast[ptr uint16](0x42001c1a)),
-    SYNCBUSY: SercomUsart_SYNCBUSY_Type(p: cast[ptr uint32](0x42001c1c)),
-    DATA: SercomUsart_DATA_Type(p: cast[ptr uint16](0x42001c28)),
-    DBGCTRL: SercomUsart_DBGCTRL_Type(p: cast[ptr uint8](0x42001c30)),
+    CTRLA: SercomUsart_CTRLA_Type(loc: 0x42001c00),
+    CTRLB: SercomUsart_CTRLB_Type(loc: 0x42001c04),
+    BAUD: SercomUsart_BAUD_Type(loc: 0x42001c0c),
+    BAUD_FRAC_MODE: SercomUsart_BAUD_FRAC_MODE_Type(loc: 0x42001c0c),
+    BAUD_FRACFP_MODE: SercomUsart_BAUD_FRACFP_MODE_Type(loc: 0x42001c0c),
+    BAUD_USARTFP_MODE: SercomUsart_BAUD_USARTFP_MODE_Type(loc: 0x42001c0c),
+    RXPL: SercomUsart_RXPL_Type(loc: 0x42001c0e),
+    INTENCLR: SercomUsart_INTENCLR_Type(loc: 0x42001c14),
+    INTENSET: SercomUsart_INTENSET_Type(loc: 0x42001c16),
+    INTFLAG: SercomUsart_INTFLAG_Type(loc: 0x42001c18),
+    STATUS: SercomUsart_STATUS_Type(loc: 0x42001c1a),
+    SYNCBUSY: SercomUsart_SYNCBUSY_Type(loc: 0x42001c1c),
+    DATA: SercomUsart_DATA_Type(loc: 0x42001c28),
+    DBGCTRL: SercomUsart_DBGCTRL_Type(loc: 0x42001c30),
   ),
 )
 
-let SYSCTRL* = SYSCTRL_Type(
-  INTENCLR: SYSCTRL_INTENCLR_Type(p: cast[ptr uint32](0x40000800)),
-  INTENSET: SYSCTRL_INTENSET_Type(p: cast[ptr uint32](0x40000804)),
-  INTFLAG: SYSCTRL_INTFLAG_Type(p: cast[ptr uint32](0x40000808)),
-  PCLKSR: SYSCTRL_PCLKSR_Type(p: cast[ptr uint32](0x4000080c)),
-  XOSC: SYSCTRL_XOSC_Type(p: cast[ptr uint16](0x40000810)),
-  XOSC32K: SYSCTRL_XOSC32K_Type(p: cast[ptr uint16](0x40000814)),
-  OSC32K: SYSCTRL_OSC32K_Type(p: cast[ptr uint32](0x40000818)),
-  OSCULP32K: SYSCTRL_OSCULP32K_Type(p: cast[ptr uint8](0x4000081c)),
-  OSC8M: SYSCTRL_OSC8M_Type(p: cast[ptr uint32](0x40000820)),
-  DFLLCTRL: SYSCTRL_DFLLCTRL_Type(p: cast[ptr uint16](0x40000824)),
-  DFLLVAL: SYSCTRL_DFLLVAL_Type(p: cast[ptr uint32](0x40000828)),
-  DFLLMUL: SYSCTRL_DFLLMUL_Type(p: cast[ptr uint32](0x4000082c)),
-  DFLLSYNC: SYSCTRL_DFLLSYNC_Type(p: cast[ptr uint8](0x40000830)),
-  BOD33: SYSCTRL_BOD33_Type(p: cast[ptr uint32](0x40000834)),
-  VREG: SYSCTRL_VREG_Type(p: cast[ptr uint16](0x4000083c)),
-  VREF: SYSCTRL_VREF_Type(p: cast[ptr uint32](0x40000840)),
-  DPLLCTRLA: SYSCTRL_DPLLCTRLA_Type(p: cast[ptr uint8](0x40000844)),
-  DPLLRATIO: SYSCTRL_DPLLRATIO_Type(p: cast[ptr uint32](0x40000848)),
-  DPLLCTRLB: SYSCTRL_DPLLCTRLB_Type(p: cast[ptr uint32](0x4000084c)),
-  DPLLSTATUS: SYSCTRL_DPLLSTATUS_Type(p: cast[ptr uint8](0x40000850)),
+const SYSCTRL* = SYSCTRL_Type(
+  INTENCLR: SYSCTRL_INTENCLR_Type(loc: 0x40000800),
+  INTENSET: SYSCTRL_INTENSET_Type(loc: 0x40000804),
+  INTFLAG: SYSCTRL_INTFLAG_Type(loc: 0x40000808),
+  PCLKSR: SYSCTRL_PCLKSR_Type(loc: 0x4000080c),
+  XOSC: SYSCTRL_XOSC_Type(loc: 0x40000810),
+  XOSC32K: SYSCTRL_XOSC32K_Type(loc: 0x40000814),
+  OSC32K: SYSCTRL_OSC32K_Type(loc: 0x40000818),
+  OSCULP32K: SYSCTRL_OSCULP32K_Type(loc: 0x4000081c),
+  OSC8M: SYSCTRL_OSC8M_Type(loc: 0x40000820),
+  DFLLCTRL: SYSCTRL_DFLLCTRL_Type(loc: 0x40000824),
+  DFLLVAL: SYSCTRL_DFLLVAL_Type(loc: 0x40000828),
+  DFLLMUL: SYSCTRL_DFLLMUL_Type(loc: 0x4000082c),
+  DFLLSYNC: SYSCTRL_DFLLSYNC_Type(loc: 0x40000830),
+  BOD33: SYSCTRL_BOD33_Type(loc: 0x40000834),
+  VREG: SYSCTRL_VREG_Type(loc: 0x4000083c),
+  VREF: SYSCTRL_VREF_Type(loc: 0x40000840),
+  DPLLCTRLA: SYSCTRL_DPLLCTRLA_Type(loc: 0x40000844),
+  DPLLRATIO: SYSCTRL_DPLLRATIO_Type(loc: 0x40000848),
+  DPLLCTRLB: SYSCTRL_DPLLCTRLB_Type(loc: 0x4000084c),
+  DPLLSTATUS: SYSCTRL_DPLLSTATUS_Type(loc: 0x40000850),
 )
 
-let TC3* = TC3_Type(
+const TC3* = TC3_Type(
   COUNT8: TcCount8_Type(
-    CTRLA: TcCount8_CTRLA_Type(p: cast[ptr uint16](0x42002c00)),
-    READREQ: TcCount8_READREQ_Type(p: cast[ptr uint16](0x42002c02)),
-    CTRLBCLR: TcCount8_CTRLBCLR_Type(p: cast[ptr uint8](0x42002c04)),
-    CTRLBSET: TcCount8_CTRLBSET_Type(p: cast[ptr uint8](0x42002c05)),
-    CTRLC: TcCount8_CTRLC_Type(p: cast[ptr uint8](0x42002c06)),
-    DBGCTRL: TcCount8_DBGCTRL_Type(p: cast[ptr uint8](0x42002c08)),
-    EVCTRL: TcCount8_EVCTRL_Type(p: cast[ptr uint16](0x42002c0a)),
-    INTENCLR: TcCount8_INTENCLR_Type(p: cast[ptr uint8](0x42002c0c)),
-    INTENSET: TcCount8_INTENSET_Type(p: cast[ptr uint8](0x42002c0d)),
-    INTFLAG: TcCount8_INTFLAG_Type(p: cast[ptr uint8](0x42002c0e)),
-    STATUS: TcCount8_STATUS_Type(p: cast[ptr uint8](0x42002c0f)),
-    COUNT: TcCount8_COUNT_Type(p: cast[ptr uint8](0x42002c10)),
-    PER: TcCount8_PER_Type(p: cast[ptr uint8](0x42002c14)),
-    CC0: TcCount8_CC_Type(p: cast[ptr uint8](0x42002c18)),
-    CC1: TcCount8_CC_Type(p: cast[ptr uint8](0x42002c19)),
+    CTRLA: TcCount8_CTRLA_Type(loc: 0x42002c00),
+    READREQ: TcCount8_READREQ_Type(loc: 0x42002c02),
+    CTRLBCLR: TcCount8_CTRLBCLR_Type(loc: 0x42002c04),
+    CTRLBSET: TcCount8_CTRLBSET_Type(loc: 0x42002c05),
+    CTRLC: TcCount8_CTRLC_Type(loc: 0x42002c06),
+    DBGCTRL: TcCount8_DBGCTRL_Type(loc: 0x42002c08),
+    EVCTRL: TcCount8_EVCTRL_Type(loc: 0x42002c0a),
+    INTENCLR: TcCount8_INTENCLR_Type(loc: 0x42002c0c),
+    INTENSET: TcCount8_INTENSET_Type(loc: 0x42002c0d),
+    INTFLAG: TcCount8_INTFLAG_Type(loc: 0x42002c0e),
+    STATUS: TcCount8_STATUS_Type(loc: 0x42002c0f),
+    COUNT: TcCount8_COUNT_Type(loc: 0x42002c10),
+    PER: TcCount8_PER_Type(loc: 0x42002c14),
+    CC0: TcCount8_CC_Type(loc: 0x42002c18),
+    CC1: TcCount8_CC_Type(loc: 0x42002c19),
   ),
   COUNT16: TcCount16_Type(
-    CTRLA: TcCount16_CTRLA_Type(p: cast[ptr uint16](0x42002c00)),
-    READREQ: TcCount16_READREQ_Type(p: cast[ptr uint16](0x42002c02)),
-    CTRLBCLR: TcCount16_CTRLBCLR_Type(p: cast[ptr uint8](0x42002c04)),
-    CTRLBSET: TcCount16_CTRLBSET_Type(p: cast[ptr uint8](0x42002c05)),
-    CTRLC: TcCount16_CTRLC_Type(p: cast[ptr uint8](0x42002c06)),
-    DBGCTRL: TcCount16_DBGCTRL_Type(p: cast[ptr uint8](0x42002c08)),
-    EVCTRL: TcCount16_EVCTRL_Type(p: cast[ptr uint16](0x42002c0a)),
-    INTENCLR: TcCount16_INTENCLR_Type(p: cast[ptr uint8](0x42002c0c)),
-    INTENSET: TcCount16_INTENSET_Type(p: cast[ptr uint8](0x42002c0d)),
-    INTFLAG: TcCount16_INTFLAG_Type(p: cast[ptr uint8](0x42002c0e)),
-    STATUS: TcCount16_STATUS_Type(p: cast[ptr uint8](0x42002c0f)),
-    COUNT: TcCount16_COUNT_Type(p: cast[ptr uint16](0x42002c10)),
-    CC0: TcCount16_CC_Type(p: cast[ptr uint16](0x42002c18)),
-    CC1: TcCount16_CC_Type(p: cast[ptr uint16](0x42002c1a)),
+    CTRLA: TcCount16_CTRLA_Type(loc: 0x42002c00),
+    READREQ: TcCount16_READREQ_Type(loc: 0x42002c02),
+    CTRLBCLR: TcCount16_CTRLBCLR_Type(loc: 0x42002c04),
+    CTRLBSET: TcCount16_CTRLBSET_Type(loc: 0x42002c05),
+    CTRLC: TcCount16_CTRLC_Type(loc: 0x42002c06),
+    DBGCTRL: TcCount16_DBGCTRL_Type(loc: 0x42002c08),
+    EVCTRL: TcCount16_EVCTRL_Type(loc: 0x42002c0a),
+    INTENCLR: TcCount16_INTENCLR_Type(loc: 0x42002c0c),
+    INTENSET: TcCount16_INTENSET_Type(loc: 0x42002c0d),
+    INTFLAG: TcCount16_INTFLAG_Type(loc: 0x42002c0e),
+    STATUS: TcCount16_STATUS_Type(loc: 0x42002c0f),
+    COUNT: TcCount16_COUNT_Type(loc: 0x42002c10),
+    CC0: TcCount16_CC_Type(loc: 0x42002c18),
+    CC1: TcCount16_CC_Type(loc: 0x42002c1a),
   ),
   COUNT32: TcCount32_Type(
-    CTRLA: TcCount32_CTRLA_Type(p: cast[ptr uint16](0x42002c00)),
-    READREQ: TcCount32_READREQ_Type(p: cast[ptr uint16](0x42002c02)),
-    CTRLBCLR: TcCount32_CTRLBCLR_Type(p: cast[ptr uint8](0x42002c04)),
-    CTRLBSET: TcCount32_CTRLBSET_Type(p: cast[ptr uint8](0x42002c05)),
-    CTRLC: TcCount32_CTRLC_Type(p: cast[ptr uint8](0x42002c06)),
-    DBGCTRL: TcCount32_DBGCTRL_Type(p: cast[ptr uint8](0x42002c08)),
-    EVCTRL: TcCount32_EVCTRL_Type(p: cast[ptr uint16](0x42002c0a)),
-    INTENCLR: TcCount32_INTENCLR_Type(p: cast[ptr uint8](0x42002c0c)),
-    INTENSET: TcCount32_INTENSET_Type(p: cast[ptr uint8](0x42002c0d)),
-    INTFLAG: TcCount32_INTFLAG_Type(p: cast[ptr uint8](0x42002c0e)),
-    STATUS: TcCount32_STATUS_Type(p: cast[ptr uint8](0x42002c0f)),
-    COUNT: TcCount32_COUNT_Type(p: cast[ptr uint32](0x42002c10)),
-    CC0: TcCount32_CC_Type(p: cast[ptr uint32](0x42002c18)),
-    CC1: TcCount32_CC_Type(p: cast[ptr uint32](0x42002c1c)),
+    CTRLA: TcCount32_CTRLA_Type(loc: 0x42002c00),
+    READREQ: TcCount32_READREQ_Type(loc: 0x42002c02),
+    CTRLBCLR: TcCount32_CTRLBCLR_Type(loc: 0x42002c04),
+    CTRLBSET: TcCount32_CTRLBSET_Type(loc: 0x42002c05),
+    CTRLC: TcCount32_CTRLC_Type(loc: 0x42002c06),
+    DBGCTRL: TcCount32_DBGCTRL_Type(loc: 0x42002c08),
+    EVCTRL: TcCount32_EVCTRL_Type(loc: 0x42002c0a),
+    INTENCLR: TcCount32_INTENCLR_Type(loc: 0x42002c0c),
+    INTENSET: TcCount32_INTENSET_Type(loc: 0x42002c0d),
+    INTFLAG: TcCount32_INTFLAG_Type(loc: 0x42002c0e),
+    STATUS: TcCount32_STATUS_Type(loc: 0x42002c0f),
+    COUNT: TcCount32_COUNT_Type(loc: 0x42002c10),
+    CC0: TcCount32_CC_Type(loc: 0x42002c18),
+    CC1: TcCount32_CC_Type(loc: 0x42002c1c),
   ),
 )
 
-let TC4* = TC3_Type(
+const TC4* = TC3_Type(
   COUNT8: TcCount8_Type(
-    CTRLA: TcCount8_CTRLA_Type(p: cast[ptr uint16](0x42003000)),
-    READREQ: TcCount8_READREQ_Type(p: cast[ptr uint16](0x42003002)),
-    CTRLBCLR: TcCount8_CTRLBCLR_Type(p: cast[ptr uint8](0x42003004)),
-    CTRLBSET: TcCount8_CTRLBSET_Type(p: cast[ptr uint8](0x42003005)),
-    CTRLC: TcCount8_CTRLC_Type(p: cast[ptr uint8](0x42003006)),
-    DBGCTRL: TcCount8_DBGCTRL_Type(p: cast[ptr uint8](0x42003008)),
-    EVCTRL: TcCount8_EVCTRL_Type(p: cast[ptr uint16](0x4200300a)),
-    INTENCLR: TcCount8_INTENCLR_Type(p: cast[ptr uint8](0x4200300c)),
-    INTENSET: TcCount8_INTENSET_Type(p: cast[ptr uint8](0x4200300d)),
-    INTFLAG: TcCount8_INTFLAG_Type(p: cast[ptr uint8](0x4200300e)),
-    STATUS: TcCount8_STATUS_Type(p: cast[ptr uint8](0x4200300f)),
-    COUNT: TcCount8_COUNT_Type(p: cast[ptr uint8](0x42003010)),
-    PER: TcCount8_PER_Type(p: cast[ptr uint8](0x42003014)),
-    CC0: TcCount8_CC_Type(p: cast[ptr uint8](0x42003018)),
-    CC1: TcCount8_CC_Type(p: cast[ptr uint8](0x42003019)),
+    CTRLA: TcCount8_CTRLA_Type(loc: 0x42003000),
+    READREQ: TcCount8_READREQ_Type(loc: 0x42003002),
+    CTRLBCLR: TcCount8_CTRLBCLR_Type(loc: 0x42003004),
+    CTRLBSET: TcCount8_CTRLBSET_Type(loc: 0x42003005),
+    CTRLC: TcCount8_CTRLC_Type(loc: 0x42003006),
+    DBGCTRL: TcCount8_DBGCTRL_Type(loc: 0x42003008),
+    EVCTRL: TcCount8_EVCTRL_Type(loc: 0x4200300a),
+    INTENCLR: TcCount8_INTENCLR_Type(loc: 0x4200300c),
+    INTENSET: TcCount8_INTENSET_Type(loc: 0x4200300d),
+    INTFLAG: TcCount8_INTFLAG_Type(loc: 0x4200300e),
+    STATUS: TcCount8_STATUS_Type(loc: 0x4200300f),
+    COUNT: TcCount8_COUNT_Type(loc: 0x42003010),
+    PER: TcCount8_PER_Type(loc: 0x42003014),
+    CC0: TcCount8_CC_Type(loc: 0x42003018),
+    CC1: TcCount8_CC_Type(loc: 0x42003019),
   ),
   COUNT16: TcCount16_Type(
-    CTRLA: TcCount16_CTRLA_Type(p: cast[ptr uint16](0x42003000)),
-    READREQ: TcCount16_READREQ_Type(p: cast[ptr uint16](0x42003002)),
-    CTRLBCLR: TcCount16_CTRLBCLR_Type(p: cast[ptr uint8](0x42003004)),
-    CTRLBSET: TcCount16_CTRLBSET_Type(p: cast[ptr uint8](0x42003005)),
-    CTRLC: TcCount16_CTRLC_Type(p: cast[ptr uint8](0x42003006)),
-    DBGCTRL: TcCount16_DBGCTRL_Type(p: cast[ptr uint8](0x42003008)),
-    EVCTRL: TcCount16_EVCTRL_Type(p: cast[ptr uint16](0x4200300a)),
-    INTENCLR: TcCount16_INTENCLR_Type(p: cast[ptr uint8](0x4200300c)),
-    INTENSET: TcCount16_INTENSET_Type(p: cast[ptr uint8](0x4200300d)),
-    INTFLAG: TcCount16_INTFLAG_Type(p: cast[ptr uint8](0x4200300e)),
-    STATUS: TcCount16_STATUS_Type(p: cast[ptr uint8](0x4200300f)),
-    COUNT: TcCount16_COUNT_Type(p: cast[ptr uint16](0x42003010)),
-    CC0: TcCount16_CC_Type(p: cast[ptr uint16](0x42003018)),
-    CC1: TcCount16_CC_Type(p: cast[ptr uint16](0x4200301a)),
+    CTRLA: TcCount16_CTRLA_Type(loc: 0x42003000),
+    READREQ: TcCount16_READREQ_Type(loc: 0x42003002),
+    CTRLBCLR: TcCount16_CTRLBCLR_Type(loc: 0x42003004),
+    CTRLBSET: TcCount16_CTRLBSET_Type(loc: 0x42003005),
+    CTRLC: TcCount16_CTRLC_Type(loc: 0x42003006),
+    DBGCTRL: TcCount16_DBGCTRL_Type(loc: 0x42003008),
+    EVCTRL: TcCount16_EVCTRL_Type(loc: 0x4200300a),
+    INTENCLR: TcCount16_INTENCLR_Type(loc: 0x4200300c),
+    INTENSET: TcCount16_INTENSET_Type(loc: 0x4200300d),
+    INTFLAG: TcCount16_INTFLAG_Type(loc: 0x4200300e),
+    STATUS: TcCount16_STATUS_Type(loc: 0x4200300f),
+    COUNT: TcCount16_COUNT_Type(loc: 0x42003010),
+    CC0: TcCount16_CC_Type(loc: 0x42003018),
+    CC1: TcCount16_CC_Type(loc: 0x4200301a),
   ),
   COUNT32: TcCount32_Type(
-    CTRLA: TcCount32_CTRLA_Type(p: cast[ptr uint16](0x42003000)),
-    READREQ: TcCount32_READREQ_Type(p: cast[ptr uint16](0x42003002)),
-    CTRLBCLR: TcCount32_CTRLBCLR_Type(p: cast[ptr uint8](0x42003004)),
-    CTRLBSET: TcCount32_CTRLBSET_Type(p: cast[ptr uint8](0x42003005)),
-    CTRLC: TcCount32_CTRLC_Type(p: cast[ptr uint8](0x42003006)),
-    DBGCTRL: TcCount32_DBGCTRL_Type(p: cast[ptr uint8](0x42003008)),
-    EVCTRL: TcCount32_EVCTRL_Type(p: cast[ptr uint16](0x4200300a)),
-    INTENCLR: TcCount32_INTENCLR_Type(p: cast[ptr uint8](0x4200300c)),
-    INTENSET: TcCount32_INTENSET_Type(p: cast[ptr uint8](0x4200300d)),
-    INTFLAG: TcCount32_INTFLAG_Type(p: cast[ptr uint8](0x4200300e)),
-    STATUS: TcCount32_STATUS_Type(p: cast[ptr uint8](0x4200300f)),
-    COUNT: TcCount32_COUNT_Type(p: cast[ptr uint32](0x42003010)),
-    CC0: TcCount32_CC_Type(p: cast[ptr uint32](0x42003018)),
-    CC1: TcCount32_CC_Type(p: cast[ptr uint32](0x4200301c)),
+    CTRLA: TcCount32_CTRLA_Type(loc: 0x42003000),
+    READREQ: TcCount32_READREQ_Type(loc: 0x42003002),
+    CTRLBCLR: TcCount32_CTRLBCLR_Type(loc: 0x42003004),
+    CTRLBSET: TcCount32_CTRLBSET_Type(loc: 0x42003005),
+    CTRLC: TcCount32_CTRLC_Type(loc: 0x42003006),
+    DBGCTRL: TcCount32_DBGCTRL_Type(loc: 0x42003008),
+    EVCTRL: TcCount32_EVCTRL_Type(loc: 0x4200300a),
+    INTENCLR: TcCount32_INTENCLR_Type(loc: 0x4200300c),
+    INTENSET: TcCount32_INTENSET_Type(loc: 0x4200300d),
+    INTFLAG: TcCount32_INTFLAG_Type(loc: 0x4200300e),
+    STATUS: TcCount32_STATUS_Type(loc: 0x4200300f),
+    COUNT: TcCount32_COUNT_Type(loc: 0x42003010),
+    CC0: TcCount32_CC_Type(loc: 0x42003018),
+    CC1: TcCount32_CC_Type(loc: 0x4200301c),
   ),
 )
 
-let TC5* = TC3_Type(
+const TC5* = TC3_Type(
   COUNT8: TcCount8_Type(
-    CTRLA: TcCount8_CTRLA_Type(p: cast[ptr uint16](0x42003400)),
-    READREQ: TcCount8_READREQ_Type(p: cast[ptr uint16](0x42003402)),
-    CTRLBCLR: TcCount8_CTRLBCLR_Type(p: cast[ptr uint8](0x42003404)),
-    CTRLBSET: TcCount8_CTRLBSET_Type(p: cast[ptr uint8](0x42003405)),
-    CTRLC: TcCount8_CTRLC_Type(p: cast[ptr uint8](0x42003406)),
-    DBGCTRL: TcCount8_DBGCTRL_Type(p: cast[ptr uint8](0x42003408)),
-    EVCTRL: TcCount8_EVCTRL_Type(p: cast[ptr uint16](0x4200340a)),
-    INTENCLR: TcCount8_INTENCLR_Type(p: cast[ptr uint8](0x4200340c)),
-    INTENSET: TcCount8_INTENSET_Type(p: cast[ptr uint8](0x4200340d)),
-    INTFLAG: TcCount8_INTFLAG_Type(p: cast[ptr uint8](0x4200340e)),
-    STATUS: TcCount8_STATUS_Type(p: cast[ptr uint8](0x4200340f)),
-    COUNT: TcCount8_COUNT_Type(p: cast[ptr uint8](0x42003410)),
-    PER: TcCount8_PER_Type(p: cast[ptr uint8](0x42003414)),
-    CC0: TcCount8_CC_Type(p: cast[ptr uint8](0x42003418)),
-    CC1: TcCount8_CC_Type(p: cast[ptr uint8](0x42003419)),
+    CTRLA: TcCount8_CTRLA_Type(loc: 0x42003400),
+    READREQ: TcCount8_READREQ_Type(loc: 0x42003402),
+    CTRLBCLR: TcCount8_CTRLBCLR_Type(loc: 0x42003404),
+    CTRLBSET: TcCount8_CTRLBSET_Type(loc: 0x42003405),
+    CTRLC: TcCount8_CTRLC_Type(loc: 0x42003406),
+    DBGCTRL: TcCount8_DBGCTRL_Type(loc: 0x42003408),
+    EVCTRL: TcCount8_EVCTRL_Type(loc: 0x4200340a),
+    INTENCLR: TcCount8_INTENCLR_Type(loc: 0x4200340c),
+    INTENSET: TcCount8_INTENSET_Type(loc: 0x4200340d),
+    INTFLAG: TcCount8_INTFLAG_Type(loc: 0x4200340e),
+    STATUS: TcCount8_STATUS_Type(loc: 0x4200340f),
+    COUNT: TcCount8_COUNT_Type(loc: 0x42003410),
+    PER: TcCount8_PER_Type(loc: 0x42003414),
+    CC0: TcCount8_CC_Type(loc: 0x42003418),
+    CC1: TcCount8_CC_Type(loc: 0x42003419),
   ),
   COUNT16: TcCount16_Type(
-    CTRLA: TcCount16_CTRLA_Type(p: cast[ptr uint16](0x42003400)),
-    READREQ: TcCount16_READREQ_Type(p: cast[ptr uint16](0x42003402)),
-    CTRLBCLR: TcCount16_CTRLBCLR_Type(p: cast[ptr uint8](0x42003404)),
-    CTRLBSET: TcCount16_CTRLBSET_Type(p: cast[ptr uint8](0x42003405)),
-    CTRLC: TcCount16_CTRLC_Type(p: cast[ptr uint8](0x42003406)),
-    DBGCTRL: TcCount16_DBGCTRL_Type(p: cast[ptr uint8](0x42003408)),
-    EVCTRL: TcCount16_EVCTRL_Type(p: cast[ptr uint16](0x4200340a)),
-    INTENCLR: TcCount16_INTENCLR_Type(p: cast[ptr uint8](0x4200340c)),
-    INTENSET: TcCount16_INTENSET_Type(p: cast[ptr uint8](0x4200340d)),
-    INTFLAG: TcCount16_INTFLAG_Type(p: cast[ptr uint8](0x4200340e)),
-    STATUS: TcCount16_STATUS_Type(p: cast[ptr uint8](0x4200340f)),
-    COUNT: TcCount16_COUNT_Type(p: cast[ptr uint16](0x42003410)),
-    CC0: TcCount16_CC_Type(p: cast[ptr uint16](0x42003418)),
-    CC1: TcCount16_CC_Type(p: cast[ptr uint16](0x4200341a)),
+    CTRLA: TcCount16_CTRLA_Type(loc: 0x42003400),
+    READREQ: TcCount16_READREQ_Type(loc: 0x42003402),
+    CTRLBCLR: TcCount16_CTRLBCLR_Type(loc: 0x42003404),
+    CTRLBSET: TcCount16_CTRLBSET_Type(loc: 0x42003405),
+    CTRLC: TcCount16_CTRLC_Type(loc: 0x42003406),
+    DBGCTRL: TcCount16_DBGCTRL_Type(loc: 0x42003408),
+    EVCTRL: TcCount16_EVCTRL_Type(loc: 0x4200340a),
+    INTENCLR: TcCount16_INTENCLR_Type(loc: 0x4200340c),
+    INTENSET: TcCount16_INTENSET_Type(loc: 0x4200340d),
+    INTFLAG: TcCount16_INTFLAG_Type(loc: 0x4200340e),
+    STATUS: TcCount16_STATUS_Type(loc: 0x4200340f),
+    COUNT: TcCount16_COUNT_Type(loc: 0x42003410),
+    CC0: TcCount16_CC_Type(loc: 0x42003418),
+    CC1: TcCount16_CC_Type(loc: 0x4200341a),
   ),
   COUNT32: TcCount32_Type(
-    CTRLA: TcCount32_CTRLA_Type(p: cast[ptr uint16](0x42003400)),
-    READREQ: TcCount32_READREQ_Type(p: cast[ptr uint16](0x42003402)),
-    CTRLBCLR: TcCount32_CTRLBCLR_Type(p: cast[ptr uint8](0x42003404)),
-    CTRLBSET: TcCount32_CTRLBSET_Type(p: cast[ptr uint8](0x42003405)),
-    CTRLC: TcCount32_CTRLC_Type(p: cast[ptr uint8](0x42003406)),
-    DBGCTRL: TcCount32_DBGCTRL_Type(p: cast[ptr uint8](0x42003408)),
-    EVCTRL: TcCount32_EVCTRL_Type(p: cast[ptr uint16](0x4200340a)),
-    INTENCLR: TcCount32_INTENCLR_Type(p: cast[ptr uint8](0x4200340c)),
-    INTENSET: TcCount32_INTENSET_Type(p: cast[ptr uint8](0x4200340d)),
-    INTFLAG: TcCount32_INTFLAG_Type(p: cast[ptr uint8](0x4200340e)),
-    STATUS: TcCount32_STATUS_Type(p: cast[ptr uint8](0x4200340f)),
-    COUNT: TcCount32_COUNT_Type(p: cast[ptr uint32](0x42003410)),
-    CC0: TcCount32_CC_Type(p: cast[ptr uint32](0x42003418)),
-    CC1: TcCount32_CC_Type(p: cast[ptr uint32](0x4200341c)),
+    CTRLA: TcCount32_CTRLA_Type(loc: 0x42003400),
+    READREQ: TcCount32_READREQ_Type(loc: 0x42003402),
+    CTRLBCLR: TcCount32_CTRLBCLR_Type(loc: 0x42003404),
+    CTRLBSET: TcCount32_CTRLBSET_Type(loc: 0x42003405),
+    CTRLC: TcCount32_CTRLC_Type(loc: 0x42003406),
+    DBGCTRL: TcCount32_DBGCTRL_Type(loc: 0x42003408),
+    EVCTRL: TcCount32_EVCTRL_Type(loc: 0x4200340a),
+    INTENCLR: TcCount32_INTENCLR_Type(loc: 0x4200340c),
+    INTENSET: TcCount32_INTENSET_Type(loc: 0x4200340d),
+    INTFLAG: TcCount32_INTFLAG_Type(loc: 0x4200340e),
+    STATUS: TcCount32_STATUS_Type(loc: 0x4200340f),
+    COUNT: TcCount32_COUNT_Type(loc: 0x42003410),
+    CC0: TcCount32_CC_Type(loc: 0x42003418),
+    CC1: TcCount32_CC_Type(loc: 0x4200341c),
   ),
 )
 
-let TCC0* = TCC0_Type(
-  CTRLA: TCC0_CTRLA_Type(p: cast[ptr uint32](0x42002000)),
-  CTRLBCLR: TCC0_CTRLBCLR_Type(p: cast[ptr uint8](0x42002004)),
-  CTRLBSET: TCC0_CTRLBSET_Type(p: cast[ptr uint8](0x42002005)),
-  SYNCBUSY: TCC0_SYNCBUSY_Type(p: cast[ptr uint32](0x42002008)),
-  FCTRLA: TCC0_FCTRLA_Type(p: cast[ptr uint32](0x4200200c)),
-  FCTRLB: TCC0_FCTRLB_Type(p: cast[ptr uint32](0x42002010)),
-  WEXCTRL: TCC0_WEXCTRL_Type(p: cast[ptr uint32](0x42002014)),
-  DRVCTRL: TCC0_DRVCTRL_Type(p: cast[ptr uint32](0x42002018)),
-  DBGCTRL: TCC0_DBGCTRL_Type(p: cast[ptr uint8](0x4200201e)),
-  EVCTRL: TCC0_EVCTRL_Type(p: cast[ptr uint32](0x42002020)),
-  INTENCLR: TCC0_INTENCLR_Type(p: cast[ptr uint32](0x42002024)),
-  INTENSET: TCC0_INTENSET_Type(p: cast[ptr uint32](0x42002028)),
-  INTFLAG: TCC0_INTFLAG_Type(p: cast[ptr uint32](0x4200202c)),
-  STATUS: TCC0_STATUS_Type(p: cast[ptr uint32](0x42002030)),
-  COUNT: TCC0_COUNT_Type(p: cast[ptr uint32](0x42002034)),
-  COUNT_DITH4: TCC0_COUNT_DITH4_Type(p: cast[ptr uint32](0x42002034)),
-  COUNT_DITH5: TCC0_COUNT_DITH5_Type(p: cast[ptr uint32](0x42002034)),
-  COUNT_DITH6: TCC0_COUNT_DITH6_Type(p: cast[ptr uint32](0x42002034)),
-  PATT: TCC0_PATT_Type(p: cast[ptr uint16](0x42002038)),
-  WAVE: TCC0_WAVE_Type(p: cast[ptr uint32](0x4200203c)),
-  PER: TCC0_PER_Type(p: cast[ptr uint32](0x42002040)),
-  PER_DITH4: TCC0_PER_DITH4_Type(p: cast[ptr uint32](0x42002040)),
-  PER_DITH5: TCC0_PER_DITH5_Type(p: cast[ptr uint32](0x42002040)),
-  PER_DITH6: TCC0_PER_DITH6_Type(p: cast[ptr uint32](0x42002040)),
-  CC0: TCC0_CC_Type(p: cast[ptr uint32](0x42002044)),
-  CC0_DITH4: TCC0_CC_DITH4_Type(p: cast[ptr uint32](0x42002044)),
-  CC0_DITH5: TCC0_CC_DITH5_Type(p: cast[ptr uint32](0x42002044)),
-  CC0_DITH6: TCC0_CC_DITH6_Type(p: cast[ptr uint32](0x42002044)),
-  CC1: TCC0_CC_Type(p: cast[ptr uint32](0x42002048)),
-  CC1_DITH4: TCC0_CC_DITH4_Type(p: cast[ptr uint32](0x42002048)),
-  CC1_DITH5: TCC0_CC_DITH5_Type(p: cast[ptr uint32](0x42002048)),
-  CC1_DITH6: TCC0_CC_DITH6_Type(p: cast[ptr uint32](0x42002048)),
-  CC2: TCC0_CC_Type(p: cast[ptr uint32](0x4200204c)),
-  CC2_DITH4: TCC0_CC_DITH4_Type(p: cast[ptr uint32](0x4200204c)),
-  CC2_DITH5: TCC0_CC_DITH5_Type(p: cast[ptr uint32](0x4200204c)),
-  CC2_DITH6: TCC0_CC_DITH6_Type(p: cast[ptr uint32](0x4200204c)),
-  CC3: TCC0_CC_Type(p: cast[ptr uint32](0x42002050)),
-  CC3_DITH4: TCC0_CC_DITH4_Type(p: cast[ptr uint32](0x42002050)),
-  CC3_DITH5: TCC0_CC_DITH5_Type(p: cast[ptr uint32](0x42002050)),
-  CC3_DITH6: TCC0_CC_DITH6_Type(p: cast[ptr uint32](0x42002050)),
-  PATTB: TCC0_PATTB_Type(p: cast[ptr uint16](0x42002064)),
-  WAVEB: TCC0_WAVEB_Type(p: cast[ptr uint32](0x42002068)),
-  PERB: TCC0_PERB_Type(p: cast[ptr uint32](0x4200206c)),
-  PERB_DITH4: TCC0_PERB_DITH4_Type(p: cast[ptr uint32](0x4200206c)),
-  PERB_DITH5: TCC0_PERB_DITH5_Type(p: cast[ptr uint32](0x4200206c)),
-  PERB_DITH6: TCC0_PERB_DITH6_Type(p: cast[ptr uint32](0x4200206c)),
-  CCB0: TCC0_CCB_Type(p: cast[ptr uint32](0x42002070)),
-  CCB0_DITH4: TCC0_CCB_DITH4_Type(p: cast[ptr uint32](0x42002070)),
-  CCB0_DITH5: TCC0_CCB_DITH5_Type(p: cast[ptr uint32](0x42002070)),
-  CCB0_DITH6: TCC0_CCB_DITH6_Type(p: cast[ptr uint32](0x42002070)),
-  CCB1: TCC0_CCB_Type(p: cast[ptr uint32](0x42002074)),
-  CCB1_DITH4: TCC0_CCB_DITH4_Type(p: cast[ptr uint32](0x42002074)),
-  CCB1_DITH5: TCC0_CCB_DITH5_Type(p: cast[ptr uint32](0x42002074)),
-  CCB1_DITH6: TCC0_CCB_DITH6_Type(p: cast[ptr uint32](0x42002074)),
-  CCB2: TCC0_CCB_Type(p: cast[ptr uint32](0x42002078)),
-  CCB2_DITH4: TCC0_CCB_DITH4_Type(p: cast[ptr uint32](0x42002078)),
-  CCB2_DITH5: TCC0_CCB_DITH5_Type(p: cast[ptr uint32](0x42002078)),
-  CCB2_DITH6: TCC0_CCB_DITH6_Type(p: cast[ptr uint32](0x42002078)),
-  CCB3: TCC0_CCB_Type(p: cast[ptr uint32](0x4200207c)),
-  CCB3_DITH4: TCC0_CCB_DITH4_Type(p: cast[ptr uint32](0x4200207c)),
-  CCB3_DITH5: TCC0_CCB_DITH5_Type(p: cast[ptr uint32](0x4200207c)),
-  CCB3_DITH6: TCC0_CCB_DITH6_Type(p: cast[ptr uint32](0x4200207c)),
+const TCC0* = TCC0_Type(
+  CTRLA: TCC0_CTRLA_Type(loc: 0x42002000),
+  CTRLBCLR: TCC0_CTRLBCLR_Type(loc: 0x42002004),
+  CTRLBSET: TCC0_CTRLBSET_Type(loc: 0x42002005),
+  SYNCBUSY: TCC0_SYNCBUSY_Type(loc: 0x42002008),
+  FCTRLA: TCC0_FCTRLA_Type(loc: 0x4200200c),
+  FCTRLB: TCC0_FCTRLB_Type(loc: 0x42002010),
+  WEXCTRL: TCC0_WEXCTRL_Type(loc: 0x42002014),
+  DRVCTRL: TCC0_DRVCTRL_Type(loc: 0x42002018),
+  DBGCTRL: TCC0_DBGCTRL_Type(loc: 0x4200201e),
+  EVCTRL: TCC0_EVCTRL_Type(loc: 0x42002020),
+  INTENCLR: TCC0_INTENCLR_Type(loc: 0x42002024),
+  INTENSET: TCC0_INTENSET_Type(loc: 0x42002028),
+  INTFLAG: TCC0_INTFLAG_Type(loc: 0x4200202c),
+  STATUS: TCC0_STATUS_Type(loc: 0x42002030),
+  COUNT: TCC0_COUNT_Type(loc: 0x42002034),
+  COUNT_DITH4: TCC0_COUNT_DITH4_Type(loc: 0x42002034),
+  COUNT_DITH5: TCC0_COUNT_DITH5_Type(loc: 0x42002034),
+  COUNT_DITH6: TCC0_COUNT_DITH6_Type(loc: 0x42002034),
+  PATT: TCC0_PATT_Type(loc: 0x42002038),
+  WAVE: TCC0_WAVE_Type(loc: 0x4200203c),
+  PER: TCC0_PER_Type(loc: 0x42002040),
+  PER_DITH4: TCC0_PER_DITH4_Type(loc: 0x42002040),
+  PER_DITH5: TCC0_PER_DITH5_Type(loc: 0x42002040),
+  PER_DITH6: TCC0_PER_DITH6_Type(loc: 0x42002040),
+  CC0: TCC0_CC_Type(loc: 0x42002044),
+  CC0_DITH4: TCC0_CC_DITH4_Type(loc: 0x42002044),
+  CC0_DITH5: TCC0_CC_DITH5_Type(loc: 0x42002044),
+  CC0_DITH6: TCC0_CC_DITH6_Type(loc: 0x42002044),
+  CC1: TCC0_CC_Type(loc: 0x42002048),
+  CC1_DITH4: TCC0_CC_DITH4_Type(loc: 0x42002048),
+  CC1_DITH5: TCC0_CC_DITH5_Type(loc: 0x42002048),
+  CC1_DITH6: TCC0_CC_DITH6_Type(loc: 0x42002048),
+  CC2: TCC0_CC_Type(loc: 0x4200204c),
+  CC2_DITH4: TCC0_CC_DITH4_Type(loc: 0x4200204c),
+  CC2_DITH5: TCC0_CC_DITH5_Type(loc: 0x4200204c),
+  CC2_DITH6: TCC0_CC_DITH6_Type(loc: 0x4200204c),
+  CC3: TCC0_CC_Type(loc: 0x42002050),
+  CC3_DITH4: TCC0_CC_DITH4_Type(loc: 0x42002050),
+  CC3_DITH5: TCC0_CC_DITH5_Type(loc: 0x42002050),
+  CC3_DITH6: TCC0_CC_DITH6_Type(loc: 0x42002050),
+  PATTB: TCC0_PATTB_Type(loc: 0x42002064),
+  WAVEB: TCC0_WAVEB_Type(loc: 0x42002068),
+  PERB: TCC0_PERB_Type(loc: 0x4200206c),
+  PERB_DITH4: TCC0_PERB_DITH4_Type(loc: 0x4200206c),
+  PERB_DITH5: TCC0_PERB_DITH5_Type(loc: 0x4200206c),
+  PERB_DITH6: TCC0_PERB_DITH6_Type(loc: 0x4200206c),
+  CCB0: TCC0_CCB_Type(loc: 0x42002070),
+  CCB0_DITH4: TCC0_CCB_DITH4_Type(loc: 0x42002070),
+  CCB0_DITH5: TCC0_CCB_DITH5_Type(loc: 0x42002070),
+  CCB0_DITH6: TCC0_CCB_DITH6_Type(loc: 0x42002070),
+  CCB1: TCC0_CCB_Type(loc: 0x42002074),
+  CCB1_DITH4: TCC0_CCB_DITH4_Type(loc: 0x42002074),
+  CCB1_DITH5: TCC0_CCB_DITH5_Type(loc: 0x42002074),
+  CCB1_DITH6: TCC0_CCB_DITH6_Type(loc: 0x42002074),
+  CCB2: TCC0_CCB_Type(loc: 0x42002078),
+  CCB2_DITH4: TCC0_CCB_DITH4_Type(loc: 0x42002078),
+  CCB2_DITH5: TCC0_CCB_DITH5_Type(loc: 0x42002078),
+  CCB2_DITH6: TCC0_CCB_DITH6_Type(loc: 0x42002078),
+  CCB3: TCC0_CCB_Type(loc: 0x4200207c),
+  CCB3_DITH4: TCC0_CCB_DITH4_Type(loc: 0x4200207c),
+  CCB3_DITH5: TCC0_CCB_DITH5_Type(loc: 0x4200207c),
+  CCB3_DITH6: TCC0_CCB_DITH6_Type(loc: 0x4200207c),
 )
 
-let TCC1* = TCC0_Type(
-  CTRLA: TCC0_CTRLA_Type(p: cast[ptr uint32](0x42002400)),
-  CTRLBCLR: TCC0_CTRLBCLR_Type(p: cast[ptr uint8](0x42002404)),
-  CTRLBSET: TCC0_CTRLBSET_Type(p: cast[ptr uint8](0x42002405)),
-  SYNCBUSY: TCC0_SYNCBUSY_Type(p: cast[ptr uint32](0x42002408)),
-  FCTRLA: TCC0_FCTRLA_Type(p: cast[ptr uint32](0x4200240c)),
-  FCTRLB: TCC0_FCTRLB_Type(p: cast[ptr uint32](0x42002410)),
-  WEXCTRL: TCC0_WEXCTRL_Type(p: cast[ptr uint32](0x42002414)),
-  DRVCTRL: TCC0_DRVCTRL_Type(p: cast[ptr uint32](0x42002418)),
-  DBGCTRL: TCC0_DBGCTRL_Type(p: cast[ptr uint8](0x4200241e)),
-  EVCTRL: TCC0_EVCTRL_Type(p: cast[ptr uint32](0x42002420)),
-  INTENCLR: TCC0_INTENCLR_Type(p: cast[ptr uint32](0x42002424)),
-  INTENSET: TCC0_INTENSET_Type(p: cast[ptr uint32](0x42002428)),
-  INTFLAG: TCC0_INTFLAG_Type(p: cast[ptr uint32](0x4200242c)),
-  STATUS: TCC0_STATUS_Type(p: cast[ptr uint32](0x42002430)),
-  COUNT: TCC0_COUNT_Type(p: cast[ptr uint32](0x42002434)),
-  COUNT_DITH4: TCC0_COUNT_DITH4_Type(p: cast[ptr uint32](0x42002434)),
-  COUNT_DITH5: TCC0_COUNT_DITH5_Type(p: cast[ptr uint32](0x42002434)),
-  COUNT_DITH6: TCC0_COUNT_DITH6_Type(p: cast[ptr uint32](0x42002434)),
-  PATT: TCC0_PATT_Type(p: cast[ptr uint16](0x42002438)),
-  WAVE: TCC0_WAVE_Type(p: cast[ptr uint32](0x4200243c)),
-  PER: TCC0_PER_Type(p: cast[ptr uint32](0x42002440)),
-  PER_DITH4: TCC0_PER_DITH4_Type(p: cast[ptr uint32](0x42002440)),
-  PER_DITH5: TCC0_PER_DITH5_Type(p: cast[ptr uint32](0x42002440)),
-  PER_DITH6: TCC0_PER_DITH6_Type(p: cast[ptr uint32](0x42002440)),
-  CC0: TCC0_CC_Type(p: cast[ptr uint32](0x42002444)),
-  CC0_DITH4: TCC0_CC_DITH4_Type(p: cast[ptr uint32](0x42002444)),
-  CC0_DITH5: TCC0_CC_DITH5_Type(p: cast[ptr uint32](0x42002444)),
-  CC0_DITH6: TCC0_CC_DITH6_Type(p: cast[ptr uint32](0x42002444)),
-  CC1: TCC0_CC_Type(p: cast[ptr uint32](0x42002448)),
-  CC1_DITH4: TCC0_CC_DITH4_Type(p: cast[ptr uint32](0x42002448)),
-  CC1_DITH5: TCC0_CC_DITH5_Type(p: cast[ptr uint32](0x42002448)),
-  CC1_DITH6: TCC0_CC_DITH6_Type(p: cast[ptr uint32](0x42002448)),
-  CC2: TCC0_CC_Type(p: cast[ptr uint32](0x4200244c)),
-  CC2_DITH4: TCC0_CC_DITH4_Type(p: cast[ptr uint32](0x4200244c)),
-  CC2_DITH5: TCC0_CC_DITH5_Type(p: cast[ptr uint32](0x4200244c)),
-  CC2_DITH6: TCC0_CC_DITH6_Type(p: cast[ptr uint32](0x4200244c)),
-  CC3: TCC0_CC_Type(p: cast[ptr uint32](0x42002450)),
-  CC3_DITH4: TCC0_CC_DITH4_Type(p: cast[ptr uint32](0x42002450)),
-  CC3_DITH5: TCC0_CC_DITH5_Type(p: cast[ptr uint32](0x42002450)),
-  CC3_DITH6: TCC0_CC_DITH6_Type(p: cast[ptr uint32](0x42002450)),
-  PATTB: TCC0_PATTB_Type(p: cast[ptr uint16](0x42002464)),
-  WAVEB: TCC0_WAVEB_Type(p: cast[ptr uint32](0x42002468)),
-  PERB: TCC0_PERB_Type(p: cast[ptr uint32](0x4200246c)),
-  PERB_DITH4: TCC0_PERB_DITH4_Type(p: cast[ptr uint32](0x4200246c)),
-  PERB_DITH5: TCC0_PERB_DITH5_Type(p: cast[ptr uint32](0x4200246c)),
-  PERB_DITH6: TCC0_PERB_DITH6_Type(p: cast[ptr uint32](0x4200246c)),
-  CCB0: TCC0_CCB_Type(p: cast[ptr uint32](0x42002470)),
-  CCB0_DITH4: TCC0_CCB_DITH4_Type(p: cast[ptr uint32](0x42002470)),
-  CCB0_DITH5: TCC0_CCB_DITH5_Type(p: cast[ptr uint32](0x42002470)),
-  CCB0_DITH6: TCC0_CCB_DITH6_Type(p: cast[ptr uint32](0x42002470)),
-  CCB1: TCC0_CCB_Type(p: cast[ptr uint32](0x42002474)),
-  CCB1_DITH4: TCC0_CCB_DITH4_Type(p: cast[ptr uint32](0x42002474)),
-  CCB1_DITH5: TCC0_CCB_DITH5_Type(p: cast[ptr uint32](0x42002474)),
-  CCB1_DITH6: TCC0_CCB_DITH6_Type(p: cast[ptr uint32](0x42002474)),
-  CCB2: TCC0_CCB_Type(p: cast[ptr uint32](0x42002478)),
-  CCB2_DITH4: TCC0_CCB_DITH4_Type(p: cast[ptr uint32](0x42002478)),
-  CCB2_DITH5: TCC0_CCB_DITH5_Type(p: cast[ptr uint32](0x42002478)),
-  CCB2_DITH6: TCC0_CCB_DITH6_Type(p: cast[ptr uint32](0x42002478)),
-  CCB3: TCC0_CCB_Type(p: cast[ptr uint32](0x4200247c)),
-  CCB3_DITH4: TCC0_CCB_DITH4_Type(p: cast[ptr uint32](0x4200247c)),
-  CCB3_DITH5: TCC0_CCB_DITH5_Type(p: cast[ptr uint32](0x4200247c)),
-  CCB3_DITH6: TCC0_CCB_DITH6_Type(p: cast[ptr uint32](0x4200247c)),
+const TCC1* = TCC0_Type(
+  CTRLA: TCC0_CTRLA_Type(loc: 0x42002400),
+  CTRLBCLR: TCC0_CTRLBCLR_Type(loc: 0x42002404),
+  CTRLBSET: TCC0_CTRLBSET_Type(loc: 0x42002405),
+  SYNCBUSY: TCC0_SYNCBUSY_Type(loc: 0x42002408),
+  FCTRLA: TCC0_FCTRLA_Type(loc: 0x4200240c),
+  FCTRLB: TCC0_FCTRLB_Type(loc: 0x42002410),
+  WEXCTRL: TCC0_WEXCTRL_Type(loc: 0x42002414),
+  DRVCTRL: TCC0_DRVCTRL_Type(loc: 0x42002418),
+  DBGCTRL: TCC0_DBGCTRL_Type(loc: 0x4200241e),
+  EVCTRL: TCC0_EVCTRL_Type(loc: 0x42002420),
+  INTENCLR: TCC0_INTENCLR_Type(loc: 0x42002424),
+  INTENSET: TCC0_INTENSET_Type(loc: 0x42002428),
+  INTFLAG: TCC0_INTFLAG_Type(loc: 0x4200242c),
+  STATUS: TCC0_STATUS_Type(loc: 0x42002430),
+  COUNT: TCC0_COUNT_Type(loc: 0x42002434),
+  COUNT_DITH4: TCC0_COUNT_DITH4_Type(loc: 0x42002434),
+  COUNT_DITH5: TCC0_COUNT_DITH5_Type(loc: 0x42002434),
+  COUNT_DITH6: TCC0_COUNT_DITH6_Type(loc: 0x42002434),
+  PATT: TCC0_PATT_Type(loc: 0x42002438),
+  WAVE: TCC0_WAVE_Type(loc: 0x4200243c),
+  PER: TCC0_PER_Type(loc: 0x42002440),
+  PER_DITH4: TCC0_PER_DITH4_Type(loc: 0x42002440),
+  PER_DITH5: TCC0_PER_DITH5_Type(loc: 0x42002440),
+  PER_DITH6: TCC0_PER_DITH6_Type(loc: 0x42002440),
+  CC0: TCC0_CC_Type(loc: 0x42002444),
+  CC0_DITH4: TCC0_CC_DITH4_Type(loc: 0x42002444),
+  CC0_DITH5: TCC0_CC_DITH5_Type(loc: 0x42002444),
+  CC0_DITH6: TCC0_CC_DITH6_Type(loc: 0x42002444),
+  CC1: TCC0_CC_Type(loc: 0x42002448),
+  CC1_DITH4: TCC0_CC_DITH4_Type(loc: 0x42002448),
+  CC1_DITH5: TCC0_CC_DITH5_Type(loc: 0x42002448),
+  CC1_DITH6: TCC0_CC_DITH6_Type(loc: 0x42002448),
+  CC2: TCC0_CC_Type(loc: 0x4200244c),
+  CC2_DITH4: TCC0_CC_DITH4_Type(loc: 0x4200244c),
+  CC2_DITH5: TCC0_CC_DITH5_Type(loc: 0x4200244c),
+  CC2_DITH6: TCC0_CC_DITH6_Type(loc: 0x4200244c),
+  CC3: TCC0_CC_Type(loc: 0x42002450),
+  CC3_DITH4: TCC0_CC_DITH4_Type(loc: 0x42002450),
+  CC3_DITH5: TCC0_CC_DITH5_Type(loc: 0x42002450),
+  CC3_DITH6: TCC0_CC_DITH6_Type(loc: 0x42002450),
+  PATTB: TCC0_PATTB_Type(loc: 0x42002464),
+  WAVEB: TCC0_WAVEB_Type(loc: 0x42002468),
+  PERB: TCC0_PERB_Type(loc: 0x4200246c),
+  PERB_DITH4: TCC0_PERB_DITH4_Type(loc: 0x4200246c),
+  PERB_DITH5: TCC0_PERB_DITH5_Type(loc: 0x4200246c),
+  PERB_DITH6: TCC0_PERB_DITH6_Type(loc: 0x4200246c),
+  CCB0: TCC0_CCB_Type(loc: 0x42002470),
+  CCB0_DITH4: TCC0_CCB_DITH4_Type(loc: 0x42002470),
+  CCB0_DITH5: TCC0_CCB_DITH5_Type(loc: 0x42002470),
+  CCB0_DITH6: TCC0_CCB_DITH6_Type(loc: 0x42002470),
+  CCB1: TCC0_CCB_Type(loc: 0x42002474),
+  CCB1_DITH4: TCC0_CCB_DITH4_Type(loc: 0x42002474),
+  CCB1_DITH5: TCC0_CCB_DITH5_Type(loc: 0x42002474),
+  CCB1_DITH6: TCC0_CCB_DITH6_Type(loc: 0x42002474),
+  CCB2: TCC0_CCB_Type(loc: 0x42002478),
+  CCB2_DITH4: TCC0_CCB_DITH4_Type(loc: 0x42002478),
+  CCB2_DITH5: TCC0_CCB_DITH5_Type(loc: 0x42002478),
+  CCB2_DITH6: TCC0_CCB_DITH6_Type(loc: 0x42002478),
+  CCB3: TCC0_CCB_Type(loc: 0x4200247c),
+  CCB3_DITH4: TCC0_CCB_DITH4_Type(loc: 0x4200247c),
+  CCB3_DITH5: TCC0_CCB_DITH5_Type(loc: 0x4200247c),
+  CCB3_DITH6: TCC0_CCB_DITH6_Type(loc: 0x4200247c),
 )
 
-let TCC2* = TCC0_Type(
-  CTRLA: TCC0_CTRLA_Type(p: cast[ptr uint32](0x42002800)),
-  CTRLBCLR: TCC0_CTRLBCLR_Type(p: cast[ptr uint8](0x42002804)),
-  CTRLBSET: TCC0_CTRLBSET_Type(p: cast[ptr uint8](0x42002805)),
-  SYNCBUSY: TCC0_SYNCBUSY_Type(p: cast[ptr uint32](0x42002808)),
-  FCTRLA: TCC0_FCTRLA_Type(p: cast[ptr uint32](0x4200280c)),
-  FCTRLB: TCC0_FCTRLB_Type(p: cast[ptr uint32](0x42002810)),
-  WEXCTRL: TCC0_WEXCTRL_Type(p: cast[ptr uint32](0x42002814)),
-  DRVCTRL: TCC0_DRVCTRL_Type(p: cast[ptr uint32](0x42002818)),
-  DBGCTRL: TCC0_DBGCTRL_Type(p: cast[ptr uint8](0x4200281e)),
-  EVCTRL: TCC0_EVCTRL_Type(p: cast[ptr uint32](0x42002820)),
-  INTENCLR: TCC0_INTENCLR_Type(p: cast[ptr uint32](0x42002824)),
-  INTENSET: TCC0_INTENSET_Type(p: cast[ptr uint32](0x42002828)),
-  INTFLAG: TCC0_INTFLAG_Type(p: cast[ptr uint32](0x4200282c)),
-  STATUS: TCC0_STATUS_Type(p: cast[ptr uint32](0x42002830)),
-  COUNT: TCC0_COUNT_Type(p: cast[ptr uint32](0x42002834)),
-  COUNT_DITH4: TCC0_COUNT_DITH4_Type(p: cast[ptr uint32](0x42002834)),
-  COUNT_DITH5: TCC0_COUNT_DITH5_Type(p: cast[ptr uint32](0x42002834)),
-  COUNT_DITH6: TCC0_COUNT_DITH6_Type(p: cast[ptr uint32](0x42002834)),
-  PATT: TCC0_PATT_Type(p: cast[ptr uint16](0x42002838)),
-  WAVE: TCC0_WAVE_Type(p: cast[ptr uint32](0x4200283c)),
-  PER: TCC0_PER_Type(p: cast[ptr uint32](0x42002840)),
-  PER_DITH4: TCC0_PER_DITH4_Type(p: cast[ptr uint32](0x42002840)),
-  PER_DITH5: TCC0_PER_DITH5_Type(p: cast[ptr uint32](0x42002840)),
-  PER_DITH6: TCC0_PER_DITH6_Type(p: cast[ptr uint32](0x42002840)),
-  CC0: TCC0_CC_Type(p: cast[ptr uint32](0x42002844)),
-  CC0_DITH4: TCC0_CC_DITH4_Type(p: cast[ptr uint32](0x42002844)),
-  CC0_DITH5: TCC0_CC_DITH5_Type(p: cast[ptr uint32](0x42002844)),
-  CC0_DITH6: TCC0_CC_DITH6_Type(p: cast[ptr uint32](0x42002844)),
-  CC1: TCC0_CC_Type(p: cast[ptr uint32](0x42002848)),
-  CC1_DITH4: TCC0_CC_DITH4_Type(p: cast[ptr uint32](0x42002848)),
-  CC1_DITH5: TCC0_CC_DITH5_Type(p: cast[ptr uint32](0x42002848)),
-  CC1_DITH6: TCC0_CC_DITH6_Type(p: cast[ptr uint32](0x42002848)),
-  CC2: TCC0_CC_Type(p: cast[ptr uint32](0x4200284c)),
-  CC2_DITH4: TCC0_CC_DITH4_Type(p: cast[ptr uint32](0x4200284c)),
-  CC2_DITH5: TCC0_CC_DITH5_Type(p: cast[ptr uint32](0x4200284c)),
-  CC2_DITH6: TCC0_CC_DITH6_Type(p: cast[ptr uint32](0x4200284c)),
-  CC3: TCC0_CC_Type(p: cast[ptr uint32](0x42002850)),
-  CC3_DITH4: TCC0_CC_DITH4_Type(p: cast[ptr uint32](0x42002850)),
-  CC3_DITH5: TCC0_CC_DITH5_Type(p: cast[ptr uint32](0x42002850)),
-  CC3_DITH6: TCC0_CC_DITH6_Type(p: cast[ptr uint32](0x42002850)),
-  PATTB: TCC0_PATTB_Type(p: cast[ptr uint16](0x42002864)),
-  WAVEB: TCC0_WAVEB_Type(p: cast[ptr uint32](0x42002868)),
-  PERB: TCC0_PERB_Type(p: cast[ptr uint32](0x4200286c)),
-  PERB_DITH4: TCC0_PERB_DITH4_Type(p: cast[ptr uint32](0x4200286c)),
-  PERB_DITH5: TCC0_PERB_DITH5_Type(p: cast[ptr uint32](0x4200286c)),
-  PERB_DITH6: TCC0_PERB_DITH6_Type(p: cast[ptr uint32](0x4200286c)),
-  CCB0: TCC0_CCB_Type(p: cast[ptr uint32](0x42002870)),
-  CCB0_DITH4: TCC0_CCB_DITH4_Type(p: cast[ptr uint32](0x42002870)),
-  CCB0_DITH5: TCC0_CCB_DITH5_Type(p: cast[ptr uint32](0x42002870)),
-  CCB0_DITH6: TCC0_CCB_DITH6_Type(p: cast[ptr uint32](0x42002870)),
-  CCB1: TCC0_CCB_Type(p: cast[ptr uint32](0x42002874)),
-  CCB1_DITH4: TCC0_CCB_DITH4_Type(p: cast[ptr uint32](0x42002874)),
-  CCB1_DITH5: TCC0_CCB_DITH5_Type(p: cast[ptr uint32](0x42002874)),
-  CCB1_DITH6: TCC0_CCB_DITH6_Type(p: cast[ptr uint32](0x42002874)),
-  CCB2: TCC0_CCB_Type(p: cast[ptr uint32](0x42002878)),
-  CCB2_DITH4: TCC0_CCB_DITH4_Type(p: cast[ptr uint32](0x42002878)),
-  CCB2_DITH5: TCC0_CCB_DITH5_Type(p: cast[ptr uint32](0x42002878)),
-  CCB2_DITH6: TCC0_CCB_DITH6_Type(p: cast[ptr uint32](0x42002878)),
-  CCB3: TCC0_CCB_Type(p: cast[ptr uint32](0x4200287c)),
-  CCB3_DITH4: TCC0_CCB_DITH4_Type(p: cast[ptr uint32](0x4200287c)),
-  CCB3_DITH5: TCC0_CCB_DITH5_Type(p: cast[ptr uint32](0x4200287c)),
-  CCB3_DITH6: TCC0_CCB_DITH6_Type(p: cast[ptr uint32](0x4200287c)),
+const TCC2* = TCC0_Type(
+  CTRLA: TCC0_CTRLA_Type(loc: 0x42002800),
+  CTRLBCLR: TCC0_CTRLBCLR_Type(loc: 0x42002804),
+  CTRLBSET: TCC0_CTRLBSET_Type(loc: 0x42002805),
+  SYNCBUSY: TCC0_SYNCBUSY_Type(loc: 0x42002808),
+  FCTRLA: TCC0_FCTRLA_Type(loc: 0x4200280c),
+  FCTRLB: TCC0_FCTRLB_Type(loc: 0x42002810),
+  WEXCTRL: TCC0_WEXCTRL_Type(loc: 0x42002814),
+  DRVCTRL: TCC0_DRVCTRL_Type(loc: 0x42002818),
+  DBGCTRL: TCC0_DBGCTRL_Type(loc: 0x4200281e),
+  EVCTRL: TCC0_EVCTRL_Type(loc: 0x42002820),
+  INTENCLR: TCC0_INTENCLR_Type(loc: 0x42002824),
+  INTENSET: TCC0_INTENSET_Type(loc: 0x42002828),
+  INTFLAG: TCC0_INTFLAG_Type(loc: 0x4200282c),
+  STATUS: TCC0_STATUS_Type(loc: 0x42002830),
+  COUNT: TCC0_COUNT_Type(loc: 0x42002834),
+  COUNT_DITH4: TCC0_COUNT_DITH4_Type(loc: 0x42002834),
+  COUNT_DITH5: TCC0_COUNT_DITH5_Type(loc: 0x42002834),
+  COUNT_DITH6: TCC0_COUNT_DITH6_Type(loc: 0x42002834),
+  PATT: TCC0_PATT_Type(loc: 0x42002838),
+  WAVE: TCC0_WAVE_Type(loc: 0x4200283c),
+  PER: TCC0_PER_Type(loc: 0x42002840),
+  PER_DITH4: TCC0_PER_DITH4_Type(loc: 0x42002840),
+  PER_DITH5: TCC0_PER_DITH5_Type(loc: 0x42002840),
+  PER_DITH6: TCC0_PER_DITH6_Type(loc: 0x42002840),
+  CC0: TCC0_CC_Type(loc: 0x42002844),
+  CC0_DITH4: TCC0_CC_DITH4_Type(loc: 0x42002844),
+  CC0_DITH5: TCC0_CC_DITH5_Type(loc: 0x42002844),
+  CC0_DITH6: TCC0_CC_DITH6_Type(loc: 0x42002844),
+  CC1: TCC0_CC_Type(loc: 0x42002848),
+  CC1_DITH4: TCC0_CC_DITH4_Type(loc: 0x42002848),
+  CC1_DITH5: TCC0_CC_DITH5_Type(loc: 0x42002848),
+  CC1_DITH6: TCC0_CC_DITH6_Type(loc: 0x42002848),
+  CC2: TCC0_CC_Type(loc: 0x4200284c),
+  CC2_DITH4: TCC0_CC_DITH4_Type(loc: 0x4200284c),
+  CC2_DITH5: TCC0_CC_DITH5_Type(loc: 0x4200284c),
+  CC2_DITH6: TCC0_CC_DITH6_Type(loc: 0x4200284c),
+  CC3: TCC0_CC_Type(loc: 0x42002850),
+  CC3_DITH4: TCC0_CC_DITH4_Type(loc: 0x42002850),
+  CC3_DITH5: TCC0_CC_DITH5_Type(loc: 0x42002850),
+  CC3_DITH6: TCC0_CC_DITH6_Type(loc: 0x42002850),
+  PATTB: TCC0_PATTB_Type(loc: 0x42002864),
+  WAVEB: TCC0_WAVEB_Type(loc: 0x42002868),
+  PERB: TCC0_PERB_Type(loc: 0x4200286c),
+  PERB_DITH4: TCC0_PERB_DITH4_Type(loc: 0x4200286c),
+  PERB_DITH5: TCC0_PERB_DITH5_Type(loc: 0x4200286c),
+  PERB_DITH6: TCC0_PERB_DITH6_Type(loc: 0x4200286c),
+  CCB0: TCC0_CCB_Type(loc: 0x42002870),
+  CCB0_DITH4: TCC0_CCB_DITH4_Type(loc: 0x42002870),
+  CCB0_DITH5: TCC0_CCB_DITH5_Type(loc: 0x42002870),
+  CCB0_DITH6: TCC0_CCB_DITH6_Type(loc: 0x42002870),
+  CCB1: TCC0_CCB_Type(loc: 0x42002874),
+  CCB1_DITH4: TCC0_CCB_DITH4_Type(loc: 0x42002874),
+  CCB1_DITH5: TCC0_CCB_DITH5_Type(loc: 0x42002874),
+  CCB1_DITH6: TCC0_CCB_DITH6_Type(loc: 0x42002874),
+  CCB2: TCC0_CCB_Type(loc: 0x42002878),
+  CCB2_DITH4: TCC0_CCB_DITH4_Type(loc: 0x42002878),
+  CCB2_DITH5: TCC0_CCB_DITH5_Type(loc: 0x42002878),
+  CCB2_DITH6: TCC0_CCB_DITH6_Type(loc: 0x42002878),
+  CCB3: TCC0_CCB_Type(loc: 0x4200287c),
+  CCB3_DITH4: TCC0_CCB_DITH4_Type(loc: 0x4200287c),
+  CCB3_DITH5: TCC0_CCB_DITH5_Type(loc: 0x4200287c),
+  CCB3_DITH6: TCC0_CCB_DITH6_Type(loc: 0x4200287c),
 )
 
-let USB* = USB_Type(
+const USB* = USB_Type(
   DEVICE: UsbDevice_Type(
-    CTRLA: UsbDevice_CTRLA_Type(p: cast[ptr uint8](0x41005000)),
-    SYNCBUSY: UsbDevice_SYNCBUSY_Type(p: cast[ptr uint8](0x41005002)),
-    QOSCTRL: UsbDevice_QOSCTRL_Type(p: cast[ptr uint8](0x41005003)),
-    CTRLB: UsbDevice_CTRLB_Type(p: cast[ptr uint16](0x41005008)),
-    DADD: UsbDevice_DADD_Type(p: cast[ptr uint8](0x4100500a)),
-    STATUS: UsbDevice_STATUS_Type(p: cast[ptr uint8](0x4100500c)),
-    FSMSTATUS: UsbDevice_FSMSTATUS_Type(p: cast[ptr uint8](0x4100500d)),
-    FNUM: UsbDevice_FNUM_Type(p: cast[ptr uint16](0x41005010)),
-    INTENCLR: UsbDevice_INTENCLR_Type(p: cast[ptr uint16](0x41005014)),
-    INTENSET: UsbDevice_INTENSET_Type(p: cast[ptr uint16](0x41005018)),
-    INTFLAG: UsbDevice_INTFLAG_Type(p: cast[ptr uint16](0x4100501c)),
-    EPINTSMRY: UsbDevice_EPINTSMRY_Type(p: cast[ptr uint16](0x41005020)),
-    DESCADD: UsbDevice_DESCADD_Type(p: cast[ptr uint32](0x41005024)),
-    PADCAL: UsbDevice_PADCAL_Type(p: cast[ptr uint16](0x41005028)),
-    EPCFG0: UsbDevice_EPCFG_Type(p: cast[ptr uint8](0x41005100)),
-    EPSTATUSCLR0: UsbDevice_EPSTATUSCLR_Type(p: cast[ptr uint8](0x41005104)),
-    EPSTATUSSET0: UsbDevice_EPSTATUSSET_Type(p: cast[ptr uint8](0x41005105)),
-    EPSTATUS0: UsbDevice_EPSTATUS_Type(p: cast[ptr uint8](0x41005106)),
-    EPINTFLAG0: UsbDevice_EPINTFLAG_Type(p: cast[ptr uint8](0x41005107)),
-    EPINTENCLR0: UsbDevice_EPINTENCLR_Type(p: cast[ptr uint8](0x41005108)),
-    EPINTENSET0: UsbDevice_EPINTENSET_Type(p: cast[ptr uint8](0x41005109)),
-    EPCFG1: UsbDevice_EPCFG_Type(p: cast[ptr uint8](0x41005120)),
-    EPSTATUSCLR1: UsbDevice_EPSTATUSCLR_Type(p: cast[ptr uint8](0x41005124)),
-    EPSTATUSSET1: UsbDevice_EPSTATUSSET_Type(p: cast[ptr uint8](0x41005125)),
-    EPSTATUS1: UsbDevice_EPSTATUS_Type(p: cast[ptr uint8](0x41005126)),
-    EPINTFLAG1: UsbDevice_EPINTFLAG_Type(p: cast[ptr uint8](0x41005127)),
-    EPINTENCLR1: UsbDevice_EPINTENCLR_Type(p: cast[ptr uint8](0x41005128)),
-    EPINTENSET1: UsbDevice_EPINTENSET_Type(p: cast[ptr uint8](0x41005129)),
-    EPCFG2: UsbDevice_EPCFG_Type(p: cast[ptr uint8](0x41005140)),
-    EPSTATUSCLR2: UsbDevice_EPSTATUSCLR_Type(p: cast[ptr uint8](0x41005144)),
-    EPSTATUSSET2: UsbDevice_EPSTATUSSET_Type(p: cast[ptr uint8](0x41005145)),
-    EPSTATUS2: UsbDevice_EPSTATUS_Type(p: cast[ptr uint8](0x41005146)),
-    EPINTFLAG2: UsbDevice_EPINTFLAG_Type(p: cast[ptr uint8](0x41005147)),
-    EPINTENCLR2: UsbDevice_EPINTENCLR_Type(p: cast[ptr uint8](0x41005148)),
-    EPINTENSET2: UsbDevice_EPINTENSET_Type(p: cast[ptr uint8](0x41005149)),
-    EPCFG3: UsbDevice_EPCFG_Type(p: cast[ptr uint8](0x41005160)),
-    EPSTATUSCLR3: UsbDevice_EPSTATUSCLR_Type(p: cast[ptr uint8](0x41005164)),
-    EPSTATUSSET3: UsbDevice_EPSTATUSSET_Type(p: cast[ptr uint8](0x41005165)),
-    EPSTATUS3: UsbDevice_EPSTATUS_Type(p: cast[ptr uint8](0x41005166)),
-    EPINTFLAG3: UsbDevice_EPINTFLAG_Type(p: cast[ptr uint8](0x41005167)),
-    EPINTENCLR3: UsbDevice_EPINTENCLR_Type(p: cast[ptr uint8](0x41005168)),
-    EPINTENSET3: UsbDevice_EPINTENSET_Type(p: cast[ptr uint8](0x41005169)),
-    EPCFG4: UsbDevice_EPCFG_Type(p: cast[ptr uint8](0x41005180)),
-    EPSTATUSCLR4: UsbDevice_EPSTATUSCLR_Type(p: cast[ptr uint8](0x41005184)),
-    EPSTATUSSET4: UsbDevice_EPSTATUSSET_Type(p: cast[ptr uint8](0x41005185)),
-    EPSTATUS4: UsbDevice_EPSTATUS_Type(p: cast[ptr uint8](0x41005186)),
-    EPINTFLAG4: UsbDevice_EPINTFLAG_Type(p: cast[ptr uint8](0x41005187)),
-    EPINTENCLR4: UsbDevice_EPINTENCLR_Type(p: cast[ptr uint8](0x41005188)),
-    EPINTENSET4: UsbDevice_EPINTENSET_Type(p: cast[ptr uint8](0x41005189)),
-    EPCFG5: UsbDevice_EPCFG_Type(p: cast[ptr uint8](0x410051a0)),
-    EPSTATUSCLR5: UsbDevice_EPSTATUSCLR_Type(p: cast[ptr uint8](0x410051a4)),
-    EPSTATUSSET5: UsbDevice_EPSTATUSSET_Type(p: cast[ptr uint8](0x410051a5)),
-    EPSTATUS5: UsbDevice_EPSTATUS_Type(p: cast[ptr uint8](0x410051a6)),
-    EPINTFLAG5: UsbDevice_EPINTFLAG_Type(p: cast[ptr uint8](0x410051a7)),
-    EPINTENCLR5: UsbDevice_EPINTENCLR_Type(p: cast[ptr uint8](0x410051a8)),
-    EPINTENSET5: UsbDevice_EPINTENSET_Type(p: cast[ptr uint8](0x410051a9)),
-    EPCFG6: UsbDevice_EPCFG_Type(p: cast[ptr uint8](0x410051c0)),
-    EPSTATUSCLR6: UsbDevice_EPSTATUSCLR_Type(p: cast[ptr uint8](0x410051c4)),
-    EPSTATUSSET6: UsbDevice_EPSTATUSSET_Type(p: cast[ptr uint8](0x410051c5)),
-    EPSTATUS6: UsbDevice_EPSTATUS_Type(p: cast[ptr uint8](0x410051c6)),
-    EPINTFLAG6: UsbDevice_EPINTFLAG_Type(p: cast[ptr uint8](0x410051c7)),
-    EPINTENCLR6: UsbDevice_EPINTENCLR_Type(p: cast[ptr uint8](0x410051c8)),
-    EPINTENSET6: UsbDevice_EPINTENSET_Type(p: cast[ptr uint8](0x410051c9)),
-    EPCFG7: UsbDevice_EPCFG_Type(p: cast[ptr uint8](0x410051e0)),
-    EPSTATUSCLR7: UsbDevice_EPSTATUSCLR_Type(p: cast[ptr uint8](0x410051e4)),
-    EPSTATUSSET7: UsbDevice_EPSTATUSSET_Type(p: cast[ptr uint8](0x410051e5)),
-    EPSTATUS7: UsbDevice_EPSTATUS_Type(p: cast[ptr uint8](0x410051e6)),
-    EPINTFLAG7: UsbDevice_EPINTFLAG_Type(p: cast[ptr uint8](0x410051e7)),
-    EPINTENCLR7: UsbDevice_EPINTENCLR_Type(p: cast[ptr uint8](0x410051e8)),
-    EPINTENSET7: UsbDevice_EPINTENSET_Type(p: cast[ptr uint8](0x410051e9)),
+    CTRLA: UsbDevice_CTRLA_Type(loc: 0x41005000),
+    SYNCBUSY: UsbDevice_SYNCBUSY_Type(loc: 0x41005002),
+    QOSCTRL: UsbDevice_QOSCTRL_Type(loc: 0x41005003),
+    CTRLB: UsbDevice_CTRLB_Type(loc: 0x41005008),
+    DADD: UsbDevice_DADD_Type(loc: 0x4100500a),
+    STATUS: UsbDevice_STATUS_Type(loc: 0x4100500c),
+    FSMSTATUS: UsbDevice_FSMSTATUS_Type(loc: 0x4100500d),
+    FNUM: UsbDevice_FNUM_Type(loc: 0x41005010),
+    INTENCLR: UsbDevice_INTENCLR_Type(loc: 0x41005014),
+    INTENSET: UsbDevice_INTENSET_Type(loc: 0x41005018),
+    INTFLAG: UsbDevice_INTFLAG_Type(loc: 0x4100501c),
+    EPINTSMRY: UsbDevice_EPINTSMRY_Type(loc: 0x41005020),
+    DESCADD: UsbDevice_DESCADD_Type(loc: 0x41005024),
+    PADCAL: UsbDevice_PADCAL_Type(loc: 0x41005028),
+    EPCFG0: UsbDevice_EPCFG_Type(loc: 0x41005100),
+    EPSTATUSCLR0: UsbDevice_EPSTATUSCLR_Type(loc: 0x41005104),
+    EPSTATUSSET0: UsbDevice_EPSTATUSSET_Type(loc: 0x41005105),
+    EPSTATUS0: UsbDevice_EPSTATUS_Type(loc: 0x41005106),
+    EPINTFLAG0: UsbDevice_EPINTFLAG_Type(loc: 0x41005107),
+    EPINTENCLR0: UsbDevice_EPINTENCLR_Type(loc: 0x41005108),
+    EPINTENSET0: UsbDevice_EPINTENSET_Type(loc: 0x41005109),
+    EPCFG1: UsbDevice_EPCFG_Type(loc: 0x41005120),
+    EPSTATUSCLR1: UsbDevice_EPSTATUSCLR_Type(loc: 0x41005124),
+    EPSTATUSSET1: UsbDevice_EPSTATUSSET_Type(loc: 0x41005125),
+    EPSTATUS1: UsbDevice_EPSTATUS_Type(loc: 0x41005126),
+    EPINTFLAG1: UsbDevice_EPINTFLAG_Type(loc: 0x41005127),
+    EPINTENCLR1: UsbDevice_EPINTENCLR_Type(loc: 0x41005128),
+    EPINTENSET1: UsbDevice_EPINTENSET_Type(loc: 0x41005129),
+    EPCFG2: UsbDevice_EPCFG_Type(loc: 0x41005140),
+    EPSTATUSCLR2: UsbDevice_EPSTATUSCLR_Type(loc: 0x41005144),
+    EPSTATUSSET2: UsbDevice_EPSTATUSSET_Type(loc: 0x41005145),
+    EPSTATUS2: UsbDevice_EPSTATUS_Type(loc: 0x41005146),
+    EPINTFLAG2: UsbDevice_EPINTFLAG_Type(loc: 0x41005147),
+    EPINTENCLR2: UsbDevice_EPINTENCLR_Type(loc: 0x41005148),
+    EPINTENSET2: UsbDevice_EPINTENSET_Type(loc: 0x41005149),
+    EPCFG3: UsbDevice_EPCFG_Type(loc: 0x41005160),
+    EPSTATUSCLR3: UsbDevice_EPSTATUSCLR_Type(loc: 0x41005164),
+    EPSTATUSSET3: UsbDevice_EPSTATUSSET_Type(loc: 0x41005165),
+    EPSTATUS3: UsbDevice_EPSTATUS_Type(loc: 0x41005166),
+    EPINTFLAG3: UsbDevice_EPINTFLAG_Type(loc: 0x41005167),
+    EPINTENCLR3: UsbDevice_EPINTENCLR_Type(loc: 0x41005168),
+    EPINTENSET3: UsbDevice_EPINTENSET_Type(loc: 0x41005169),
+    EPCFG4: UsbDevice_EPCFG_Type(loc: 0x41005180),
+    EPSTATUSCLR4: UsbDevice_EPSTATUSCLR_Type(loc: 0x41005184),
+    EPSTATUSSET4: UsbDevice_EPSTATUSSET_Type(loc: 0x41005185),
+    EPSTATUS4: UsbDevice_EPSTATUS_Type(loc: 0x41005186),
+    EPINTFLAG4: UsbDevice_EPINTFLAG_Type(loc: 0x41005187),
+    EPINTENCLR4: UsbDevice_EPINTENCLR_Type(loc: 0x41005188),
+    EPINTENSET4: UsbDevice_EPINTENSET_Type(loc: 0x41005189),
+    EPCFG5: UsbDevice_EPCFG_Type(loc: 0x410051a0),
+    EPSTATUSCLR5: UsbDevice_EPSTATUSCLR_Type(loc: 0x410051a4),
+    EPSTATUSSET5: UsbDevice_EPSTATUSSET_Type(loc: 0x410051a5),
+    EPSTATUS5: UsbDevice_EPSTATUS_Type(loc: 0x410051a6),
+    EPINTFLAG5: UsbDevice_EPINTFLAG_Type(loc: 0x410051a7),
+    EPINTENCLR5: UsbDevice_EPINTENCLR_Type(loc: 0x410051a8),
+    EPINTENSET5: UsbDevice_EPINTENSET_Type(loc: 0x410051a9),
+    EPCFG6: UsbDevice_EPCFG_Type(loc: 0x410051c0),
+    EPSTATUSCLR6: UsbDevice_EPSTATUSCLR_Type(loc: 0x410051c4),
+    EPSTATUSSET6: UsbDevice_EPSTATUSSET_Type(loc: 0x410051c5),
+    EPSTATUS6: UsbDevice_EPSTATUS_Type(loc: 0x410051c6),
+    EPINTFLAG6: UsbDevice_EPINTFLAG_Type(loc: 0x410051c7),
+    EPINTENCLR6: UsbDevice_EPINTENCLR_Type(loc: 0x410051c8),
+    EPINTENSET6: UsbDevice_EPINTENSET_Type(loc: 0x410051c9),
+    EPCFG7: UsbDevice_EPCFG_Type(loc: 0x410051e0),
+    EPSTATUSCLR7: UsbDevice_EPSTATUSCLR_Type(loc: 0x410051e4),
+    EPSTATUSSET7: UsbDevice_EPSTATUSSET_Type(loc: 0x410051e5),
+    EPSTATUS7: UsbDevice_EPSTATUS_Type(loc: 0x410051e6),
+    EPINTFLAG7: UsbDevice_EPINTFLAG_Type(loc: 0x410051e7),
+    EPINTENCLR7: UsbDevice_EPINTENCLR_Type(loc: 0x410051e8),
+    EPINTENSET7: UsbDevice_EPINTENSET_Type(loc: 0x410051e9),
   ),
   HOST: UsbHost_Type(
-    CTRLA: UsbHost_CTRLA_Type(p: cast[ptr uint8](0x41005000)),
-    SYNCBUSY: UsbHost_SYNCBUSY_Type(p: cast[ptr uint8](0x41005002)),
-    QOSCTRL: UsbHost_QOSCTRL_Type(p: cast[ptr uint8](0x41005003)),
-    CTRLB: UsbHost_CTRLB_Type(p: cast[ptr uint16](0x41005008)),
-    HSOFC: UsbHost_HSOFC_Type(p: cast[ptr uint8](0x4100500a)),
-    STATUS: UsbHost_STATUS_Type(p: cast[ptr uint8](0x4100500c)),
-    FSMSTATUS: UsbHost_FSMSTATUS_Type(p: cast[ptr uint8](0x4100500d)),
-    FNUM: UsbHost_FNUM_Type(p: cast[ptr uint16](0x41005010)),
-    FLENHIGH: UsbHost_FLENHIGH_Type(p: cast[ptr uint8](0x41005012)),
-    INTENCLR: UsbHost_INTENCLR_Type(p: cast[ptr uint16](0x41005014)),
-    INTENSET: UsbHost_INTENSET_Type(p: cast[ptr uint16](0x41005018)),
-    INTFLAG: UsbHost_INTFLAG_Type(p: cast[ptr uint16](0x4100501c)),
-    PINTSMRY: UsbHost_PINTSMRY_Type(p: cast[ptr uint16](0x41005020)),
-    DESCADD: UsbHost_DESCADD_Type(p: cast[ptr uint32](0x41005024)),
-    PADCAL: UsbHost_PADCAL_Type(p: cast[ptr uint16](0x41005028)),
-    PCFG0: UsbHost_PCFG_Type(p: cast[ptr uint8](0x41005100)),
-    BINTERVAL0: UsbHost_BINTERVAL_Type(p: cast[ptr uint8](0x41005103)),
-    PSTATUSCLR0: UsbHost_PSTATUSCLR_Type(p: cast[ptr uint8](0x41005104)),
-    PSTATUSSET0: UsbHost_PSTATUSSET_Type(p: cast[ptr uint8](0x41005105)),
-    PSTATUS0: UsbHost_PSTATUS_Type(p: cast[ptr uint8](0x41005106)),
-    PINTFLAG0: UsbHost_PINTFLAG_Type(p: cast[ptr uint8](0x41005107)),
-    PINTENCLR0: UsbHost_PINTENCLR_Type(p: cast[ptr uint8](0x41005108)),
-    PINTENSET0: UsbHost_PINTENSET_Type(p: cast[ptr uint8](0x41005109)),
-    PCFG1: UsbHost_PCFG_Type(p: cast[ptr uint8](0x41005120)),
-    BINTERVAL1: UsbHost_BINTERVAL_Type(p: cast[ptr uint8](0x41005123)),
-    PSTATUSCLR1: UsbHost_PSTATUSCLR_Type(p: cast[ptr uint8](0x41005124)),
-    PSTATUSSET1: UsbHost_PSTATUSSET_Type(p: cast[ptr uint8](0x41005125)),
-    PSTATUS1: UsbHost_PSTATUS_Type(p: cast[ptr uint8](0x41005126)),
-    PINTFLAG1: UsbHost_PINTFLAG_Type(p: cast[ptr uint8](0x41005127)),
-    PINTENCLR1: UsbHost_PINTENCLR_Type(p: cast[ptr uint8](0x41005128)),
-    PINTENSET1: UsbHost_PINTENSET_Type(p: cast[ptr uint8](0x41005129)),
-    PCFG2: UsbHost_PCFG_Type(p: cast[ptr uint8](0x41005140)),
-    BINTERVAL2: UsbHost_BINTERVAL_Type(p: cast[ptr uint8](0x41005143)),
-    PSTATUSCLR2: UsbHost_PSTATUSCLR_Type(p: cast[ptr uint8](0x41005144)),
-    PSTATUSSET2: UsbHost_PSTATUSSET_Type(p: cast[ptr uint8](0x41005145)),
-    PSTATUS2: UsbHost_PSTATUS_Type(p: cast[ptr uint8](0x41005146)),
-    PINTFLAG2: UsbHost_PINTFLAG_Type(p: cast[ptr uint8](0x41005147)),
-    PINTENCLR2: UsbHost_PINTENCLR_Type(p: cast[ptr uint8](0x41005148)),
-    PINTENSET2: UsbHost_PINTENSET_Type(p: cast[ptr uint8](0x41005149)),
-    PCFG3: UsbHost_PCFG_Type(p: cast[ptr uint8](0x41005160)),
-    BINTERVAL3: UsbHost_BINTERVAL_Type(p: cast[ptr uint8](0x41005163)),
-    PSTATUSCLR3: UsbHost_PSTATUSCLR_Type(p: cast[ptr uint8](0x41005164)),
-    PSTATUSSET3: UsbHost_PSTATUSSET_Type(p: cast[ptr uint8](0x41005165)),
-    PSTATUS3: UsbHost_PSTATUS_Type(p: cast[ptr uint8](0x41005166)),
-    PINTFLAG3: UsbHost_PINTFLAG_Type(p: cast[ptr uint8](0x41005167)),
-    PINTENCLR3: UsbHost_PINTENCLR_Type(p: cast[ptr uint8](0x41005168)),
-    PINTENSET3: UsbHost_PINTENSET_Type(p: cast[ptr uint8](0x41005169)),
-    PCFG4: UsbHost_PCFG_Type(p: cast[ptr uint8](0x41005180)),
-    BINTERVAL4: UsbHost_BINTERVAL_Type(p: cast[ptr uint8](0x41005183)),
-    PSTATUSCLR4: UsbHost_PSTATUSCLR_Type(p: cast[ptr uint8](0x41005184)),
-    PSTATUSSET4: UsbHost_PSTATUSSET_Type(p: cast[ptr uint8](0x41005185)),
-    PSTATUS4: UsbHost_PSTATUS_Type(p: cast[ptr uint8](0x41005186)),
-    PINTFLAG4: UsbHost_PINTFLAG_Type(p: cast[ptr uint8](0x41005187)),
-    PINTENCLR4: UsbHost_PINTENCLR_Type(p: cast[ptr uint8](0x41005188)),
-    PINTENSET4: UsbHost_PINTENSET_Type(p: cast[ptr uint8](0x41005189)),
-    PCFG5: UsbHost_PCFG_Type(p: cast[ptr uint8](0x410051a0)),
-    BINTERVAL5: UsbHost_BINTERVAL_Type(p: cast[ptr uint8](0x410051a3)),
-    PSTATUSCLR5: UsbHost_PSTATUSCLR_Type(p: cast[ptr uint8](0x410051a4)),
-    PSTATUSSET5: UsbHost_PSTATUSSET_Type(p: cast[ptr uint8](0x410051a5)),
-    PSTATUS5: UsbHost_PSTATUS_Type(p: cast[ptr uint8](0x410051a6)),
-    PINTFLAG5: UsbHost_PINTFLAG_Type(p: cast[ptr uint8](0x410051a7)),
-    PINTENCLR5: UsbHost_PINTENCLR_Type(p: cast[ptr uint8](0x410051a8)),
-    PINTENSET5: UsbHost_PINTENSET_Type(p: cast[ptr uint8](0x410051a9)),
-    PCFG6: UsbHost_PCFG_Type(p: cast[ptr uint8](0x410051c0)),
-    BINTERVAL6: UsbHost_BINTERVAL_Type(p: cast[ptr uint8](0x410051c3)),
-    PSTATUSCLR6: UsbHost_PSTATUSCLR_Type(p: cast[ptr uint8](0x410051c4)),
-    PSTATUSSET6: UsbHost_PSTATUSSET_Type(p: cast[ptr uint8](0x410051c5)),
-    PSTATUS6: UsbHost_PSTATUS_Type(p: cast[ptr uint8](0x410051c6)),
-    PINTFLAG6: UsbHost_PINTFLAG_Type(p: cast[ptr uint8](0x410051c7)),
-    PINTENCLR6: UsbHost_PINTENCLR_Type(p: cast[ptr uint8](0x410051c8)),
-    PINTENSET6: UsbHost_PINTENSET_Type(p: cast[ptr uint8](0x410051c9)),
-    PCFG7: UsbHost_PCFG_Type(p: cast[ptr uint8](0x410051e0)),
-    BINTERVAL7: UsbHost_BINTERVAL_Type(p: cast[ptr uint8](0x410051e3)),
-    PSTATUSCLR7: UsbHost_PSTATUSCLR_Type(p: cast[ptr uint8](0x410051e4)),
-    PSTATUSSET7: UsbHost_PSTATUSSET_Type(p: cast[ptr uint8](0x410051e5)),
-    PSTATUS7: UsbHost_PSTATUS_Type(p: cast[ptr uint8](0x410051e6)),
-    PINTFLAG7: UsbHost_PINTFLAG_Type(p: cast[ptr uint8](0x410051e7)),
-    PINTENCLR7: UsbHost_PINTENCLR_Type(p: cast[ptr uint8](0x410051e8)),
-    PINTENSET7: UsbHost_PINTENSET_Type(p: cast[ptr uint8](0x410051e9)),
+    CTRLA: UsbHost_CTRLA_Type(loc: 0x41005000),
+    SYNCBUSY: UsbHost_SYNCBUSY_Type(loc: 0x41005002),
+    QOSCTRL: UsbHost_QOSCTRL_Type(loc: 0x41005003),
+    CTRLB: UsbHost_CTRLB_Type(loc: 0x41005008),
+    HSOFC: UsbHost_HSOFC_Type(loc: 0x4100500a),
+    STATUS: UsbHost_STATUS_Type(loc: 0x4100500c),
+    FSMSTATUS: UsbHost_FSMSTATUS_Type(loc: 0x4100500d),
+    FNUM: UsbHost_FNUM_Type(loc: 0x41005010),
+    FLENHIGH: UsbHost_FLENHIGH_Type(loc: 0x41005012),
+    INTENCLR: UsbHost_INTENCLR_Type(loc: 0x41005014),
+    INTENSET: UsbHost_INTENSET_Type(loc: 0x41005018),
+    INTFLAG: UsbHost_INTFLAG_Type(loc: 0x4100501c),
+    PINTSMRY: UsbHost_PINTSMRY_Type(loc: 0x41005020),
+    DESCADD: UsbHost_DESCADD_Type(loc: 0x41005024),
+    PADCAL: UsbHost_PADCAL_Type(loc: 0x41005028),
+    PCFG0: UsbHost_PCFG_Type(loc: 0x41005100),
+    BINTERVAL0: UsbHost_BINTERVAL_Type(loc: 0x41005103),
+    PSTATUSCLR0: UsbHost_PSTATUSCLR_Type(loc: 0x41005104),
+    PSTATUSSET0: UsbHost_PSTATUSSET_Type(loc: 0x41005105),
+    PSTATUS0: UsbHost_PSTATUS_Type(loc: 0x41005106),
+    PINTFLAG0: UsbHost_PINTFLAG_Type(loc: 0x41005107),
+    PINTENCLR0: UsbHost_PINTENCLR_Type(loc: 0x41005108),
+    PINTENSET0: UsbHost_PINTENSET_Type(loc: 0x41005109),
+    PCFG1: UsbHost_PCFG_Type(loc: 0x41005120),
+    BINTERVAL1: UsbHost_BINTERVAL_Type(loc: 0x41005123),
+    PSTATUSCLR1: UsbHost_PSTATUSCLR_Type(loc: 0x41005124),
+    PSTATUSSET1: UsbHost_PSTATUSSET_Type(loc: 0x41005125),
+    PSTATUS1: UsbHost_PSTATUS_Type(loc: 0x41005126),
+    PINTFLAG1: UsbHost_PINTFLAG_Type(loc: 0x41005127),
+    PINTENCLR1: UsbHost_PINTENCLR_Type(loc: 0x41005128),
+    PINTENSET1: UsbHost_PINTENSET_Type(loc: 0x41005129),
+    PCFG2: UsbHost_PCFG_Type(loc: 0x41005140),
+    BINTERVAL2: UsbHost_BINTERVAL_Type(loc: 0x41005143),
+    PSTATUSCLR2: UsbHost_PSTATUSCLR_Type(loc: 0x41005144),
+    PSTATUSSET2: UsbHost_PSTATUSSET_Type(loc: 0x41005145),
+    PSTATUS2: UsbHost_PSTATUS_Type(loc: 0x41005146),
+    PINTFLAG2: UsbHost_PINTFLAG_Type(loc: 0x41005147),
+    PINTENCLR2: UsbHost_PINTENCLR_Type(loc: 0x41005148),
+    PINTENSET2: UsbHost_PINTENSET_Type(loc: 0x41005149),
+    PCFG3: UsbHost_PCFG_Type(loc: 0x41005160),
+    BINTERVAL3: UsbHost_BINTERVAL_Type(loc: 0x41005163),
+    PSTATUSCLR3: UsbHost_PSTATUSCLR_Type(loc: 0x41005164),
+    PSTATUSSET3: UsbHost_PSTATUSSET_Type(loc: 0x41005165),
+    PSTATUS3: UsbHost_PSTATUS_Type(loc: 0x41005166),
+    PINTFLAG3: UsbHost_PINTFLAG_Type(loc: 0x41005167),
+    PINTENCLR3: UsbHost_PINTENCLR_Type(loc: 0x41005168),
+    PINTENSET3: UsbHost_PINTENSET_Type(loc: 0x41005169),
+    PCFG4: UsbHost_PCFG_Type(loc: 0x41005180),
+    BINTERVAL4: UsbHost_BINTERVAL_Type(loc: 0x41005183),
+    PSTATUSCLR4: UsbHost_PSTATUSCLR_Type(loc: 0x41005184),
+    PSTATUSSET4: UsbHost_PSTATUSSET_Type(loc: 0x41005185),
+    PSTATUS4: UsbHost_PSTATUS_Type(loc: 0x41005186),
+    PINTFLAG4: UsbHost_PINTFLAG_Type(loc: 0x41005187),
+    PINTENCLR4: UsbHost_PINTENCLR_Type(loc: 0x41005188),
+    PINTENSET4: UsbHost_PINTENSET_Type(loc: 0x41005189),
+    PCFG5: UsbHost_PCFG_Type(loc: 0x410051a0),
+    BINTERVAL5: UsbHost_BINTERVAL_Type(loc: 0x410051a3),
+    PSTATUSCLR5: UsbHost_PSTATUSCLR_Type(loc: 0x410051a4),
+    PSTATUSSET5: UsbHost_PSTATUSSET_Type(loc: 0x410051a5),
+    PSTATUS5: UsbHost_PSTATUS_Type(loc: 0x410051a6),
+    PINTFLAG5: UsbHost_PINTFLAG_Type(loc: 0x410051a7),
+    PINTENCLR5: UsbHost_PINTENCLR_Type(loc: 0x410051a8),
+    PINTENSET5: UsbHost_PINTENSET_Type(loc: 0x410051a9),
+    PCFG6: UsbHost_PCFG_Type(loc: 0x410051c0),
+    BINTERVAL6: UsbHost_BINTERVAL_Type(loc: 0x410051c3),
+    PSTATUSCLR6: UsbHost_PSTATUSCLR_Type(loc: 0x410051c4),
+    PSTATUSSET6: UsbHost_PSTATUSSET_Type(loc: 0x410051c5),
+    PSTATUS6: UsbHost_PSTATUS_Type(loc: 0x410051c6),
+    PINTFLAG6: UsbHost_PINTFLAG_Type(loc: 0x410051c7),
+    PINTENCLR6: UsbHost_PINTENCLR_Type(loc: 0x410051c8),
+    PINTENSET6: UsbHost_PINTENSET_Type(loc: 0x410051c9),
+    PCFG7: UsbHost_PCFG_Type(loc: 0x410051e0),
+    BINTERVAL7: UsbHost_BINTERVAL_Type(loc: 0x410051e3),
+    PSTATUSCLR7: UsbHost_PSTATUSCLR_Type(loc: 0x410051e4),
+    PSTATUSSET7: UsbHost_PSTATUSSET_Type(loc: 0x410051e5),
+    PSTATUS7: UsbHost_PSTATUS_Type(loc: 0x410051e6),
+    PINTFLAG7: UsbHost_PINTFLAG_Type(loc: 0x410051e7),
+    PINTENCLR7: UsbHost_PINTENCLR_Type(loc: 0x410051e8),
+    PINTENSET7: UsbHost_PINTENSET_Type(loc: 0x410051e9),
   ),
 )
 
-let WDT* = WDT_Type(
-  CTRL: WDT_CTRL_Type(p: cast[ptr uint8](0x40001000)),
-  CONFIG: WDT_CONFIG_Type(p: cast[ptr uint8](0x40001001)),
-  EWCTRL: WDT_EWCTRL_Type(p: cast[ptr uint8](0x40001002)),
-  INTENCLR: WDT_INTENCLR_Type(p: cast[ptr uint8](0x40001004)),
-  INTENSET: WDT_INTENSET_Type(p: cast[ptr uint8](0x40001005)),
-  INTFLAG: WDT_INTFLAG_Type(p: cast[ptr uint8](0x40001006)),
-  STATUS: WDT_STATUS_Type(p: cast[ptr uint8](0x40001007)),
-  CLEAR: WDT_CLEAR_Type(p: cast[ptr uint8](0x40001008)),
+const WDT* = WDT_Type(
+  CTRL: WDT_CTRL_Type(loc: 0x40001000),
+  CONFIG: WDT_CONFIG_Type(loc: 0x40001001),
+  EWCTRL: WDT_EWCTRL_Type(loc: 0x40001002),
+  INTENCLR: WDT_INTENCLR_Type(loc: 0x40001004),
+  INTENSET: WDT_INTENSET_Type(loc: 0x40001005),
+  INTFLAG: WDT_INTFLAG_Type(loc: 0x40001006),
+  STATUS: WDT_STATUS_Type(loc: 0x40001007),
+  CLEAR: WDT_CLEAR_Type(loc: 0x40001008),
 )
 
 
@@ -3653,10 +3653,10 @@ type AC_COMPCTRL_FLEN* {.pure.} = enum
   MAJ5 = 0x2,
 
 template read*(reg: AC_CTRLA_Type): AC_CTRLA_Fields =
-  cast[AC_CTRLA_Fields](volatileLoad(reg.p))
+  cast[AC_CTRLA_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: AC_CTRLA_Type, val: AC_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: AC_CTRLA_Type, op: untyped): untyped =
   block:
@@ -3665,13 +3665,13 @@ template modifyIt*(reg: AC_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template write*(reg: AC_CTRLB_Type, val: AC_CTRLB_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template read*(reg: AC_EVCTRL_Type): AC_EVCTRL_Fields =
-  cast[AC_EVCTRL_Fields](volatileLoad(reg.p))
+  cast[AC_EVCTRL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: AC_EVCTRL_Type, val: AC_EVCTRL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: AC_EVCTRL_Type, op: untyped): untyped =
   block:
@@ -3680,10 +3680,10 @@ template modifyIt*(reg: AC_EVCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: AC_INTENCLR_Type): AC_INTENCLR_Fields =
-  cast[AC_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[AC_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: AC_INTENCLR_Type, val: AC_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: AC_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -3692,10 +3692,10 @@ template modifyIt*(reg: AC_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: AC_INTENSET_Type): AC_INTENSET_Fields =
-  cast[AC_INTENSET_Fields](volatileLoad(reg.p))
+  cast[AC_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: AC_INTENSET_Type, val: AC_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: AC_INTENSET_Type, op: untyped): untyped =
   block:
@@ -3704,10 +3704,10 @@ template modifyIt*(reg: AC_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: AC_INTFLAG_Type): AC_INTFLAG_Fields =
-  cast[AC_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[AC_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: AC_INTFLAG_Type, val: AC_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: AC_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -3716,19 +3716,19 @@ template modifyIt*(reg: AC_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: AC_STATUSA_Type): AC_STATUSA_Fields =
-  cast[AC_STATUSA_Fields](volatileLoad(reg.p))
+  cast[AC_STATUSA_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: AC_STATUSB_Type): AC_STATUSB_Fields =
-  cast[AC_STATUSB_Fields](volatileLoad(reg.p))
+  cast[AC_STATUSB_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: AC_STATUSC_Type): AC_STATUSC_Fields =
-  cast[AC_STATUSC_Fields](volatileLoad(reg.p))
+  cast[AC_STATUSC_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: AC_WINCTRL_Type): AC_WINCTRL_Fields =
-  cast[AC_WINCTRL_Fields](volatileLoad(reg.p))
+  cast[AC_WINCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: AC_WINCTRL_Type, val: AC_WINCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: AC_WINCTRL_Type, op: untyped): untyped =
   block:
@@ -3737,10 +3737,10 @@ template modifyIt*(reg: AC_WINCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: AC_COMPCTRL_Type): AC_COMPCTRL_Fields =
-  cast[AC_COMPCTRL_Fields](volatileLoad(reg.p))
+  cast[AC_COMPCTRL_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: AC_COMPCTRL_Type, val: AC_COMPCTRL_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: AC_COMPCTRL_Type, op: untyped): untyped =
   block:
@@ -3749,10 +3749,10 @@ template modifyIt*(reg: AC_COMPCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: AC_SCALER_Type): AC_SCALER_Fields =
-  cast[AC_SCALER_Fields](volatileLoad(reg.p))
+  cast[AC_SCALER_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: AC_SCALER_Type, val: AC_SCALER_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: AC_SCALER_Type, op: untyped): untyped =
   block:
@@ -3950,10 +3950,10 @@ type ADC_INPUTCTRL_GAIN* {.pure.} = enum
   DIV2 = 0xf,
 
 template read*(reg: ADC_CTRLA_Type): ADC_CTRLA_Fields =
-  cast[ADC_CTRLA_Fields](volatileLoad(reg.p))
+  cast[ADC_CTRLA_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: ADC_CTRLA_Type, val: ADC_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: ADC_CTRLA_Type, op: untyped): untyped =
   block:
@@ -3962,10 +3962,10 @@ template modifyIt*(reg: ADC_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_REFCTRL_Type): ADC_REFCTRL_Fields =
-  cast[ADC_REFCTRL_Fields](volatileLoad(reg.p))
+  cast[ADC_REFCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: ADC_REFCTRL_Type, val: ADC_REFCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: ADC_REFCTRL_Type, op: untyped): untyped =
   block:
@@ -3974,10 +3974,10 @@ template modifyIt*(reg: ADC_REFCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_AVGCTRL_Type): ADC_AVGCTRL_Fields =
-  cast[ADC_AVGCTRL_Fields](volatileLoad(reg.p))
+  cast[ADC_AVGCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: ADC_AVGCTRL_Type, val: ADC_AVGCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: ADC_AVGCTRL_Type, op: untyped): untyped =
   block:
@@ -3986,10 +3986,10 @@ template modifyIt*(reg: ADC_AVGCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_SAMPCTRL_Type): ADC_SAMPCTRL_Fields =
-  cast[ADC_SAMPCTRL_Fields](volatileLoad(reg.p))
+  cast[ADC_SAMPCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: ADC_SAMPCTRL_Type, val: ADC_SAMPCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: ADC_SAMPCTRL_Type, op: untyped): untyped =
   block:
@@ -3998,10 +3998,10 @@ template modifyIt*(reg: ADC_SAMPCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_CTRLB_Type): ADC_CTRLB_Fields =
-  cast[ADC_CTRLB_Fields](volatileLoad(reg.p))
+  cast[ADC_CTRLB_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: ADC_CTRLB_Type, val: ADC_CTRLB_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: ADC_CTRLB_Type, op: untyped): untyped =
   block:
@@ -4010,10 +4010,10 @@ template modifyIt*(reg: ADC_CTRLB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_WINCTRL_Type): ADC_WINCTRL_Fields =
-  cast[ADC_WINCTRL_Fields](volatileLoad(reg.p))
+  cast[ADC_WINCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: ADC_WINCTRL_Type, val: ADC_WINCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: ADC_WINCTRL_Type, op: untyped): untyped =
   block:
@@ -4022,10 +4022,10 @@ template modifyIt*(reg: ADC_WINCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_SWTRIG_Type): ADC_SWTRIG_Fields =
-  cast[ADC_SWTRIG_Fields](volatileLoad(reg.p))
+  cast[ADC_SWTRIG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: ADC_SWTRIG_Type, val: ADC_SWTRIG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: ADC_SWTRIG_Type, op: untyped): untyped =
   block:
@@ -4034,10 +4034,10 @@ template modifyIt*(reg: ADC_SWTRIG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_INPUTCTRL_Type): ADC_INPUTCTRL_Fields =
-  cast[ADC_INPUTCTRL_Fields](volatileLoad(reg.p))
+  cast[ADC_INPUTCTRL_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: ADC_INPUTCTRL_Type, val: ADC_INPUTCTRL_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: ADC_INPUTCTRL_Type, op: untyped): untyped =
   block:
@@ -4046,10 +4046,10 @@ template modifyIt*(reg: ADC_INPUTCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_EVCTRL_Type): ADC_EVCTRL_Fields =
-  cast[ADC_EVCTRL_Fields](volatileLoad(reg.p))
+  cast[ADC_EVCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: ADC_EVCTRL_Type, val: ADC_EVCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: ADC_EVCTRL_Type, op: untyped): untyped =
   block:
@@ -4058,10 +4058,10 @@ template modifyIt*(reg: ADC_EVCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_INTENCLR_Type): ADC_INTENCLR_Fields =
-  cast[ADC_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[ADC_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: ADC_INTENCLR_Type, val: ADC_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: ADC_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -4070,10 +4070,10 @@ template modifyIt*(reg: ADC_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_INTENSET_Type): ADC_INTENSET_Fields =
-  cast[ADC_INTENSET_Fields](volatileLoad(reg.p))
+  cast[ADC_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: ADC_INTENSET_Type, val: ADC_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: ADC_INTENSET_Type, op: untyped): untyped =
   block:
@@ -4082,10 +4082,10 @@ template modifyIt*(reg: ADC_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_INTFLAG_Type): ADC_INTFLAG_Fields =
-  cast[ADC_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[ADC_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: ADC_INTFLAG_Type, val: ADC_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: ADC_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -4094,16 +4094,16 @@ template modifyIt*(reg: ADC_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_STATUS_Type): ADC_STATUS_Fields =
-  cast[ADC_STATUS_Fields](volatileLoad(reg.p))
+  cast[ADC_STATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: ADC_RESULT_Type): uint16 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint16](reg.loc))
 
 template read*(reg: ADC_WINLT_Type): uint16 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint16](reg.loc))
 
 template write*(reg: ADC_WINLT_Type, val: uint16) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint16](reg.loc), val)
 
 template modifyIt*(reg: ADC_WINLT_Type, op: untyped): untyped =
   block:
@@ -4112,10 +4112,10 @@ template modifyIt*(reg: ADC_WINLT_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_WINUT_Type): uint16 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint16](reg.loc))
 
 template write*(reg: ADC_WINUT_Type, val: uint16) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint16](reg.loc), val)
 
 template modifyIt*(reg: ADC_WINUT_Type, op: untyped): untyped =
   block:
@@ -4124,10 +4124,10 @@ template modifyIt*(reg: ADC_WINUT_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_GAINCORR_Type): ADC_GAINCORR_Fields =
-  cast[ADC_GAINCORR_Fields](volatileLoad(reg.p))
+  cast[ADC_GAINCORR_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: ADC_GAINCORR_Type, val: ADC_GAINCORR_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: ADC_GAINCORR_Type, op: untyped): untyped =
   block:
@@ -4136,10 +4136,10 @@ template modifyIt*(reg: ADC_GAINCORR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_OFFSETCORR_Type): ADC_OFFSETCORR_Fields =
-  cast[ADC_OFFSETCORR_Fields](volatileLoad(reg.p))
+  cast[ADC_OFFSETCORR_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: ADC_OFFSETCORR_Type, val: ADC_OFFSETCORR_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: ADC_OFFSETCORR_Type, op: untyped): untyped =
   block:
@@ -4148,10 +4148,10 @@ template modifyIt*(reg: ADC_OFFSETCORR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_CALIB_Type): ADC_CALIB_Fields =
-  cast[ADC_CALIB_Fields](volatileLoad(reg.p))
+  cast[ADC_CALIB_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: ADC_CALIB_Type, val: ADC_CALIB_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: ADC_CALIB_Type, op: untyped): untyped =
   block:
@@ -4160,10 +4160,10 @@ template modifyIt*(reg: ADC_CALIB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: ADC_DBGCTRL_Type): ADC_DBGCTRL_Fields =
-  cast[ADC_DBGCTRL_Fields](volatileLoad(reg.p))
+  cast[ADC_DBGCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: ADC_DBGCTRL_Type, val: ADC_DBGCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: ADC_DBGCTRL_Type, op: untyped): untyped =
   block:
@@ -4219,10 +4219,10 @@ type DAC_CTRLB_REFSEL* {.pure.} = enum
   VREFP = 0x2,
 
 template read*(reg: DAC_CTRLA_Type): DAC_CTRLA_Fields =
-  cast[DAC_CTRLA_Fields](volatileLoad(reg.p))
+  cast[DAC_CTRLA_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DAC_CTRLA_Type, val: DAC_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DAC_CTRLA_Type, op: untyped): untyped =
   block:
@@ -4231,10 +4231,10 @@ template modifyIt*(reg: DAC_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DAC_CTRLB_Type): DAC_CTRLB_Fields =
-  cast[DAC_CTRLB_Fields](volatileLoad(reg.p))
+  cast[DAC_CTRLB_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DAC_CTRLB_Type, val: DAC_CTRLB_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DAC_CTRLB_Type, op: untyped): untyped =
   block:
@@ -4243,10 +4243,10 @@ template modifyIt*(reg: DAC_CTRLB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DAC_EVCTRL_Type): DAC_EVCTRL_Fields =
-  cast[DAC_EVCTRL_Fields](volatileLoad(reg.p))
+  cast[DAC_EVCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DAC_EVCTRL_Type, val: DAC_EVCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DAC_EVCTRL_Type, op: untyped): untyped =
   block:
@@ -4255,10 +4255,10 @@ template modifyIt*(reg: DAC_EVCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DAC_INTENCLR_Type): DAC_INTENCLR_Fields =
-  cast[DAC_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[DAC_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DAC_INTENCLR_Type, val: DAC_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DAC_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -4267,10 +4267,10 @@ template modifyIt*(reg: DAC_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DAC_INTENSET_Type): DAC_INTENSET_Fields =
-  cast[DAC_INTENSET_Fields](volatileLoad(reg.p))
+  cast[DAC_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DAC_INTENSET_Type, val: DAC_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DAC_INTENSET_Type, op: untyped): untyped =
   block:
@@ -4279,10 +4279,10 @@ template modifyIt*(reg: DAC_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DAC_INTFLAG_Type): DAC_INTFLAG_Fields =
-  cast[DAC_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[DAC_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DAC_INTFLAG_Type, val: DAC_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DAC_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -4291,13 +4291,13 @@ template modifyIt*(reg: DAC_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DAC_STATUS_Type): DAC_STATUS_Fields =
-  cast[DAC_STATUS_Fields](volatileLoad(reg.p))
+  cast[DAC_STATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: DAC_DATA_Type): uint16 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint16](reg.loc))
 
 template write*(reg: DAC_DATA_Type, val: uint16) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint16](reg.loc), val)
 
 template modifyIt*(reg: DAC_DATA_Type, op: untyped): untyped =
   block:
@@ -4306,10 +4306,10 @@ template modifyIt*(reg: DAC_DATA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DAC_DATABUF_Type): uint16 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint16](reg.loc))
 
 template write*(reg: DAC_DATABUF_Type, val: uint16) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint16](reg.loc), val)
 
 template modifyIt*(reg: DAC_DATABUF_Type, op: untyped): untyped =
   block:
@@ -4551,10 +4551,10 @@ type DMAC_CHCTRLB_CMD* {.pure.} = enum
   RESUME = 0x2,
 
 template read*(reg: DMAC_CTRL_Type): DMAC_CTRL_Fields =
-  cast[DMAC_CTRL_Fields](volatileLoad(reg.p))
+  cast[DMAC_CTRL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: DMAC_CTRL_Type, val: DMAC_CTRL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: DMAC_CTRL_Type, op: untyped): untyped =
   block:
@@ -4563,10 +4563,10 @@ template modifyIt*(reg: DMAC_CTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_CRCCTRL_Type): DMAC_CRCCTRL_Fields =
-  cast[DMAC_CRCCTRL_Fields](volatileLoad(reg.p))
+  cast[DMAC_CRCCTRL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: DMAC_CRCCTRL_Type, val: DMAC_CRCCTRL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: DMAC_CRCCTRL_Type, op: untyped): untyped =
   block:
@@ -4575,10 +4575,10 @@ template modifyIt*(reg: DMAC_CRCCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_CRCDATAIN_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: DMAC_CRCDATAIN_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: DMAC_CRCDATAIN_Type, op: untyped): untyped =
   block:
@@ -4587,10 +4587,10 @@ template modifyIt*(reg: DMAC_CRCDATAIN_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_CRCCHKSUM_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: DMAC_CRCCHKSUM_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: DMAC_CRCCHKSUM_Type, op: untyped): untyped =
   block:
@@ -4599,10 +4599,10 @@ template modifyIt*(reg: DMAC_CRCCHKSUM_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_CRCSTATUS_Type): DMAC_CRCSTATUS_Fields =
-  cast[DMAC_CRCSTATUS_Fields](volatileLoad(reg.p))
+  cast[DMAC_CRCSTATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DMAC_CRCSTATUS_Type, val: DMAC_CRCSTATUS_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DMAC_CRCSTATUS_Type, op: untyped): untyped =
   block:
@@ -4611,10 +4611,10 @@ template modifyIt*(reg: DMAC_CRCSTATUS_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_DBGCTRL_Type): DMAC_DBGCTRL_Fields =
-  cast[DMAC_DBGCTRL_Fields](volatileLoad(reg.p))
+  cast[DMAC_DBGCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DMAC_DBGCTRL_Type, val: DMAC_DBGCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DMAC_DBGCTRL_Type, op: untyped): untyped =
   block:
@@ -4623,10 +4623,10 @@ template modifyIt*(reg: DMAC_DBGCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_QOSCTRL_Type): DMAC_QOSCTRL_Fields =
-  cast[DMAC_QOSCTRL_Fields](volatileLoad(reg.p))
+  cast[DMAC_QOSCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DMAC_QOSCTRL_Type, val: DMAC_QOSCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DMAC_QOSCTRL_Type, op: untyped): untyped =
   block:
@@ -4635,10 +4635,10 @@ template modifyIt*(reg: DMAC_QOSCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_SWTRIGCTRL_Type): DMAC_SWTRIGCTRL_Fields =
-  cast[DMAC_SWTRIGCTRL_Fields](volatileLoad(reg.p))
+  cast[DMAC_SWTRIGCTRL_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: DMAC_SWTRIGCTRL_Type, val: DMAC_SWTRIGCTRL_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: DMAC_SWTRIGCTRL_Type, op: untyped): untyped =
   block:
@@ -4647,10 +4647,10 @@ template modifyIt*(reg: DMAC_SWTRIGCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_PRICTRL0_Type): DMAC_PRICTRL0_Fields =
-  cast[DMAC_PRICTRL0_Fields](volatileLoad(reg.p))
+  cast[DMAC_PRICTRL0_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: DMAC_PRICTRL0_Type, val: DMAC_PRICTRL0_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: DMAC_PRICTRL0_Type, op: untyped): untyped =
   block:
@@ -4659,10 +4659,10 @@ template modifyIt*(reg: DMAC_PRICTRL0_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_INTPEND_Type): DMAC_INTPEND_Fields =
-  cast[DMAC_INTPEND_Fields](volatileLoad(reg.p))
+  cast[DMAC_INTPEND_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: DMAC_INTPEND_Type, val: DMAC_INTPEND_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: DMAC_INTPEND_Type, op: untyped): untyped =
   block:
@@ -4671,22 +4671,22 @@ template modifyIt*(reg: DMAC_INTPEND_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_INTSTATUS_Type): DMAC_INTSTATUS_Fields =
-  cast[DMAC_INTSTATUS_Fields](volatileLoad(reg.p))
+  cast[DMAC_INTSTATUS_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DMAC_BUSYCH_Type): DMAC_BUSYCH_Fields =
-  cast[DMAC_BUSYCH_Fields](volatileLoad(reg.p))
+  cast[DMAC_BUSYCH_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DMAC_PENDCH_Type): DMAC_PENDCH_Fields =
-  cast[DMAC_PENDCH_Fields](volatileLoad(reg.p))
+  cast[DMAC_PENDCH_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DMAC_ACTIVE_Type): DMAC_ACTIVE_Fields =
-  cast[DMAC_ACTIVE_Fields](volatileLoad(reg.p))
+  cast[DMAC_ACTIVE_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DMAC_BASEADDR_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: DMAC_BASEADDR_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: DMAC_BASEADDR_Type, op: untyped): untyped =
   block:
@@ -4695,10 +4695,10 @@ template modifyIt*(reg: DMAC_BASEADDR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_WRBADDR_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: DMAC_WRBADDR_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: DMAC_WRBADDR_Type, op: untyped): untyped =
   block:
@@ -4707,10 +4707,10 @@ template modifyIt*(reg: DMAC_WRBADDR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_CHID_Type): DMAC_CHID_Fields =
-  cast[DMAC_CHID_Fields](volatileLoad(reg.p))
+  cast[DMAC_CHID_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DMAC_CHID_Type, val: DMAC_CHID_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DMAC_CHID_Type, op: untyped): untyped =
   block:
@@ -4719,10 +4719,10 @@ template modifyIt*(reg: DMAC_CHID_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_CHCTRLA_Type): DMAC_CHCTRLA_Fields =
-  cast[DMAC_CHCTRLA_Fields](volatileLoad(reg.p))
+  cast[DMAC_CHCTRLA_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DMAC_CHCTRLA_Type, val: DMAC_CHCTRLA_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DMAC_CHCTRLA_Type, op: untyped): untyped =
   block:
@@ -4731,10 +4731,10 @@ template modifyIt*(reg: DMAC_CHCTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_CHCTRLB_Type): DMAC_CHCTRLB_Fields =
-  cast[DMAC_CHCTRLB_Fields](volatileLoad(reg.p))
+  cast[DMAC_CHCTRLB_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: DMAC_CHCTRLB_Type, val: DMAC_CHCTRLB_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: DMAC_CHCTRLB_Type, op: untyped): untyped =
   block:
@@ -4743,10 +4743,10 @@ template modifyIt*(reg: DMAC_CHCTRLB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_CHINTENCLR_Type): DMAC_CHINTENCLR_Fields =
-  cast[DMAC_CHINTENCLR_Fields](volatileLoad(reg.p))
+  cast[DMAC_CHINTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DMAC_CHINTENCLR_Type, val: DMAC_CHINTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DMAC_CHINTENCLR_Type, op: untyped): untyped =
   block:
@@ -4755,10 +4755,10 @@ template modifyIt*(reg: DMAC_CHINTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_CHINTENSET_Type): DMAC_CHINTENSET_Fields =
-  cast[DMAC_CHINTENSET_Fields](volatileLoad(reg.p))
+  cast[DMAC_CHINTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DMAC_CHINTENSET_Type, val: DMAC_CHINTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DMAC_CHINTENSET_Type, op: untyped): untyped =
   block:
@@ -4767,10 +4767,10 @@ template modifyIt*(reg: DMAC_CHINTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_CHINTFLAG_Type): DMAC_CHINTFLAG_Fields =
-  cast[DMAC_CHINTFLAG_Fields](volatileLoad(reg.p))
+  cast[DMAC_CHINTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DMAC_CHINTFLAG_Type, val: DMAC_CHINTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DMAC_CHINTFLAG_Type, op: untyped): untyped =
   block:
@@ -4779,7 +4779,7 @@ template modifyIt*(reg: DMAC_CHINTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DMAC_CHSTATUS_Type): DMAC_CHSTATUS_Fields =
-  cast[DMAC_CHSTATUS_Fields](volatileLoad(reg.p))
+  cast[DMAC_CHSTATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 type DSU_CTRL_Fields* = object
   SWRST* {.bitsize:1.}: bool
@@ -4875,13 +4875,13 @@ type DSU_CID3_Fields* = object
   RESERVED {.bitsize:24.}: 0u32 .. 16777215u32
 
 template write*(reg: DSU_CTRL_Type, val: DSU_CTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template read*(reg: DSU_STATUSA_Type): DSU_STATUSA_Fields =
-  cast[DSU_STATUSA_Fields](volatileLoad(reg.p))
+  cast[DSU_STATUSA_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: DSU_STATUSA_Type, val: DSU_STATUSA_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: DSU_STATUSA_Type, op: untyped): untyped =
   block:
@@ -4890,13 +4890,13 @@ template modifyIt*(reg: DSU_STATUSA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DSU_STATUSB_Type): DSU_STATUSB_Fields =
-  cast[DSU_STATUSB_Fields](volatileLoad(reg.p))
+  cast[DSU_STATUSB_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: DSU_ADDR_Type): DSU_ADDR_Fields =
-  cast[DSU_ADDR_Fields](volatileLoad(reg.p))
+  cast[DSU_ADDR_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: DSU_ADDR_Type, val: DSU_ADDR_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: DSU_ADDR_Type, op: untyped): untyped =
   block:
@@ -4905,10 +4905,10 @@ template modifyIt*(reg: DSU_ADDR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DSU_LENGTH_Type): DSU_LENGTH_Fields =
-  cast[DSU_LENGTH_Fields](volatileLoad(reg.p))
+  cast[DSU_LENGTH_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: DSU_LENGTH_Type, val: DSU_LENGTH_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: DSU_LENGTH_Type, op: untyped): untyped =
   block:
@@ -4917,10 +4917,10 @@ template modifyIt*(reg: DSU_LENGTH_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DSU_DATA_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: DSU_DATA_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: DSU_DATA_Type, op: untyped): untyped =
   block:
@@ -4929,10 +4929,10 @@ template modifyIt*(reg: DSU_DATA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DSU_DCC_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: DSU_DCC_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: DSU_DCC_Type, op: untyped): untyped =
   block:
@@ -4941,46 +4941,46 @@ template modifyIt*(reg: DSU_DCC_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: DSU_DID_Type): DSU_DID_Fields =
-  cast[DSU_DID_Fields](volatileLoad(reg.p))
+  cast[DSU_DID_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DSU_ENTRY_Type): DSU_ENTRY_Fields =
-  cast[DSU_ENTRY_Fields](volatileLoad(reg.p))
+  cast[DSU_ENTRY_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DSU_ENTRY1_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: DSU_END_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: DSU_MEMTYPE_Type): DSU_MEMTYPE_Fields =
-  cast[DSU_MEMTYPE_Fields](volatileLoad(reg.p))
+  cast[DSU_MEMTYPE_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DSU_PID4_Type): DSU_PID4_Fields =
-  cast[DSU_PID4_Fields](volatileLoad(reg.p))
+  cast[DSU_PID4_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DSU_PID0_Type): DSU_PID0_Fields =
-  cast[DSU_PID0_Fields](volatileLoad(reg.p))
+  cast[DSU_PID0_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DSU_PID1_Type): DSU_PID1_Fields =
-  cast[DSU_PID1_Fields](volatileLoad(reg.p))
+  cast[DSU_PID1_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DSU_PID2_Type): DSU_PID2_Fields =
-  cast[DSU_PID2_Fields](volatileLoad(reg.p))
+  cast[DSU_PID2_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DSU_PID3_Type): DSU_PID3_Fields =
-  cast[DSU_PID3_Fields](volatileLoad(reg.p))
+  cast[DSU_PID3_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DSU_CID0_Type): DSU_CID0_Fields =
-  cast[DSU_CID0_Fields](volatileLoad(reg.p))
+  cast[DSU_CID0_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DSU_CID1_Type): DSU_CID1_Fields =
-  cast[DSU_CID1_Fields](volatileLoad(reg.p))
+  cast[DSU_CID1_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DSU_CID2_Type): DSU_CID2_Fields =
-  cast[DSU_CID2_Fields](volatileLoad(reg.p))
+  cast[DSU_CID2_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: DSU_CID3_Type): DSU_CID3_Fields =
-  cast[DSU_CID3_Fields](volatileLoad(reg.p))
+  cast[DSU_CID3_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 type EIC_CTRL_Fields* = object
   SWRST* {.bitsize:1.}: bool
@@ -5186,10 +5186,10 @@ type EIC_CONFIG_SENSE7* {.pure.} = enum
   LOW = 0x5,
 
 template read*(reg: EIC_CTRL_Type): EIC_CTRL_Fields =
-  cast[EIC_CTRL_Fields](volatileLoad(reg.p))
+  cast[EIC_CTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: EIC_CTRL_Type, val: EIC_CTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: EIC_CTRL_Type, op: untyped): untyped =
   block:
@@ -5198,13 +5198,13 @@ template modifyIt*(reg: EIC_CTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: EIC_STATUS_Type): EIC_STATUS_Fields =
-  cast[EIC_STATUS_Fields](volatileLoad(reg.p))
+  cast[EIC_STATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: EIC_NMICTRL_Type): EIC_NMICTRL_Fields =
-  cast[EIC_NMICTRL_Fields](volatileLoad(reg.p))
+  cast[EIC_NMICTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: EIC_NMICTRL_Type, val: EIC_NMICTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: EIC_NMICTRL_Type, op: untyped): untyped =
   block:
@@ -5213,10 +5213,10 @@ template modifyIt*(reg: EIC_NMICTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: EIC_NMIFLAG_Type): EIC_NMIFLAG_Fields =
-  cast[EIC_NMIFLAG_Fields](volatileLoad(reg.p))
+  cast[EIC_NMIFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: EIC_NMIFLAG_Type, val: EIC_NMIFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: EIC_NMIFLAG_Type, op: untyped): untyped =
   block:
@@ -5225,10 +5225,10 @@ template modifyIt*(reg: EIC_NMIFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: EIC_EVCTRL_Type): EIC_EVCTRL_Fields =
-  cast[EIC_EVCTRL_Fields](volatileLoad(reg.p))
+  cast[EIC_EVCTRL_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: EIC_EVCTRL_Type, val: EIC_EVCTRL_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: EIC_EVCTRL_Type, op: untyped): untyped =
   block:
@@ -5237,10 +5237,10 @@ template modifyIt*(reg: EIC_EVCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: EIC_INTENCLR_Type): EIC_INTENCLR_Fields =
-  cast[EIC_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[EIC_INTENCLR_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: EIC_INTENCLR_Type, val: EIC_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: EIC_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -5249,10 +5249,10 @@ template modifyIt*(reg: EIC_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: EIC_INTENSET_Type): EIC_INTENSET_Fields =
-  cast[EIC_INTENSET_Fields](volatileLoad(reg.p))
+  cast[EIC_INTENSET_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: EIC_INTENSET_Type, val: EIC_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: EIC_INTENSET_Type, op: untyped): untyped =
   block:
@@ -5261,10 +5261,10 @@ template modifyIt*(reg: EIC_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: EIC_INTFLAG_Type): EIC_INTFLAG_Fields =
-  cast[EIC_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[EIC_INTFLAG_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: EIC_INTFLAG_Type, val: EIC_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: EIC_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -5273,10 +5273,10 @@ template modifyIt*(reg: EIC_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: EIC_WAKEUP_Type): EIC_WAKEUP_Fields =
-  cast[EIC_WAKEUP_Fields](volatileLoad(reg.p))
+  cast[EIC_WAKEUP_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: EIC_WAKEUP_Type, val: EIC_WAKEUP_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: EIC_WAKEUP_Type, op: untyped): untyped =
   block:
@@ -5285,10 +5285,10 @@ template modifyIt*(reg: EIC_WAKEUP_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: EIC_CONFIG_Type): EIC_CONFIG_Fields =
-  cast[EIC_CONFIG_Fields](volatileLoad(reg.p))
+  cast[EIC_CONFIG_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: EIC_CONFIG_Type, val: EIC_CONFIG_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: EIC_CONFIG_Type, op: untyped): untyped =
   block:
@@ -5446,13 +5446,13 @@ type EVSYS_USER_CHANNEL* {.pure.} = enum
   x0 = 0x0,
 
 template write*(reg: EVSYS_CTRL_Type, val: EVSYS_CTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template read*(reg: EVSYS_CHANNEL_Type): EVSYS_CHANNEL_Fields =
-  cast[EVSYS_CHANNEL_Fields](volatileLoad(reg.p))
+  cast[EVSYS_CHANNEL_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: EVSYS_CHANNEL_Type, val: EVSYS_CHANNEL_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: EVSYS_CHANNEL_Type, op: untyped): untyped =
   block:
@@ -5461,10 +5461,10 @@ template modifyIt*(reg: EVSYS_CHANNEL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: EVSYS_USER_Type): EVSYS_USER_Fields =
-  cast[EVSYS_USER_Fields](volatileLoad(reg.p))
+  cast[EVSYS_USER_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: EVSYS_USER_Type, val: EVSYS_USER_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: EVSYS_USER_Type, op: untyped): untyped =
   block:
@@ -5473,13 +5473,13 @@ template modifyIt*(reg: EVSYS_USER_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: EVSYS_CHSTATUS_Type): EVSYS_CHSTATUS_Fields =
-  cast[EVSYS_CHSTATUS_Fields](volatileLoad(reg.p))
+  cast[EVSYS_CHSTATUS_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: EVSYS_INTENCLR_Type): EVSYS_INTENCLR_Fields =
-  cast[EVSYS_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[EVSYS_INTENCLR_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: EVSYS_INTENCLR_Type, val: EVSYS_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: EVSYS_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -5488,10 +5488,10 @@ template modifyIt*(reg: EVSYS_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: EVSYS_INTENSET_Type): EVSYS_INTENSET_Fields =
-  cast[EVSYS_INTENSET_Fields](volatileLoad(reg.p))
+  cast[EVSYS_INTENSET_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: EVSYS_INTENSET_Type, val: EVSYS_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: EVSYS_INTENSET_Type, op: untyped): untyped =
   block:
@@ -5500,10 +5500,10 @@ template modifyIt*(reg: EVSYS_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: EVSYS_INTFLAG_Type): EVSYS_INTFLAG_Fields =
-  cast[EVSYS_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[EVSYS_INTFLAG_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: EVSYS_INTFLAG_Type, val: EVSYS_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: EVSYS_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -5607,10 +5607,10 @@ type GCLK_GENCTRL_SRC* {.pure.} = enum
   DPLL96M = 0x8,
 
 template read*(reg: GCLK_CTRL_Type): GCLK_CTRL_Fields =
-  cast[GCLK_CTRL_Fields](volatileLoad(reg.p))
+  cast[GCLK_CTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: GCLK_CTRL_Type, val: GCLK_CTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: GCLK_CTRL_Type, op: untyped): untyped =
   block:
@@ -5619,13 +5619,13 @@ template modifyIt*(reg: GCLK_CTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: GCLK_STATUS_Type): GCLK_STATUS_Fields =
-  cast[GCLK_STATUS_Fields](volatileLoad(reg.p))
+  cast[GCLK_STATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: GCLK_CLKCTRL_Type): GCLK_CLKCTRL_Fields =
-  cast[GCLK_CLKCTRL_Fields](volatileLoad(reg.p))
+  cast[GCLK_CLKCTRL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: GCLK_CLKCTRL_Type, val: GCLK_CLKCTRL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: GCLK_CLKCTRL_Type, op: untyped): untyped =
   block:
@@ -5634,10 +5634,10 @@ template modifyIt*(reg: GCLK_CLKCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: GCLK_GENCTRL_Type): GCLK_GENCTRL_Fields =
-  cast[GCLK_GENCTRL_Fields](volatileLoad(reg.p))
+  cast[GCLK_GENCTRL_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: GCLK_GENCTRL_Type, val: GCLK_GENCTRL_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: GCLK_GENCTRL_Type, op: untyped): untyped =
   block:
@@ -5646,10 +5646,10 @@ template modifyIt*(reg: GCLK_GENCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: GCLK_GENDIV_Type): GCLK_GENDIV_Fields =
-  cast[GCLK_GENDIV_Fields](volatileLoad(reg.p))
+  cast[GCLK_GENDIV_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: GCLK_GENDIV_Type, val: GCLK_GENDIV_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: GCLK_GENDIV_Type, op: untyped): untyped =
   block:
@@ -5658,10 +5658,10 @@ template modifyIt*(reg: GCLK_GENDIV_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: HMATRIX_PRAS_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: HMATRIX_PRAS_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: HMATRIX_PRAS_Type, op: untyped): untyped =
   block:
@@ -5670,10 +5670,10 @@ template modifyIt*(reg: HMATRIX_PRAS_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: HMATRIX_PRBS_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: HMATRIX_PRBS_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: HMATRIX_PRBS_Type, op: untyped): untyped =
   block:
@@ -5682,10 +5682,10 @@ template modifyIt*(reg: HMATRIX_PRBS_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: HMATRIX_SFR_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: HMATRIX_SFR_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: HMATRIX_SFR_Type, op: untyped): untyped =
   block:
@@ -5883,10 +5883,10 @@ type I2S_SERCTRL_DMA* {.pure.} = enum
   MULTIPLE = 0x1,
 
 template read*(reg: I2S_CTRLA_Type): I2S_CTRLA_Fields =
-  cast[I2S_CTRLA_Fields](volatileLoad(reg.p))
+  cast[I2S_CTRLA_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: I2S_CTRLA_Type, val: I2S_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: I2S_CTRLA_Type, op: untyped): untyped =
   block:
@@ -5895,10 +5895,10 @@ template modifyIt*(reg: I2S_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: I2S_CLKCTRL_Type): I2S_CLKCTRL_Fields =
-  cast[I2S_CLKCTRL_Fields](volatileLoad(reg.p))
+  cast[I2S_CLKCTRL_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: I2S_CLKCTRL_Type, val: I2S_CLKCTRL_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: I2S_CLKCTRL_Type, op: untyped): untyped =
   block:
@@ -5907,10 +5907,10 @@ template modifyIt*(reg: I2S_CLKCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: I2S_INTENCLR_Type): I2S_INTENCLR_Fields =
-  cast[I2S_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[I2S_INTENCLR_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: I2S_INTENCLR_Type, val: I2S_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: I2S_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -5919,10 +5919,10 @@ template modifyIt*(reg: I2S_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: I2S_INTENSET_Type): I2S_INTENSET_Fields =
-  cast[I2S_INTENSET_Fields](volatileLoad(reg.p))
+  cast[I2S_INTENSET_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: I2S_INTENSET_Type, val: I2S_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: I2S_INTENSET_Type, op: untyped): untyped =
   block:
@@ -5931,10 +5931,10 @@ template modifyIt*(reg: I2S_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: I2S_INTFLAG_Type): I2S_INTFLAG_Fields =
-  cast[I2S_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[I2S_INTFLAG_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: I2S_INTFLAG_Type, val: I2S_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: I2S_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -5943,13 +5943,13 @@ template modifyIt*(reg: I2S_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: I2S_SYNCBUSY_Type): I2S_SYNCBUSY_Fields =
-  cast[I2S_SYNCBUSY_Fields](volatileLoad(reg.p))
+  cast[I2S_SYNCBUSY_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template read*(reg: I2S_SERCTRL_Type): I2S_SERCTRL_Fields =
-  cast[I2S_SERCTRL_Fields](volatileLoad(reg.p))
+  cast[I2S_SERCTRL_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: I2S_SERCTRL_Type, val: I2S_SERCTRL_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: I2S_SERCTRL_Type, op: untyped): untyped =
   block:
@@ -5958,10 +5958,10 @@ template modifyIt*(reg: I2S_SERCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: I2S_DATA_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: I2S_DATA_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: I2S_DATA_Type, op: untyped): untyped =
   block:
@@ -5991,10 +5991,10 @@ type MTB_FLOW_Fields* = object
   WATERMARK* {.bitsize:29.}: 0u32 .. 536870911u32
 
 template read*(reg: MTB_POSITION_Type): MTB_POSITION_Fields =
-  cast[MTB_POSITION_Fields](volatileLoad(reg.p))
+  cast[MTB_POSITION_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: MTB_POSITION_Type, val: MTB_POSITION_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: MTB_POSITION_Type, op: untyped): untyped =
   block:
@@ -6003,10 +6003,10 @@ template modifyIt*(reg: MTB_POSITION_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: MTB_MASTER_Type): MTB_MASTER_Fields =
-  cast[MTB_MASTER_Fields](volatileLoad(reg.p))
+  cast[MTB_MASTER_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: MTB_MASTER_Type, val: MTB_MASTER_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: MTB_MASTER_Type, op: untyped): untyped =
   block:
@@ -6015,10 +6015,10 @@ template modifyIt*(reg: MTB_MASTER_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: MTB_FLOW_Type): MTB_FLOW_Fields =
-  cast[MTB_FLOW_Fields](volatileLoad(reg.p))
+  cast[MTB_FLOW_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: MTB_FLOW_Type, val: MTB_FLOW_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: MTB_FLOW_Type, op: untyped): untyped =
   block:
@@ -6027,13 +6027,13 @@ template modifyIt*(reg: MTB_FLOW_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: MTB_BASE_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_ITCTRL_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: MTB_ITCTRL_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: MTB_ITCTRL_Type, op: untyped): untyped =
   block:
@@ -6042,10 +6042,10 @@ template modifyIt*(reg: MTB_ITCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: MTB_CLAIMSET_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: MTB_CLAIMSET_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: MTB_CLAIMSET_Type, op: untyped): untyped =
   block:
@@ -6054,10 +6054,10 @@ template modifyIt*(reg: MTB_CLAIMSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: MTB_CLAIMCLR_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: MTB_CLAIMCLR_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: MTB_CLAIMCLR_Type, op: untyped): untyped =
   block:
@@ -6066,10 +6066,10 @@ template modifyIt*(reg: MTB_CLAIMCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: MTB_LOCKACCESS_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: MTB_LOCKACCESS_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: MTB_LOCKACCESS_Type, op: untyped): untyped =
   block:
@@ -6078,55 +6078,55 @@ template modifyIt*(reg: MTB_LOCKACCESS_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: MTB_LOCKSTATUS_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_AUTHSTATUS_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_DEVARCH_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_DEVID_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_DEVTYPE_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_PID4_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_PID5_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_PID6_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_PID7_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_PID0_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_PID1_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_PID2_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_PID3_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_CID0_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_CID1_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_CID2_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: MTB_CID3_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 type NVMCTRL_CTRLA_Fields* = object
   CMD* {.bitsize:7.}: 0u8 .. 127u8
@@ -6222,10 +6222,10 @@ type NVMCTRL_PARAM_PSZ* {.pure.} = enum
   x1024 = 0x7,
 
 template read*(reg: NVMCTRL_CTRLA_Type): NVMCTRL_CTRLA_Fields =
-  cast[NVMCTRL_CTRLA_Fields](volatileLoad(reg.p))
+  cast[NVMCTRL_CTRLA_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: NVMCTRL_CTRLA_Type, val: NVMCTRL_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: NVMCTRL_CTRLA_Type, op: untyped): untyped =
   block:
@@ -6234,10 +6234,10 @@ template modifyIt*(reg: NVMCTRL_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: NVMCTRL_CTRLB_Type): NVMCTRL_CTRLB_Fields =
-  cast[NVMCTRL_CTRLB_Fields](volatileLoad(reg.p))
+  cast[NVMCTRL_CTRLB_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: NVMCTRL_CTRLB_Type, val: NVMCTRL_CTRLB_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: NVMCTRL_CTRLB_Type, op: untyped): untyped =
   block:
@@ -6246,10 +6246,10 @@ template modifyIt*(reg: NVMCTRL_CTRLB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: NVMCTRL_PARAM_Type): NVMCTRL_PARAM_Fields =
-  cast[NVMCTRL_PARAM_Fields](volatileLoad(reg.p))
+  cast[NVMCTRL_PARAM_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: NVMCTRL_PARAM_Type, val: NVMCTRL_PARAM_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: NVMCTRL_PARAM_Type, op: untyped): untyped =
   block:
@@ -6258,10 +6258,10 @@ template modifyIt*(reg: NVMCTRL_PARAM_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: NVMCTRL_INTENCLR_Type): NVMCTRL_INTENCLR_Fields =
-  cast[NVMCTRL_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[NVMCTRL_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: NVMCTRL_INTENCLR_Type, val: NVMCTRL_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: NVMCTRL_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -6270,10 +6270,10 @@ template modifyIt*(reg: NVMCTRL_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: NVMCTRL_INTENSET_Type): NVMCTRL_INTENSET_Fields =
-  cast[NVMCTRL_INTENSET_Fields](volatileLoad(reg.p))
+  cast[NVMCTRL_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: NVMCTRL_INTENSET_Type, val: NVMCTRL_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: NVMCTRL_INTENSET_Type, op: untyped): untyped =
   block:
@@ -6282,10 +6282,10 @@ template modifyIt*(reg: NVMCTRL_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: NVMCTRL_INTFLAG_Type): NVMCTRL_INTFLAG_Fields =
-  cast[NVMCTRL_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[NVMCTRL_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: NVMCTRL_INTFLAG_Type, val: NVMCTRL_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: NVMCTRL_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -6294,10 +6294,10 @@ template modifyIt*(reg: NVMCTRL_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: NVMCTRL_STATUS_Type): NVMCTRL_STATUS_Fields =
-  cast[NVMCTRL_STATUS_Fields](volatileLoad(reg.p))
+  cast[NVMCTRL_STATUS_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: NVMCTRL_STATUS_Type, val: NVMCTRL_STATUS_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: NVMCTRL_STATUS_Type, op: untyped): untyped =
   block:
@@ -6306,10 +6306,10 @@ template modifyIt*(reg: NVMCTRL_STATUS_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: NVMCTRL_ADDR_Type): NVMCTRL_ADDR_Fields =
-  cast[NVMCTRL_ADDR_Fields](volatileLoad(reg.p))
+  cast[NVMCTRL_ADDR_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: NVMCTRL_ADDR_Type, val: NVMCTRL_ADDR_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: NVMCTRL_ADDR_Type, op: untyped): untyped =
   block:
@@ -6318,10 +6318,10 @@ template modifyIt*(reg: NVMCTRL_ADDR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: NVMCTRL_LOCK_Type): uint16 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint16](reg.loc))
 
 template write*(reg: NVMCTRL_LOCK_Type, val: uint16) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint16](reg.loc), val)
 
 template modifyIt*(reg: NVMCTRL_LOCK_Type, op: untyped): untyped =
   block:
@@ -6338,10 +6338,10 @@ type PAC0_WPSET_Fields* = object
   WP* {.bitsize:31.}: 0u32 .. 2147483647u32
 
 template read*(reg: PAC0_WPCLR_Type): PAC0_WPCLR_Fields =
-  cast[PAC0_WPCLR_Fields](volatileLoad(reg.p))
+  cast[PAC0_WPCLR_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: PAC0_WPCLR_Type, val: PAC0_WPCLR_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: PAC0_WPCLR_Type, op: untyped): untyped =
   block:
@@ -6350,10 +6350,10 @@ template modifyIt*(reg: PAC0_WPCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PAC0_WPSET_Type): PAC0_WPSET_Fields =
-  cast[PAC0_WPSET_Fields](volatileLoad(reg.p))
+  cast[PAC0_WPSET_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: PAC0_WPSET_Type, val: PAC0_WPSET_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: PAC0_WPSET_Type, op: untyped): untyped =
   block:
@@ -6502,10 +6502,10 @@ type PM_APBCSEL_APBCDIV* {.pure.} = enum
   DIV128 = 0x7,
 
 template read*(reg: PM_CTRL_Type): uint8 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint8](reg.loc))
 
 template write*(reg: PM_CTRL_Type, val: uint8) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint8](reg.loc), val)
 
 template modifyIt*(reg: PM_CTRL_Type, op: untyped): untyped =
   block:
@@ -6514,10 +6514,10 @@ template modifyIt*(reg: PM_CTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PM_SLEEP_Type): PM_SLEEP_Fields =
-  cast[PM_SLEEP_Fields](volatileLoad(reg.p))
+  cast[PM_SLEEP_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: PM_SLEEP_Type, val: PM_SLEEP_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: PM_SLEEP_Type, op: untyped): untyped =
   block:
@@ -6526,10 +6526,10 @@ template modifyIt*(reg: PM_SLEEP_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PM_CPUSEL_Type): PM_CPUSEL_Fields =
-  cast[PM_CPUSEL_Fields](volatileLoad(reg.p))
+  cast[PM_CPUSEL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: PM_CPUSEL_Type, val: PM_CPUSEL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: PM_CPUSEL_Type, op: untyped): untyped =
   block:
@@ -6538,10 +6538,10 @@ template modifyIt*(reg: PM_CPUSEL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PM_APBASEL_Type): PM_APBASEL_Fields =
-  cast[PM_APBASEL_Fields](volatileLoad(reg.p))
+  cast[PM_APBASEL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: PM_APBASEL_Type, val: PM_APBASEL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: PM_APBASEL_Type, op: untyped): untyped =
   block:
@@ -6550,10 +6550,10 @@ template modifyIt*(reg: PM_APBASEL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PM_APBBSEL_Type): PM_APBBSEL_Fields =
-  cast[PM_APBBSEL_Fields](volatileLoad(reg.p))
+  cast[PM_APBBSEL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: PM_APBBSEL_Type, val: PM_APBBSEL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: PM_APBBSEL_Type, op: untyped): untyped =
   block:
@@ -6562,10 +6562,10 @@ template modifyIt*(reg: PM_APBBSEL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PM_APBCSEL_Type): PM_APBCSEL_Fields =
-  cast[PM_APBCSEL_Fields](volatileLoad(reg.p))
+  cast[PM_APBCSEL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: PM_APBCSEL_Type, val: PM_APBCSEL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: PM_APBCSEL_Type, op: untyped): untyped =
   block:
@@ -6574,10 +6574,10 @@ template modifyIt*(reg: PM_APBCSEL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PM_AHBMASK_Type): PM_AHBMASK_Fields =
-  cast[PM_AHBMASK_Fields](volatileLoad(reg.p))
+  cast[PM_AHBMASK_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: PM_AHBMASK_Type, val: PM_AHBMASK_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: PM_AHBMASK_Type, op: untyped): untyped =
   block:
@@ -6586,10 +6586,10 @@ template modifyIt*(reg: PM_AHBMASK_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PM_APBAMASK_Type): PM_APBAMASK_Fields =
-  cast[PM_APBAMASK_Fields](volatileLoad(reg.p))
+  cast[PM_APBAMASK_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: PM_APBAMASK_Type, val: PM_APBAMASK_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: PM_APBAMASK_Type, op: untyped): untyped =
   block:
@@ -6598,10 +6598,10 @@ template modifyIt*(reg: PM_APBAMASK_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PM_APBBMASK_Type): PM_APBBMASK_Fields =
-  cast[PM_APBBMASK_Fields](volatileLoad(reg.p))
+  cast[PM_APBBMASK_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: PM_APBBMASK_Type, val: PM_APBBMASK_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: PM_APBBMASK_Type, op: untyped): untyped =
   block:
@@ -6610,10 +6610,10 @@ template modifyIt*(reg: PM_APBBMASK_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PM_APBCMASK_Type): PM_APBCMASK_Fields =
-  cast[PM_APBCMASK_Fields](volatileLoad(reg.p))
+  cast[PM_APBCMASK_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: PM_APBCMASK_Type, val: PM_APBCMASK_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: PM_APBCMASK_Type, op: untyped): untyped =
   block:
@@ -6622,10 +6622,10 @@ template modifyIt*(reg: PM_APBCMASK_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PM_INTENCLR_Type): PM_INTENCLR_Fields =
-  cast[PM_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[PM_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: PM_INTENCLR_Type, val: PM_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: PM_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -6634,10 +6634,10 @@ template modifyIt*(reg: PM_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PM_INTENSET_Type): PM_INTENSET_Fields =
-  cast[PM_INTENSET_Fields](volatileLoad(reg.p))
+  cast[PM_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: PM_INTENSET_Type, val: PM_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: PM_INTENSET_Type, op: untyped): untyped =
   block:
@@ -6646,10 +6646,10 @@ template modifyIt*(reg: PM_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PM_INTFLAG_Type): PM_INTFLAG_Fields =
-  cast[PM_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[PM_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: PM_INTFLAG_Type, val: PM_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: PM_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -6658,7 +6658,7 @@ template modifyIt*(reg: PM_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PM_RCAUSE_Type): PM_RCAUSE_Fields =
-  cast[PM_RCAUSE_Fields](volatileLoad(reg.p))
+  cast[PM_RCAUSE_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 type PORT_WRCONFIG_Fields* = object
   PINMASK* {.bitsize:16.}: 0u16 .. 65535u16
@@ -6707,10 +6707,10 @@ type PORT_PMUX0_PMUXO* {.pure.} = enum
   H = 0x7,
 
 template read*(reg: PORT_DIR_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: PORT_DIR_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: PORT_DIR_Type, op: untyped): untyped =
   block:
@@ -6719,10 +6719,10 @@ template modifyIt*(reg: PORT_DIR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PORT_DIRCLR_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: PORT_DIRCLR_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: PORT_DIRCLR_Type, op: untyped): untyped =
   block:
@@ -6731,10 +6731,10 @@ template modifyIt*(reg: PORT_DIRCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PORT_DIRSET_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: PORT_DIRSET_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: PORT_DIRSET_Type, op: untyped): untyped =
   block:
@@ -6743,10 +6743,10 @@ template modifyIt*(reg: PORT_DIRSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PORT_DIRTGL_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: PORT_DIRTGL_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: PORT_DIRTGL_Type, op: untyped): untyped =
   block:
@@ -6755,10 +6755,10 @@ template modifyIt*(reg: PORT_DIRTGL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PORT_OUT_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: PORT_OUT_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: PORT_OUT_Type, op: untyped): untyped =
   block:
@@ -6767,10 +6767,10 @@ template modifyIt*(reg: PORT_OUT_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PORT_OUTCLR_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: PORT_OUTCLR_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: PORT_OUTCLR_Type, op: untyped): untyped =
   block:
@@ -6779,10 +6779,10 @@ template modifyIt*(reg: PORT_OUTCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PORT_OUTSET_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: PORT_OUTSET_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: PORT_OUTSET_Type, op: untyped): untyped =
   block:
@@ -6791,10 +6791,10 @@ template modifyIt*(reg: PORT_OUTSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PORT_OUTTGL_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: PORT_OUTTGL_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: PORT_OUTTGL_Type, op: untyped): untyped =
   block:
@@ -6803,13 +6803,13 @@ template modifyIt*(reg: PORT_OUTTGL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PORT_IN_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template read*(reg: PORT_CTRL_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: PORT_CTRL_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: PORT_CTRL_Type, op: untyped): untyped =
   block:
@@ -6818,13 +6818,13 @@ template modifyIt*(reg: PORT_CTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template write*(reg: PORT_WRCONFIG_Type, val: PORT_WRCONFIG_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template read*(reg: PORT_PMUX0_Type): PORT_PMUX0_Fields =
-  cast[PORT_PMUX0_Fields](volatileLoad(reg.p))
+  cast[PORT_PMUX0_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: PORT_PMUX0_Type, val: PORT_PMUX0_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: PORT_PMUX0_Type, op: untyped): untyped =
   block:
@@ -6833,10 +6833,10 @@ template modifyIt*(reg: PORT_PMUX0_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: PORT_PINCFG0_Type): PORT_PINCFG0_Fields =
-  cast[PORT_PINCFG0_Fields](volatileLoad(reg.p))
+  cast[PORT_PINCFG0_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: PORT_PINCFG0_Type, val: PORT_PINCFG0_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: PORT_PINCFG0_Type, op: untyped): untyped =
   block:
@@ -7114,10 +7114,10 @@ type RtcMode0_CTRL_PRESCALER* {.pure.} = enum
   DIV1024 = 0xa,
 
 template read*(reg: RtcMode2_CTRL_Type): RtcMode2_CTRL_Fields =
-  cast[RtcMode2_CTRL_Fields](volatileLoad(reg.p))
+  cast[RtcMode2_CTRL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: RtcMode2_CTRL_Type, val: RtcMode2_CTRL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: RtcMode2_CTRL_Type, op: untyped): untyped =
   block:
@@ -7126,10 +7126,10 @@ template modifyIt*(reg: RtcMode2_CTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode2_READREQ_Type): RtcMode2_READREQ_Fields =
-  cast[RtcMode2_READREQ_Fields](volatileLoad(reg.p))
+  cast[RtcMode2_READREQ_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: RtcMode2_READREQ_Type, val: RtcMode2_READREQ_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: RtcMode2_READREQ_Type, op: untyped): untyped =
   block:
@@ -7138,10 +7138,10 @@ template modifyIt*(reg: RtcMode2_READREQ_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode2_EVCTRL_Type): RtcMode2_EVCTRL_Fields =
-  cast[RtcMode2_EVCTRL_Fields](volatileLoad(reg.p))
+  cast[RtcMode2_EVCTRL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: RtcMode2_EVCTRL_Type, val: RtcMode2_EVCTRL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: RtcMode2_EVCTRL_Type, op: untyped): untyped =
   block:
@@ -7150,10 +7150,10 @@ template modifyIt*(reg: RtcMode2_EVCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode2_INTENCLR_Type): RtcMode2_INTENCLR_Fields =
-  cast[RtcMode2_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[RtcMode2_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode2_INTENCLR_Type, val: RtcMode2_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode2_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -7162,10 +7162,10 @@ template modifyIt*(reg: RtcMode2_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode2_INTENSET_Type): RtcMode2_INTENSET_Fields =
-  cast[RtcMode2_INTENSET_Fields](volatileLoad(reg.p))
+  cast[RtcMode2_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode2_INTENSET_Type, val: RtcMode2_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode2_INTENSET_Type, op: untyped): untyped =
   block:
@@ -7174,10 +7174,10 @@ template modifyIt*(reg: RtcMode2_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode2_INTFLAG_Type): RtcMode2_INTFLAG_Fields =
-  cast[RtcMode2_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[RtcMode2_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode2_INTFLAG_Type, val: RtcMode2_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode2_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -7186,10 +7186,10 @@ template modifyIt*(reg: RtcMode2_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode2_STATUS_Type): RtcMode2_STATUS_Fields =
-  cast[RtcMode2_STATUS_Fields](volatileLoad(reg.p))
+  cast[RtcMode2_STATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode2_STATUS_Type, val: RtcMode2_STATUS_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode2_STATUS_Type, op: untyped): untyped =
   block:
@@ -7198,10 +7198,10 @@ template modifyIt*(reg: RtcMode2_STATUS_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode2_DBGCTRL_Type): RtcMode2_DBGCTRL_Fields =
-  cast[RtcMode2_DBGCTRL_Fields](volatileLoad(reg.p))
+  cast[RtcMode2_DBGCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode2_DBGCTRL_Type, val: RtcMode2_DBGCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode2_DBGCTRL_Type, op: untyped): untyped =
   block:
@@ -7210,10 +7210,10 @@ template modifyIt*(reg: RtcMode2_DBGCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode2_FREQCORR_Type): RtcMode2_FREQCORR_Fields =
-  cast[RtcMode2_FREQCORR_Fields](volatileLoad(reg.p))
+  cast[RtcMode2_FREQCORR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode2_FREQCORR_Type, val: RtcMode2_FREQCORR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode2_FREQCORR_Type, op: untyped): untyped =
   block:
@@ -7222,10 +7222,10 @@ template modifyIt*(reg: RtcMode2_FREQCORR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode2_CLOCK_Type): RtcMode2_CLOCK_Fields =
-  cast[RtcMode2_CLOCK_Fields](volatileLoad(reg.p))
+  cast[RtcMode2_CLOCK_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: RtcMode2_CLOCK_Type, val: RtcMode2_CLOCK_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: RtcMode2_CLOCK_Type, op: untyped): untyped =
   block:
@@ -7234,10 +7234,10 @@ template modifyIt*(reg: RtcMode2_CLOCK_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode2_ALARM_Type): RtcMode2_ALARM_Fields =
-  cast[RtcMode2_ALARM_Fields](volatileLoad(reg.p))
+  cast[RtcMode2_ALARM_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: RtcMode2_ALARM_Type, val: RtcMode2_ALARM_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: RtcMode2_ALARM_Type, op: untyped): untyped =
   block:
@@ -7246,10 +7246,10 @@ template modifyIt*(reg: RtcMode2_ALARM_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode2_MASK_Type): RtcMode2_MASK_Fields =
-  cast[RtcMode2_MASK_Fields](volatileLoad(reg.p))
+  cast[RtcMode2_MASK_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode2_MASK_Type, val: RtcMode2_MASK_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode2_MASK_Type, op: untyped): untyped =
   block:
@@ -7258,10 +7258,10 @@ template modifyIt*(reg: RtcMode2_MASK_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode1_CTRL_Type): RtcMode1_CTRL_Fields =
-  cast[RtcMode1_CTRL_Fields](volatileLoad(reg.p))
+  cast[RtcMode1_CTRL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: RtcMode1_CTRL_Type, val: RtcMode1_CTRL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: RtcMode1_CTRL_Type, op: untyped): untyped =
   block:
@@ -7270,10 +7270,10 @@ template modifyIt*(reg: RtcMode1_CTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode1_READREQ_Type): RtcMode1_READREQ_Fields =
-  cast[RtcMode1_READREQ_Fields](volatileLoad(reg.p))
+  cast[RtcMode1_READREQ_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: RtcMode1_READREQ_Type, val: RtcMode1_READREQ_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: RtcMode1_READREQ_Type, op: untyped): untyped =
   block:
@@ -7282,10 +7282,10 @@ template modifyIt*(reg: RtcMode1_READREQ_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode1_EVCTRL_Type): RtcMode1_EVCTRL_Fields =
-  cast[RtcMode1_EVCTRL_Fields](volatileLoad(reg.p))
+  cast[RtcMode1_EVCTRL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: RtcMode1_EVCTRL_Type, val: RtcMode1_EVCTRL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: RtcMode1_EVCTRL_Type, op: untyped): untyped =
   block:
@@ -7294,10 +7294,10 @@ template modifyIt*(reg: RtcMode1_EVCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode1_INTENCLR_Type): RtcMode1_INTENCLR_Fields =
-  cast[RtcMode1_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[RtcMode1_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode1_INTENCLR_Type, val: RtcMode1_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode1_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -7306,10 +7306,10 @@ template modifyIt*(reg: RtcMode1_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode1_INTENSET_Type): RtcMode1_INTENSET_Fields =
-  cast[RtcMode1_INTENSET_Fields](volatileLoad(reg.p))
+  cast[RtcMode1_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode1_INTENSET_Type, val: RtcMode1_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode1_INTENSET_Type, op: untyped): untyped =
   block:
@@ -7318,10 +7318,10 @@ template modifyIt*(reg: RtcMode1_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode1_INTFLAG_Type): RtcMode1_INTFLAG_Fields =
-  cast[RtcMode1_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[RtcMode1_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode1_INTFLAG_Type, val: RtcMode1_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode1_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -7330,10 +7330,10 @@ template modifyIt*(reg: RtcMode1_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode1_STATUS_Type): RtcMode1_STATUS_Fields =
-  cast[RtcMode1_STATUS_Fields](volatileLoad(reg.p))
+  cast[RtcMode1_STATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode1_STATUS_Type, val: RtcMode1_STATUS_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode1_STATUS_Type, op: untyped): untyped =
   block:
@@ -7342,10 +7342,10 @@ template modifyIt*(reg: RtcMode1_STATUS_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode1_DBGCTRL_Type): RtcMode1_DBGCTRL_Fields =
-  cast[RtcMode1_DBGCTRL_Fields](volatileLoad(reg.p))
+  cast[RtcMode1_DBGCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode1_DBGCTRL_Type, val: RtcMode1_DBGCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode1_DBGCTRL_Type, op: untyped): untyped =
   block:
@@ -7354,10 +7354,10 @@ template modifyIt*(reg: RtcMode1_DBGCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode1_FREQCORR_Type): RtcMode1_FREQCORR_Fields =
-  cast[RtcMode1_FREQCORR_Fields](volatileLoad(reg.p))
+  cast[RtcMode1_FREQCORR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode1_FREQCORR_Type, val: RtcMode1_FREQCORR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode1_FREQCORR_Type, op: untyped): untyped =
   block:
@@ -7366,10 +7366,10 @@ template modifyIt*(reg: RtcMode1_FREQCORR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode1_COUNT_Type): uint16 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint16](reg.loc))
 
 template write*(reg: RtcMode1_COUNT_Type, val: uint16) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint16](reg.loc), val)
 
 template modifyIt*(reg: RtcMode1_COUNT_Type, op: untyped): untyped =
   block:
@@ -7378,10 +7378,10 @@ template modifyIt*(reg: RtcMode1_COUNT_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode1_PER_Type): uint16 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint16](reg.loc))
 
 template write*(reg: RtcMode1_PER_Type, val: uint16) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint16](reg.loc), val)
 
 template modifyIt*(reg: RtcMode1_PER_Type, op: untyped): untyped =
   block:
@@ -7390,10 +7390,10 @@ template modifyIt*(reg: RtcMode1_PER_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode1_COMP_Type): uint16 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint16](reg.loc))
 
 template write*(reg: RtcMode1_COMP_Type, val: uint16) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint16](reg.loc), val)
 
 template modifyIt*(reg: RtcMode1_COMP_Type, op: untyped): untyped =
   block:
@@ -7402,10 +7402,10 @@ template modifyIt*(reg: RtcMode1_COMP_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode0_CTRL_Type): RtcMode0_CTRL_Fields =
-  cast[RtcMode0_CTRL_Fields](volatileLoad(reg.p))
+  cast[RtcMode0_CTRL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: RtcMode0_CTRL_Type, val: RtcMode0_CTRL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: RtcMode0_CTRL_Type, op: untyped): untyped =
   block:
@@ -7414,10 +7414,10 @@ template modifyIt*(reg: RtcMode0_CTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode0_READREQ_Type): RtcMode0_READREQ_Fields =
-  cast[RtcMode0_READREQ_Fields](volatileLoad(reg.p))
+  cast[RtcMode0_READREQ_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: RtcMode0_READREQ_Type, val: RtcMode0_READREQ_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: RtcMode0_READREQ_Type, op: untyped): untyped =
   block:
@@ -7426,10 +7426,10 @@ template modifyIt*(reg: RtcMode0_READREQ_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode0_EVCTRL_Type): RtcMode0_EVCTRL_Fields =
-  cast[RtcMode0_EVCTRL_Fields](volatileLoad(reg.p))
+  cast[RtcMode0_EVCTRL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: RtcMode0_EVCTRL_Type, val: RtcMode0_EVCTRL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: RtcMode0_EVCTRL_Type, op: untyped): untyped =
   block:
@@ -7438,10 +7438,10 @@ template modifyIt*(reg: RtcMode0_EVCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode0_INTENCLR_Type): RtcMode0_INTENCLR_Fields =
-  cast[RtcMode0_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[RtcMode0_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode0_INTENCLR_Type, val: RtcMode0_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode0_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -7450,10 +7450,10 @@ template modifyIt*(reg: RtcMode0_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode0_INTENSET_Type): RtcMode0_INTENSET_Fields =
-  cast[RtcMode0_INTENSET_Fields](volatileLoad(reg.p))
+  cast[RtcMode0_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode0_INTENSET_Type, val: RtcMode0_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode0_INTENSET_Type, op: untyped): untyped =
   block:
@@ -7462,10 +7462,10 @@ template modifyIt*(reg: RtcMode0_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode0_INTFLAG_Type): RtcMode0_INTFLAG_Fields =
-  cast[RtcMode0_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[RtcMode0_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode0_INTFLAG_Type, val: RtcMode0_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode0_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -7474,10 +7474,10 @@ template modifyIt*(reg: RtcMode0_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode0_STATUS_Type): RtcMode0_STATUS_Fields =
-  cast[RtcMode0_STATUS_Fields](volatileLoad(reg.p))
+  cast[RtcMode0_STATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode0_STATUS_Type, val: RtcMode0_STATUS_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode0_STATUS_Type, op: untyped): untyped =
   block:
@@ -7486,10 +7486,10 @@ template modifyIt*(reg: RtcMode0_STATUS_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode0_DBGCTRL_Type): RtcMode0_DBGCTRL_Fields =
-  cast[RtcMode0_DBGCTRL_Fields](volatileLoad(reg.p))
+  cast[RtcMode0_DBGCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode0_DBGCTRL_Type, val: RtcMode0_DBGCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode0_DBGCTRL_Type, op: untyped): untyped =
   block:
@@ -7498,10 +7498,10 @@ template modifyIt*(reg: RtcMode0_DBGCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode0_FREQCORR_Type): RtcMode0_FREQCORR_Fields =
-  cast[RtcMode0_FREQCORR_Fields](volatileLoad(reg.p))
+  cast[RtcMode0_FREQCORR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: RtcMode0_FREQCORR_Type, val: RtcMode0_FREQCORR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: RtcMode0_FREQCORR_Type, op: untyped): untyped =
   block:
@@ -7510,10 +7510,10 @@ template modifyIt*(reg: RtcMode0_FREQCORR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode0_COUNT_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: RtcMode0_COUNT_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: RtcMode0_COUNT_Type, op: untyped): untyped =
   block:
@@ -7522,10 +7522,10 @@ template modifyIt*(reg: RtcMode0_COUNT_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: RtcMode0_COMP_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: RtcMode0_COMP_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: RtcMode0_COMP_Type, op: untyped): untyped =
   block:
@@ -7904,10 +7904,10 @@ type SercomI2cm_CTRLA_MODE* {.pure.} = enum
   I2C_MASTER = 0x5,
 
 template read*(reg: SercomUsart_CTRLA_Type): SercomUsart_CTRLA_Fields =
-  cast[SercomUsart_CTRLA_Fields](volatileLoad(reg.p))
+  cast[SercomUsart_CTRLA_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SercomUsart_CTRLA_Type, val: SercomUsart_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SercomUsart_CTRLA_Type, op: untyped): untyped =
   block:
@@ -7916,10 +7916,10 @@ template modifyIt*(reg: SercomUsart_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomUsart_CTRLB_Type): SercomUsart_CTRLB_Fields =
-  cast[SercomUsart_CTRLB_Fields](volatileLoad(reg.p))
+  cast[SercomUsart_CTRLB_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SercomUsart_CTRLB_Type, val: SercomUsart_CTRLB_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SercomUsart_CTRLB_Type, op: untyped): untyped =
   block:
@@ -7928,10 +7928,10 @@ template modifyIt*(reg: SercomUsart_CTRLB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomUsart_BAUD_Type): uint16 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint16](reg.loc))
 
 template write*(reg: SercomUsart_BAUD_Type, val: uint16) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint16](reg.loc), val)
 
 template modifyIt*(reg: SercomUsart_BAUD_Type, op: untyped): untyped =
   block:
@@ -7940,10 +7940,10 @@ template modifyIt*(reg: SercomUsart_BAUD_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomUsart_BAUD_FRAC_MODE_Type): SercomUsart_BAUD_FRAC_MODE_Fields =
-  cast[SercomUsart_BAUD_FRAC_MODE_Fields](volatileLoad(reg.p))
+  cast[SercomUsart_BAUD_FRAC_MODE_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: SercomUsart_BAUD_FRAC_MODE_Type, val: SercomUsart_BAUD_FRAC_MODE_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: SercomUsart_BAUD_FRAC_MODE_Type, op: untyped): untyped =
   block:
@@ -7952,10 +7952,10 @@ template modifyIt*(reg: SercomUsart_BAUD_FRAC_MODE_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomUsart_BAUD_FRACFP_MODE_Type): SercomUsart_BAUD_FRACFP_MODE_Fields =
-  cast[SercomUsart_BAUD_FRACFP_MODE_Fields](volatileLoad(reg.p))
+  cast[SercomUsart_BAUD_FRACFP_MODE_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: SercomUsart_BAUD_FRACFP_MODE_Type, val: SercomUsart_BAUD_FRACFP_MODE_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: SercomUsart_BAUD_FRACFP_MODE_Type, op: untyped): untyped =
   block:
@@ -7964,10 +7964,10 @@ template modifyIt*(reg: SercomUsart_BAUD_FRACFP_MODE_Type, op: untyped): untyped
     reg.write(it)
 
 template read*(reg: SercomUsart_BAUD_USARTFP_MODE_Type): uint16 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint16](reg.loc))
 
 template write*(reg: SercomUsart_BAUD_USARTFP_MODE_Type, val: uint16) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint16](reg.loc), val)
 
 template modifyIt*(reg: SercomUsart_BAUD_USARTFP_MODE_Type, op: untyped): untyped =
   block:
@@ -7976,10 +7976,10 @@ template modifyIt*(reg: SercomUsart_BAUD_USARTFP_MODE_Type, op: untyped): untype
     reg.write(it)
 
 template read*(reg: SercomUsart_RXPL_Type): uint8 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint8](reg.loc))
 
 template write*(reg: SercomUsart_RXPL_Type, val: uint8) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint8](reg.loc), val)
 
 template modifyIt*(reg: SercomUsart_RXPL_Type, op: untyped): untyped =
   block:
@@ -7988,10 +7988,10 @@ template modifyIt*(reg: SercomUsart_RXPL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomUsart_INTENCLR_Type): SercomUsart_INTENCLR_Fields =
-  cast[SercomUsart_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[SercomUsart_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomUsart_INTENCLR_Type, val: SercomUsart_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomUsart_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -8000,10 +8000,10 @@ template modifyIt*(reg: SercomUsart_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomUsart_INTENSET_Type): SercomUsart_INTENSET_Fields =
-  cast[SercomUsart_INTENSET_Fields](volatileLoad(reg.p))
+  cast[SercomUsart_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomUsart_INTENSET_Type, val: SercomUsart_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomUsart_INTENSET_Type, op: untyped): untyped =
   block:
@@ -8012,10 +8012,10 @@ template modifyIt*(reg: SercomUsart_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomUsart_INTFLAG_Type): SercomUsart_INTFLAG_Fields =
-  cast[SercomUsart_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[SercomUsart_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomUsart_INTFLAG_Type, val: SercomUsart_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomUsart_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -8024,10 +8024,10 @@ template modifyIt*(reg: SercomUsart_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomUsart_STATUS_Type): SercomUsart_STATUS_Fields =
-  cast[SercomUsart_STATUS_Fields](volatileLoad(reg.p))
+  cast[SercomUsart_STATUS_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: SercomUsart_STATUS_Type, val: SercomUsart_STATUS_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: SercomUsart_STATUS_Type, op: untyped): untyped =
   block:
@@ -8036,13 +8036,13 @@ template modifyIt*(reg: SercomUsart_STATUS_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomUsart_SYNCBUSY_Type): SercomUsart_SYNCBUSY_Fields =
-  cast[SercomUsart_SYNCBUSY_Fields](volatileLoad(reg.p))
+  cast[SercomUsart_SYNCBUSY_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: SercomUsart_DATA_Type): SercomUsart_DATA_Fields =
-  cast[SercomUsart_DATA_Fields](volatileLoad(reg.p))
+  cast[SercomUsart_DATA_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: SercomUsart_DATA_Type, val: SercomUsart_DATA_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: SercomUsart_DATA_Type, op: untyped): untyped =
   block:
@@ -8051,10 +8051,10 @@ template modifyIt*(reg: SercomUsart_DATA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomUsart_DBGCTRL_Type): SercomUsart_DBGCTRL_Fields =
-  cast[SercomUsart_DBGCTRL_Fields](volatileLoad(reg.p))
+  cast[SercomUsart_DBGCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomUsart_DBGCTRL_Type, val: SercomUsart_DBGCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomUsart_DBGCTRL_Type, op: untyped): untyped =
   block:
@@ -8063,10 +8063,10 @@ template modifyIt*(reg: SercomUsart_DBGCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomSpi_CTRLA_Type): SercomSpi_CTRLA_Fields =
-  cast[SercomSpi_CTRLA_Fields](volatileLoad(reg.p))
+  cast[SercomSpi_CTRLA_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SercomSpi_CTRLA_Type, val: SercomSpi_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SercomSpi_CTRLA_Type, op: untyped): untyped =
   block:
@@ -8075,10 +8075,10 @@ template modifyIt*(reg: SercomSpi_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomSpi_CTRLB_Type): SercomSpi_CTRLB_Fields =
-  cast[SercomSpi_CTRLB_Fields](volatileLoad(reg.p))
+  cast[SercomSpi_CTRLB_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SercomSpi_CTRLB_Type, val: SercomSpi_CTRLB_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SercomSpi_CTRLB_Type, op: untyped): untyped =
   block:
@@ -8087,10 +8087,10 @@ template modifyIt*(reg: SercomSpi_CTRLB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomSpi_BAUD_Type): uint8 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint8](reg.loc))
 
 template write*(reg: SercomSpi_BAUD_Type, val: uint8) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint8](reg.loc), val)
 
 template modifyIt*(reg: SercomSpi_BAUD_Type, op: untyped): untyped =
   block:
@@ -8099,10 +8099,10 @@ template modifyIt*(reg: SercomSpi_BAUD_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomSpi_INTENCLR_Type): SercomSpi_INTENCLR_Fields =
-  cast[SercomSpi_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[SercomSpi_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomSpi_INTENCLR_Type, val: SercomSpi_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomSpi_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -8111,10 +8111,10 @@ template modifyIt*(reg: SercomSpi_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomSpi_INTENSET_Type): SercomSpi_INTENSET_Fields =
-  cast[SercomSpi_INTENSET_Fields](volatileLoad(reg.p))
+  cast[SercomSpi_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomSpi_INTENSET_Type, val: SercomSpi_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomSpi_INTENSET_Type, op: untyped): untyped =
   block:
@@ -8123,10 +8123,10 @@ template modifyIt*(reg: SercomSpi_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomSpi_INTFLAG_Type): SercomSpi_INTFLAG_Fields =
-  cast[SercomSpi_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[SercomSpi_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomSpi_INTFLAG_Type, val: SercomSpi_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomSpi_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -8135,10 +8135,10 @@ template modifyIt*(reg: SercomSpi_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomSpi_STATUS_Type): SercomSpi_STATUS_Fields =
-  cast[SercomSpi_STATUS_Fields](volatileLoad(reg.p))
+  cast[SercomSpi_STATUS_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: SercomSpi_STATUS_Type, val: SercomSpi_STATUS_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: SercomSpi_STATUS_Type, op: untyped): untyped =
   block:
@@ -8147,13 +8147,13 @@ template modifyIt*(reg: SercomSpi_STATUS_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomSpi_SYNCBUSY_Type): SercomSpi_SYNCBUSY_Fields =
-  cast[SercomSpi_SYNCBUSY_Fields](volatileLoad(reg.p))
+  cast[SercomSpi_SYNCBUSY_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: SercomSpi_ADDR_Type): SercomSpi_ADDR_Fields =
-  cast[SercomSpi_ADDR_Fields](volatileLoad(reg.p))
+  cast[SercomSpi_ADDR_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SercomSpi_ADDR_Type, val: SercomSpi_ADDR_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SercomSpi_ADDR_Type, op: untyped): untyped =
   block:
@@ -8162,10 +8162,10 @@ template modifyIt*(reg: SercomSpi_ADDR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomSpi_DATA_Type): SercomSpi_DATA_Fields =
-  cast[SercomSpi_DATA_Fields](volatileLoad(reg.p))
+  cast[SercomSpi_DATA_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SercomSpi_DATA_Type, val: SercomSpi_DATA_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SercomSpi_DATA_Type, op: untyped): untyped =
   block:
@@ -8174,10 +8174,10 @@ template modifyIt*(reg: SercomSpi_DATA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomSpi_DBGCTRL_Type): SercomSpi_DBGCTRL_Fields =
-  cast[SercomSpi_DBGCTRL_Fields](volatileLoad(reg.p))
+  cast[SercomSpi_DBGCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomSpi_DBGCTRL_Type, val: SercomSpi_DBGCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomSpi_DBGCTRL_Type, op: untyped): untyped =
   block:
@@ -8186,10 +8186,10 @@ template modifyIt*(reg: SercomSpi_DBGCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cs_CTRLA_Type): SercomI2cs_CTRLA_Fields =
-  cast[SercomI2cs_CTRLA_Fields](volatileLoad(reg.p))
+  cast[SercomI2cs_CTRLA_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SercomI2cs_CTRLA_Type, val: SercomI2cs_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SercomI2cs_CTRLA_Type, op: untyped): untyped =
   block:
@@ -8198,10 +8198,10 @@ template modifyIt*(reg: SercomI2cs_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cs_CTRLB_Type): SercomI2cs_CTRLB_Fields =
-  cast[SercomI2cs_CTRLB_Fields](volatileLoad(reg.p))
+  cast[SercomI2cs_CTRLB_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SercomI2cs_CTRLB_Type, val: SercomI2cs_CTRLB_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SercomI2cs_CTRLB_Type, op: untyped): untyped =
   block:
@@ -8210,10 +8210,10 @@ template modifyIt*(reg: SercomI2cs_CTRLB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cs_INTENCLR_Type): SercomI2cs_INTENCLR_Fields =
-  cast[SercomI2cs_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[SercomI2cs_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomI2cs_INTENCLR_Type, val: SercomI2cs_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomI2cs_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -8222,10 +8222,10 @@ template modifyIt*(reg: SercomI2cs_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cs_INTENSET_Type): SercomI2cs_INTENSET_Fields =
-  cast[SercomI2cs_INTENSET_Fields](volatileLoad(reg.p))
+  cast[SercomI2cs_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomI2cs_INTENSET_Type, val: SercomI2cs_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomI2cs_INTENSET_Type, op: untyped): untyped =
   block:
@@ -8234,10 +8234,10 @@ template modifyIt*(reg: SercomI2cs_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cs_INTFLAG_Type): SercomI2cs_INTFLAG_Fields =
-  cast[SercomI2cs_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[SercomI2cs_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomI2cs_INTFLAG_Type, val: SercomI2cs_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomI2cs_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -8246,10 +8246,10 @@ template modifyIt*(reg: SercomI2cs_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cs_STATUS_Type): SercomI2cs_STATUS_Fields =
-  cast[SercomI2cs_STATUS_Fields](volatileLoad(reg.p))
+  cast[SercomI2cs_STATUS_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: SercomI2cs_STATUS_Type, val: SercomI2cs_STATUS_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: SercomI2cs_STATUS_Type, op: untyped): untyped =
   block:
@@ -8258,13 +8258,13 @@ template modifyIt*(reg: SercomI2cs_STATUS_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cs_SYNCBUSY_Type): SercomI2cs_SYNCBUSY_Fields =
-  cast[SercomI2cs_SYNCBUSY_Fields](volatileLoad(reg.p))
+  cast[SercomI2cs_SYNCBUSY_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: SercomI2cs_ADDR_Type): SercomI2cs_ADDR_Fields =
-  cast[SercomI2cs_ADDR_Fields](volatileLoad(reg.p))
+  cast[SercomI2cs_ADDR_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SercomI2cs_ADDR_Type, val: SercomI2cs_ADDR_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SercomI2cs_ADDR_Type, op: untyped): untyped =
   block:
@@ -8273,10 +8273,10 @@ template modifyIt*(reg: SercomI2cs_ADDR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cs_DATA_Type): uint8 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint8](reg.loc))
 
 template write*(reg: SercomI2cs_DATA_Type, val: uint8) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint8](reg.loc), val)
 
 template modifyIt*(reg: SercomI2cs_DATA_Type, op: untyped): untyped =
   block:
@@ -8285,10 +8285,10 @@ template modifyIt*(reg: SercomI2cs_DATA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cm_CTRLA_Type): SercomI2cm_CTRLA_Fields =
-  cast[SercomI2cm_CTRLA_Fields](volatileLoad(reg.p))
+  cast[SercomI2cm_CTRLA_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SercomI2cm_CTRLA_Type, val: SercomI2cm_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SercomI2cm_CTRLA_Type, op: untyped): untyped =
   block:
@@ -8297,10 +8297,10 @@ template modifyIt*(reg: SercomI2cm_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cm_CTRLB_Type): SercomI2cm_CTRLB_Fields =
-  cast[SercomI2cm_CTRLB_Fields](volatileLoad(reg.p))
+  cast[SercomI2cm_CTRLB_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SercomI2cm_CTRLB_Type, val: SercomI2cm_CTRLB_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SercomI2cm_CTRLB_Type, op: untyped): untyped =
   block:
@@ -8309,10 +8309,10 @@ template modifyIt*(reg: SercomI2cm_CTRLB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cm_BAUD_Type): SercomI2cm_BAUD_Fields =
-  cast[SercomI2cm_BAUD_Fields](volatileLoad(reg.p))
+  cast[SercomI2cm_BAUD_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SercomI2cm_BAUD_Type, val: SercomI2cm_BAUD_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SercomI2cm_BAUD_Type, op: untyped): untyped =
   block:
@@ -8321,10 +8321,10 @@ template modifyIt*(reg: SercomI2cm_BAUD_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cm_INTENCLR_Type): SercomI2cm_INTENCLR_Fields =
-  cast[SercomI2cm_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[SercomI2cm_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomI2cm_INTENCLR_Type, val: SercomI2cm_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomI2cm_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -8333,10 +8333,10 @@ template modifyIt*(reg: SercomI2cm_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cm_INTENSET_Type): SercomI2cm_INTENSET_Fields =
-  cast[SercomI2cm_INTENSET_Fields](volatileLoad(reg.p))
+  cast[SercomI2cm_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomI2cm_INTENSET_Type, val: SercomI2cm_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomI2cm_INTENSET_Type, op: untyped): untyped =
   block:
@@ -8345,10 +8345,10 @@ template modifyIt*(reg: SercomI2cm_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cm_INTFLAG_Type): SercomI2cm_INTFLAG_Fields =
-  cast[SercomI2cm_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[SercomI2cm_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomI2cm_INTFLAG_Type, val: SercomI2cm_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomI2cm_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -8357,10 +8357,10 @@ template modifyIt*(reg: SercomI2cm_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cm_STATUS_Type): SercomI2cm_STATUS_Fields =
-  cast[SercomI2cm_STATUS_Fields](volatileLoad(reg.p))
+  cast[SercomI2cm_STATUS_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: SercomI2cm_STATUS_Type, val: SercomI2cm_STATUS_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: SercomI2cm_STATUS_Type, op: untyped): untyped =
   block:
@@ -8369,13 +8369,13 @@ template modifyIt*(reg: SercomI2cm_STATUS_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cm_SYNCBUSY_Type): SercomI2cm_SYNCBUSY_Fields =
-  cast[SercomI2cm_SYNCBUSY_Fields](volatileLoad(reg.p))
+  cast[SercomI2cm_SYNCBUSY_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: SercomI2cm_ADDR_Type): SercomI2cm_ADDR_Fields =
-  cast[SercomI2cm_ADDR_Fields](volatileLoad(reg.p))
+  cast[SercomI2cm_ADDR_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SercomI2cm_ADDR_Type, val: SercomI2cm_ADDR_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SercomI2cm_ADDR_Type, op: untyped): untyped =
   block:
@@ -8384,10 +8384,10 @@ template modifyIt*(reg: SercomI2cm_ADDR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cm_DATA_Type): uint8 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint8](reg.loc))
 
 template write*(reg: SercomI2cm_DATA_Type, val: uint8) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint8](reg.loc), val)
 
 template modifyIt*(reg: SercomI2cm_DATA_Type, op: untyped): untyped =
   block:
@@ -8396,10 +8396,10 @@ template modifyIt*(reg: SercomI2cm_DATA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SercomI2cm_DBGCTRL_Type): SercomI2cm_DBGCTRL_Fields =
-  cast[SercomI2cm_DBGCTRL_Fields](volatileLoad(reg.p))
+  cast[SercomI2cm_DBGCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SercomI2cm_DBGCTRL_Type, val: SercomI2cm_DBGCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SercomI2cm_DBGCTRL_Type, op: untyped): untyped =
   block:
@@ -8693,10 +8693,10 @@ type SYSCTRL_DPLLCTRLB_LTIME* {.pure.} = enum
   x11MS = 0x7,
 
 template read*(reg: SYSCTRL_INTENCLR_Type): SYSCTRL_INTENCLR_Fields =
-  cast[SYSCTRL_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_INTENCLR_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SYSCTRL_INTENCLR_Type, val: SYSCTRL_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SYSCTRL_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -8705,10 +8705,10 @@ template modifyIt*(reg: SYSCTRL_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_INTENSET_Type): SYSCTRL_INTENSET_Fields =
-  cast[SYSCTRL_INTENSET_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_INTENSET_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SYSCTRL_INTENSET_Type, val: SYSCTRL_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SYSCTRL_INTENSET_Type, op: untyped): untyped =
   block:
@@ -8717,10 +8717,10 @@ template modifyIt*(reg: SYSCTRL_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_INTFLAG_Type): SYSCTRL_INTFLAG_Fields =
-  cast[SYSCTRL_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_INTFLAG_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SYSCTRL_INTFLAG_Type, val: SYSCTRL_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SYSCTRL_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -8729,13 +8729,13 @@ template modifyIt*(reg: SYSCTRL_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_PCLKSR_Type): SYSCTRL_PCLKSR_Fields =
-  cast[SYSCTRL_PCLKSR_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_PCLKSR_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: SYSCTRL_XOSC_Type): SYSCTRL_XOSC_Fields =
-  cast[SYSCTRL_XOSC_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_XOSC_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: SYSCTRL_XOSC_Type, val: SYSCTRL_XOSC_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: SYSCTRL_XOSC_Type, op: untyped): untyped =
   block:
@@ -8744,10 +8744,10 @@ template modifyIt*(reg: SYSCTRL_XOSC_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_XOSC32K_Type): SYSCTRL_XOSC32K_Fields =
-  cast[SYSCTRL_XOSC32K_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_XOSC32K_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: SYSCTRL_XOSC32K_Type, val: SYSCTRL_XOSC32K_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: SYSCTRL_XOSC32K_Type, op: untyped): untyped =
   block:
@@ -8756,10 +8756,10 @@ template modifyIt*(reg: SYSCTRL_XOSC32K_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_OSC32K_Type): SYSCTRL_OSC32K_Fields =
-  cast[SYSCTRL_OSC32K_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_OSC32K_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SYSCTRL_OSC32K_Type, val: SYSCTRL_OSC32K_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SYSCTRL_OSC32K_Type, op: untyped): untyped =
   block:
@@ -8768,10 +8768,10 @@ template modifyIt*(reg: SYSCTRL_OSC32K_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_OSCULP32K_Type): SYSCTRL_OSCULP32K_Fields =
-  cast[SYSCTRL_OSCULP32K_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_OSCULP32K_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SYSCTRL_OSCULP32K_Type, val: SYSCTRL_OSCULP32K_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SYSCTRL_OSCULP32K_Type, op: untyped): untyped =
   block:
@@ -8780,10 +8780,10 @@ template modifyIt*(reg: SYSCTRL_OSCULP32K_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_OSC8M_Type): SYSCTRL_OSC8M_Fields =
-  cast[SYSCTRL_OSC8M_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_OSC8M_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SYSCTRL_OSC8M_Type, val: SYSCTRL_OSC8M_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SYSCTRL_OSC8M_Type, op: untyped): untyped =
   block:
@@ -8792,10 +8792,10 @@ template modifyIt*(reg: SYSCTRL_OSC8M_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_DFLLCTRL_Type): SYSCTRL_DFLLCTRL_Fields =
-  cast[SYSCTRL_DFLLCTRL_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_DFLLCTRL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: SYSCTRL_DFLLCTRL_Type, val: SYSCTRL_DFLLCTRL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: SYSCTRL_DFLLCTRL_Type, op: untyped): untyped =
   block:
@@ -8804,10 +8804,10 @@ template modifyIt*(reg: SYSCTRL_DFLLCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_DFLLVAL_Type): SYSCTRL_DFLLVAL_Fields =
-  cast[SYSCTRL_DFLLVAL_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_DFLLVAL_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SYSCTRL_DFLLVAL_Type, val: SYSCTRL_DFLLVAL_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SYSCTRL_DFLLVAL_Type, op: untyped): untyped =
   block:
@@ -8816,10 +8816,10 @@ template modifyIt*(reg: SYSCTRL_DFLLVAL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_DFLLMUL_Type): SYSCTRL_DFLLMUL_Fields =
-  cast[SYSCTRL_DFLLMUL_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_DFLLMUL_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SYSCTRL_DFLLMUL_Type, val: SYSCTRL_DFLLMUL_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SYSCTRL_DFLLMUL_Type, op: untyped): untyped =
   block:
@@ -8828,10 +8828,10 @@ template modifyIt*(reg: SYSCTRL_DFLLMUL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_DFLLSYNC_Type): SYSCTRL_DFLLSYNC_Fields =
-  cast[SYSCTRL_DFLLSYNC_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_DFLLSYNC_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SYSCTRL_DFLLSYNC_Type, val: SYSCTRL_DFLLSYNC_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SYSCTRL_DFLLSYNC_Type, op: untyped): untyped =
   block:
@@ -8840,10 +8840,10 @@ template modifyIt*(reg: SYSCTRL_DFLLSYNC_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_BOD33_Type): SYSCTRL_BOD33_Fields =
-  cast[SYSCTRL_BOD33_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_BOD33_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SYSCTRL_BOD33_Type, val: SYSCTRL_BOD33_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SYSCTRL_BOD33_Type, op: untyped): untyped =
   block:
@@ -8852,10 +8852,10 @@ template modifyIt*(reg: SYSCTRL_BOD33_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_VREG_Type): SYSCTRL_VREG_Fields =
-  cast[SYSCTRL_VREG_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_VREG_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: SYSCTRL_VREG_Type, val: SYSCTRL_VREG_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: SYSCTRL_VREG_Type, op: untyped): untyped =
   block:
@@ -8864,10 +8864,10 @@ template modifyIt*(reg: SYSCTRL_VREG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_VREF_Type): SYSCTRL_VREF_Fields =
-  cast[SYSCTRL_VREF_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_VREF_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SYSCTRL_VREF_Type, val: SYSCTRL_VREF_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SYSCTRL_VREF_Type, op: untyped): untyped =
   block:
@@ -8876,10 +8876,10 @@ template modifyIt*(reg: SYSCTRL_VREF_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_DPLLCTRLA_Type): SYSCTRL_DPLLCTRLA_Fields =
-  cast[SYSCTRL_DPLLCTRLA_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_DPLLCTRLA_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: SYSCTRL_DPLLCTRLA_Type, val: SYSCTRL_DPLLCTRLA_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: SYSCTRL_DPLLCTRLA_Type, op: untyped): untyped =
   block:
@@ -8888,10 +8888,10 @@ template modifyIt*(reg: SYSCTRL_DPLLCTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_DPLLRATIO_Type): SYSCTRL_DPLLRATIO_Fields =
-  cast[SYSCTRL_DPLLRATIO_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_DPLLRATIO_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SYSCTRL_DPLLRATIO_Type, val: SYSCTRL_DPLLRATIO_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SYSCTRL_DPLLRATIO_Type, op: untyped): untyped =
   block:
@@ -8900,10 +8900,10 @@ template modifyIt*(reg: SYSCTRL_DPLLRATIO_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_DPLLCTRLB_Type): SYSCTRL_DPLLCTRLB_Fields =
-  cast[SYSCTRL_DPLLCTRLB_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_DPLLCTRLB_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: SYSCTRL_DPLLCTRLB_Type, val: SYSCTRL_DPLLCTRLB_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: SYSCTRL_DPLLCTRLB_Type, op: untyped): untyped =
   block:
@@ -8912,7 +8912,7 @@ template modifyIt*(reg: SYSCTRL_DPLLCTRLB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: SYSCTRL_DPLLSTATUS_Type): SYSCTRL_DPLLSTATUS_Fields =
-  cast[SYSCTRL_DPLLSTATUS_Fields](volatileLoad(reg.p))
+  cast[SYSCTRL_DPLLSTATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 type TcCount32_CTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
@@ -9317,10 +9317,10 @@ type TcCount8_EVCTRL_EVACT* {.pure.} = enum
   PWP = 0x6,
 
 template read*(reg: TcCount32_CTRLA_Type): TcCount32_CTRLA_Fields =
-  cast[TcCount32_CTRLA_Fields](volatileLoad(reg.p))
+  cast[TcCount32_CTRLA_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: TcCount32_CTRLA_Type, val: TcCount32_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: TcCount32_CTRLA_Type, op: untyped): untyped =
   block:
@@ -9329,10 +9329,10 @@ template modifyIt*(reg: TcCount32_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount32_READREQ_Type): TcCount32_READREQ_Fields =
-  cast[TcCount32_READREQ_Fields](volatileLoad(reg.p))
+  cast[TcCount32_READREQ_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: TcCount32_READREQ_Type, val: TcCount32_READREQ_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: TcCount32_READREQ_Type, op: untyped): untyped =
   block:
@@ -9341,10 +9341,10 @@ template modifyIt*(reg: TcCount32_READREQ_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount32_CTRLBCLR_Type): TcCount32_CTRLBCLR_Fields =
-  cast[TcCount32_CTRLBCLR_Fields](volatileLoad(reg.p))
+  cast[TcCount32_CTRLBCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount32_CTRLBCLR_Type, val: TcCount32_CTRLBCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount32_CTRLBCLR_Type, op: untyped): untyped =
   block:
@@ -9353,10 +9353,10 @@ template modifyIt*(reg: TcCount32_CTRLBCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount32_CTRLBSET_Type): TcCount32_CTRLBSET_Fields =
-  cast[TcCount32_CTRLBSET_Fields](volatileLoad(reg.p))
+  cast[TcCount32_CTRLBSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount32_CTRLBSET_Type, val: TcCount32_CTRLBSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount32_CTRLBSET_Type, op: untyped): untyped =
   block:
@@ -9365,10 +9365,10 @@ template modifyIt*(reg: TcCount32_CTRLBSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount32_CTRLC_Type): TcCount32_CTRLC_Fields =
-  cast[TcCount32_CTRLC_Fields](volatileLoad(reg.p))
+  cast[TcCount32_CTRLC_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount32_CTRLC_Type, val: TcCount32_CTRLC_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount32_CTRLC_Type, op: untyped): untyped =
   block:
@@ -9377,10 +9377,10 @@ template modifyIt*(reg: TcCount32_CTRLC_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount32_DBGCTRL_Type): TcCount32_DBGCTRL_Fields =
-  cast[TcCount32_DBGCTRL_Fields](volatileLoad(reg.p))
+  cast[TcCount32_DBGCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount32_DBGCTRL_Type, val: TcCount32_DBGCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount32_DBGCTRL_Type, op: untyped): untyped =
   block:
@@ -9389,10 +9389,10 @@ template modifyIt*(reg: TcCount32_DBGCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount32_EVCTRL_Type): TcCount32_EVCTRL_Fields =
-  cast[TcCount32_EVCTRL_Fields](volatileLoad(reg.p))
+  cast[TcCount32_EVCTRL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: TcCount32_EVCTRL_Type, val: TcCount32_EVCTRL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: TcCount32_EVCTRL_Type, op: untyped): untyped =
   block:
@@ -9401,10 +9401,10 @@ template modifyIt*(reg: TcCount32_EVCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount32_INTENCLR_Type): TcCount32_INTENCLR_Fields =
-  cast[TcCount32_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[TcCount32_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount32_INTENCLR_Type, val: TcCount32_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount32_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -9413,10 +9413,10 @@ template modifyIt*(reg: TcCount32_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount32_INTENSET_Type): TcCount32_INTENSET_Fields =
-  cast[TcCount32_INTENSET_Fields](volatileLoad(reg.p))
+  cast[TcCount32_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount32_INTENSET_Type, val: TcCount32_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount32_INTENSET_Type, op: untyped): untyped =
   block:
@@ -9425,10 +9425,10 @@ template modifyIt*(reg: TcCount32_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount32_INTFLAG_Type): TcCount32_INTFLAG_Fields =
-  cast[TcCount32_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[TcCount32_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount32_INTFLAG_Type, val: TcCount32_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount32_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -9437,13 +9437,13 @@ template modifyIt*(reg: TcCount32_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount32_STATUS_Type): TcCount32_STATUS_Fields =
-  cast[TcCount32_STATUS_Fields](volatileLoad(reg.p))
+  cast[TcCount32_STATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: TcCount32_COUNT_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: TcCount32_COUNT_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: TcCount32_COUNT_Type, op: untyped): untyped =
   block:
@@ -9452,10 +9452,10 @@ template modifyIt*(reg: TcCount32_COUNT_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount32_CC_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: TcCount32_CC_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: TcCount32_CC_Type, op: untyped): untyped =
   block:
@@ -9464,10 +9464,10 @@ template modifyIt*(reg: TcCount32_CC_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount16_CTRLA_Type): TcCount16_CTRLA_Fields =
-  cast[TcCount16_CTRLA_Fields](volatileLoad(reg.p))
+  cast[TcCount16_CTRLA_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: TcCount16_CTRLA_Type, val: TcCount16_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: TcCount16_CTRLA_Type, op: untyped): untyped =
   block:
@@ -9476,10 +9476,10 @@ template modifyIt*(reg: TcCount16_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount16_READREQ_Type): TcCount16_READREQ_Fields =
-  cast[TcCount16_READREQ_Fields](volatileLoad(reg.p))
+  cast[TcCount16_READREQ_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: TcCount16_READREQ_Type, val: TcCount16_READREQ_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: TcCount16_READREQ_Type, op: untyped): untyped =
   block:
@@ -9488,10 +9488,10 @@ template modifyIt*(reg: TcCount16_READREQ_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount16_CTRLBCLR_Type): TcCount16_CTRLBCLR_Fields =
-  cast[TcCount16_CTRLBCLR_Fields](volatileLoad(reg.p))
+  cast[TcCount16_CTRLBCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount16_CTRLBCLR_Type, val: TcCount16_CTRLBCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount16_CTRLBCLR_Type, op: untyped): untyped =
   block:
@@ -9500,10 +9500,10 @@ template modifyIt*(reg: TcCount16_CTRLBCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount16_CTRLBSET_Type): TcCount16_CTRLBSET_Fields =
-  cast[TcCount16_CTRLBSET_Fields](volatileLoad(reg.p))
+  cast[TcCount16_CTRLBSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount16_CTRLBSET_Type, val: TcCount16_CTRLBSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount16_CTRLBSET_Type, op: untyped): untyped =
   block:
@@ -9512,10 +9512,10 @@ template modifyIt*(reg: TcCount16_CTRLBSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount16_CTRLC_Type): TcCount16_CTRLC_Fields =
-  cast[TcCount16_CTRLC_Fields](volatileLoad(reg.p))
+  cast[TcCount16_CTRLC_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount16_CTRLC_Type, val: TcCount16_CTRLC_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount16_CTRLC_Type, op: untyped): untyped =
   block:
@@ -9524,10 +9524,10 @@ template modifyIt*(reg: TcCount16_CTRLC_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount16_DBGCTRL_Type): TcCount16_DBGCTRL_Fields =
-  cast[TcCount16_DBGCTRL_Fields](volatileLoad(reg.p))
+  cast[TcCount16_DBGCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount16_DBGCTRL_Type, val: TcCount16_DBGCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount16_DBGCTRL_Type, op: untyped): untyped =
   block:
@@ -9536,10 +9536,10 @@ template modifyIt*(reg: TcCount16_DBGCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount16_EVCTRL_Type): TcCount16_EVCTRL_Fields =
-  cast[TcCount16_EVCTRL_Fields](volatileLoad(reg.p))
+  cast[TcCount16_EVCTRL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: TcCount16_EVCTRL_Type, val: TcCount16_EVCTRL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: TcCount16_EVCTRL_Type, op: untyped): untyped =
   block:
@@ -9548,10 +9548,10 @@ template modifyIt*(reg: TcCount16_EVCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount16_INTENCLR_Type): TcCount16_INTENCLR_Fields =
-  cast[TcCount16_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[TcCount16_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount16_INTENCLR_Type, val: TcCount16_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount16_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -9560,10 +9560,10 @@ template modifyIt*(reg: TcCount16_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount16_INTENSET_Type): TcCount16_INTENSET_Fields =
-  cast[TcCount16_INTENSET_Fields](volatileLoad(reg.p))
+  cast[TcCount16_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount16_INTENSET_Type, val: TcCount16_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount16_INTENSET_Type, op: untyped): untyped =
   block:
@@ -9572,10 +9572,10 @@ template modifyIt*(reg: TcCount16_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount16_INTFLAG_Type): TcCount16_INTFLAG_Fields =
-  cast[TcCount16_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[TcCount16_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount16_INTFLAG_Type, val: TcCount16_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount16_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -9584,13 +9584,13 @@ template modifyIt*(reg: TcCount16_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount16_STATUS_Type): TcCount16_STATUS_Fields =
-  cast[TcCount16_STATUS_Fields](volatileLoad(reg.p))
+  cast[TcCount16_STATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: TcCount16_COUNT_Type): uint16 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint16](reg.loc))
 
 template write*(reg: TcCount16_COUNT_Type, val: uint16) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint16](reg.loc), val)
 
 template modifyIt*(reg: TcCount16_COUNT_Type, op: untyped): untyped =
   block:
@@ -9599,10 +9599,10 @@ template modifyIt*(reg: TcCount16_COUNT_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount16_CC_Type): uint16 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint16](reg.loc))
 
 template write*(reg: TcCount16_CC_Type, val: uint16) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint16](reg.loc), val)
 
 template modifyIt*(reg: TcCount16_CC_Type, op: untyped): untyped =
   block:
@@ -9611,10 +9611,10 @@ template modifyIt*(reg: TcCount16_CC_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount8_CTRLA_Type): TcCount8_CTRLA_Fields =
-  cast[TcCount8_CTRLA_Fields](volatileLoad(reg.p))
+  cast[TcCount8_CTRLA_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: TcCount8_CTRLA_Type, val: TcCount8_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: TcCount8_CTRLA_Type, op: untyped): untyped =
   block:
@@ -9623,10 +9623,10 @@ template modifyIt*(reg: TcCount8_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount8_READREQ_Type): TcCount8_READREQ_Fields =
-  cast[TcCount8_READREQ_Fields](volatileLoad(reg.p))
+  cast[TcCount8_READREQ_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: TcCount8_READREQ_Type, val: TcCount8_READREQ_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: TcCount8_READREQ_Type, op: untyped): untyped =
   block:
@@ -9635,10 +9635,10 @@ template modifyIt*(reg: TcCount8_READREQ_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount8_CTRLBCLR_Type): TcCount8_CTRLBCLR_Fields =
-  cast[TcCount8_CTRLBCLR_Fields](volatileLoad(reg.p))
+  cast[TcCount8_CTRLBCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount8_CTRLBCLR_Type, val: TcCount8_CTRLBCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount8_CTRLBCLR_Type, op: untyped): untyped =
   block:
@@ -9647,10 +9647,10 @@ template modifyIt*(reg: TcCount8_CTRLBCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount8_CTRLBSET_Type): TcCount8_CTRLBSET_Fields =
-  cast[TcCount8_CTRLBSET_Fields](volatileLoad(reg.p))
+  cast[TcCount8_CTRLBSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount8_CTRLBSET_Type, val: TcCount8_CTRLBSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount8_CTRLBSET_Type, op: untyped): untyped =
   block:
@@ -9659,10 +9659,10 @@ template modifyIt*(reg: TcCount8_CTRLBSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount8_CTRLC_Type): TcCount8_CTRLC_Fields =
-  cast[TcCount8_CTRLC_Fields](volatileLoad(reg.p))
+  cast[TcCount8_CTRLC_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount8_CTRLC_Type, val: TcCount8_CTRLC_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount8_CTRLC_Type, op: untyped): untyped =
   block:
@@ -9671,10 +9671,10 @@ template modifyIt*(reg: TcCount8_CTRLC_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount8_DBGCTRL_Type): TcCount8_DBGCTRL_Fields =
-  cast[TcCount8_DBGCTRL_Fields](volatileLoad(reg.p))
+  cast[TcCount8_DBGCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount8_DBGCTRL_Type, val: TcCount8_DBGCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount8_DBGCTRL_Type, op: untyped): untyped =
   block:
@@ -9683,10 +9683,10 @@ template modifyIt*(reg: TcCount8_DBGCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount8_EVCTRL_Type): TcCount8_EVCTRL_Fields =
-  cast[TcCount8_EVCTRL_Fields](volatileLoad(reg.p))
+  cast[TcCount8_EVCTRL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: TcCount8_EVCTRL_Type, val: TcCount8_EVCTRL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: TcCount8_EVCTRL_Type, op: untyped): untyped =
   block:
@@ -9695,10 +9695,10 @@ template modifyIt*(reg: TcCount8_EVCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount8_INTENCLR_Type): TcCount8_INTENCLR_Fields =
-  cast[TcCount8_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[TcCount8_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount8_INTENCLR_Type, val: TcCount8_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount8_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -9707,10 +9707,10 @@ template modifyIt*(reg: TcCount8_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount8_INTENSET_Type): TcCount8_INTENSET_Fields =
-  cast[TcCount8_INTENSET_Fields](volatileLoad(reg.p))
+  cast[TcCount8_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount8_INTENSET_Type, val: TcCount8_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount8_INTENSET_Type, op: untyped): untyped =
   block:
@@ -9719,10 +9719,10 @@ template modifyIt*(reg: TcCount8_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount8_INTFLAG_Type): TcCount8_INTFLAG_Fields =
-  cast[TcCount8_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[TcCount8_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TcCount8_INTFLAG_Type, val: TcCount8_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TcCount8_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -9731,13 +9731,13 @@ template modifyIt*(reg: TcCount8_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount8_STATUS_Type): TcCount8_STATUS_Fields =
-  cast[TcCount8_STATUS_Fields](volatileLoad(reg.p))
+  cast[TcCount8_STATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: TcCount8_COUNT_Type): uint8 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint8](reg.loc))
 
 template write*(reg: TcCount8_COUNT_Type, val: uint8) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint8](reg.loc), val)
 
 template modifyIt*(reg: TcCount8_COUNT_Type, op: untyped): untyped =
   block:
@@ -9746,10 +9746,10 @@ template modifyIt*(reg: TcCount8_COUNT_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount8_PER_Type): uint8 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint8](reg.loc))
 
 template write*(reg: TcCount8_PER_Type, val: uint8) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint8](reg.loc), val)
 
 template modifyIt*(reg: TcCount8_PER_Type, op: untyped): untyped =
   block:
@@ -9758,10 +9758,10 @@ template modifyIt*(reg: TcCount8_PER_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TcCount8_CC_Type): uint8 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint8](reg.loc))
 
 template write*(reg: TcCount8_CC_Type, val: uint8) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint8](reg.loc), val)
 
 template modifyIt*(reg: TcCount8_CC_Type, op: untyped): untyped =
   block:
@@ -10342,10 +10342,10 @@ type TCC0_WAVEB_RAMPB* {.pure.} = enum
   RAMP2 = 0x2,
 
 template read*(reg: TCC0_CTRLA_Type): TCC0_CTRLA_Fields =
-  cast[TCC0_CTRLA_Fields](volatileLoad(reg.p))
+  cast[TCC0_CTRLA_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_CTRLA_Type, val: TCC0_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_CTRLA_Type, op: untyped): untyped =
   block:
@@ -10354,10 +10354,10 @@ template modifyIt*(reg: TCC0_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_CTRLBCLR_Type): TCC0_CTRLBCLR_Fields =
-  cast[TCC0_CTRLBCLR_Fields](volatileLoad(reg.p))
+  cast[TCC0_CTRLBCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TCC0_CTRLBCLR_Type, val: TCC0_CTRLBCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TCC0_CTRLBCLR_Type, op: untyped): untyped =
   block:
@@ -10366,10 +10366,10 @@ template modifyIt*(reg: TCC0_CTRLBCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_CTRLBSET_Type): TCC0_CTRLBSET_Fields =
-  cast[TCC0_CTRLBSET_Fields](volatileLoad(reg.p))
+  cast[TCC0_CTRLBSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TCC0_CTRLBSET_Type, val: TCC0_CTRLBSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TCC0_CTRLBSET_Type, op: untyped): untyped =
   block:
@@ -10378,13 +10378,13 @@ template modifyIt*(reg: TCC0_CTRLBSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_SYNCBUSY_Type): TCC0_SYNCBUSY_Fields =
-  cast[TCC0_SYNCBUSY_Fields](volatileLoad(reg.p))
+  cast[TCC0_SYNCBUSY_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template read*(reg: TCC0_FCTRLA_Type): TCC0_FCTRLA_Fields =
-  cast[TCC0_FCTRLA_Fields](volatileLoad(reg.p))
+  cast[TCC0_FCTRLA_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_FCTRLA_Type, val: TCC0_FCTRLA_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_FCTRLA_Type, op: untyped): untyped =
   block:
@@ -10393,10 +10393,10 @@ template modifyIt*(reg: TCC0_FCTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_FCTRLB_Type): TCC0_FCTRLB_Fields =
-  cast[TCC0_FCTRLB_Fields](volatileLoad(reg.p))
+  cast[TCC0_FCTRLB_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_FCTRLB_Type, val: TCC0_FCTRLB_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_FCTRLB_Type, op: untyped): untyped =
   block:
@@ -10405,10 +10405,10 @@ template modifyIt*(reg: TCC0_FCTRLB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_WEXCTRL_Type): TCC0_WEXCTRL_Fields =
-  cast[TCC0_WEXCTRL_Fields](volatileLoad(reg.p))
+  cast[TCC0_WEXCTRL_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_WEXCTRL_Type, val: TCC0_WEXCTRL_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_WEXCTRL_Type, op: untyped): untyped =
   block:
@@ -10417,10 +10417,10 @@ template modifyIt*(reg: TCC0_WEXCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_DRVCTRL_Type): TCC0_DRVCTRL_Fields =
-  cast[TCC0_DRVCTRL_Fields](volatileLoad(reg.p))
+  cast[TCC0_DRVCTRL_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_DRVCTRL_Type, val: TCC0_DRVCTRL_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_DRVCTRL_Type, op: untyped): untyped =
   block:
@@ -10429,10 +10429,10 @@ template modifyIt*(reg: TCC0_DRVCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_DBGCTRL_Type): TCC0_DBGCTRL_Fields =
-  cast[TCC0_DBGCTRL_Fields](volatileLoad(reg.p))
+  cast[TCC0_DBGCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: TCC0_DBGCTRL_Type, val: TCC0_DBGCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: TCC0_DBGCTRL_Type, op: untyped): untyped =
   block:
@@ -10441,10 +10441,10 @@ template modifyIt*(reg: TCC0_DBGCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_EVCTRL_Type): TCC0_EVCTRL_Fields =
-  cast[TCC0_EVCTRL_Fields](volatileLoad(reg.p))
+  cast[TCC0_EVCTRL_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_EVCTRL_Type, val: TCC0_EVCTRL_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_EVCTRL_Type, op: untyped): untyped =
   block:
@@ -10453,10 +10453,10 @@ template modifyIt*(reg: TCC0_EVCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_INTENCLR_Type): TCC0_INTENCLR_Fields =
-  cast[TCC0_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[TCC0_INTENCLR_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_INTENCLR_Type, val: TCC0_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -10465,10 +10465,10 @@ template modifyIt*(reg: TCC0_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_INTENSET_Type): TCC0_INTENSET_Fields =
-  cast[TCC0_INTENSET_Fields](volatileLoad(reg.p))
+  cast[TCC0_INTENSET_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_INTENSET_Type, val: TCC0_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_INTENSET_Type, op: untyped): untyped =
   block:
@@ -10477,10 +10477,10 @@ template modifyIt*(reg: TCC0_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_INTFLAG_Type): TCC0_INTFLAG_Fields =
-  cast[TCC0_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[TCC0_INTFLAG_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_INTFLAG_Type, val: TCC0_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -10489,10 +10489,10 @@ template modifyIt*(reg: TCC0_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_STATUS_Type): TCC0_STATUS_Fields =
-  cast[TCC0_STATUS_Fields](volatileLoad(reg.p))
+  cast[TCC0_STATUS_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_STATUS_Type, val: TCC0_STATUS_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_STATUS_Type, op: untyped): untyped =
   block:
@@ -10501,10 +10501,10 @@ template modifyIt*(reg: TCC0_STATUS_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_COUNT_Type): TCC0_COUNT_Fields =
-  cast[TCC0_COUNT_Fields](volatileLoad(reg.p))
+  cast[TCC0_COUNT_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_COUNT_Type, val: TCC0_COUNT_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_COUNT_Type, op: untyped): untyped =
   block:
@@ -10513,10 +10513,10 @@ template modifyIt*(reg: TCC0_COUNT_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_COUNT_DITH4_Type): TCC0_COUNT_DITH4_Fields =
-  cast[TCC0_COUNT_DITH4_Fields](volatileLoad(reg.p))
+  cast[TCC0_COUNT_DITH4_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_COUNT_DITH4_Type, val: TCC0_COUNT_DITH4_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_COUNT_DITH4_Type, op: untyped): untyped =
   block:
@@ -10525,10 +10525,10 @@ template modifyIt*(reg: TCC0_COUNT_DITH4_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_COUNT_DITH5_Type): TCC0_COUNT_DITH5_Fields =
-  cast[TCC0_COUNT_DITH5_Fields](volatileLoad(reg.p))
+  cast[TCC0_COUNT_DITH5_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_COUNT_DITH5_Type, val: TCC0_COUNT_DITH5_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_COUNT_DITH5_Type, op: untyped): untyped =
   block:
@@ -10537,10 +10537,10 @@ template modifyIt*(reg: TCC0_COUNT_DITH5_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_COUNT_DITH6_Type): TCC0_COUNT_DITH6_Fields =
-  cast[TCC0_COUNT_DITH6_Fields](volatileLoad(reg.p))
+  cast[TCC0_COUNT_DITH6_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_COUNT_DITH6_Type, val: TCC0_COUNT_DITH6_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_COUNT_DITH6_Type, op: untyped): untyped =
   block:
@@ -10549,10 +10549,10 @@ template modifyIt*(reg: TCC0_COUNT_DITH6_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_PATT_Type): TCC0_PATT_Fields =
-  cast[TCC0_PATT_Fields](volatileLoad(reg.p))
+  cast[TCC0_PATT_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: TCC0_PATT_Type, val: TCC0_PATT_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: TCC0_PATT_Type, op: untyped): untyped =
   block:
@@ -10561,10 +10561,10 @@ template modifyIt*(reg: TCC0_PATT_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_WAVE_Type): TCC0_WAVE_Fields =
-  cast[TCC0_WAVE_Fields](volatileLoad(reg.p))
+  cast[TCC0_WAVE_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_WAVE_Type, val: TCC0_WAVE_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_WAVE_Type, op: untyped): untyped =
   block:
@@ -10573,10 +10573,10 @@ template modifyIt*(reg: TCC0_WAVE_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_PER_Type): TCC0_PER_Fields =
-  cast[TCC0_PER_Fields](volatileLoad(reg.p))
+  cast[TCC0_PER_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_PER_Type, val: TCC0_PER_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_PER_Type, op: untyped): untyped =
   block:
@@ -10585,10 +10585,10 @@ template modifyIt*(reg: TCC0_PER_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_PER_DITH4_Type): TCC0_PER_DITH4_Fields =
-  cast[TCC0_PER_DITH4_Fields](volatileLoad(reg.p))
+  cast[TCC0_PER_DITH4_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_PER_DITH4_Type, val: TCC0_PER_DITH4_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_PER_DITH4_Type, op: untyped): untyped =
   block:
@@ -10597,10 +10597,10 @@ template modifyIt*(reg: TCC0_PER_DITH4_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_PER_DITH5_Type): TCC0_PER_DITH5_Fields =
-  cast[TCC0_PER_DITH5_Fields](volatileLoad(reg.p))
+  cast[TCC0_PER_DITH5_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_PER_DITH5_Type, val: TCC0_PER_DITH5_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_PER_DITH5_Type, op: untyped): untyped =
   block:
@@ -10609,10 +10609,10 @@ template modifyIt*(reg: TCC0_PER_DITH5_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_PER_DITH6_Type): TCC0_PER_DITH6_Fields =
-  cast[TCC0_PER_DITH6_Fields](volatileLoad(reg.p))
+  cast[TCC0_PER_DITH6_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_PER_DITH6_Type, val: TCC0_PER_DITH6_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_PER_DITH6_Type, op: untyped): untyped =
   block:
@@ -10621,10 +10621,10 @@ template modifyIt*(reg: TCC0_PER_DITH6_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_CC_Type): TCC0_CC_Fields =
-  cast[TCC0_CC_Fields](volatileLoad(reg.p))
+  cast[TCC0_CC_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_CC_Type, val: TCC0_CC_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_CC_Type, op: untyped): untyped =
   block:
@@ -10633,10 +10633,10 @@ template modifyIt*(reg: TCC0_CC_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_CC_DITH4_Type): TCC0_CC_DITH4_Fields =
-  cast[TCC0_CC_DITH4_Fields](volatileLoad(reg.p))
+  cast[TCC0_CC_DITH4_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_CC_DITH4_Type, val: TCC0_CC_DITH4_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_CC_DITH4_Type, op: untyped): untyped =
   block:
@@ -10645,10 +10645,10 @@ template modifyIt*(reg: TCC0_CC_DITH4_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_CC_DITH5_Type): TCC0_CC_DITH5_Fields =
-  cast[TCC0_CC_DITH5_Fields](volatileLoad(reg.p))
+  cast[TCC0_CC_DITH5_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_CC_DITH5_Type, val: TCC0_CC_DITH5_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_CC_DITH5_Type, op: untyped): untyped =
   block:
@@ -10657,10 +10657,10 @@ template modifyIt*(reg: TCC0_CC_DITH5_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_CC_DITH6_Type): TCC0_CC_DITH6_Fields =
-  cast[TCC0_CC_DITH6_Fields](volatileLoad(reg.p))
+  cast[TCC0_CC_DITH6_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_CC_DITH6_Type, val: TCC0_CC_DITH6_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_CC_DITH6_Type, op: untyped): untyped =
   block:
@@ -10669,10 +10669,10 @@ template modifyIt*(reg: TCC0_CC_DITH6_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_PATTB_Type): TCC0_PATTB_Fields =
-  cast[TCC0_PATTB_Fields](volatileLoad(reg.p))
+  cast[TCC0_PATTB_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: TCC0_PATTB_Type, val: TCC0_PATTB_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: TCC0_PATTB_Type, op: untyped): untyped =
   block:
@@ -10681,10 +10681,10 @@ template modifyIt*(reg: TCC0_PATTB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_WAVEB_Type): TCC0_WAVEB_Fields =
-  cast[TCC0_WAVEB_Fields](volatileLoad(reg.p))
+  cast[TCC0_WAVEB_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_WAVEB_Type, val: TCC0_WAVEB_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_WAVEB_Type, op: untyped): untyped =
   block:
@@ -10693,10 +10693,10 @@ template modifyIt*(reg: TCC0_WAVEB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_PERB_Type): TCC0_PERB_Fields =
-  cast[TCC0_PERB_Fields](volatileLoad(reg.p))
+  cast[TCC0_PERB_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_PERB_Type, val: TCC0_PERB_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_PERB_Type, op: untyped): untyped =
   block:
@@ -10705,10 +10705,10 @@ template modifyIt*(reg: TCC0_PERB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_PERB_DITH4_Type): TCC0_PERB_DITH4_Fields =
-  cast[TCC0_PERB_DITH4_Fields](volatileLoad(reg.p))
+  cast[TCC0_PERB_DITH4_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_PERB_DITH4_Type, val: TCC0_PERB_DITH4_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_PERB_DITH4_Type, op: untyped): untyped =
   block:
@@ -10717,10 +10717,10 @@ template modifyIt*(reg: TCC0_PERB_DITH4_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_PERB_DITH5_Type): TCC0_PERB_DITH5_Fields =
-  cast[TCC0_PERB_DITH5_Fields](volatileLoad(reg.p))
+  cast[TCC0_PERB_DITH5_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_PERB_DITH5_Type, val: TCC0_PERB_DITH5_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_PERB_DITH5_Type, op: untyped): untyped =
   block:
@@ -10729,10 +10729,10 @@ template modifyIt*(reg: TCC0_PERB_DITH5_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_PERB_DITH6_Type): TCC0_PERB_DITH6_Fields =
-  cast[TCC0_PERB_DITH6_Fields](volatileLoad(reg.p))
+  cast[TCC0_PERB_DITH6_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_PERB_DITH6_Type, val: TCC0_PERB_DITH6_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_PERB_DITH6_Type, op: untyped): untyped =
   block:
@@ -10741,10 +10741,10 @@ template modifyIt*(reg: TCC0_PERB_DITH6_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_CCB_Type): TCC0_CCB_Fields =
-  cast[TCC0_CCB_Fields](volatileLoad(reg.p))
+  cast[TCC0_CCB_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_CCB_Type, val: TCC0_CCB_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_CCB_Type, op: untyped): untyped =
   block:
@@ -10753,10 +10753,10 @@ template modifyIt*(reg: TCC0_CCB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_CCB_DITH4_Type): TCC0_CCB_DITH4_Fields =
-  cast[TCC0_CCB_DITH4_Fields](volatileLoad(reg.p))
+  cast[TCC0_CCB_DITH4_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_CCB_DITH4_Type, val: TCC0_CCB_DITH4_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_CCB_DITH4_Type, op: untyped): untyped =
   block:
@@ -10765,10 +10765,10 @@ template modifyIt*(reg: TCC0_CCB_DITH4_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_CCB_DITH5_Type): TCC0_CCB_DITH5_Fields =
-  cast[TCC0_CCB_DITH5_Fields](volatileLoad(reg.p))
+  cast[TCC0_CCB_DITH5_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_CCB_DITH5_Type, val: TCC0_CCB_DITH5_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_CCB_DITH5_Type, op: untyped): untyped =
   block:
@@ -10777,10 +10777,10 @@ template modifyIt*(reg: TCC0_CCB_DITH5_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: TCC0_CCB_DITH6_Type): TCC0_CCB_DITH6_Fields =
-  cast[TCC0_CCB_DITH6_Fields](volatileLoad(reg.p))
+  cast[TCC0_CCB_DITH6_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
 
 template write*(reg: TCC0_CCB_DITH6_Type, val: TCC0_CCB_DITH6_Fields) =
-  volatileStore(reg.p, cast[uint32](val))
+  volatileStore(cast[ptr uint32](reg.loc), cast[uint32](val))
 
 template modifyIt*(reg: TCC0_CCB_DITH6_Type, op: untyped): untyped =
   block:
@@ -11208,10 +11208,10 @@ type UsbDevice_FSMSTATUS_FSMSTATE* {.pure.} = enum
   RESET = 0x40,
 
 template read*(reg: UsbHost_CTRLA_Type): UsbHost_CTRLA_Fields =
-  cast[UsbHost_CTRLA_Fields](volatileLoad(reg.p))
+  cast[UsbHost_CTRLA_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbHost_CTRLA_Type, val: UsbHost_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbHost_CTRLA_Type, op: untyped): untyped =
   block:
@@ -11220,13 +11220,13 @@ template modifyIt*(reg: UsbHost_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbHost_SYNCBUSY_Type): UsbHost_SYNCBUSY_Fields =
-  cast[UsbHost_SYNCBUSY_Fields](volatileLoad(reg.p))
+  cast[UsbHost_SYNCBUSY_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: UsbHost_QOSCTRL_Type): UsbHost_QOSCTRL_Fields =
-  cast[UsbHost_QOSCTRL_Fields](volatileLoad(reg.p))
+  cast[UsbHost_QOSCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbHost_QOSCTRL_Type, val: UsbHost_QOSCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbHost_QOSCTRL_Type, op: untyped): untyped =
   block:
@@ -11235,10 +11235,10 @@ template modifyIt*(reg: UsbHost_QOSCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbHost_CTRLB_Type): UsbHost_CTRLB_Fields =
-  cast[UsbHost_CTRLB_Fields](volatileLoad(reg.p))
+  cast[UsbHost_CTRLB_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: UsbHost_CTRLB_Type, val: UsbHost_CTRLB_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: UsbHost_CTRLB_Type, op: untyped): untyped =
   block:
@@ -11247,10 +11247,10 @@ template modifyIt*(reg: UsbHost_CTRLB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbHost_HSOFC_Type): UsbHost_HSOFC_Fields =
-  cast[UsbHost_HSOFC_Fields](volatileLoad(reg.p))
+  cast[UsbHost_HSOFC_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbHost_HSOFC_Type, val: UsbHost_HSOFC_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbHost_HSOFC_Type, op: untyped): untyped =
   block:
@@ -11259,10 +11259,10 @@ template modifyIt*(reg: UsbHost_HSOFC_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbHost_STATUS_Type): UsbHost_STATUS_Fields =
-  cast[UsbHost_STATUS_Fields](volatileLoad(reg.p))
+  cast[UsbHost_STATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbHost_STATUS_Type, val: UsbHost_STATUS_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbHost_STATUS_Type, op: untyped): untyped =
   block:
@@ -11271,13 +11271,13 @@ template modifyIt*(reg: UsbHost_STATUS_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbHost_FSMSTATUS_Type): UsbHost_FSMSTATUS_Fields =
-  cast[UsbHost_FSMSTATUS_Fields](volatileLoad(reg.p))
+  cast[UsbHost_FSMSTATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: UsbHost_FNUM_Type): UsbHost_FNUM_Fields =
-  cast[UsbHost_FNUM_Fields](volatileLoad(reg.p))
+  cast[UsbHost_FNUM_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: UsbHost_FNUM_Type, val: UsbHost_FNUM_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: UsbHost_FNUM_Type, op: untyped): untyped =
   block:
@@ -11286,13 +11286,13 @@ template modifyIt*(reg: UsbHost_FNUM_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbHost_FLENHIGH_Type): uint8 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint8](reg.loc))
 
 template read*(reg: UsbHost_INTENCLR_Type): UsbHost_INTENCLR_Fields =
-  cast[UsbHost_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[UsbHost_INTENCLR_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: UsbHost_INTENCLR_Type, val: UsbHost_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: UsbHost_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -11301,10 +11301,10 @@ template modifyIt*(reg: UsbHost_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbHost_INTENSET_Type): UsbHost_INTENSET_Fields =
-  cast[UsbHost_INTENSET_Fields](volatileLoad(reg.p))
+  cast[UsbHost_INTENSET_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: UsbHost_INTENSET_Type, val: UsbHost_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: UsbHost_INTENSET_Type, op: untyped): untyped =
   block:
@@ -11313,10 +11313,10 @@ template modifyIt*(reg: UsbHost_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbHost_INTFLAG_Type): UsbHost_INTFLAG_Fields =
-  cast[UsbHost_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[UsbHost_INTFLAG_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: UsbHost_INTFLAG_Type, val: UsbHost_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: UsbHost_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -11325,13 +11325,13 @@ template modifyIt*(reg: UsbHost_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbHost_PINTSMRY_Type): UsbHost_PINTSMRY_Fields =
-  cast[UsbHost_PINTSMRY_Fields](volatileLoad(reg.p))
+  cast[UsbHost_PINTSMRY_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template read*(reg: UsbHost_DESCADD_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: UsbHost_DESCADD_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: UsbHost_DESCADD_Type, op: untyped): untyped =
   block:
@@ -11340,10 +11340,10 @@ template modifyIt*(reg: UsbHost_DESCADD_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbHost_PADCAL_Type): UsbHost_PADCAL_Fields =
-  cast[UsbHost_PADCAL_Fields](volatileLoad(reg.p))
+  cast[UsbHost_PADCAL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: UsbHost_PADCAL_Type, val: UsbHost_PADCAL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: UsbHost_PADCAL_Type, op: untyped): untyped =
   block:
@@ -11352,10 +11352,10 @@ template modifyIt*(reg: UsbHost_PADCAL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbHost_PCFG_Type): UsbHost_PCFG_Fields =
-  cast[UsbHost_PCFG_Fields](volatileLoad(reg.p))
+  cast[UsbHost_PCFG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbHost_PCFG_Type, val: UsbHost_PCFG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbHost_PCFG_Type, op: untyped): untyped =
   block:
@@ -11364,10 +11364,10 @@ template modifyIt*(reg: UsbHost_PCFG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbHost_BINTERVAL_Type): uint8 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint8](reg.loc))
 
 template write*(reg: UsbHost_BINTERVAL_Type, val: uint8) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint8](reg.loc), val)
 
 template modifyIt*(reg: UsbHost_BINTERVAL_Type, op: untyped): untyped =
   block:
@@ -11376,19 +11376,19 @@ template modifyIt*(reg: UsbHost_BINTERVAL_Type, op: untyped): untyped =
     reg.write(it)
 
 template write*(reg: UsbHost_PSTATUSCLR_Type, val: UsbHost_PSTATUSCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template write*(reg: UsbHost_PSTATUSSET_Type, val: UsbHost_PSTATUSSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template read*(reg: UsbHost_PSTATUS_Type): UsbHost_PSTATUS_Fields =
-  cast[UsbHost_PSTATUS_Fields](volatileLoad(reg.p))
+  cast[UsbHost_PSTATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: UsbHost_PINTFLAG_Type): UsbHost_PINTFLAG_Fields =
-  cast[UsbHost_PINTFLAG_Fields](volatileLoad(reg.p))
+  cast[UsbHost_PINTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbHost_PINTFLAG_Type, val: UsbHost_PINTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbHost_PINTFLAG_Type, op: untyped): untyped =
   block:
@@ -11397,10 +11397,10 @@ template modifyIt*(reg: UsbHost_PINTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbHost_PINTENCLR_Type): UsbHost_PINTENCLR_Fields =
-  cast[UsbHost_PINTENCLR_Fields](volatileLoad(reg.p))
+  cast[UsbHost_PINTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbHost_PINTENCLR_Type, val: UsbHost_PINTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbHost_PINTENCLR_Type, op: untyped): untyped =
   block:
@@ -11409,10 +11409,10 @@ template modifyIt*(reg: UsbHost_PINTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbHost_PINTENSET_Type): UsbHost_PINTENSET_Fields =
-  cast[UsbHost_PINTENSET_Fields](volatileLoad(reg.p))
+  cast[UsbHost_PINTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbHost_PINTENSET_Type, val: UsbHost_PINTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbHost_PINTENSET_Type, op: untyped): untyped =
   block:
@@ -11421,10 +11421,10 @@ template modifyIt*(reg: UsbHost_PINTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbDevice_CTRLA_Type): UsbDevice_CTRLA_Fields =
-  cast[UsbDevice_CTRLA_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_CTRLA_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbDevice_CTRLA_Type, val: UsbDevice_CTRLA_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbDevice_CTRLA_Type, op: untyped): untyped =
   block:
@@ -11433,13 +11433,13 @@ template modifyIt*(reg: UsbDevice_CTRLA_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbDevice_SYNCBUSY_Type): UsbDevice_SYNCBUSY_Fields =
-  cast[UsbDevice_SYNCBUSY_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_SYNCBUSY_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: UsbDevice_QOSCTRL_Type): UsbDevice_QOSCTRL_Fields =
-  cast[UsbDevice_QOSCTRL_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_QOSCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbDevice_QOSCTRL_Type, val: UsbDevice_QOSCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbDevice_QOSCTRL_Type, op: untyped): untyped =
   block:
@@ -11448,10 +11448,10 @@ template modifyIt*(reg: UsbDevice_QOSCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbDevice_CTRLB_Type): UsbDevice_CTRLB_Fields =
-  cast[UsbDevice_CTRLB_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_CTRLB_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: UsbDevice_CTRLB_Type, val: UsbDevice_CTRLB_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: UsbDevice_CTRLB_Type, op: untyped): untyped =
   block:
@@ -11460,10 +11460,10 @@ template modifyIt*(reg: UsbDevice_CTRLB_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbDevice_DADD_Type): UsbDevice_DADD_Fields =
-  cast[UsbDevice_DADD_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_DADD_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbDevice_DADD_Type, val: UsbDevice_DADD_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbDevice_DADD_Type, op: untyped): untyped =
   block:
@@ -11472,19 +11472,19 @@ template modifyIt*(reg: UsbDevice_DADD_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbDevice_STATUS_Type): UsbDevice_STATUS_Fields =
-  cast[UsbDevice_STATUS_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_STATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: UsbDevice_FSMSTATUS_Type): UsbDevice_FSMSTATUS_Fields =
-  cast[UsbDevice_FSMSTATUS_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_FSMSTATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: UsbDevice_FNUM_Type): UsbDevice_FNUM_Fields =
-  cast[UsbDevice_FNUM_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_FNUM_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template read*(reg: UsbDevice_INTENCLR_Type): UsbDevice_INTENCLR_Fields =
-  cast[UsbDevice_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_INTENCLR_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: UsbDevice_INTENCLR_Type, val: UsbDevice_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: UsbDevice_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -11493,10 +11493,10 @@ template modifyIt*(reg: UsbDevice_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbDevice_INTENSET_Type): UsbDevice_INTENSET_Fields =
-  cast[UsbDevice_INTENSET_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_INTENSET_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: UsbDevice_INTENSET_Type, val: UsbDevice_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: UsbDevice_INTENSET_Type, op: untyped): untyped =
   block:
@@ -11505,10 +11505,10 @@ template modifyIt*(reg: UsbDevice_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbDevice_INTFLAG_Type): UsbDevice_INTFLAG_Fields =
-  cast[UsbDevice_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_INTFLAG_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: UsbDevice_INTFLAG_Type, val: UsbDevice_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: UsbDevice_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -11517,13 +11517,13 @@ template modifyIt*(reg: UsbDevice_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbDevice_EPINTSMRY_Type): UsbDevice_EPINTSMRY_Fields =
-  cast[UsbDevice_EPINTSMRY_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_EPINTSMRY_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template read*(reg: UsbDevice_DESCADD_Type): uint32 =
-  volatileLoad(reg.p)
+  volatileLoad(cast[ptr uint32](reg.loc))
 
 template write*(reg: UsbDevice_DESCADD_Type, val: uint32) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint32](reg.loc), val)
 
 template modifyIt*(reg: UsbDevice_DESCADD_Type, op: untyped): untyped =
   block:
@@ -11532,10 +11532,10 @@ template modifyIt*(reg: UsbDevice_DESCADD_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbDevice_PADCAL_Type): UsbDevice_PADCAL_Fields =
-  cast[UsbDevice_PADCAL_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_PADCAL_Fields](volatileLoad(cast[ptr uint16](reg.loc)))
 
 template write*(reg: UsbDevice_PADCAL_Type, val: UsbDevice_PADCAL_Fields) =
-  volatileStore(reg.p, cast[uint16](val))
+  volatileStore(cast[ptr uint16](reg.loc), cast[uint16](val))
 
 template modifyIt*(reg: UsbDevice_PADCAL_Type, op: untyped): untyped =
   block:
@@ -11544,10 +11544,10 @@ template modifyIt*(reg: UsbDevice_PADCAL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbDevice_EPCFG_Type): UsbDevice_EPCFG_Fields =
-  cast[UsbDevice_EPCFG_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_EPCFG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbDevice_EPCFG_Type, val: UsbDevice_EPCFG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbDevice_EPCFG_Type, op: untyped): untyped =
   block:
@@ -11556,19 +11556,19 @@ template modifyIt*(reg: UsbDevice_EPCFG_Type, op: untyped): untyped =
     reg.write(it)
 
 template write*(reg: UsbDevice_EPSTATUSCLR_Type, val: UsbDevice_EPSTATUSCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template write*(reg: UsbDevice_EPSTATUSSET_Type, val: UsbDevice_EPSTATUSSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template read*(reg: UsbDevice_EPSTATUS_Type): UsbDevice_EPSTATUS_Fields =
-  cast[UsbDevice_EPSTATUS_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_EPSTATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template read*(reg: UsbDevice_EPINTFLAG_Type): UsbDevice_EPINTFLAG_Fields =
-  cast[UsbDevice_EPINTFLAG_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_EPINTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbDevice_EPINTFLAG_Type, val: UsbDevice_EPINTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbDevice_EPINTFLAG_Type, op: untyped): untyped =
   block:
@@ -11577,10 +11577,10 @@ template modifyIt*(reg: UsbDevice_EPINTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbDevice_EPINTENCLR_Type): UsbDevice_EPINTENCLR_Fields =
-  cast[UsbDevice_EPINTENCLR_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_EPINTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbDevice_EPINTENCLR_Type, val: UsbDevice_EPINTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbDevice_EPINTENCLR_Type, op: untyped): untyped =
   block:
@@ -11589,10 +11589,10 @@ template modifyIt*(reg: UsbDevice_EPINTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: UsbDevice_EPINTENSET_Type): UsbDevice_EPINTENSET_Fields =
-  cast[UsbDevice_EPINTENSET_Fields](volatileLoad(reg.p))
+  cast[UsbDevice_EPINTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: UsbDevice_EPINTENSET_Type, val: UsbDevice_EPINTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: UsbDevice_EPINTENSET_Type, op: untyped): untyped =
   block:
@@ -11677,10 +11677,10 @@ type WDT_CLEAR_CLEAR* {.pure.} = enum
   KEY = 0xa5,
 
 template read*(reg: WDT_CTRL_Type): WDT_CTRL_Fields =
-  cast[WDT_CTRL_Fields](volatileLoad(reg.p))
+  cast[WDT_CTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: WDT_CTRL_Type, val: WDT_CTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: WDT_CTRL_Type, op: untyped): untyped =
   block:
@@ -11689,10 +11689,10 @@ template modifyIt*(reg: WDT_CTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: WDT_CONFIG_Type): WDT_CONFIG_Fields =
-  cast[WDT_CONFIG_Fields](volatileLoad(reg.p))
+  cast[WDT_CONFIG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: WDT_CONFIG_Type, val: WDT_CONFIG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: WDT_CONFIG_Type, op: untyped): untyped =
   block:
@@ -11701,10 +11701,10 @@ template modifyIt*(reg: WDT_CONFIG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: WDT_EWCTRL_Type): WDT_EWCTRL_Fields =
-  cast[WDT_EWCTRL_Fields](volatileLoad(reg.p))
+  cast[WDT_EWCTRL_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: WDT_EWCTRL_Type, val: WDT_EWCTRL_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: WDT_EWCTRL_Type, op: untyped): untyped =
   block:
@@ -11713,10 +11713,10 @@ template modifyIt*(reg: WDT_EWCTRL_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: WDT_INTENCLR_Type): WDT_INTENCLR_Fields =
-  cast[WDT_INTENCLR_Fields](volatileLoad(reg.p))
+  cast[WDT_INTENCLR_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: WDT_INTENCLR_Type, val: WDT_INTENCLR_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: WDT_INTENCLR_Type, op: untyped): untyped =
   block:
@@ -11725,10 +11725,10 @@ template modifyIt*(reg: WDT_INTENCLR_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: WDT_INTENSET_Type): WDT_INTENSET_Fields =
-  cast[WDT_INTENSET_Fields](volatileLoad(reg.p))
+  cast[WDT_INTENSET_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: WDT_INTENSET_Type, val: WDT_INTENSET_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: WDT_INTENSET_Type, op: untyped): untyped =
   block:
@@ -11737,10 +11737,10 @@ template modifyIt*(reg: WDT_INTENSET_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: WDT_INTFLAG_Type): WDT_INTFLAG_Fields =
-  cast[WDT_INTFLAG_Fields](volatileLoad(reg.p))
+  cast[WDT_INTFLAG_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: WDT_INTFLAG_Type, val: WDT_INTFLAG_Fields) =
-  volatileStore(reg.p, cast[uint8](val))
+  volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
 
 template modifyIt*(reg: WDT_INTFLAG_Type, op: untyped): untyped =
   block:
@@ -11749,8 +11749,8 @@ template modifyIt*(reg: WDT_INTFLAG_Type, op: untyped): untyped =
     reg.write(it)
 
 template read*(reg: WDT_STATUS_Type): WDT_STATUS_Fields =
-  cast[WDT_STATUS_Fields](volatileLoad(reg.p))
+  cast[WDT_STATUS_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 template write*(reg: WDT_CLEAR_Type, val: uint8) =
-  volatileStore(reg.p, val)
+  volatileStore(cast[ptr uint8](reg.loc), val)
 

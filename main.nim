@@ -31,11 +31,13 @@ proc main(): int {.exportc.} =
   Button1_Pin.configure(pdInput, pullUp=true)
 
   LED_pin.setHigh
+
+  # Not used, just to show an example of getting an input pin state
   let pressed: bool = not Button1_Pin.read()
 
   # Allocate a seq to ensure that malloc() works
   var a = newSeqOfCap[int](48)
 
   while true:
-    delay(500)
+    delay(2000)
     LED_Pin.toggle
