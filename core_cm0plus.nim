@@ -1,6 +1,6 @@
 import strformat
 
-import device/atsamd21g18a
+import device/device
 
 const headerStr = fmt"""
 #define __CM0PLUS_REV                  {CM0PLUS_REV:#x}U

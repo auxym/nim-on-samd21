@@ -1,7 +1,7 @@
 # HAL for the Port peripheral
 
 import macros
-import device/atsamd21g18a
+import device/device
 
 type PortGroup* = enum pgA, pgB
 
