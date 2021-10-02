@@ -1,19 +1,23 @@
 # Nim on SAM D21
 
-A template using [Nim](nim-lang.org) to program Atmel SAM D21 series
+A demo using [Nim](nim-lang.org) to program Microchip SAM D21 series
 microcontrollers.
 
 Specifically, it is focused on the SAMD21G18A variant, found on many popular
 development boards such as the Arduino MKR Zero and Adafruit Metro M0 / Feather
-M0. Modifications required for other SAM D21 variants are listed in a section
-below. It should also be possible to use a similar structure to run Nim on
-other ARM Cortex-M devices (STM32, etc).
+M0. Modifications required for other SAM D21 variants are listed below. It
+should also be possible to use a similar structure to run Nim on other ARM
+Cortex-M devices (STM32, etc).
 
-`svd2nim` was used to generate the `device/atsamd21g18a.nim` module, which provides a
-fast, type-safe, idiomatic Nim interface to the SAM D21's full set of peripheral
-registers.
+[svd2nim](https://github.com/auxym/svd2nim) was used to generate the
+`device/atsamd21g18a.nim` module, which provides a fast, type-safe, idiomatic
+Nim interface to the SAM D21's full set of peripheral registers.
 
 ## Building
+
+### Install Nim
+
+https://nim-lang.org/install.html
 
 ### Install cross compiling toolchain
 
@@ -34,28 +38,96 @@ provides instructions to install the `arm-none-eabi` toolchain.
 
 ### Build
 
-TODO
+```bash
+nim bin
+```
+
+This will run `nim c` followed by `arm-none-eabi-objcopy` to create the `.bin`
+file. Build output will be in the `./build` directory. The code size will also
+be printed.
 
 ## Flashing
 
-TODO
+Assuming the following:
+
+1. The device to be flashed has a
+   [BOSSA](http://www.shumatech.com/web/products/bossa)-compatible bootloader
+   installed. This is the case of the default bootloader on SAMD21-based
+   Arduino and Adafruit boards, as well as the UF2 bootloader and Microchip's
+   SAM-BA bootloader.
+
+2. The bootloader takes up 8 kb, therefore flash space for the application
+   starts at `0x2000` (this is defined in the linker script as well).
+
+3. BOSSA is installed on the system and `bossac` is available on the path.
+
+4. The device is in bootloader mode (double-tap reset, pulsating LED) and the
+   corresponding serial port is `/dev/ttyACMO` (modify as needed.) User must
+   also have read/write permissions to the port, on Arch Linux this probably
+   means adding the user to the `uucp` group.
+
+Then run the following command to flash the `main.bin` program to the device:
+
+```bash
+bossac -o 0x2000 -p /dev/ttyACM0 -e -w -v build/main.bin
+```
+
+Instructions for flashing via SWD/OpenOCD are left as an exercise to the reader
+(PRs welcome).
 
 ## Adapting to other SAM D21 variants
 
 1. Generate the *device* module (so called because it is the analog to what ARM
-   CMSIS refers to as the *device.h* header file), here `atsamdg18a21.nim`, for
-   your variant. See instructions in the `device/README.md` (TODO) file.
+   CMSIS refers to as the *device.h* header file), here `atsamd21g18a21.nim`, for
+   your variant, using [svd2nim](https://github.com/auxym/svd2nim)
 
-2. You will need to modify the linker script under the `lib/linker` directory.
-   Thankfully, Thea Flowers' great
-   [blog post](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/)
+2. You might need to modify the linker script under the `lib/linker` directory,
+   for example, if the device has a different flash or SRAM size.  Thankfully, Thea
+   Flowers' great [blog post](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/)
    should help with that.
 
-3. Change imports of `atsamd21g18a` in the `main.nim` and `core_cm0plus.nim`
-   files for your newly generated file.
+3. Change the import and export in the `device/device.nim` file.
 
-4. Change the `SAMD21_Family` and `SAMD21_Variant` constants in `config.nims`.
+4. Change the `SAMD21_Family` and `SAMD21_Variant` constants in `config.nims`. This
+   is used to include the correct startup file and header include path.
 
 Note: for families other than `samd21a`, you will need to get the device support
 pack from https://packs.download.microchip.com/ and extract the `include` and
 `gcc` directories for your family under `./lib/atmel/{family}/`.
+
+## TODO
+
+(partial)
+
+* Get USB serial working, including 1200bps touch-to-reset
+* Add clock initialization code (in nim) to run at 48 MHz
+* Do something actually useful with this
+
+## License
+
+Released under the terms of the MIT license, see the `LICENSE` file for details.
+
+The `lib` directory contains copies of works by other authors and distributed here
+per the terms of their own license. Refer to each subdirectory or file for more
+information.
+
+## Acknowledgements
+
+(and suggested reading)
+
+1. Thea Flowers, in particular her [linker script](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/)
+   which is used directly in this repository. Her blog contains many more great
+   articles on the SAM D21, check it out!
+
+2. [Zero to main()](https://interrupt.memfault.com/tag/zero-to-main/) series
+   of posts by François Baldassari.
+
+3. [The Best and Worst GCC Compiler Flags For Embedded](https://interrupt.memfault.com/blog/best-and-worst-gcc-clang-compiler-flags)
+    by Chris Coleman. Unless you're up for reading the gcc man page, this is
+    probably as good a place to start as any.
+
+3. Alex Taradov's
+   [bare metal MCU starter projects](https://github.com/ataradov/mcu-starter-projects).
+
+4. PMunch's [badger](https://github.com/PMunch/badger/), which sparked my
+   inspiration to make this and from which many build flags were lifted.
