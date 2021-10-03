@@ -75,7 +75,35 @@ bossac -o 0x2000 -p /dev/ttyACM0 -e -w -v build/main.bin
 Instructions for flashing via SWD/OpenOCD are left as an exercise to the reader
 (PRs welcome).
 
-## Adapting to other SAM D21 variants
+## Compatibility
+
+### External Oscillator
+
+By default, this project sets up the main CPU clock to 48 MHz via the DFLL clock
+by using an **external 32 kHz oscillator as source** (`XOSC32K`). If your board
+does not have an external oscillator, it should be possible to modify the code
+to use one of the SAMD21's internal 32k oscillators instead (PRs welcome to add
+this as a configuration option).  Or, remove the call to `initDfll48m` and use
+the default 1 MHz clock (make sure that `SystemCoreClock` is set
+correspondingly).
+
+### Bootloader
+
+The linker script used by this project assumes an 8 kb bootloader. Some compatible
+options are:
+
+   * [Microchip SAM-BA](https://www.microchip.com/en-us/development-tool/SAM-BA-In-system-Programmer)
+   * [Arduino MKR Zero bootloader](https://github.com/arduino/ArduinoCore-samd/tree/master/bootloaders/mkrzero)
+   * [Adafruit's fork of the Arduino bootloader](https://github.com/adafruit/ArduinoCore-samd/tree/master/bootloaders/featherM0)
+   * [UF2 bootloader](https://github.com/adafruit/uf2-samdx1)
+
+If you want use this project without a bootloader, or with a different
+bootloader (such as [this 1 kb DFU
+bootloader](https://github.com/majbthrd/SAMDx1-USB-DFU-Bootloader)), you will
+need to modify the linker script (see link below in "Adapting to other SAM D21
+variants").
+
+### Adapting to other SAM D21 variants
 
 1. Generate the *device* module (so called because it is the analog to what ARM
    CMSIS refers to as the *device.h* header file), here `atsamd21g18a21.nim`, for
@@ -89,7 +117,7 @@ Instructions for flashing via SWD/OpenOCD are left as an exercise to the reader
 3. Change the import and export in the `device/device.nim` file.
 
 4. Change the `SAMD21_Family` and `SAMD21_Variant` constants in `config.nims`. This
-   is used to include the correct startup file and header include path.
+   is used to setup the correct startup file and header include paths.
 
 Note: for families other than `samd21a`, you will need to get the device support
 pack from https://packs.download.microchip.com/ and extract the `include` and
@@ -97,10 +125,8 @@ pack from https://packs.download.microchip.com/ and extract the `include` and
 
 ## TODO
 
-(partial)
-
-* Get USB serial working, including 1200bps touch-to-reset
-* Do something actually useful with this
+* Get USB serial working, including the Arduino-style 1200bps touch-to-reset trick
+* Do something actually useful :)
 
 ## License
 
