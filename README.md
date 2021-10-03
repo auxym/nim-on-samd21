@@ -100,7 +100,6 @@ pack from https://packs.download.microchip.com/ and extract the `include` and
 (partial)
 
 * Get USB serial working, including 1200bps touch-to-reset
-* Add clock initialization code (in nim) to run at 48 MHz
 * Do something actually useful with this
 
 ## License

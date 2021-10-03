@@ -52,40 +52,40 @@ type IRQn* = enum
 # Type definitions for peripheral registers
 ################################################################################
 type AC_SCALER_Type = object
-  loc: int
+  loc: uint
 
 type AC_COMPCTRL_Type = object
-  loc: int
+  loc: uint
 
 type AC_WINCTRL_Type = object
-  loc: int
+  loc: uint
 
 type AC_STATUSC_Type = object
-  loc: int
+  loc: uint
 
 type AC_STATUSB_Type = object
-  loc: int
+  loc: uint
 
 type AC_STATUSA_Type = object
-  loc: int
+  loc: uint
 
 type AC_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type AC_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type AC_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type AC_EVCTRL_Type = object
-  loc: int
+  loc: uint
 
 type AC_CTRLB_Type = object
-  loc: int
+  loc: uint
 
 type AC_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type AC_Type = object
   CTRLA*: AC_CTRLA_Type
@@ -104,64 +104,64 @@ type AC_Type = object
   SCALER1*: AC_SCALER_Type
 
 type ADC_DBGCTRL_Type = object
-  loc: int
+  loc: uint
 
 type ADC_CALIB_Type = object
-  loc: int
+  loc: uint
 
 type ADC_OFFSETCORR_Type = object
-  loc: int
+  loc: uint
 
 type ADC_GAINCORR_Type = object
-  loc: int
+  loc: uint
 
 type ADC_WINUT_Type = object
-  loc: int
+  loc: uint
 
 type ADC_WINLT_Type = object
-  loc: int
+  loc: uint
 
 type ADC_RESULT_Type = object
-  loc: int
+  loc: uint
 
 type ADC_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type ADC_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type ADC_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type ADC_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type ADC_EVCTRL_Type = object
-  loc: int
+  loc: uint
 
 type ADC_INPUTCTRL_Type = object
-  loc: int
+  loc: uint
 
 type ADC_SWTRIG_Type = object
-  loc: int
+  loc: uint
 
 type ADC_WINCTRL_Type = object
-  loc: int
+  loc: uint
 
 type ADC_CTRLB_Type = object
-  loc: int
+  loc: uint
 
 type ADC_SAMPCTRL_Type = object
-  loc: int
+  loc: uint
 
 type ADC_AVGCTRL_Type = object
-  loc: int
+  loc: uint
 
 type ADC_REFCTRL_Type = object
-  loc: int
+  loc: uint
 
 type ADC_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type ADC_Type = object
   CTRLA*: ADC_CTRLA_Type
@@ -186,31 +186,31 @@ type ADC_Type = object
   DBGCTRL*: ADC_DBGCTRL_Type
 
 type DAC_DATABUF_Type = object
-  loc: int
+  loc: uint
 
 type DAC_DATA_Type = object
-  loc: int
+  loc: uint
 
 type DAC_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type DAC_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type DAC_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type DAC_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type DAC_EVCTRL_Type = object
-  loc: int
+  loc: uint
 
 type DAC_CTRLB_Type = object
-  loc: int
+  loc: uint
 
 type DAC_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type DAC_Type = object
   CTRLA*: DAC_CTRLA_Type
@@ -224,73 +224,73 @@ type DAC_Type = object
   DATABUF*: DAC_DATABUF_Type
 
 type DMAC_CHSTATUS_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_CHINTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_CHINTENSET_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_CHINTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_CHCTRLB_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_CHCTRLA_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_CHID_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_WRBADDR_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_BASEADDR_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_ACTIVE_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_PENDCH_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_BUSYCH_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_INTSTATUS_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_INTPEND_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_PRICTRL0_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_SWTRIGCTRL_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_QOSCTRL_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_DBGCTRL_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_CRCSTATUS_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_CRCCHKSUM_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_CRCDATAIN_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_CRCCTRL_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_CTRL_Type = object
-  loc: int
+  loc: uint
 
 type DMAC_Type = object
   CTRL*: DMAC_CTRL_Type
@@ -318,67 +318,67 @@ type DMAC_Type = object
   CHSTATUS*: DMAC_CHSTATUS_Type
 
 type DSU_CID3_Type = object
-  loc: int
+  loc: uint
 
 type DSU_CID2_Type = object
-  loc: int
+  loc: uint
 
 type DSU_CID1_Type = object
-  loc: int
+  loc: uint
 
 type DSU_CID0_Type = object
-  loc: int
+  loc: uint
 
 type DSU_PID3_Type = object
-  loc: int
+  loc: uint
 
 type DSU_PID2_Type = object
-  loc: int
+  loc: uint
 
 type DSU_PID1_Type = object
-  loc: int
+  loc: uint
 
 type DSU_PID0_Type = object
-  loc: int
+  loc: uint
 
 type DSU_PID4_Type = object
-  loc: int
+  loc: uint
 
 type DSU_MEMTYPE_Type = object
-  loc: int
+  loc: uint
 
 type DSU_END_Type = object
-  loc: int
+  loc: uint
 
 type DSU_ENTRY1_Type = object
-  loc: int
+  loc: uint
 
 type DSU_ENTRY_Type = object
-  loc: int
+  loc: uint
 
 type DSU_DID_Type = object
-  loc: int
+  loc: uint
 
 type DSU_DCC_Type = object
-  loc: int
+  loc: uint
 
 type DSU_DATA_Type = object
-  loc: int
+  loc: uint
 
 type DSU_LENGTH_Type = object
-  loc: int
+  loc: uint
 
 type DSU_ADDR_Type = object
-  loc: int
+  loc: uint
 
 type DSU_STATUSB_Type = object
-  loc: int
+  loc: uint
 
 type DSU_STATUSA_Type = object
-  loc: int
+  loc: uint
 
 type DSU_CTRL_Type = object
-  loc: int
+  loc: uint
 
 type DSU_Type = object
   CTRL*: DSU_CTRL_Type
@@ -405,34 +405,34 @@ type DSU_Type = object
   CID3*: DSU_CID3_Type
 
 type EIC_CONFIG_Type = object
-  loc: int
+  loc: uint
 
 type EIC_WAKEUP_Type = object
-  loc: int
+  loc: uint
 
 type EIC_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type EIC_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type EIC_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type EIC_EVCTRL_Type = object
-  loc: int
+  loc: uint
 
 type EIC_NMIFLAG_Type = object
-  loc: int
+  loc: uint
 
 type EIC_NMICTRL_Type = object
-  loc: int
+  loc: uint
 
 type EIC_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type EIC_CTRL_Type = object
-  loc: int
+  loc: uint
 
 type EIC_Type = object
   CTRL*: EIC_CTRL_Type
@@ -448,25 +448,25 @@ type EIC_Type = object
   CONFIG1*: EIC_CONFIG_Type
 
 type EVSYS_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type EVSYS_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type EVSYS_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type EVSYS_CHSTATUS_Type = object
-  loc: int
+  loc: uint
 
 type EVSYS_USER_Type = object
-  loc: int
+  loc: uint
 
 type EVSYS_CHANNEL_Type = object
-  loc: int
+  loc: uint
 
 type EVSYS_CTRL_Type = object
-  loc: int
+  loc: uint
 
 type EVSYS_Type = object
   CTRL*: EVSYS_CTRL_Type
@@ -478,19 +478,19 @@ type EVSYS_Type = object
   INTFLAG*: EVSYS_INTFLAG_Type
 
 type GCLK_GENDIV_Type = object
-  loc: int
+  loc: uint
 
 type GCLK_GENCTRL_Type = object
-  loc: int
+  loc: uint
 
 type GCLK_CLKCTRL_Type = object
-  loc: int
+  loc: uint
 
 type GCLK_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type GCLK_CTRL_Type = object
-  loc: int
+  loc: uint
 
 type GCLK_Type = object
   CTRL*: GCLK_CTRL_Type
@@ -500,13 +500,13 @@ type GCLK_Type = object
   GENDIV*: GCLK_GENDIV_Type
 
 type HMATRIX_SFR_Type = object
-  loc: int
+  loc: uint
 
 type HMATRIX_PRBS_Type = object
-  loc: int
+  loc: uint
 
 type HMATRIX_PRAS_Type = object
-  loc: int
+  loc: uint
 
 type HMATRIX_Type = object
   PRAS0*: HMATRIX_PRAS_Type
@@ -559,28 +559,28 @@ type HMATRIX_Type = object
   SFR15*: HMATRIX_SFR_Type
 
 type I2S_DATA_Type = object
-  loc: int
+  loc: uint
 
 type I2S_SERCTRL_Type = object
-  loc: int
+  loc: uint
 
 type I2S_SYNCBUSY_Type = object
-  loc: int
+  loc: uint
 
 type I2S_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type I2S_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type I2S_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type I2S_CLKCTRL_Type = object
-  loc: int
+  loc: uint
 
 type I2S_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type I2S_Type = object
   CTRLA*: I2S_CTRLA_Type
@@ -596,79 +596,79 @@ type I2S_Type = object
   DATA1*: I2S_DATA_Type
 
 type MTB_CID3_Type = object
-  loc: int
+  loc: uint
 
 type MTB_CID2_Type = object
-  loc: int
+  loc: uint
 
 type MTB_CID1_Type = object
-  loc: int
+  loc: uint
 
 type MTB_CID0_Type = object
-  loc: int
+  loc: uint
 
 type MTB_PID3_Type = object
-  loc: int
+  loc: uint
 
 type MTB_PID2_Type = object
-  loc: int
+  loc: uint
 
 type MTB_PID1_Type = object
-  loc: int
+  loc: uint
 
 type MTB_PID0_Type = object
-  loc: int
+  loc: uint
 
 type MTB_PID7_Type = object
-  loc: int
+  loc: uint
 
 type MTB_PID6_Type = object
-  loc: int
+  loc: uint
 
 type MTB_PID5_Type = object
-  loc: int
+  loc: uint
 
 type MTB_PID4_Type = object
-  loc: int
+  loc: uint
 
 type MTB_DEVTYPE_Type = object
-  loc: int
+  loc: uint
 
 type MTB_DEVID_Type = object
-  loc: int
+  loc: uint
 
 type MTB_DEVARCH_Type = object
-  loc: int
+  loc: uint
 
 type MTB_AUTHSTATUS_Type = object
-  loc: int
+  loc: uint
 
 type MTB_LOCKSTATUS_Type = object
-  loc: int
+  loc: uint
 
 type MTB_LOCKACCESS_Type = object
-  loc: int
+  loc: uint
 
 type MTB_CLAIMCLR_Type = object
-  loc: int
+  loc: uint
 
 type MTB_CLAIMSET_Type = object
-  loc: int
+  loc: uint
 
 type MTB_ITCTRL_Type = object
-  loc: int
+  loc: uint
 
 type MTB_BASE_Type = object
-  loc: int
+  loc: uint
 
 type MTB_FLOW_Type = object
-  loc: int
+  loc: uint
 
 type MTB_MASTER_Type = object
-  loc: int
+  loc: uint
 
 type MTB_POSITION_Type = object
-  loc: int
+  loc: uint
 
 type MTB_Type = object
   POSITION*: MTB_POSITION_Type
@@ -698,31 +698,31 @@ type MTB_Type = object
   CID3*: MTB_CID3_Type
 
 type NVMCTRL_LOCK_Type = object
-  loc: int
+  loc: uint
 
 type NVMCTRL_ADDR_Type = object
-  loc: int
+  loc: uint
 
 type NVMCTRL_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type NVMCTRL_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type NVMCTRL_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type NVMCTRL_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type NVMCTRL_PARAM_Type = object
-  loc: int
+  loc: uint
 
 type NVMCTRL_CTRLB_Type = object
-  loc: int
+  loc: uint
 
 type NVMCTRL_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type NVMCTRL_Type = object
   CTRLA*: NVMCTRL_CTRLA_Type
@@ -736,56 +736,56 @@ type NVMCTRL_Type = object
   LOCK*: NVMCTRL_LOCK_Type
 
 type PAC0_WPSET_Type = object
-  loc: int
+  loc: uint
 
 type PAC0_WPCLR_Type = object
-  loc: int
+  loc: uint
 
 type PAC0_Type = object
   WPCLR*: PAC0_WPCLR_Type
   WPSET*: PAC0_WPSET_Type
 
 type PM_RCAUSE_Type = object
-  loc: int
+  loc: uint
 
 type PM_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type PM_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type PM_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type PM_APBCMASK_Type = object
-  loc: int
+  loc: uint
 
 type PM_APBBMASK_Type = object
-  loc: int
+  loc: uint
 
 type PM_APBAMASK_Type = object
-  loc: int
+  loc: uint
 
 type PM_AHBMASK_Type = object
-  loc: int
+  loc: uint
 
 type PM_APBCSEL_Type = object
-  loc: int
+  loc: uint
 
 type PM_APBBSEL_Type = object
-  loc: int
+  loc: uint
 
 type PM_APBASEL_Type = object
-  loc: int
+  loc: uint
 
 type PM_CPUSEL_Type = object
-  loc: int
+  loc: uint
 
 type PM_SLEEP_Type = object
-  loc: int
+  loc: uint
 
 type PM_CTRL_Type = object
-  loc: int
+  loc: uint
 
 type PM_Type = object
   CTRL*: PM_CTRL_Type
@@ -804,43 +804,43 @@ type PM_Type = object
   RCAUSE*: PM_RCAUSE_Type
 
 type PORT_PINCFG0_Type = object
-  loc: int
+  loc: uint
 
 type PORT_PMUX0_Type = object
-  loc: int
+  loc: uint
 
 type PORT_WRCONFIG_Type = object
-  loc: int
+  loc: uint
 
 type PORT_CTRL_Type = object
-  loc: int
+  loc: uint
 
 type PORT_IN_Type = object
-  loc: int
+  loc: uint
 
 type PORT_OUTTGL_Type = object
-  loc: int
+  loc: uint
 
 type PORT_OUTSET_Type = object
-  loc: int
+  loc: uint
 
 type PORT_OUTCLR_Type = object
-  loc: int
+  loc: uint
 
 type PORT_OUT_Type = object
-  loc: int
+  loc: uint
 
 type PORT_DIRTGL_Type = object
-  loc: int
+  loc: uint
 
 type PORT_DIRSET_Type = object
-  loc: int
+  loc: uint
 
 type PORT_DIRCLR_Type = object
-  loc: int
+  loc: uint
 
 type PORT_DIR_Type = object
-  loc: int
+  loc: uint
 
 type PORT_Type = object
   DIR0*: PORT_DIR_Type
@@ -963,37 +963,37 @@ type PORT_Type = object
   PINCFG1_31*: PORT_PINCFG0_Type
 
 type RtcMode0_COMP_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode0_COUNT_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode0_FREQCORR_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode0_DBGCTRL_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode0_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode0_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode0_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode0_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode0_EVCTRL_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode0_READREQ_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode0_CTRL_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode0_Type = object
   CTRL*: RtcMode0_CTRL_Type
@@ -1009,40 +1009,40 @@ type RtcMode0_Type = object
   COMP0*: RtcMode0_COMP_Type
 
 type RtcMode1_COMP_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode1_PER_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode1_COUNT_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode1_FREQCORR_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode1_DBGCTRL_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode1_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode1_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode1_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode1_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode1_EVCTRL_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode1_READREQ_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode1_CTRL_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode1_Type = object
   CTRL*: RtcMode1_CTRL_Type
@@ -1060,40 +1060,40 @@ type RtcMode1_Type = object
   COMP1*: RtcMode1_COMP_Type
 
 type RtcMode2_MASK_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode2_ALARM_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode2_CLOCK_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode2_FREQCORR_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode2_DBGCTRL_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode2_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode2_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode2_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode2_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode2_EVCTRL_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode2_READREQ_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode2_CTRL_Type = object
-  loc: int
+  loc: uint
 
 type RtcMode2_Type = object
   CTRL*: RtcMode2_CTRL_Type
@@ -1115,37 +1115,37 @@ type RTC_Type = object
   MODE2*: RtcMode2_Type
 
 type SercomI2cm_DBGCTRL_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cm_DATA_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cm_ADDR_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cm_SYNCBUSY_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cm_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cm_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cm_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cm_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cm_BAUD_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cm_CTRLB_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cm_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cm_Type = object
   CTRLA*: SercomI2cm_CTRLA_Type
@@ -1161,31 +1161,31 @@ type SercomI2cm_Type = object
   DBGCTRL*: SercomI2cm_DBGCTRL_Type
 
 type SercomI2cs_DATA_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cs_ADDR_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cs_SYNCBUSY_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cs_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cs_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cs_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cs_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cs_CTRLB_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cs_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type SercomI2cs_Type = object
   CTRLA*: SercomI2cs_CTRLA_Type
@@ -1199,37 +1199,37 @@ type SercomI2cs_Type = object
   DATA*: SercomI2cs_DATA_Type
 
 type SercomSpi_DBGCTRL_Type = object
-  loc: int
+  loc: uint
 
 type SercomSpi_DATA_Type = object
-  loc: int
+  loc: uint
 
 type SercomSpi_ADDR_Type = object
-  loc: int
+  loc: uint
 
 type SercomSpi_SYNCBUSY_Type = object
-  loc: int
+  loc: uint
 
 type SercomSpi_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type SercomSpi_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type SercomSpi_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type SercomSpi_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type SercomSpi_BAUD_Type = object
-  loc: int
+  loc: uint
 
 type SercomSpi_CTRLB_Type = object
-  loc: int
+  loc: uint
 
 type SercomSpi_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type SercomSpi_Type = object
   CTRLA*: SercomSpi_CTRLA_Type
@@ -1245,46 +1245,46 @@ type SercomSpi_Type = object
   DBGCTRL*: SercomSpi_DBGCTRL_Type
 
 type SercomUsart_DBGCTRL_Type = object
-  loc: int
+  loc: uint
 
 type SercomUsart_DATA_Type = object
-  loc: int
+  loc: uint
 
 type SercomUsart_SYNCBUSY_Type = object
-  loc: int
+  loc: uint
 
 type SercomUsart_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type SercomUsart_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type SercomUsart_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type SercomUsart_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type SercomUsart_RXPL_Type = object
-  loc: int
+  loc: uint
 
 type SercomUsart_BAUD_USARTFP_MODE_Type = object
-  loc: int
+  loc: uint
 
 type SercomUsart_BAUD_FRACFP_MODE_Type = object
-  loc: int
+  loc: uint
 
 type SercomUsart_BAUD_FRAC_MODE_Type = object
-  loc: int
+  loc: uint
 
 type SercomUsart_BAUD_Type = object
-  loc: int
+  loc: uint
 
 type SercomUsart_CTRLB_Type = object
-  loc: int
+  loc: uint
 
 type SercomUsart_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type SercomUsart_Type = object
   CTRLA*: SercomUsart_CTRLA_Type
@@ -1309,64 +1309,64 @@ type SERCOM0_Type = object
   USART*: SercomUsart_Type
 
 type SYSCTRL_DPLLSTATUS_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_DPLLCTRLB_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_DPLLRATIO_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_DPLLCTRLA_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_VREF_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_VREG_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_BOD33_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_DFLLSYNC_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_DFLLMUL_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_DFLLVAL_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_DFLLCTRL_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_OSC8M_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_OSCULP32K_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_OSC32K_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_XOSC32K_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_XOSC_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_PCLKSR_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type SYSCTRL_Type = object
   INTENCLR*: SYSCTRL_INTENCLR_Type
@@ -1391,46 +1391,46 @@ type SYSCTRL_Type = object
   DPLLSTATUS*: SYSCTRL_DPLLSTATUS_Type
 
 type TcCount8_CC_Type = object
-  loc: int
+  loc: uint
 
 type TcCount8_PER_Type = object
-  loc: int
+  loc: uint
 
 type TcCount8_COUNT_Type = object
-  loc: int
+  loc: uint
 
 type TcCount8_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type TcCount8_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type TcCount8_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type TcCount8_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type TcCount8_EVCTRL_Type = object
-  loc: int
+  loc: uint
 
 type TcCount8_DBGCTRL_Type = object
-  loc: int
+  loc: uint
 
 type TcCount8_CTRLC_Type = object
-  loc: int
+  loc: uint
 
 type TcCount8_CTRLBSET_Type = object
-  loc: int
+  loc: uint
 
 type TcCount8_CTRLBCLR_Type = object
-  loc: int
+  loc: uint
 
 type TcCount8_READREQ_Type = object
-  loc: int
+  loc: uint
 
 type TcCount8_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type TcCount8_Type = object
   CTRLA*: TcCount8_CTRLA_Type
@@ -1450,43 +1450,43 @@ type TcCount8_Type = object
   CC1*: TcCount8_CC_Type
 
 type TcCount16_CC_Type = object
-  loc: int
+  loc: uint
 
 type TcCount16_COUNT_Type = object
-  loc: int
+  loc: uint
 
 type TcCount16_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type TcCount16_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type TcCount16_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type TcCount16_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type TcCount16_EVCTRL_Type = object
-  loc: int
+  loc: uint
 
 type TcCount16_DBGCTRL_Type = object
-  loc: int
+  loc: uint
 
 type TcCount16_CTRLC_Type = object
-  loc: int
+  loc: uint
 
 type TcCount16_CTRLBSET_Type = object
-  loc: int
+  loc: uint
 
 type TcCount16_CTRLBCLR_Type = object
-  loc: int
+  loc: uint
 
 type TcCount16_READREQ_Type = object
-  loc: int
+  loc: uint
 
 type TcCount16_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type TcCount16_Type = object
   CTRLA*: TcCount16_CTRLA_Type
@@ -1505,43 +1505,43 @@ type TcCount16_Type = object
   CC1*: TcCount16_CC_Type
 
 type TcCount32_CC_Type = object
-  loc: int
+  loc: uint
 
 type TcCount32_COUNT_Type = object
-  loc: int
+  loc: uint
 
 type TcCount32_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type TcCount32_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type TcCount32_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type TcCount32_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type TcCount32_EVCTRL_Type = object
-  loc: int
+  loc: uint
 
 type TcCount32_DBGCTRL_Type = object
-  loc: int
+  loc: uint
 
 type TcCount32_CTRLC_Type = object
-  loc: int
+  loc: uint
 
 type TcCount32_CTRLBSET_Type = object
-  loc: int
+  loc: uint
 
 type TcCount32_CTRLBCLR_Type = object
-  loc: int
+  loc: uint
 
 type TcCount32_READREQ_Type = object
-  loc: int
+  loc: uint
 
 type TcCount32_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type TcCount32_Type = object
   CTRLA*: TcCount32_CTRLA_Type
@@ -1565,118 +1565,118 @@ type TC3_Type = object
   COUNT32*: TcCount32_Type
 
 type TCC0_CCB_DITH6_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_CCB_DITH5_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_CCB_DITH4_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_CCB_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_PERB_DITH6_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_PERB_DITH5_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_PERB_DITH4_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_PERB_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_WAVEB_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_PATTB_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_CC_DITH6_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_CC_DITH5_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_CC_DITH4_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_CC_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_PER_DITH6_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_PER_DITH5_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_PER_DITH4_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_PER_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_WAVE_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_PATT_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_COUNT_DITH6_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_COUNT_DITH5_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_COUNT_DITH4_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_COUNT_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_EVCTRL_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_DBGCTRL_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_DRVCTRL_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_WEXCTRL_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_FCTRLB_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_FCTRLA_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_SYNCBUSY_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_CTRLBSET_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_CTRLBCLR_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type TCC0_Type = object
   CTRLA*: TCC0_CTRLA_Type
@@ -1743,67 +1743,67 @@ type TCC0_Type = object
   CCB3_DITH6*: TCC0_CCB_DITH6_Type
 
 type UsbDevice_EPINTENSET_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_EPINTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_EPINTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_EPSTATUS_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_EPSTATUSSET_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_EPSTATUSCLR_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_EPCFG_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_PADCAL_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_DESCADD_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_EPINTSMRY_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_FNUM_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_FSMSTATUS_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_DADD_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_CTRLB_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_QOSCTRL_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_SYNCBUSY_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type UsbDevice_Type = object
   CTRLA*: UsbDevice_CTRLA_Type
@@ -1878,73 +1878,73 @@ type UsbDevice_Type = object
   EPINTENSET7*: UsbDevice_EPINTENSET_Type
 
 type UsbHost_PINTENSET_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_PINTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_PINTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_PSTATUS_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_PSTATUSSET_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_PSTATUSCLR_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_BINTERVAL_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_PCFG_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_PADCAL_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_DESCADD_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_PINTSMRY_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_FLENHIGH_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_FNUM_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_FSMSTATUS_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_HSOFC_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_CTRLB_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_QOSCTRL_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_SYNCBUSY_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_CTRLA_Type = object
-  loc: int
+  loc: uint
 
 type UsbHost_Type = object
   CTRLA*: UsbHost_CTRLA_Type
@@ -2032,28 +2032,28 @@ type USB_Type = object
   HOST*: UsbHost_Type
 
 type WDT_CLEAR_Type = object
-  loc: int
+  loc: uint
 
 type WDT_STATUS_Type = object
-  loc: int
+  loc: uint
 
 type WDT_INTFLAG_Type = object
-  loc: int
+  loc: uint
 
 type WDT_INTENSET_Type = object
-  loc: int
+  loc: uint
 
 type WDT_INTENCLR_Type = object
-  loc: int
+  loc: uint
 
 type WDT_EWCTRL_Type = object
-  loc: int
+  loc: uint
 
 type WDT_CONFIG_Type = object
-  loc: int
+  loc: uint
 
 type WDT_CTRL_Type = object
-  loc: int
+  loc: uint
 
 type WDT_Type = object
   CTRL*: WDT_CTRL_Type
@@ -3513,92 +3513,92 @@ type AC_CTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
   RUNSTDBY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   LPMUX* {.bitsize:1.}: bool
 
 type AC_CTRLB_Fields* = object
   START0* {.bitsize:1.}: bool
   START1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type AC_EVCTRL_Fields* = object
   COMPEO0* {.bitsize:1.}: bool
   COMPEO1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   WINEO0* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
   COMPEI0* {.bitsize:1.}: bool
   COMPEI1* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED2 {.bitsize:6.}: 0'u .. 63'u
 
 type AC_INTENCLR_Fields* = object
   COMP0* {.bitsize:1.}: bool
   COMP1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   WIN0* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
 
 type AC_INTENSET_Fields* = object
   COMP0* {.bitsize:1.}: bool
   COMP1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   WIN0* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
 
 type AC_INTFLAG_Fields* = object
   COMP0* {.bitsize:1.}: bool
   COMP1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   WIN0* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
 
 type AC_STATUSA_Fields* = object
   STATE0* {.bitsize:1.}: bool
   STATE1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
-  WSTATE0* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
+  WSTATE0* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type AC_STATUSB_Fields* = object
   READY0* {.bitsize:1.}: bool
   READY1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
   SYNCBUSY* {.bitsize:1.}: bool
 
 type AC_STATUSC_Fields* = object
   STATE0* {.bitsize:1.}: bool
   STATE1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
-  WSTATE0* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
+  WSTATE0* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type AC_WINCTRL_Fields* = object
   WEN0* {.bitsize:1.}: bool
-  WINTSEL0* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  WINTSEL0* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type AC_COMPCTRL_Fields* = object
   ENABLE* {.bitsize:1.}: bool
   SINGLE* {.bitsize:1.}: bool
-  SPEED* {.bitsize:2.}: 0u8 .. 3u8
+  SPEED* {.bitsize:2.}: 0'u .. 3'u
   RESERVED {.bitsize:1.}: bool
-  INTSEL* {.bitsize:2.}: 0u8 .. 3u8
+  INTSEL* {.bitsize:2.}: 0'u .. 3'u
   RESERVED1 {.bitsize:1.}: bool
-  MUXNEG* {.bitsize:3.}: 0u8 .. 7u8
+  MUXNEG* {.bitsize:3.}: 0'u .. 7'u
   RESERVED2 {.bitsize:1.}: bool
-  MUXPOS* {.bitsize:2.}: 0u8 .. 3u8
+  MUXPOS* {.bitsize:2.}: 0'u .. 3'u
   RESERVED3 {.bitsize:1.}: bool
   SWAP* {.bitsize:1.}: bool
-  OUT* {.bitsize:2.}: 0u8 .. 3u8
+  OUT* {.bitsize:2.}: 0'u .. 3'u
   RESERVED4 {.bitsize:1.}: bool
   HYST* {.bitsize:1.}: bool
-  RESERVED5 {.bitsize:4.}: 0u8 .. 15u8
-  FLEN* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED6 {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED5 {.bitsize:4.}: 0'u .. 15'u
+  FLEN* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED6 {.bitsize:5.}: 0'u .. 31'u
 
 type AC_SCALER_Fields* = object
-  VALUE* {.bitsize:6.}: 0u8 .. 63u8
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  VALUE* {.bitsize:6.}: 0'u .. 63'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
 
 type AC_STATUSA_WSTATE0* {.pure.} = enum
   ABOVE = 0x0,
@@ -3764,100 +3764,100 @@ type ADC_CTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
   RUNSTDBY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type ADC_REFCTRL_Fields* = object
-  REFSEL* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  REFSEL* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   REFCOMP* {.bitsize:1.}: bool
 
 type ADC_AVGCTRL_Fields* = object
-  SAMPLENUM* {.bitsize:4.}: 0u8 .. 15u8
-  ADJRES* {.bitsize:3.}: 0u8 .. 7u8
+  SAMPLENUM* {.bitsize:4.}: 0'u .. 15'u
+  ADJRES* {.bitsize:3.}: 0'u .. 7'u
   RESERVED {.bitsize:1.}: bool
 
 type ADC_SAMPCTRL_Fields* = object
-  SAMPLEN* {.bitsize:6.}: 0u8 .. 63u8
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  SAMPLEN* {.bitsize:6.}: 0'u .. 63'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
 
 type ADC_CTRLB_Fields* = object
   DIFFMODE* {.bitsize:1.}: bool
   LEFTADJ* {.bitsize:1.}: bool
   FREERUN* {.bitsize:1.}: bool
   CORREN* {.bitsize:1.}: bool
-  RESSEL* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
-  PRESCALER* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED1 {.bitsize:5.}: 0u8 .. 31u8
+  RESSEL* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
+  PRESCALER* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED1 {.bitsize:5.}: 0'u .. 31'u
 
 type ADC_WINCTRL_Fields* = object
-  WINMODE* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  WINMODE* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type ADC_SWTRIG_Fields* = object
   FLUSH* {.bitsize:1.}: bool
   START* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type ADC_INPUTCTRL_Fields* = object
-  MUXPOS* {.bitsize:5.}: 0u8 .. 31u8
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
-  MUXNEG* {.bitsize:5.}: 0u8 .. 31u8
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
-  INPUTSCAN* {.bitsize:4.}: 0u8 .. 15u8
-  INPUTOFFSET* {.bitsize:4.}: 0u8 .. 15u8
-  GAIN* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED2 {.bitsize:4.}: 0u8 .. 15u8
+  MUXPOS* {.bitsize:5.}: 0'u .. 31'u
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
+  MUXNEG* {.bitsize:5.}: 0'u .. 31'u
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
+  INPUTSCAN* {.bitsize:4.}: 0'u .. 15'u
+  INPUTOFFSET* {.bitsize:4.}: 0'u .. 15'u
+  GAIN* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED2 {.bitsize:4.}: 0'u .. 15'u
 
 type ADC_EVCTRL_Fields* = object
   STARTEI* {.bitsize:1.}: bool
   SYNCEI* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   RESRDYEO* {.bitsize:1.}: bool
   WINMONEO* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type ADC_INTENCLR_Fields* = object
   RESRDY* {.bitsize:1.}: bool
   OVERRUN* {.bitsize:1.}: bool
   WINMON* {.bitsize:1.}: bool
   SYNCRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
 
 type ADC_INTENSET_Fields* = object
   RESRDY* {.bitsize:1.}: bool
   OVERRUN* {.bitsize:1.}: bool
   WINMON* {.bitsize:1.}: bool
   SYNCRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
 
 type ADC_INTFLAG_Fields* = object
   RESRDY* {.bitsize:1.}: bool
   OVERRUN* {.bitsize:1.}: bool
   WINMON* {.bitsize:1.}: bool
   SYNCRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
 
 type ADC_STATUS_Fields* = object
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
   SYNCBUSY* {.bitsize:1.}: bool
 
 type ADC_GAINCORR_Fields* = object
-  GAINCORR* {.bitsize:12.}: 0u16 .. 4095u16
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  GAINCORR* {.bitsize:12.}: 0'u .. 4095'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
 
 type ADC_OFFSETCORR_Fields* = object
-  OFFSETCORR* {.bitsize:12.}: 0u16 .. 4095u16
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  OFFSETCORR* {.bitsize:12.}: 0'u .. 4095'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
 
 type ADC_CALIB_Fields* = object
-  LINEARITY_CAL* {.bitsize:8.}: 0u8 .. 255u8
-  BIAS_CAL* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  LINEARITY_CAL* {.bitsize:8.}: 0'u .. 255'u
+  BIAS_CAL* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type ADC_DBGCTRL_Fields* = object
   DBGRUN* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type ADC_REFCTRL_REFSEL* {.pure.} = enum
   INT1V = 0x0,
@@ -4175,7 +4175,7 @@ type DAC_CTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
   RUNSTDBY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type DAC_CTRLB_Fields* = object
   EOEN* {.bitsize:1.}: bool
@@ -4184,33 +4184,33 @@ type DAC_CTRLB_Fields* = object
   VPD* {.bitsize:1.}: bool
   BDWP* {.bitsize:1.}: bool
   RESERVED {.bitsize:1.}: bool
-  REFSEL* {.bitsize:2.}: 0u8 .. 3u8
+  REFSEL* {.bitsize:2.}: 0'u .. 3'u
 
 type DAC_EVCTRL_Fields* = object
   STARTEI* {.bitsize:1.}: bool
   EMPTYEO* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type DAC_INTENCLR_Fields* = object
   UNDERRUN* {.bitsize:1.}: bool
   EMPTY* {.bitsize:1.}: bool
   SYNCRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type DAC_INTENSET_Fields* = object
   UNDERRUN* {.bitsize:1.}: bool
   EMPTY* {.bitsize:1.}: bool
   SYNCRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type DAC_INTFLAG_Fields* = object
   UNDERRUN* {.bitsize:1.}: bool
   EMPTY* {.bitsize:1.}: bool
   SYNCRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type DAC_STATUS_Fields* = object
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
   SYNCBUSY* {.bitsize:1.}: bool
 
 type DAC_CTRLB_REFSEL* {.pure.} = enum
@@ -4321,34 +4321,34 @@ type DMAC_CTRL_Fields* = object
   SWRST* {.bitsize:1.}: bool
   DMAENABLE* {.bitsize:1.}: bool
   CRCENABLE* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
   LVLEN0* {.bitsize:1.}: bool
   LVLEN1* {.bitsize:1.}: bool
   LVLEN2* {.bitsize:1.}: bool
   LVLEN3* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
 
 type DMAC_CRCCTRL_Fields* = object
-  CRCBEATSIZE* {.bitsize:2.}: 0u8 .. 3u8
-  CRCPOLY* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
-  CRCSRC* {.bitsize:6.}: 0u8 .. 63u8
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  CRCBEATSIZE* {.bitsize:2.}: 0'u .. 3'u
+  CRCPOLY* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
+  CRCSRC* {.bitsize:6.}: 0'u .. 63'u
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type DMAC_CRCSTATUS_Fields* = object
   CRCBUSY* {.bitsize:1.}: bool
   CRCZERO* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type DMAC_DBGCTRL_Fields* = object
   DBGRUN* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type DMAC_QOSCTRL_Fields* = object
-  WRBQOS* {.bitsize:2.}: 0u8 .. 3u8
-  FQOS* {.bitsize:2.}: 0u8 .. 3u8
-  DQOS* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  WRBQOS* {.bitsize:2.}: 0'u .. 3'u
+  FQOS* {.bitsize:2.}: 0'u .. 3'u
+  DQOS* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
 
 type DMAC_SWTRIGCTRL_Fields* = object
   SWTRIG0* {.bitsize:1.}: bool
@@ -4363,29 +4363,29 @@ type DMAC_SWTRIGCTRL_Fields* = object
   SWTRIG9* {.bitsize:1.}: bool
   SWTRIG10* {.bitsize:1.}: bool
   SWTRIG11* {.bitsize:1.}: bool
-  RESERVED {.bitsize:20.}: 0u32 .. 1048575u32
+  RESERVED {.bitsize:20.}: 0'u .. 1048575'u
 
 type DMAC_PRICTRL0_Fields* = object
-  LVLPRI0* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  LVLPRI0* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   RRLVLEN0* {.bitsize:1.}: bool
-  LVLPRI1* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
+  LVLPRI1* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
   RRLVLEN1* {.bitsize:1.}: bool
-  LVLPRI2* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED2 {.bitsize:3.}: 0u8 .. 7u8
+  LVLPRI2* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED2 {.bitsize:3.}: 0'u .. 7'u
   RRLVLEN2* {.bitsize:1.}: bool
-  LVLPRI3* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED3 {.bitsize:3.}: 0u8 .. 7u8
+  LVLPRI3* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED3 {.bitsize:3.}: 0'u .. 7'u
   RRLVLEN3* {.bitsize:1.}: bool
 
 type DMAC_INTPEND_Fields* = object
-  ID* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  ID* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   TERR* {.bitsize:1.}: bool
   TCMPL* {.bitsize:1.}: bool
   SUSP* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   FERR* {.bitsize:1.}: bool
   BUSY* {.bitsize:1.}: bool
   PEND* {.bitsize:1.}: bool
@@ -4403,7 +4403,7 @@ type DMAC_INTSTATUS_Fields* = object
   CHINT9* {.bitsize:1.}: bool
   CHINT10* {.bitsize:1.}: bool
   CHINT11* {.bitsize:1.}: bool
-  RESERVED {.bitsize:20.}: 0u32 .. 1048575u32
+  RESERVED {.bitsize:20.}: 0'u .. 1048575'u
 
 type DMAC_BUSYCH_Fields* = object
   BUSYCH0* {.bitsize:1.}: bool
@@ -4418,7 +4418,7 @@ type DMAC_BUSYCH_Fields* = object
   BUSYCH9* {.bitsize:1.}: bool
   BUSYCH10* {.bitsize:1.}: bool
   BUSYCH11* {.bitsize:1.}: bool
-  RESERVED {.bitsize:20.}: 0u32 .. 1048575u32
+  RESERVED {.bitsize:20.}: 0'u .. 1048575'u
 
 type DMAC_PENDCH_Fields* = object
   PENDCH0* {.bitsize:1.}: bool
@@ -4433,63 +4433,63 @@ type DMAC_PENDCH_Fields* = object
   PENDCH9* {.bitsize:1.}: bool
   PENDCH10* {.bitsize:1.}: bool
   PENDCH11* {.bitsize:1.}: bool
-  RESERVED {.bitsize:20.}: 0u32 .. 1048575u32
+  RESERVED {.bitsize:20.}: 0'u .. 1048575'u
 
 type DMAC_ACTIVE_Fields* = object
   LVLEX0* {.bitsize:1.}: bool
   LVLEX1* {.bitsize:1.}: bool
   LVLEX2* {.bitsize:1.}: bool
   LVLEX3* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
-  ID* {.bitsize:5.}: 0u8 .. 31u8
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
+  ID* {.bitsize:5.}: 0'u .. 31'u
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   ABUSY* {.bitsize:1.}: bool
-  BTCNT* {.bitsize:16.}: 0u16 .. 65535u16
+  BTCNT* {.bitsize:16.}: 0'u .. 65535'u
 
 type DMAC_CHID_Fields* = object
-  ID* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  ID* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
 
 type DMAC_CHCTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type DMAC_CHCTRLB_Fields* = object
-  EVACT* {.bitsize:3.}: 0u8 .. 7u8
+  EVACT* {.bitsize:3.}: 0'u .. 7'u
   EVIE* {.bitsize:1.}: bool
   EVOE* {.bitsize:1.}: bool
-  LVL* {.bitsize:2.}: 0u8 .. 3u8
+  LVL* {.bitsize:2.}: 0'u .. 3'u
   RESERVED {.bitsize:1.}: bool
-  TRIGSRC* {.bitsize:6.}: 0u8 .. 63u8
-  RESERVED1 {.bitsize:8.}: 0u8 .. 255u8
-  TRIGACT* {.bitsize:2.}: 0u8 .. 3u8
-  CMD* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED2 {.bitsize:6.}: 0u8 .. 63u8
+  TRIGSRC* {.bitsize:6.}: 0'u .. 63'u
+  RESERVED1 {.bitsize:8.}: 0'u .. 255'u
+  TRIGACT* {.bitsize:2.}: 0'u .. 3'u
+  CMD* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED2 {.bitsize:6.}: 0'u .. 63'u
 
 type DMAC_CHINTENCLR_Fields* = object
   TERR* {.bitsize:1.}: bool
   TCMPL* {.bitsize:1.}: bool
   SUSP* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type DMAC_CHINTENSET_Fields* = object
   TERR* {.bitsize:1.}: bool
   TCMPL* {.bitsize:1.}: bool
   SUSP* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type DMAC_CHINTFLAG_Fields* = object
   TERR* {.bitsize:1.}: bool
   TCMPL* {.bitsize:1.}: bool
   SUSP* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type DMAC_CHSTATUS_Fields* = object
   PEND* {.bitsize:1.}: bool
   BUSY* {.bitsize:1.}: bool
   FERR* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type DMAC_CRCCTRL_CRCBEATSIZE* {.pure.} = enum
   BYTE = 0x0,
@@ -4787,7 +4787,7 @@ type DSU_CTRL_Fields* = object
   CRC* {.bitsize:1.}: bool
   MBIST* {.bitsize:1.}: bool
   CE* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
 
 type DSU_STATUSA_Fields* = object
   DONE* {.bitsize:1.}: bool
@@ -4795,7 +4795,7 @@ type DSU_STATUSA_Fields* = object
   BERR* {.bitsize:1.}: bool
   FAIL* {.bitsize:1.}: bool
   PERR* {.bitsize:1.}: bool
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
 
 type DSU_STATUSB_Fields* = object
   PROT* {.bitsize:1.}: bool
@@ -4803,76 +4803,76 @@ type DSU_STATUSB_Fields* = object
   DCCD0* {.bitsize:1.}: bool
   DCCD1* {.bitsize:1.}: bool
   HPE* {.bitsize:1.}: bool
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
 
 type DSU_ADDR_Fields* = object
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
-  ADDR* {.bitsize:30.}: 0u32 .. 1073741823u32
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
+  ADDR* {.bitsize:30.}: 0'u .. 1073741823'u
 
 type DSU_LENGTH_Fields* = object
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
-  LENGTH* {.bitsize:30.}: 0u32 .. 1073741823u32
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
+  LENGTH* {.bitsize:30.}: 0'u .. 1073741823'u
 
 type DSU_DID_Fields* = object
-  DEVSEL* {.bitsize:8.}: 0u8 .. 255u8
-  REVISION* {.bitsize:4.}: 0u8 .. 15u8
-  DIE* {.bitsize:4.}: 0u8 .. 15u8
-  SERIES* {.bitsize:6.}: 0u8 .. 63u8
+  DEVSEL* {.bitsize:8.}: 0'u .. 255'u
+  REVISION* {.bitsize:4.}: 0'u .. 15'u
+  DIE* {.bitsize:4.}: 0'u .. 15'u
+  SERIES* {.bitsize:6.}: 0'u .. 63'u
   RESERVED {.bitsize:1.}: bool
-  FAMILY* {.bitsize:5.}: 0u8 .. 31u8
-  PROCESSOR* {.bitsize:4.}: 0u8 .. 15u8
+  FAMILY* {.bitsize:5.}: 0'u .. 31'u
+  PROCESSOR* {.bitsize:4.}: 0'u .. 15'u
 
 type DSU_ENTRY_Fields* = object
   EPRES* {.bitsize:1.}: bool
   FMT* {.bitsize:1.}: bool
-  RESERVED {.bitsize:10.}: 0u16 .. 1023u16
-  ADDOFF* {.bitsize:20.}: 0u32 .. 1048575u32
+  RESERVED {.bitsize:10.}: 0'u .. 1023'u
+  ADDOFF* {.bitsize:20.}: 0'u .. 1048575'u
 
 type DSU_MEMTYPE_Fields* = object
   SMEMP* {.bitsize:1.}: bool
-  RESERVED {.bitsize:31.}: 0u32 .. 2147483647u32
+  RESERVED {.bitsize:31.}: 0'u .. 2147483647'u
 
 type DSU_PID4_Fields* = object
-  JEPCC* {.bitsize:4.}: 0u8 .. 15u8
-  FKBC* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED {.bitsize:24.}: 0u32 .. 16777215u32
+  JEPCC* {.bitsize:4.}: 0'u .. 15'u
+  FKBC* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED {.bitsize:24.}: 0'u .. 16777215'u
 
 type DSU_PID0_Fields* = object
-  PARTNBL* {.bitsize:8.}: 0u8 .. 255u8
-  RESERVED {.bitsize:24.}: 0u32 .. 16777215u32
+  PARTNBL* {.bitsize:8.}: 0'u .. 255'u
+  RESERVED {.bitsize:24.}: 0'u .. 16777215'u
 
 type DSU_PID1_Fields* = object
-  PARTNBH* {.bitsize:4.}: 0u8 .. 15u8
-  JEPIDCL* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED {.bitsize:24.}: 0u32 .. 16777215u32
+  PARTNBH* {.bitsize:4.}: 0'u .. 15'u
+  JEPIDCL* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED {.bitsize:24.}: 0'u .. 16777215'u
 
 type DSU_PID2_Fields* = object
-  JEPIDCH* {.bitsize:3.}: 0u8 .. 7u8
+  JEPIDCH* {.bitsize:3.}: 0'u .. 7'u
   JEPU* {.bitsize:1.}: bool
-  REVISION* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED {.bitsize:24.}: 0u32 .. 16777215u32
+  REVISION* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED {.bitsize:24.}: 0'u .. 16777215'u
 
 type DSU_PID3_Fields* = object
-  CUSMOD* {.bitsize:4.}: 0u8 .. 15u8
-  REVAND* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED {.bitsize:24.}: 0u32 .. 16777215u32
+  CUSMOD* {.bitsize:4.}: 0'u .. 15'u
+  REVAND* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED {.bitsize:24.}: 0'u .. 16777215'u
 
 type DSU_CID0_Fields* = object
-  PREAMBLEB0* {.bitsize:8.}: 0u8 .. 255u8
-  RESERVED {.bitsize:24.}: 0u32 .. 16777215u32
+  PREAMBLEB0* {.bitsize:8.}: 0'u .. 255'u
+  RESERVED {.bitsize:24.}: 0'u .. 16777215'u
 
 type DSU_CID1_Fields* = object
-  PREAMBLE* {.bitsize:4.}: 0u8 .. 15u8
-  CCLASS* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED {.bitsize:24.}: 0u32 .. 16777215u32
+  PREAMBLE* {.bitsize:4.}: 0'u .. 15'u
+  CCLASS* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED {.bitsize:24.}: 0'u .. 16777215'u
 
 type DSU_CID2_Fields* = object
-  PREAMBLEB2* {.bitsize:8.}: 0u8 .. 255u8
-  RESERVED {.bitsize:24.}: 0u32 .. 16777215u32
+  PREAMBLEB2* {.bitsize:8.}: 0'u .. 255'u
+  RESERVED {.bitsize:24.}: 0'u .. 16777215'u
 
 type DSU_CID3_Fields* = object
-  PREAMBLEB3* {.bitsize:8.}: 0u8 .. 255u8
-  RESERVED {.bitsize:24.}: 0u32 .. 16777215u32
+  PREAMBLEB3* {.bitsize:8.}: 0'u .. 255'u
+  RESERVED {.bitsize:24.}: 0'u .. 16777215'u
 
 template write*(reg: DSU_CTRL_Type, val: DSU_CTRL_Fields) =
   volatileStore(cast[ptr uint8](reg.loc), cast[uint8](val))
@@ -4985,20 +4985,20 @@ template read*(reg: DSU_CID3_Type): DSU_CID3_Fields =
 type EIC_CTRL_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type EIC_STATUS_Fields* = object
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
   SYNCBUSY* {.bitsize:1.}: bool
 
 type EIC_NMICTRL_Fields* = object
-  NMISENSE* {.bitsize:3.}: 0u8 .. 7u8
+  NMISENSE* {.bitsize:3.}: 0'u .. 7'u
   NMIFILTEN* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
 
 type EIC_NMIFLAG_Fields* = object
   NMI* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type EIC_EVCTRL_Fields* = object
   EXTINTEO0* {.bitsize:1.}: bool
@@ -5017,7 +5017,7 @@ type EIC_EVCTRL_Fields* = object
   EXTINTEO13* {.bitsize:1.}: bool
   EXTINTEO14* {.bitsize:1.}: bool
   EXTINTEO15* {.bitsize:1.}: bool
-  RESERVED {.bitsize:16.}: 0u16 .. 65535u16
+  RESERVED {.bitsize:16.}: 0'u .. 65535'u
 
 type EIC_INTENCLR_Fields* = object
   EXTINT0* {.bitsize:1.}: bool
@@ -5036,7 +5036,7 @@ type EIC_INTENCLR_Fields* = object
   EXTINT13* {.bitsize:1.}: bool
   EXTINT14* {.bitsize:1.}: bool
   EXTINT15* {.bitsize:1.}: bool
-  RESERVED {.bitsize:16.}: 0u16 .. 65535u16
+  RESERVED {.bitsize:16.}: 0'u .. 65535'u
 
 type EIC_INTENSET_Fields* = object
   EXTINT0* {.bitsize:1.}: bool
@@ -5055,7 +5055,7 @@ type EIC_INTENSET_Fields* = object
   EXTINT13* {.bitsize:1.}: bool
   EXTINT14* {.bitsize:1.}: bool
   EXTINT15* {.bitsize:1.}: bool
-  RESERVED {.bitsize:16.}: 0u16 .. 65535u16
+  RESERVED {.bitsize:16.}: 0'u .. 65535'u
 
 type EIC_INTFLAG_Fields* = object
   EXTINT0* {.bitsize:1.}: bool
@@ -5074,7 +5074,7 @@ type EIC_INTFLAG_Fields* = object
   EXTINT13* {.bitsize:1.}: bool
   EXTINT14* {.bitsize:1.}: bool
   EXTINT15* {.bitsize:1.}: bool
-  RESERVED {.bitsize:16.}: 0u16 .. 65535u16
+  RESERVED {.bitsize:16.}: 0'u .. 65535'u
 
 type EIC_WAKEUP_Fields* = object
   WAKEUPEN0* {.bitsize:1.}: bool
@@ -5093,24 +5093,24 @@ type EIC_WAKEUP_Fields* = object
   WAKEUPEN13* {.bitsize:1.}: bool
   WAKEUPEN14* {.bitsize:1.}: bool
   WAKEUPEN15* {.bitsize:1.}: bool
-  RESERVED {.bitsize:16.}: 0u16 .. 65535u16
+  RESERVED {.bitsize:16.}: 0'u .. 65535'u
 
 type EIC_CONFIG_Fields* = object
-  SENSE0* {.bitsize:3.}: 0u8 .. 7u8
+  SENSE0* {.bitsize:3.}: 0'u .. 7'u
   FILTEN0* {.bitsize:1.}: bool
-  SENSE1* {.bitsize:3.}: 0u8 .. 7u8
+  SENSE1* {.bitsize:3.}: 0'u .. 7'u
   FILTEN1* {.bitsize:1.}: bool
-  SENSE2* {.bitsize:3.}: 0u8 .. 7u8
+  SENSE2* {.bitsize:3.}: 0'u .. 7'u
   FILTEN2* {.bitsize:1.}: bool
-  SENSE3* {.bitsize:3.}: 0u8 .. 7u8
+  SENSE3* {.bitsize:3.}: 0'u .. 7'u
   FILTEN3* {.bitsize:1.}: bool
-  SENSE4* {.bitsize:3.}: 0u8 .. 7u8
+  SENSE4* {.bitsize:3.}: 0'u .. 7'u
   FILTEN4* {.bitsize:1.}: bool
-  SENSE5* {.bitsize:3.}: 0u8 .. 7u8
+  SENSE5* {.bitsize:3.}: 0'u .. 7'u
   FILTEN5* {.bitsize:1.}: bool
-  SENSE6* {.bitsize:3.}: 0u8 .. 7u8
+  SENSE6* {.bitsize:3.}: 0'u .. 7'u
   FILTEN6* {.bitsize:1.}: bool
-  SENSE7* {.bitsize:3.}: 0u8 .. 7u8
+  SENSE7* {.bitsize:3.}: 0'u .. 7'u
   FILTEN7* {.bitsize:1.}: bool
 
 type EIC_NMICTRL_NMISENSE* {.pure.} = enum
@@ -5298,26 +5298,26 @@ template modifyIt*(reg: EIC_CONFIG_Type, op: untyped): untyped =
 
 type EVSYS_CTRL_Fields* = object
   SWRST* {.bitsize:1.}: bool
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   GCLKREQ* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
 
 type EVSYS_CHANNEL_Fields* = object
-  CHANNEL* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  CHANNEL* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   SWEVT* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:7.}: 0u8 .. 127u8
-  EVGEN* {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED1 {.bitsize:7.}: 0'u .. 127'u
+  EVGEN* {.bitsize:7.}: 0'u .. 127'u
   RESERVED2 {.bitsize:1.}: bool
-  PATH* {.bitsize:2.}: 0u8 .. 3u8
-  EDGSEL* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED3 {.bitsize:4.}: 0u8 .. 15u8
+  PATH* {.bitsize:2.}: 0'u .. 3'u
+  EDGSEL* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED3 {.bitsize:4.}: 0'u .. 15'u
 
 type EVSYS_USER_Fields* = object
-  USER* {.bitsize:5.}: 0u8 .. 31u8
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
-  CHANNEL* {.bitsize:5.}: 0u8 .. 31u8
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
+  USER* {.bitsize:5.}: 0'u .. 31'u
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
+  CHANNEL* {.bitsize:5.}: 0'u .. 31'u
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
 
 type EVSYS_CHSTATUS_Fields* = object
   USRRDY0* {.bitsize:1.}: bool
@@ -5340,12 +5340,12 @@ type EVSYS_CHSTATUS_Fields* = object
   USRRDY9* {.bitsize:1.}: bool
   USRRDY10* {.bitsize:1.}: bool
   USRRDY11* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   CHBUSY8* {.bitsize:1.}: bool
   CHBUSY9* {.bitsize:1.}: bool
   CHBUSY10* {.bitsize:1.}: bool
   CHBUSY11* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
 
 type EVSYS_INTENCLR_Fields* = object
   OVR0* {.bitsize:1.}: bool
@@ -5368,12 +5368,12 @@ type EVSYS_INTENCLR_Fields* = object
   OVR9* {.bitsize:1.}: bool
   OVR10* {.bitsize:1.}: bool
   OVR11* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   EVD8* {.bitsize:1.}: bool
   EVD9* {.bitsize:1.}: bool
   EVD10* {.bitsize:1.}: bool
   EVD11* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
 
 type EVSYS_INTENSET_Fields* = object
   OVR0* {.bitsize:1.}: bool
@@ -5396,12 +5396,12 @@ type EVSYS_INTENSET_Fields* = object
   OVR9* {.bitsize:1.}: bool
   OVR10* {.bitsize:1.}: bool
   OVR11* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   EVD8* {.bitsize:1.}: bool
   EVD9* {.bitsize:1.}: bool
   EVD10* {.bitsize:1.}: bool
   EVD11* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
 
 type EVSYS_INTFLAG_Fields* = object
   OVR0* {.bitsize:1.}: bool
@@ -5424,12 +5424,12 @@ type EVSYS_INTFLAG_Fields* = object
   OVR9* {.bitsize:1.}: bool
   OVR10* {.bitsize:1.}: bool
   OVR11* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   EVD8* {.bitsize:1.}: bool
   EVD9* {.bitsize:1.}: bool
   EVD10* {.bitsize:1.}: bool
   EVD11* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
 
 type EVSYS_CHANNEL_PATH* {.pure.} = enum
   SYNCHRONOUS = 0x0,
@@ -5513,38 +5513,38 @@ template modifyIt*(reg: EVSYS_INTFLAG_Type, op: untyped): untyped =
 
 type GCLK_CTRL_Fields* = object
   SWRST* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type GCLK_STATUS_Fields* = object
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
   SYNCBUSY* {.bitsize:1.}: bool
 
 type GCLK_CLKCTRL_Fields* = object
-  ID* {.bitsize:6.}: 0u8 .. 63u8
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
-  GEN* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  ID* {.bitsize:6.}: 0'u .. 63'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
+  GEN* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   CLKEN* {.bitsize:1.}: bool
   WRTLOCK* {.bitsize:1.}: bool
 
 type GCLK_GENCTRL_Fields* = object
-  ID* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
-  SRC* {.bitsize:5.}: 0u8 .. 31u8
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
+  ID* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
+  SRC* {.bitsize:5.}: 0'u .. 31'u
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
   GENEN* {.bitsize:1.}: bool
   IDC* {.bitsize:1.}: bool
   OOV* {.bitsize:1.}: bool
   OE* {.bitsize:1.}: bool
   DIVSEL* {.bitsize:1.}: bool
   RUNSTDBY* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:10.}: 0u16 .. 1023u16
+  RESERVED2 {.bitsize:10.}: 0'u .. 1023'u
 
 type GCLK_GENDIV_Fields* = object
-  ID* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
-  DIV* {.bitsize:16.}: 0u16 .. 65535u16
-  RESERVED1 {.bitsize:8.}: 0u8 .. 255u8
+  ID* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
+  DIV* {.bitsize:16.}: 0'u .. 65535'u
+  RESERVED1 {.bitsize:8.}: 0'u .. 255'u
 
 type GCLK_CLKCTRL_ID* {.pure.} = enum
   DFLL48 = 0x0,
@@ -5700,23 +5700,23 @@ type I2S_CTRLA_Fields* = object
   CKEN1* {.bitsize:1.}: bool
   SEREN0* {.bitsize:1.}: bool
   SEREN1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
 
 type I2S_CLKCTRL_Fields* = object
-  SLOTSIZE* {.bitsize:2.}: 0u8 .. 3u8
-  NBSLOTS* {.bitsize:3.}: 0u8 .. 7u8
-  FSWIDTH* {.bitsize:2.}: 0u8 .. 3u8
+  SLOTSIZE* {.bitsize:2.}: 0'u .. 3'u
+  NBSLOTS* {.bitsize:3.}: 0'u .. 7'u
+  FSWIDTH* {.bitsize:2.}: 0'u .. 3'u
   BITDELAY* {.bitsize:1.}: bool
   FSSEL* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   FSINV* {.bitsize:1.}: bool
   SCKSEL* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
   MCKSEL* {.bitsize:1.}: bool
   RESERVED2 {.bitsize:1.}: bool
   MCKEN* {.bitsize:1.}: bool
-  MCKDIV* {.bitsize:5.}: 0u8 .. 31u8
-  MCKOUTDIV* {.bitsize:5.}: 0u8 .. 31u8
+  MCKDIV* {.bitsize:5.}: 0'u .. 31'u
+  MCKOUTDIV* {.bitsize:5.}: 0'u .. 31'u
   FSOUTINV* {.bitsize:1.}: bool
   SCKOUTINV* {.bitsize:1.}: bool
   MCKOUTINV* {.bitsize:1.}: bool
@@ -5724,44 +5724,44 @@ type I2S_CLKCTRL_Fields* = object
 type I2S_INTENCLR_Fields* = object
   RXRDY0* {.bitsize:1.}: bool
   RXRDY1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   RXOR0* {.bitsize:1.}: bool
   RXOR1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   TXRDY0* {.bitsize:1.}: bool
   TXRDY1* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED2 {.bitsize:2.}: 0'u .. 3'u
   TXUR0* {.bitsize:1.}: bool
   TXUR1* {.bitsize:1.}: bool
-  RESERVED3 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED3 {.bitsize:2.}: 0'u .. 3'u
 
 type I2S_INTENSET_Fields* = object
   RXRDY0* {.bitsize:1.}: bool
   RXRDY1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   RXOR0* {.bitsize:1.}: bool
   RXOR1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   TXRDY0* {.bitsize:1.}: bool
   TXRDY1* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED2 {.bitsize:2.}: 0'u .. 3'u
   TXUR0* {.bitsize:1.}: bool
   TXUR1* {.bitsize:1.}: bool
-  RESERVED3 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED3 {.bitsize:2.}: 0'u .. 3'u
 
 type I2S_INTFLAG_Fields* = object
   RXRDY0* {.bitsize:1.}: bool
   RXRDY1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   RXOR0* {.bitsize:1.}: bool
   RXOR1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   TXRDY0* {.bitsize:1.}: bool
   TXRDY1* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED2 {.bitsize:2.}: 0'u .. 3'u
   TXUR0* {.bitsize:1.}: bool
   TXUR1* {.bitsize:1.}: bool
-  RESERVED3 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED3 {.bitsize:2.}: 0'u .. 3'u
 
 type I2S_SYNCBUSY_Fields* = object
   SWRST* {.bitsize:1.}: bool
@@ -5770,22 +5770,22 @@ type I2S_SYNCBUSY_Fields* = object
   CKEN1* {.bitsize:1.}: bool
   SEREN0* {.bitsize:1.}: bool
   SEREN1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   DATA0* {.bitsize:1.}: bool
   DATA1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED1 {.bitsize:6.}: 0'u .. 63'u
 
 type I2S_SERCTRL_Fields* = object
-  SERMODE* {.bitsize:2.}: 0u8 .. 3u8
-  TXDEFAULT* {.bitsize:2.}: 0u8 .. 3u8
+  SERMODE* {.bitsize:2.}: 0'u .. 3'u
+  TXDEFAULT* {.bitsize:2.}: 0'u .. 3'u
   TXSAME* {.bitsize:1.}: bool
   CLKSEL* {.bitsize:1.}: bool
   RESERVED {.bitsize:1.}: bool
   SLOTADJ* {.bitsize:1.}: bool
-  DATASIZE* {.bitsize:3.}: 0u8 .. 7u8
+  DATASIZE* {.bitsize:3.}: 0'u .. 7'u
   RESERVED1 {.bitsize:1.}: bool
   WORDADJ* {.bitsize:1.}: bool
-  EXTEND* {.bitsize:2.}: 0u8 .. 3u8
+  EXTEND* {.bitsize:2.}: 0'u .. 3'u
   BITREV* {.bitsize:1.}: bool
   SLOTDIS0* {.bitsize:1.}: bool
   SLOTDIS1* {.bitsize:1.}: bool
@@ -5798,7 +5798,7 @@ type I2S_SERCTRL_Fields* = object
   MONO* {.bitsize:1.}: bool
   DMA* {.bitsize:1.}: bool
   RXLOOP* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED2 {.bitsize:5.}: 0'u .. 31'u
 
 type I2S_CLKCTRL_SLOTSIZE* {.pure.} = enum
   x8 = 0x0,
@@ -5970,25 +5970,25 @@ template modifyIt*(reg: I2S_DATA_Type, op: untyped): untyped =
     reg.write(it)
 
 type MTB_POSITION_Fields* = object
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   WRAP* {.bitsize:1.}: bool
-  POINTER* {.bitsize:29.}: 0u32 .. 536870911u32
+  POINTER* {.bitsize:29.}: 0'u .. 536870911'u
 
 type MTB_MASTER_Fields* = object
-  MASK* {.bitsize:5.}: 0u8 .. 31u8
+  MASK* {.bitsize:5.}: 0'u .. 31'u
   TSTARTEN* {.bitsize:1.}: bool
   TSTOPEN* {.bitsize:1.}: bool
   SFRWPRIV* {.bitsize:1.}: bool
   RAMPRIV* {.bitsize:1.}: bool
   HALTREQ* {.bitsize:1.}: bool
-  RESERVED {.bitsize:21.}: 0u32 .. 2097151u32
+  RESERVED {.bitsize:21.}: 0'u .. 2097151'u
   EN* {.bitsize:1.}: bool
 
 type MTB_FLOW_Fields* = object
   AUTOSTOP* {.bitsize:1.}: bool
   AUTOHALT* {.bitsize:1.}: bool
   RESERVED {.bitsize:1.}: bool
-  WATERMARK* {.bitsize:29.}: 0u32 .. 536870911u32
+  WATERMARK* {.bitsize:29.}: 0'u .. 536870911'u
 
 template read*(reg: MTB_POSITION_Type): MTB_POSITION_Fields =
   cast[MTB_POSITION_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
@@ -6129,40 +6129,40 @@ template read*(reg: MTB_CID3_Type): uint32 =
   volatileLoad(cast[ptr uint32](reg.loc))
 
 type NVMCTRL_CTRLA_Fields* = object
-  CMD* {.bitsize:7.}: 0u8 .. 127u8
+  CMD* {.bitsize:7.}: 0'u .. 127'u
   RESERVED {.bitsize:1.}: bool
-  CMDEX* {.bitsize:8.}: 0u8 .. 255u8
+  CMDEX* {.bitsize:8.}: 0'u .. 255'u
 
 type NVMCTRL_CTRLB_Fields* = object
   RESERVED {.bitsize:1.}: bool
-  RWS* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RWS* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   MANW* {.bitsize:1.}: bool
-  SLEEPPRM* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED2 {.bitsize:6.}: 0u8 .. 63u8
-  READMODE* {.bitsize:2.}: 0u8 .. 3u8
+  SLEEPPRM* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED2 {.bitsize:6.}: 0'u .. 63'u
+  READMODE* {.bitsize:2.}: 0'u .. 3'u
   CACHEDIS* {.bitsize:1.}: bool
-  RESERVED3 {.bitsize:13.}: 0u16 .. 8191u16
+  RESERVED3 {.bitsize:13.}: 0'u .. 8191'u
 
 type NVMCTRL_PARAM_Fields* = object
-  NVMP* {.bitsize:16.}: 0u16 .. 65535u16
-  PSZ* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:13.}: 0u16 .. 8191u16
+  NVMP* {.bitsize:16.}: 0'u .. 65535'u
+  PSZ* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:13.}: 0'u .. 8191'u
 
 type NVMCTRL_INTENCLR_Fields* = object
   READY* {.bitsize:1.}: bool
   ERROR* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type NVMCTRL_INTENSET_Fields* = object
   READY* {.bitsize:1.}: bool
   ERROR* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type NVMCTRL_INTFLAG_Fields* = object
   READY* {.bitsize:1.}: bool
   ERROR* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type NVMCTRL_STATUS_Fields* = object
   PRM* {.bitsize:1.}: bool
@@ -6170,13 +6170,13 @@ type NVMCTRL_STATUS_Fields* = object
   PROGE* {.bitsize:1.}: bool
   LOCKE* {.bitsize:1.}: bool
   NVME* {.bitsize:1.}: bool
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   SB* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED1 {.bitsize:7.}: 0'u .. 127'u
 
 type NVMCTRL_ADDR_Fields* = object
-  ADDR* {.bitsize:22.}: 0u32 .. 4194303u32
-  RESERVED {.bitsize:10.}: 0u16 .. 1023u16
+  ADDR* {.bitsize:22.}: 0'u .. 4194303'u
+  RESERVED {.bitsize:10.}: 0'u .. 1023'u
 
 type NVMCTRL_CTRLA_CMD* {.pure.} = enum
   ER = 0x2,
@@ -6331,11 +6331,11 @@ template modifyIt*(reg: NVMCTRL_LOCK_Type, op: untyped): untyped =
 
 type PAC0_WPCLR_Fields* = object
   RESERVED {.bitsize:1.}: bool
-  WP* {.bitsize:31.}: 0u32 .. 2147483647u32
+  WP* {.bitsize:31.}: 0'u .. 2147483647'u
 
 type PAC0_WPSET_Fields* = object
   RESERVED {.bitsize:1.}: bool
-  WP* {.bitsize:31.}: 0u32 .. 2147483647u32
+  WP* {.bitsize:31.}: 0'u .. 2147483647'u
 
 template read*(reg: PAC0_WPCLR_Type): PAC0_WPCLR_Fields =
   cast[PAC0_WPCLR_Fields](volatileLoad(cast[ptr uint32](reg.loc)))
@@ -6362,24 +6362,24 @@ template modifyIt*(reg: PAC0_WPSET_Type, op: untyped): untyped =
     reg.write(it)
 
 type PM_SLEEP_Fields* = object
-  IDLE* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  IDLE* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type PM_CPUSEL_Fields* = object
-  CPUDIV* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  CPUDIV* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type PM_APBASEL_Fields* = object
-  APBADIV* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  APBADIV* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type PM_APBBSEL_Fields* = object
-  APBBDIV* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  APBBDIV* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type PM_APBCSEL_Fields* = object
-  APBCDIV* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  APBCDIV* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type PM_AHBMASK_Fields* = object
   HPB0* {.bitsize:1.}: bool
@@ -6389,7 +6389,7 @@ type PM_AHBMASK_Fields* = object
   NVMCTRL* {.bitsize:1.}: bool
   DMAC* {.bitsize:1.}: bool
   USB* {.bitsize:1.}: bool
-  RESERVED {.bitsize:25.}: 0u32 .. 33554431u32
+  RESERVED {.bitsize:25.}: 0'u .. 33554431'u
 
 type PM_APBAMASK_Fields* = object
   PAC0* {.bitsize:1.}: bool
@@ -6399,7 +6399,7 @@ type PM_APBAMASK_Fields* = object
   WDT* {.bitsize:1.}: bool
   RTC* {.bitsize:1.}: bool
   EIC* {.bitsize:1.}: bool
-  RESERVED {.bitsize:25.}: 0u32 .. 33554431u32
+  RESERVED {.bitsize:25.}: 0'u .. 33554431'u
 
 type PM_APBBMASK_Fields* = object
   PAC1* {.bitsize:1.}: bool
@@ -6409,7 +6409,7 @@ type PM_APBBMASK_Fields* = object
   DMAC* {.bitsize:1.}: bool
   USB* {.bitsize:1.}: bool
   HMATRIX* {.bitsize:1.}: bool
-  RESERVED {.bitsize:25.}: 0u32 .. 33554431u32
+  RESERVED {.bitsize:25.}: 0'u .. 33554431'u
 
 type PM_APBCMASK_Fields* = object
   PAC2* {.bitsize:1.}: bool
@@ -6426,25 +6426,25 @@ type PM_APBCMASK_Fields* = object
   TC3* {.bitsize:1.}: bool
   TC4* {.bitsize:1.}: bool
   TC5* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   ADC* {.bitsize:1.}: bool
   AC* {.bitsize:1.}: bool
   DAC* {.bitsize:1.}: bool
   PTC* {.bitsize:1.}: bool
   I2S* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:11.}: 0u16 .. 2047u16
+  RESERVED1 {.bitsize:11.}: 0'u .. 2047'u
 
 type PM_INTENCLR_Fields* = object
   CKRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type PM_INTENSET_Fields* = object
   CKRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type PM_INTFLAG_Fields* = object
   CKRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type PM_RCAUSE_Fields* = object
   POR* {.bitsize:1.}: bool
@@ -6661,28 +6661,28 @@ template read*(reg: PM_RCAUSE_Type): PM_RCAUSE_Fields =
   cast[PM_RCAUSE_Fields](volatileLoad(cast[ptr uint8](reg.loc)))
 
 type PORT_WRCONFIG_Fields* = object
-  PINMASK* {.bitsize:16.}: 0u16 .. 65535u16
+  PINMASK* {.bitsize:16.}: 0'u .. 65535'u
   PMUXEN* {.bitsize:1.}: bool
   INEN* {.bitsize:1.}: bool
   PULLEN* {.bitsize:1.}: bool
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   DRVSTR* {.bitsize:1.}: bool
   RESERVED1 {.bitsize:1.}: bool
-  PMUX* {.bitsize:4.}: 0u8 .. 15u8
+  PMUX* {.bitsize:4.}: 0'u .. 15'u
   WRPMUX* {.bitsize:1.}: bool
   RESERVED2 {.bitsize:1.}: bool
   WRPINCFG* {.bitsize:1.}: bool
   HWSEL* {.bitsize:1.}: bool
 
 type PORT_PMUX0_Fields* = object
-  PMUXE* {.bitsize:4.}: 0u8 .. 15u8
-  PMUXO* {.bitsize:4.}: 0u8 .. 15u8
+  PMUXE* {.bitsize:4.}: 0'u .. 15'u
+  PMUXO* {.bitsize:4.}: 0'u .. 15'u
 
 type PORT_PINCFG0_Fields* = object
   PMUXEN* {.bitsize:1.}: bool
   INEN* {.bitsize:1.}: bool
   PULLEN* {.bitsize:1.}: bool
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   DRVSTR* {.bitsize:1.}: bool
   RESERVED1 {.bitsize:1.}: bool
 
@@ -6847,16 +6847,16 @@ template modifyIt*(reg: PORT_PINCFG0_Type, op: untyped): untyped =
 type RtcMode2_CTRL_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  MODE* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  MODE* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   CLKREP* {.bitsize:1.}: bool
   MATCHCLR* {.bitsize:1.}: bool
-  PRESCALER* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
+  PRESCALER* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
 
 type RtcMode2_READREQ_Fields* = object
-  ADDR* {.bitsize:6.}: 0u8 .. 63u8
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  ADDR* {.bitsize:6.}: 0'u .. 63'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
   RCONT* {.bitsize:1.}: bool
   RREQ* {.bitsize:1.}: bool
 
@@ -6870,70 +6870,70 @@ type RtcMode2_EVCTRL_Fields* = object
   PEREO6* {.bitsize:1.}: bool
   PEREO7* {.bitsize:1.}: bool
   ALARMEO0* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
   OVFEO* {.bitsize:1.}: bool
 
 type RtcMode2_INTENCLR_Fields* = object
   ALARM0* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
   SYNCRDY* {.bitsize:1.}: bool
   OVF* {.bitsize:1.}: bool
 
 type RtcMode2_INTENSET_Fields* = object
   ALARM0* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
   SYNCRDY* {.bitsize:1.}: bool
   OVF* {.bitsize:1.}: bool
 
 type RtcMode2_INTFLAG_Fields* = object
   ALARM0* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
   SYNCRDY* {.bitsize:1.}: bool
   OVF* {.bitsize:1.}: bool
 
 type RtcMode2_STATUS_Fields* = object
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
   SYNCBUSY* {.bitsize:1.}: bool
 
 type RtcMode2_DBGCTRL_Fields* = object
   DBGRUN* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type RtcMode2_FREQCORR_Fields* = object
-  VALUE* {.bitsize:7.}: 0u8 .. 127u8
+  VALUE* {.bitsize:7.}: 0'u .. 127'u
   SIGN* {.bitsize:1.}: bool
 
 type RtcMode2_CLOCK_Fields* = object
-  SECOND* {.bitsize:6.}: 0u8 .. 63u8
-  MINUTE* {.bitsize:6.}: 0u8 .. 63u8
-  HOUR* {.bitsize:5.}: 0u8 .. 31u8
-  DAY* {.bitsize:5.}: 0u8 .. 31u8
-  MONTH* {.bitsize:4.}: 0u8 .. 15u8
-  YEAR* {.bitsize:6.}: 0u8 .. 63u8
+  SECOND* {.bitsize:6.}: 0'u .. 63'u
+  MINUTE* {.bitsize:6.}: 0'u .. 63'u
+  HOUR* {.bitsize:5.}: 0'u .. 31'u
+  DAY* {.bitsize:5.}: 0'u .. 31'u
+  MONTH* {.bitsize:4.}: 0'u .. 15'u
+  YEAR* {.bitsize:6.}: 0'u .. 63'u
 
 type RtcMode2_ALARM_Fields* = object
-  SECOND* {.bitsize:6.}: 0u8 .. 63u8
-  MINUTE* {.bitsize:6.}: 0u8 .. 63u8
-  HOUR* {.bitsize:5.}: 0u8 .. 31u8
-  DAY* {.bitsize:5.}: 0u8 .. 31u8
-  MONTH* {.bitsize:4.}: 0u8 .. 15u8
-  YEAR* {.bitsize:6.}: 0u8 .. 63u8
+  SECOND* {.bitsize:6.}: 0'u .. 63'u
+  MINUTE* {.bitsize:6.}: 0'u .. 63'u
+  HOUR* {.bitsize:5.}: 0'u .. 31'u
+  DAY* {.bitsize:5.}: 0'u .. 31'u
+  MONTH* {.bitsize:4.}: 0'u .. 15'u
+  YEAR* {.bitsize:6.}: 0'u .. 63'u
 
 type RtcMode2_MASK_Fields* = object
-  SEL* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  SEL* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
 
 type RtcMode1_CTRL_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  MODE* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
-  PRESCALER* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
+  MODE* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
+  PRESCALER* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
 
 type RtcMode1_READREQ_Fields* = object
-  ADDR* {.bitsize:6.}: 0u8 .. 63u8
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  ADDR* {.bitsize:6.}: 0'u .. 63'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
   RCONT* {.bitsize:1.}: bool
   RREQ* {.bitsize:1.}: bool
 
@@ -6948,54 +6948,54 @@ type RtcMode1_EVCTRL_Fields* = object
   PEREO7* {.bitsize:1.}: bool
   CMPEO0* {.bitsize:1.}: bool
   CMPEO1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
   OVFEO* {.bitsize:1.}: bool
 
 type RtcMode1_INTENCLR_Fields* = object
   CMP0* {.bitsize:1.}: bool
   CMP1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   SYNCRDY* {.bitsize:1.}: bool
   OVF* {.bitsize:1.}: bool
 
 type RtcMode1_INTENSET_Fields* = object
   CMP0* {.bitsize:1.}: bool
   CMP1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   SYNCRDY* {.bitsize:1.}: bool
   OVF* {.bitsize:1.}: bool
 
 type RtcMode1_INTFLAG_Fields* = object
   CMP0* {.bitsize:1.}: bool
   CMP1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   SYNCRDY* {.bitsize:1.}: bool
   OVF* {.bitsize:1.}: bool
 
 type RtcMode1_STATUS_Fields* = object
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
   SYNCBUSY* {.bitsize:1.}: bool
 
 type RtcMode1_DBGCTRL_Fields* = object
   DBGRUN* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type RtcMode1_FREQCORR_Fields* = object
-  VALUE* {.bitsize:7.}: 0u8 .. 127u8
+  VALUE* {.bitsize:7.}: 0'u .. 127'u
   SIGN* {.bitsize:1.}: bool
 
 type RtcMode0_CTRL_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  MODE* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  MODE* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   MATCHCLR* {.bitsize:1.}: bool
-  PRESCALER* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
+  PRESCALER* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
 
 type RtcMode0_READREQ_Fields* = object
-  ADDR* {.bitsize:6.}: 0u8 .. 63u8
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  ADDR* {.bitsize:6.}: 0'u .. 63'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
   RCONT* {.bitsize:1.}: bool
   RREQ* {.bitsize:1.}: bool
 
@@ -7009,37 +7009,37 @@ type RtcMode0_EVCTRL_Fields* = object
   PEREO6* {.bitsize:1.}: bool
   PEREO7* {.bitsize:1.}: bool
   CMPEO0* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
   OVFEO* {.bitsize:1.}: bool
 
 type RtcMode0_INTENCLR_Fields* = object
   CMP0* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
   SYNCRDY* {.bitsize:1.}: bool
   OVF* {.bitsize:1.}: bool
 
 type RtcMode0_INTENSET_Fields* = object
   CMP0* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
   SYNCRDY* {.bitsize:1.}: bool
   OVF* {.bitsize:1.}: bool
 
 type RtcMode0_INTFLAG_Fields* = object
   CMP0* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
   SYNCRDY* {.bitsize:1.}: bool
   OVF* {.bitsize:1.}: bool
 
 type RtcMode0_STATUS_Fields* = object
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
   SYNCBUSY* {.bitsize:1.}: bool
 
 type RtcMode0_DBGCTRL_Fields* = object
   DBGRUN* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type RtcMode0_FREQCORR_Fields* = object
-  VALUE* {.bitsize:7.}: 0u8 .. 127u8
+  VALUE* {.bitsize:7.}: 0'u .. 127'u
   SIGN* {.bitsize:1.}: bool
 
 type RtcMode2_CTRL_MODE* {.pure.} = enum
@@ -7536,44 +7536,44 @@ template modifyIt*(reg: RtcMode0_COMP_Type, op: untyped): untyped =
 type SercomUsart_CTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  MODE* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  MODE* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   RUNSTDBY* {.bitsize:1.}: bool
   IBON* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
-  SAMPR* {.bitsize:3.}: 0u8 .. 7u8
-  TXPO* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED2 {.bitsize:2.}: 0u8 .. 3u8
-  RXPO* {.bitsize:2.}: 0u8 .. 3u8
-  SAMPA* {.bitsize:2.}: 0u8 .. 3u8
-  FORM* {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
+  SAMPR* {.bitsize:3.}: 0'u .. 7'u
+  TXPO* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED2 {.bitsize:2.}: 0'u .. 3'u
+  RXPO* {.bitsize:2.}: 0'u .. 3'u
+  SAMPA* {.bitsize:2.}: 0'u .. 3'u
+  FORM* {.bitsize:4.}: 0'u .. 15'u
   CMODE* {.bitsize:1.}: bool
   CPOL* {.bitsize:1.}: bool
   DORD* {.bitsize:1.}: bool
   RESERVED3 {.bitsize:1.}: bool
 
 type SercomUsart_CTRLB_Fields* = object
-  CHSIZE* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  CHSIZE* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   SBMODE* {.bitsize:1.}: bool
   RESERVED1 {.bitsize:1.}: bool
   COLDEN* {.bitsize:1.}: bool
   SFDE* {.bitsize:1.}: bool
   ENC* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED2 {.bitsize:2.}: 0'u .. 3'u
   PMODE* {.bitsize:1.}: bool
-  RESERVED3 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED3 {.bitsize:2.}: 0'u .. 3'u
   TXEN* {.bitsize:1.}: bool
   RXEN* {.bitsize:1.}: bool
-  RESERVED4 {.bitsize:14.}: 0u16 .. 16383u16
+  RESERVED4 {.bitsize:14.}: 0'u .. 16383'u
 
 type SercomUsart_BAUD_FRAC_MODE_Fields* = object
-  BAUD* {.bitsize:13.}: 0u16 .. 8191u16
-  FP* {.bitsize:3.}: 0u8 .. 7u8
+  BAUD* {.bitsize:13.}: 0'u .. 8191'u
+  FP* {.bitsize:3.}: 0'u .. 7'u
 
 type SercomUsart_BAUD_FRACFP_MODE_Fields* = object
-  BAUD* {.bitsize:13.}: 0u16 .. 8191u16
-  FP* {.bitsize:3.}: 0u8 .. 7u8
+  BAUD* {.bitsize:13.}: 0'u .. 8191'u
+  FP* {.bitsize:3.}: 0'u .. 7'u
 
 type SercomUsart_INTENCLR_Fields* = object
   DRE* {.bitsize:1.}: bool
@@ -7612,59 +7612,59 @@ type SercomUsart_STATUS_Fields* = object
   CTS* {.bitsize:1.}: bool
   ISF* {.bitsize:1.}: bool
   COLL* {.bitsize:1.}: bool
-  RESERVED {.bitsize:10.}: 0u16 .. 1023u16
+  RESERVED {.bitsize:10.}: 0'u .. 1023'u
 
 type SercomUsart_SYNCBUSY_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
   CTRLB* {.bitsize:1.}: bool
-  RESERVED {.bitsize:29.}: 0u32 .. 536870911u32
+  RESERVED {.bitsize:29.}: 0'u .. 536870911'u
 
 type SercomUsart_DATA_Fields* = object
-  DATA* {.bitsize:9.}: 0u16 .. 511u16
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  DATA* {.bitsize:9.}: 0'u .. 511'u
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type SercomUsart_DBGCTRL_Fields* = object
   DBGSTOP* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type SercomSpi_CTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  MODE* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  MODE* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   RUNSTDBY* {.bitsize:1.}: bool
   IBON* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:7.}: 0u8 .. 127u8
-  DOPO* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED2 {.bitsize:2.}: 0u8 .. 3u8
-  DIPO* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED3 {.bitsize:2.}: 0u8 .. 3u8
-  FORM* {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED1 {.bitsize:7.}: 0'u .. 127'u
+  DOPO* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED2 {.bitsize:2.}: 0'u .. 3'u
+  DIPO* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED3 {.bitsize:2.}: 0'u .. 3'u
+  FORM* {.bitsize:4.}: 0'u .. 15'u
   CPHA* {.bitsize:1.}: bool
   CPOL* {.bitsize:1.}: bool
   DORD* {.bitsize:1.}: bool
   RESERVED4 {.bitsize:1.}: bool
 
 type SercomSpi_CTRLB_Fields* = object
-  CHSIZE* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  CHSIZE* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   PLOADEN* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   SSDE* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED2 {.bitsize:3.}: 0'u .. 7'u
   MSSEN* {.bitsize:1.}: bool
-  AMODE* {.bitsize:2.}: 0u8 .. 3u8
+  AMODE* {.bitsize:2.}: 0'u .. 3'u
   RESERVED3 {.bitsize:1.}: bool
   RXEN* {.bitsize:1.}: bool
-  RESERVED4 {.bitsize:14.}: 0u16 .. 16383u16
+  RESERVED4 {.bitsize:14.}: 0'u .. 16383'u
 
 type SercomSpi_INTENCLR_Fields* = object
   DRE* {.bitsize:1.}: bool
   TXC* {.bitsize:1.}: bool
   RXC* {.bitsize:1.}: bool
   SSL* {.bitsize:1.}: bool
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   ERROR* {.bitsize:1.}: bool
 
 type SercomSpi_INTENSET_Fields* = object
@@ -7672,7 +7672,7 @@ type SercomSpi_INTENSET_Fields* = object
   TXC* {.bitsize:1.}: bool
   RXC* {.bitsize:1.}: bool
   SSL* {.bitsize:1.}: bool
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   ERROR* {.bitsize:1.}: bool
 
 type SercomSpi_INTFLAG_Fields* = object
@@ -7680,83 +7680,83 @@ type SercomSpi_INTFLAG_Fields* = object
   TXC* {.bitsize:1.}: bool
   RXC* {.bitsize:1.}: bool
   SSL* {.bitsize:1.}: bool
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   ERROR* {.bitsize:1.}: bool
 
 type SercomSpi_STATUS_Fields* = object
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   BUFOVF* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:13.}: 0u16 .. 8191u16
+  RESERVED1 {.bitsize:13.}: 0'u .. 8191'u
 
 type SercomSpi_SYNCBUSY_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
   CTRLB* {.bitsize:1.}: bool
-  RESERVED {.bitsize:29.}: 0u32 .. 536870911u32
+  RESERVED {.bitsize:29.}: 0'u .. 536870911'u
 
 type SercomSpi_ADDR_Fields* = object
-  ADDR* {.bitsize:8.}: 0u8 .. 255u8
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
-  ADDRMASK* {.bitsize:8.}: 0u8 .. 255u8
-  RESERVED1 {.bitsize:8.}: 0u8 .. 255u8
+  ADDR* {.bitsize:8.}: 0'u .. 255'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
+  ADDRMASK* {.bitsize:8.}: 0'u .. 255'u
+  RESERVED1 {.bitsize:8.}: 0'u .. 255'u
 
 type SercomSpi_DATA_Fields* = object
-  DATA* {.bitsize:9.}: 0u16 .. 511u16
-  RESERVED {.bitsize:23.}: 0u32 .. 8388607u32
+  DATA* {.bitsize:9.}: 0'u .. 511'u
+  RESERVED {.bitsize:23.}: 0'u .. 8388607'u
 
 type SercomSpi_DBGCTRL_Fields* = object
   DBGSTOP* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type SercomI2cs_CTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  MODE* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  MODE* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   RUNSTDBY* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:8.}: 0u8 .. 255u8
+  RESERVED1 {.bitsize:8.}: 0'u .. 255'u
   PINOUT* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:3.}: 0u8 .. 7u8
-  SDAHOLD* {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED2 {.bitsize:3.}: 0'u .. 7'u
+  SDAHOLD* {.bitsize:2.}: 0'u .. 3'u
   RESERVED3 {.bitsize:1.}: bool
   SEXTTOEN* {.bitsize:1.}: bool
-  SPEED* {.bitsize:2.}: 0u8 .. 3u8
+  SPEED* {.bitsize:2.}: 0'u .. 3'u
   RESERVED4 {.bitsize:1.}: bool
   SCLSM* {.bitsize:1.}: bool
-  RESERVED5 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED5 {.bitsize:2.}: 0'u .. 3'u
   LOWTOUTEN* {.bitsize:1.}: bool
   RESERVED6 {.bitsize:1.}: bool
 
 type SercomI2cs_CTRLB_Fields* = object
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
   SMEN* {.bitsize:1.}: bool
   GCMD* {.bitsize:1.}: bool
   AACKEN* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
-  AMODE* {.bitsize:2.}: 0u8 .. 3u8
-  CMD* {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
+  AMODE* {.bitsize:2.}: 0'u .. 3'u
+  CMD* {.bitsize:2.}: 0'u .. 3'u
   ACKACT* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:13.}: 0u16 .. 8191u16
+  RESERVED2 {.bitsize:13.}: 0'u .. 8191'u
 
 type SercomI2cs_INTENCLR_Fields* = object
   PREC* {.bitsize:1.}: bool
   AMATCH* {.bitsize:1.}: bool
   DRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   ERROR* {.bitsize:1.}: bool
 
 type SercomI2cs_INTENSET_Fields* = object
   PREC* {.bitsize:1.}: bool
   AMATCH* {.bitsize:1.}: bool
   DRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   ERROR* {.bitsize:1.}: bool
 
 type SercomI2cs_INTFLAG_Fields* = object
   PREC* {.bitsize:1.}: bool
   AMATCH* {.bitsize:1.}: bool
   DRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   ERROR* {.bitsize:1.}: bool
 
 type SercomI2cs_STATUS_Fields* = object
@@ -7771,72 +7771,72 @@ type SercomI2cs_STATUS_Fields* = object
   RESERVED1 {.bitsize:1.}: bool
   SEXTTOUT* {.bitsize:1.}: bool
   HS* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED2 {.bitsize:5.}: 0'u .. 31'u
 
 type SercomI2cs_SYNCBUSY_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  RESERVED {.bitsize:30.}: 0u32 .. 1073741823u32
+  RESERVED {.bitsize:30.}: 0'u .. 1073741823'u
 
 type SercomI2cs_ADDR_Fields* = object
   GENCEN* {.bitsize:1.}: bool
-  ADDR* {.bitsize:10.}: 0u16 .. 1023u16
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  ADDR* {.bitsize:10.}: 0'u .. 1023'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   TENBITEN* {.bitsize:1.}: bool
   RESERVED1 {.bitsize:1.}: bool
-  ADDRMASK* {.bitsize:10.}: 0u16 .. 1023u16
-  RESERVED2 {.bitsize:5.}: 0u8 .. 31u8
+  ADDRMASK* {.bitsize:10.}: 0'u .. 1023'u
+  RESERVED2 {.bitsize:5.}: 0'u .. 31'u
 
 type SercomI2cm_CTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  MODE* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  MODE* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   RUNSTDBY* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:8.}: 0u8 .. 255u8
+  RESERVED1 {.bitsize:8.}: 0'u .. 255'u
   PINOUT* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:3.}: 0u8 .. 7u8
-  SDAHOLD* {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED2 {.bitsize:3.}: 0'u .. 7'u
+  SDAHOLD* {.bitsize:2.}: 0'u .. 3'u
   MEXTTOEN* {.bitsize:1.}: bool
   SEXTTOEN* {.bitsize:1.}: bool
-  SPEED* {.bitsize:2.}: 0u8 .. 3u8
+  SPEED* {.bitsize:2.}: 0'u .. 3'u
   RESERVED3 {.bitsize:1.}: bool
   SCLSM* {.bitsize:1.}: bool
-  INACTOUT* {.bitsize:2.}: 0u8 .. 3u8
+  INACTOUT* {.bitsize:2.}: 0'u .. 3'u
   LOWTOUTEN* {.bitsize:1.}: bool
   RESERVED4 {.bitsize:1.}: bool
 
 type SercomI2cm_CTRLB_Fields* = object
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
   SMEN* {.bitsize:1.}: bool
   QCEN* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:6.}: 0u8 .. 63u8
-  CMD* {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:6.}: 0'u .. 63'u
+  CMD* {.bitsize:2.}: 0'u .. 3'u
   ACKACT* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:13.}: 0u16 .. 8191u16
+  RESERVED2 {.bitsize:13.}: 0'u .. 8191'u
 
 type SercomI2cm_BAUD_Fields* = object
-  BAUD* {.bitsize:8.}: 0u8 .. 255u8
-  BAUDLOW* {.bitsize:8.}: 0u8 .. 255u8
-  HSBAUD* {.bitsize:8.}: 0u8 .. 255u8
-  HSBAUDLOW* {.bitsize:8.}: 0u8 .. 255u8
+  BAUD* {.bitsize:8.}: 0'u .. 255'u
+  BAUDLOW* {.bitsize:8.}: 0'u .. 255'u
+  HSBAUD* {.bitsize:8.}: 0'u .. 255'u
+  HSBAUDLOW* {.bitsize:8.}: 0'u .. 255'u
 
 type SercomI2cm_INTENCLR_Fields* = object
   MB* {.bitsize:1.}: bool
   SB* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
   ERROR* {.bitsize:1.}: bool
 
 type SercomI2cm_INTENSET_Fields* = object
   MB* {.bitsize:1.}: bool
   SB* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
   ERROR* {.bitsize:1.}: bool
 
 type SercomI2cm_INTFLAG_Fields* = object
   MB* {.bitsize:1.}: bool
   SB* {.bitsize:1.}: bool
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
   ERROR* {.bitsize:1.}: bool
 
 type SercomI2cm_STATUS_Fields* = object
@@ -7844,32 +7844,32 @@ type SercomI2cm_STATUS_Fields* = object
   ARBLOST* {.bitsize:1.}: bool
   RXNACK* {.bitsize:1.}: bool
   RESERVED {.bitsize:1.}: bool
-  BUSSTATE* {.bitsize:2.}: 0u8 .. 3u8
+  BUSSTATE* {.bitsize:2.}: 0'u .. 3'u
   LOWTOUT* {.bitsize:1.}: bool
   CLKHOLD* {.bitsize:1.}: bool
   MEXTTOUT* {.bitsize:1.}: bool
   SEXTTOUT* {.bitsize:1.}: bool
   LENERR* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED1 {.bitsize:5.}: 0'u .. 31'u
 
 type SercomI2cm_SYNCBUSY_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
   SYSOP* {.bitsize:1.}: bool
-  RESERVED {.bitsize:29.}: 0u32 .. 536870911u32
+  RESERVED {.bitsize:29.}: 0'u .. 536870911'u
 
 type SercomI2cm_ADDR_Fields* = object
-  ADDR* {.bitsize:11.}: 0u16 .. 2047u16
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  ADDR* {.bitsize:11.}: 0'u .. 2047'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   LENEN* {.bitsize:1.}: bool
   HS* {.bitsize:1.}: bool
   TENBITEN* {.bitsize:1.}: bool
-  LEN* {.bitsize:8.}: 0u8 .. 255u8
-  RESERVED1 {.bitsize:8.}: 0u8 .. 255u8
+  LEN* {.bitsize:8.}: 0'u .. 255'u
+  RESERVED1 {.bitsize:8.}: 0'u .. 255'u
 
 type SercomI2cm_DBGCTRL_Fields* = object
   DBGSTOP* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type SercomUsart_CTRLA_MODE* {.pure.} = enum
   USART_EXT_CLK = 0x0,
@@ -8420,11 +8420,11 @@ type SYSCTRL_INTENCLR_Fields* = object
   BOD33RDY* {.bitsize:1.}: bool
   BOD33DET* {.bitsize:1.}: bool
   B33SRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   DPLLLCKR* {.bitsize:1.}: bool
   DPLLLCKF* {.bitsize:1.}: bool
   DPLLLTO* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:14.}: 0u16 .. 16383u16
+  RESERVED1 {.bitsize:14.}: 0'u .. 16383'u
 
 type SYSCTRL_INTENSET_Fields* = object
   XOSCRDY* {.bitsize:1.}: bool
@@ -8439,11 +8439,11 @@ type SYSCTRL_INTENSET_Fields* = object
   BOD33RDY* {.bitsize:1.}: bool
   BOD33DET* {.bitsize:1.}: bool
   B33SRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   DPLLLCKR* {.bitsize:1.}: bool
   DPLLLCKF* {.bitsize:1.}: bool
   DPLLLTO* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:14.}: 0u16 .. 16383u16
+  RESERVED1 {.bitsize:14.}: 0'u .. 16383'u
 
 type SYSCTRL_INTFLAG_Fields* = object
   XOSCRDY* {.bitsize:1.}: bool
@@ -8458,11 +8458,11 @@ type SYSCTRL_INTFLAG_Fields* = object
   BOD33RDY* {.bitsize:1.}: bool
   BOD33DET* {.bitsize:1.}: bool
   B33SRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   DPLLLCKR* {.bitsize:1.}: bool
   DPLLLCKF* {.bitsize:1.}: bool
   DPLLLTO* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:14.}: 0u16 .. 16383u16
+  RESERVED1 {.bitsize:14.}: 0'u .. 16383'u
 
 type SYSCTRL_PCLKSR_Fields* = object
   XOSCRDY* {.bitsize:1.}: bool
@@ -8477,22 +8477,22 @@ type SYSCTRL_PCLKSR_Fields* = object
   BOD33RDY* {.bitsize:1.}: bool
   BOD33DET* {.bitsize:1.}: bool
   B33SRDY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   DPLLLCKR* {.bitsize:1.}: bool
   DPLLLCKF* {.bitsize:1.}: bool
   DPLLLTO* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:14.}: 0u16 .. 16383u16
+  RESERVED1 {.bitsize:14.}: 0'u .. 16383'u
 
 type SYSCTRL_XOSC_Fields* = object
   RESERVED {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
   XTALEN* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
   RUNSTDBY* {.bitsize:1.}: bool
   ONDEMAND* {.bitsize:1.}: bool
-  GAIN* {.bitsize:3.}: 0u8 .. 7u8
+  GAIN* {.bitsize:3.}: 0'u .. 7'u
   AMPGC* {.bitsize:1.}: bool
-  STARTUP* {.bitsize:4.}: 0u8 .. 15u8
+  STARTUP* {.bitsize:4.}: 0'u .. 15'u
 
 type SYSCTRL_XOSC32K_Fields* = object
   RESERVED {.bitsize:1.}: bool
@@ -8503,42 +8503,42 @@ type SYSCTRL_XOSC32K_Fields* = object
   AAMPEN* {.bitsize:1.}: bool
   RUNSTDBY* {.bitsize:1.}: bool
   ONDEMAND* {.bitsize:1.}: bool
-  STARTUP* {.bitsize:3.}: 0u8 .. 7u8
+  STARTUP* {.bitsize:3.}: 0'u .. 7'u
   RESERVED1 {.bitsize:1.}: bool
   WRTLOCK* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED2 {.bitsize:3.}: 0'u .. 7'u
 
 type SYSCTRL_OSC32K_Fields* = object
   RESERVED {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
   EN32K* {.bitsize:1.}: bool
   EN1K* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   RUNSTDBY* {.bitsize:1.}: bool
   ONDEMAND* {.bitsize:1.}: bool
-  STARTUP* {.bitsize:3.}: 0u8 .. 7u8
+  STARTUP* {.bitsize:3.}: 0'u .. 7'u
   RESERVED2 {.bitsize:1.}: bool
   WRTLOCK* {.bitsize:1.}: bool
-  RESERVED3 {.bitsize:3.}: 0u8 .. 7u8
-  CALIB* {.bitsize:7.}: 0u8 .. 127u8
-  RESERVED4 {.bitsize:9.}: 0u16 .. 511u16
+  RESERVED3 {.bitsize:3.}: 0'u .. 7'u
+  CALIB* {.bitsize:7.}: 0'u .. 127'u
+  RESERVED4 {.bitsize:9.}: 0'u .. 511'u
 
 type SYSCTRL_OSCULP32K_Fields* = object
-  CALIB* {.bitsize:5.}: 0u8 .. 31u8
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  CALIB* {.bitsize:5.}: 0'u .. 31'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   WRTLOCK* {.bitsize:1.}: bool
 
 type SYSCTRL_OSC8M_Fields* = object
   RESERVED {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
   RUNSTDBY* {.bitsize:1.}: bool
   ONDEMAND* {.bitsize:1.}: bool
-  PRESC* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED2 {.bitsize:6.}: 0u8 .. 63u8
-  CALIB* {.bitsize:12.}: 0u16 .. 4095u16
-  RESERVED3 {.bitsize:2.}: 0u8 .. 3u8
-  FRANGE* {.bitsize:2.}: 0u8 .. 3u8
+  PRESC* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED2 {.bitsize:6.}: 0'u .. 63'u
+  CALIB* {.bitsize:12.}: 0'u .. 4095'u
+  RESERVED3 {.bitsize:2.}: 0'u .. 3'u
+  FRANGE* {.bitsize:2.}: 0'u .. 3'u
 
 type SYSCTRL_DFLLCTRL_Fields* = object
   RESERVED {.bitsize:1.}: bool
@@ -8553,84 +8553,84 @@ type SYSCTRL_DFLLCTRL_Fields* = object
   QLDIS* {.bitsize:1.}: bool
   BPLCKC* {.bitsize:1.}: bool
   WAITLOCK* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
 
 type SYSCTRL_DFLLVAL_Fields* = object
-  FINE* {.bitsize:10.}: 0u16 .. 1023u16
-  COARSE* {.bitsize:6.}: 0u8 .. 63u8
-  DIFF* {.bitsize:16.}: 0u16 .. 65535u16
+  FINE* {.bitsize:10.}: 0'u .. 1023'u
+  COARSE* {.bitsize:6.}: 0'u .. 63'u
+  DIFF* {.bitsize:16.}: 0'u .. 65535'u
 
 type SYSCTRL_DFLLMUL_Fields* = object
-  MUL* {.bitsize:16.}: 0u16 .. 65535u16
-  FSTEP* {.bitsize:10.}: 0u16 .. 1023u16
-  CSTEP* {.bitsize:6.}: 0u8 .. 63u8
+  MUL* {.bitsize:16.}: 0'u .. 65535'u
+  FSTEP* {.bitsize:10.}: 0'u .. 1023'u
+  CSTEP* {.bitsize:6.}: 0'u .. 63'u
 
 type SYSCTRL_DFLLSYNC_Fields* = object
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
   READREQ* {.bitsize:1.}: bool
 
 type SYSCTRL_BOD33_Fields* = object
   RESERVED {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
   HYST* {.bitsize:1.}: bool
-  ACTION* {.bitsize:2.}: 0u8 .. 3u8
+  ACTION* {.bitsize:2.}: 0'u .. 3'u
   RESERVED1 {.bitsize:1.}: bool
   RUNSTDBY* {.bitsize:1.}: bool
   RESERVED2 {.bitsize:1.}: bool
   MODE* {.bitsize:1.}: bool
   CEN* {.bitsize:1.}: bool
-  RESERVED3 {.bitsize:2.}: 0u8 .. 3u8
-  PSEL* {.bitsize:4.}: 0u8 .. 15u8
-  LEVEL* {.bitsize:6.}: 0u8 .. 63u8
-  RESERVED4 {.bitsize:10.}: 0u16 .. 1023u16
+  RESERVED3 {.bitsize:2.}: 0'u .. 3'u
+  PSEL* {.bitsize:4.}: 0'u .. 15'u
+  LEVEL* {.bitsize:6.}: 0'u .. 63'u
+  RESERVED4 {.bitsize:10.}: 0'u .. 1023'u
 
 type SYSCTRL_VREG_Fields* = object
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
   RUNSTDBY* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED1 {.bitsize:6.}: 0'u .. 63'u
   FORCELDO* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED2 {.bitsize:2.}: 0'u .. 3'u
 
 type SYSCTRL_VREF_Fields* = object
   RESERVED {.bitsize:1.}: bool
   TSEN* {.bitsize:1.}: bool
   BGOUTEN* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:13.}: 0u16 .. 8191u16
-  CALIB* {.bitsize:11.}: 0u16 .. 2047u16
-  RESERVED2 {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED1 {.bitsize:13.}: 0'u .. 8191'u
+  CALIB* {.bitsize:11.}: 0'u .. 2047'u
+  RESERVED2 {.bitsize:5.}: 0'u .. 31'u
 
 type SYSCTRL_DPLLCTRLA_Fields* = object
   RESERVED {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
   RUNSTDBY* {.bitsize:1.}: bool
   ONDEMAND* {.bitsize:1.}: bool
 
 type SYSCTRL_DPLLRATIO_Fields* = object
-  LDR* {.bitsize:12.}: 0u16 .. 4095u16
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
-  LDRFRAC* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED1 {.bitsize:12.}: 0u16 .. 4095u16
+  LDR* {.bitsize:12.}: 0'u .. 4095'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
+  LDRFRAC* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED1 {.bitsize:12.}: 0'u .. 4095'u
 
 type SYSCTRL_DPLLCTRLB_Fields* = object
-  FILTER* {.bitsize:2.}: 0u8 .. 3u8
+  FILTER* {.bitsize:2.}: 0'u .. 3'u
   LPEN* {.bitsize:1.}: bool
   WUF* {.bitsize:1.}: bool
-  REFCLK* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
-  LTIME* {.bitsize:3.}: 0u8 .. 7u8
+  REFCLK* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
+  LTIME* {.bitsize:3.}: 0'u .. 7'u
   RESERVED1 {.bitsize:1.}: bool
   LBYPASS* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:3.}: 0u8 .. 7u8
-  DIV* {.bitsize:11.}: 0u16 .. 2047u16
-  RESERVED3 {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED2 {.bitsize:3.}: 0'u .. 7'u
+  DIV* {.bitsize:11.}: 0'u .. 2047'u
+  RESERVED3 {.bitsize:5.}: 0'u .. 31'u
 
 type SYSCTRL_DPLLSTATUS_Fields* = object
   LOCK* {.bitsize:1.}: bool
   CLKRDY* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
   DIV* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
 
 type SYSCTRL_XOSC_GAIN* {.pure.} = enum
   x0 = 0x0,
@@ -8917,18 +8917,18 @@ template read*(reg: SYSCTRL_DPLLSTATUS_Type): SYSCTRL_DPLLSTATUS_Fields =
 type TcCount32_CTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  MODE* {.bitsize:2.}: 0u8 .. 3u8
+  MODE* {.bitsize:2.}: 0'u .. 3'u
   RESERVED {.bitsize:1.}: bool
-  WAVEGEN* {.bitsize:2.}: 0u8 .. 3u8
+  WAVEGEN* {.bitsize:2.}: 0'u .. 3'u
   RESERVED1 {.bitsize:1.}: bool
-  PRESCALER* {.bitsize:3.}: 0u8 .. 7u8
+  PRESCALER* {.bitsize:3.}: 0'u .. 7'u
   RUNSTDBY* {.bitsize:1.}: bool
-  PRESCSYNC* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED2 {.bitsize:2.}: 0u8 .. 3u8
+  PRESCSYNC* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED2 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount32_READREQ_Fields* = object
-  ADDR* {.bitsize:5.}: 0u8 .. 31u8
-  RESERVED {.bitsize:9.}: 0u16 .. 511u16
+  ADDR* {.bitsize:5.}: 0'u .. 31'u
+  RESERVED {.bitsize:9.}: 0'u .. 511'u
   RCONT* {.bitsize:1.}: bool
   RREQ* {.bitsize:1.}: bool
 
@@ -8936,39 +8936,39 @@ type TcCount32_CTRLBCLR_Fields* = object
   DIR* {.bitsize:1.}: bool
   RESERVED {.bitsize:1.}: bool
   ONESHOT* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
-  CMD* {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
+  CMD* {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount32_CTRLBSET_Fields* = object
   DIR* {.bitsize:1.}: bool
   RESERVED {.bitsize:1.}: bool
   ONESHOT* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
-  CMD* {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
+  CMD* {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount32_CTRLC_Fields* = object
   INVEN0* {.bitsize:1.}: bool
   INVEN1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   CPTEN0* {.bitsize:1.}: bool
   CPTEN1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount32_DBGCTRL_Fields* = object
   DBGRUN* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type TcCount32_EVCTRL_Fields* = object
-  EVACT* {.bitsize:3.}: 0u8 .. 7u8
+  EVACT* {.bitsize:3.}: 0'u .. 7'u
   RESERVED {.bitsize:1.}: bool
   TCINV* {.bitsize:1.}: bool
   TCEI* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   OVFEO* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED2 {.bitsize:3.}: 0'u .. 7'u
   MCEO0* {.bitsize:1.}: bool
   MCEO1* {.bitsize:1.}: bool
-  RESERVED3 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED3 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount32_INTENCLR_Fields* = object
   OVF* {.bitsize:1.}: bool
@@ -8977,7 +8977,7 @@ type TcCount32_INTENCLR_Fields* = object
   SYNCRDY* {.bitsize:1.}: bool
   MC0* {.bitsize:1.}: bool
   MC1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount32_INTENSET_Fields* = object
   OVF* {.bitsize:1.}: bool
@@ -8986,7 +8986,7 @@ type TcCount32_INTENSET_Fields* = object
   SYNCRDY* {.bitsize:1.}: bool
   MC0* {.bitsize:1.}: bool
   MC1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount32_INTFLAG_Fields* = object
   OVF* {.bitsize:1.}: bool
@@ -8995,30 +8995,30 @@ type TcCount32_INTFLAG_Fields* = object
   SYNCRDY* {.bitsize:1.}: bool
   MC0* {.bitsize:1.}: bool
   MC1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount32_STATUS_Fields* = object
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   STOP* {.bitsize:1.}: bool
   SLAVE* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   SYNCBUSY* {.bitsize:1.}: bool
 
 type TcCount16_CTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  MODE* {.bitsize:2.}: 0u8 .. 3u8
+  MODE* {.bitsize:2.}: 0'u .. 3'u
   RESERVED {.bitsize:1.}: bool
-  WAVEGEN* {.bitsize:2.}: 0u8 .. 3u8
+  WAVEGEN* {.bitsize:2.}: 0'u .. 3'u
   RESERVED1 {.bitsize:1.}: bool
-  PRESCALER* {.bitsize:3.}: 0u8 .. 7u8
+  PRESCALER* {.bitsize:3.}: 0'u .. 7'u
   RUNSTDBY* {.bitsize:1.}: bool
-  PRESCSYNC* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED2 {.bitsize:2.}: 0u8 .. 3u8
+  PRESCSYNC* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED2 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount16_READREQ_Fields* = object
-  ADDR* {.bitsize:5.}: 0u8 .. 31u8
-  RESERVED {.bitsize:9.}: 0u16 .. 511u16
+  ADDR* {.bitsize:5.}: 0'u .. 31'u
+  RESERVED {.bitsize:9.}: 0'u .. 511'u
   RCONT* {.bitsize:1.}: bool
   RREQ* {.bitsize:1.}: bool
 
@@ -9026,39 +9026,39 @@ type TcCount16_CTRLBCLR_Fields* = object
   DIR* {.bitsize:1.}: bool
   RESERVED {.bitsize:1.}: bool
   ONESHOT* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
-  CMD* {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
+  CMD* {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount16_CTRLBSET_Fields* = object
   DIR* {.bitsize:1.}: bool
   RESERVED {.bitsize:1.}: bool
   ONESHOT* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
-  CMD* {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
+  CMD* {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount16_CTRLC_Fields* = object
   INVEN0* {.bitsize:1.}: bool
   INVEN1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   CPTEN0* {.bitsize:1.}: bool
   CPTEN1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount16_DBGCTRL_Fields* = object
   DBGRUN* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type TcCount16_EVCTRL_Fields* = object
-  EVACT* {.bitsize:3.}: 0u8 .. 7u8
+  EVACT* {.bitsize:3.}: 0'u .. 7'u
   RESERVED {.bitsize:1.}: bool
   TCINV* {.bitsize:1.}: bool
   TCEI* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   OVFEO* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED2 {.bitsize:3.}: 0'u .. 7'u
   MCEO0* {.bitsize:1.}: bool
   MCEO1* {.bitsize:1.}: bool
-  RESERVED3 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED3 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount16_INTENCLR_Fields* = object
   OVF* {.bitsize:1.}: bool
@@ -9067,7 +9067,7 @@ type TcCount16_INTENCLR_Fields* = object
   SYNCRDY* {.bitsize:1.}: bool
   MC0* {.bitsize:1.}: bool
   MC1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount16_INTENSET_Fields* = object
   OVF* {.bitsize:1.}: bool
@@ -9076,7 +9076,7 @@ type TcCount16_INTENSET_Fields* = object
   SYNCRDY* {.bitsize:1.}: bool
   MC0* {.bitsize:1.}: bool
   MC1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount16_INTFLAG_Fields* = object
   OVF* {.bitsize:1.}: bool
@@ -9085,30 +9085,30 @@ type TcCount16_INTFLAG_Fields* = object
   SYNCRDY* {.bitsize:1.}: bool
   MC0* {.bitsize:1.}: bool
   MC1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount16_STATUS_Fields* = object
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   STOP* {.bitsize:1.}: bool
   SLAVE* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   SYNCBUSY* {.bitsize:1.}: bool
 
 type TcCount8_CTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  MODE* {.bitsize:2.}: 0u8 .. 3u8
+  MODE* {.bitsize:2.}: 0'u .. 3'u
   RESERVED {.bitsize:1.}: bool
-  WAVEGEN* {.bitsize:2.}: 0u8 .. 3u8
+  WAVEGEN* {.bitsize:2.}: 0'u .. 3'u
   RESERVED1 {.bitsize:1.}: bool
-  PRESCALER* {.bitsize:3.}: 0u8 .. 7u8
+  PRESCALER* {.bitsize:3.}: 0'u .. 7'u
   RUNSTDBY* {.bitsize:1.}: bool
-  PRESCSYNC* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED2 {.bitsize:2.}: 0u8 .. 3u8
+  PRESCSYNC* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED2 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount8_READREQ_Fields* = object
-  ADDR* {.bitsize:5.}: 0u8 .. 31u8
-  RESERVED {.bitsize:9.}: 0u16 .. 511u16
+  ADDR* {.bitsize:5.}: 0'u .. 31'u
+  RESERVED {.bitsize:9.}: 0'u .. 511'u
   RCONT* {.bitsize:1.}: bool
   RREQ* {.bitsize:1.}: bool
 
@@ -9116,39 +9116,39 @@ type TcCount8_CTRLBCLR_Fields* = object
   DIR* {.bitsize:1.}: bool
   RESERVED {.bitsize:1.}: bool
   ONESHOT* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
-  CMD* {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
+  CMD* {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount8_CTRLBSET_Fields* = object
   DIR* {.bitsize:1.}: bool
   RESERVED {.bitsize:1.}: bool
   ONESHOT* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:3.}: 0u8 .. 7u8
-  CMD* {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:3.}: 0'u .. 7'u
+  CMD* {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount8_CTRLC_Fields* = object
   INVEN0* {.bitsize:1.}: bool
   INVEN1* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   CPTEN0* {.bitsize:1.}: bool
   CPTEN1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount8_DBGCTRL_Fields* = object
   DBGRUN* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type TcCount8_EVCTRL_Fields* = object
-  EVACT* {.bitsize:3.}: 0u8 .. 7u8
+  EVACT* {.bitsize:3.}: 0'u .. 7'u
   RESERVED {.bitsize:1.}: bool
   TCINV* {.bitsize:1.}: bool
   TCEI* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   OVFEO* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED2 {.bitsize:3.}: 0'u .. 7'u
   MCEO0* {.bitsize:1.}: bool
   MCEO1* {.bitsize:1.}: bool
-  RESERVED3 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED3 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount8_INTENCLR_Fields* = object
   OVF* {.bitsize:1.}: bool
@@ -9157,7 +9157,7 @@ type TcCount8_INTENCLR_Fields* = object
   SYNCRDY* {.bitsize:1.}: bool
   MC0* {.bitsize:1.}: bool
   MC1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount8_INTENSET_Fields* = object
   OVF* {.bitsize:1.}: bool
@@ -9166,7 +9166,7 @@ type TcCount8_INTENSET_Fields* = object
   SYNCRDY* {.bitsize:1.}: bool
   MC0* {.bitsize:1.}: bool
   MC1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount8_INTFLAG_Fields* = object
   OVF* {.bitsize:1.}: bool
@@ -9175,13 +9175,13 @@ type TcCount8_INTFLAG_Fields* = object
   SYNCRDY* {.bitsize:1.}: bool
   MC0* {.bitsize:1.}: bool
   MC1* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
 
 type TcCount8_STATUS_Fields* = object
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   STOP* {.bitsize:1.}: bool
   SLAVE* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
   SYNCBUSY* {.bitsize:1.}: bool
 
 type TcCount32_CTRLA_MODE* {.pure.} = enum
@@ -9772,33 +9772,33 @@ template modifyIt*(reg: TcCount8_CC_Type, op: untyped): untyped =
 type TCC0_CTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
-  RESOLUTION* {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
+  RESOLUTION* {.bitsize:2.}: 0'u .. 3'u
   RESERVED1 {.bitsize:1.}: bool
-  PRESCALER* {.bitsize:3.}: 0u8 .. 7u8
+  PRESCALER* {.bitsize:3.}: 0'u .. 7'u
   RUNSTDBY* {.bitsize:1.}: bool
-  PRESCSYNC* {.bitsize:2.}: 0u8 .. 3u8
+  PRESCSYNC* {.bitsize:2.}: 0'u .. 3'u
   ALOCK* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:9.}: 0u16 .. 511u16
+  RESERVED2 {.bitsize:9.}: 0'u .. 511'u
   CPTEN0* {.bitsize:1.}: bool
   CPTEN1* {.bitsize:1.}: bool
   CPTEN2* {.bitsize:1.}: bool
   CPTEN3* {.bitsize:1.}: bool
-  RESERVED3 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED3 {.bitsize:4.}: 0'u .. 15'u
 
 type TCC0_CTRLBCLR_Fields* = object
   DIR* {.bitsize:1.}: bool
   LUPD* {.bitsize:1.}: bool
   ONESHOT* {.bitsize:1.}: bool
-  IDXCMD* {.bitsize:2.}: 0u8 .. 3u8
-  CMD* {.bitsize:3.}: 0u8 .. 7u8
+  IDXCMD* {.bitsize:2.}: 0'u .. 3'u
+  CMD* {.bitsize:3.}: 0'u .. 7'u
 
 type TCC0_CTRLBSET_Fields* = object
   DIR* {.bitsize:1.}: bool
   LUPD* {.bitsize:1.}: bool
   ONESHOT* {.bitsize:1.}: bool
-  IDXCMD* {.bitsize:2.}: 0u8 .. 3u8
-  CMD* {.bitsize:3.}: 0u8 .. 7u8
+  IDXCMD* {.bitsize:2.}: 0'u .. 3'u
+  CMD* {.bitsize:3.}: 0'u .. 7'u
 
 type TCC0_SYNCBUSY_Fields* = object
   SWRST* {.bitsize:1.}: bool
@@ -9813,7 +9813,7 @@ type TCC0_SYNCBUSY_Fields* = object
   CC1* {.bitsize:1.}: bool
   CC2* {.bitsize:1.}: bool
   CC3* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   PATTB* {.bitsize:1.}: bool
   WAVEB* {.bitsize:1.}: bool
   PERB* {.bitsize:1.}: bool
@@ -9821,48 +9821,48 @@ type TCC0_SYNCBUSY_Fields* = object
   CCB1* {.bitsize:1.}: bool
   CCB2* {.bitsize:1.}: bool
   CCB3* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:9.}: 0u16 .. 511u16
+  RESERVED1 {.bitsize:9.}: 0'u .. 511'u
 
 type TCC0_FCTRLA_Fields* = object
-  SRC* {.bitsize:2.}: 0u8 .. 3u8
+  SRC* {.bitsize:2.}: 0'u .. 3'u
   RESERVED {.bitsize:1.}: bool
   KEEP* {.bitsize:1.}: bool
   QUAL* {.bitsize:1.}: bool
-  BLANK* {.bitsize:2.}: 0u8 .. 3u8
+  BLANK* {.bitsize:2.}: 0'u .. 3'u
   RESTART* {.bitsize:1.}: bool
-  HALT* {.bitsize:2.}: 0u8 .. 3u8
-  CHSEL* {.bitsize:2.}: 0u8 .. 3u8
-  CAPTURE* {.bitsize:3.}: 0u8 .. 7u8
+  HALT* {.bitsize:2.}: 0'u .. 3'u
+  CHSEL* {.bitsize:2.}: 0'u .. 3'u
+  CAPTURE* {.bitsize:3.}: 0'u .. 7'u
   RESERVED1 {.bitsize:1.}: bool
-  BLANKVAL* {.bitsize:8.}: 0u8 .. 255u8
-  FILTERVAL* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED2 {.bitsize:4.}: 0u8 .. 15u8
+  BLANKVAL* {.bitsize:8.}: 0'u .. 255'u
+  FILTERVAL* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED2 {.bitsize:4.}: 0'u .. 15'u
 
 type TCC0_FCTRLB_Fields* = object
-  SRC* {.bitsize:2.}: 0u8 .. 3u8
+  SRC* {.bitsize:2.}: 0'u .. 3'u
   RESERVED {.bitsize:1.}: bool
   KEEP* {.bitsize:1.}: bool
   QUAL* {.bitsize:1.}: bool
-  BLANK* {.bitsize:2.}: 0u8 .. 3u8
+  BLANK* {.bitsize:2.}: 0'u .. 3'u
   RESTART* {.bitsize:1.}: bool
-  HALT* {.bitsize:2.}: 0u8 .. 3u8
-  CHSEL* {.bitsize:2.}: 0u8 .. 3u8
-  CAPTURE* {.bitsize:3.}: 0u8 .. 7u8
+  HALT* {.bitsize:2.}: 0'u .. 3'u
+  CHSEL* {.bitsize:2.}: 0'u .. 3'u
+  CAPTURE* {.bitsize:3.}: 0'u .. 7'u
   RESERVED1 {.bitsize:1.}: bool
-  BLANKVAL* {.bitsize:8.}: 0u8 .. 255u8
-  FILTERVAL* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED2 {.bitsize:4.}: 0u8 .. 15u8
+  BLANKVAL* {.bitsize:8.}: 0'u .. 255'u
+  FILTERVAL* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED2 {.bitsize:4.}: 0'u .. 15'u
 
 type TCC0_WEXCTRL_Fields* = object
-  OTMX* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  OTMX* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
   DTIEN0* {.bitsize:1.}: bool
   DTIEN1* {.bitsize:1.}: bool
   DTIEN2* {.bitsize:1.}: bool
   DTIEN3* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
-  DTLS* {.bitsize:8.}: 0u8 .. 255u8
-  DTHS* {.bitsize:8.}: 0u8 .. 255u8
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
+  DTLS* {.bitsize:8.}: 0'u .. 255'u
+  DTHS* {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_DRVCTRL_Fields* = object
   NRE0* {.bitsize:1.}: bool
@@ -9889,19 +9889,19 @@ type TCC0_DRVCTRL_Fields* = object
   INVEN5* {.bitsize:1.}: bool
   INVEN6* {.bitsize:1.}: bool
   INVEN7* {.bitsize:1.}: bool
-  FILTERVAL0* {.bitsize:4.}: 0u8 .. 15u8
-  FILTERVAL1* {.bitsize:4.}: 0u8 .. 15u8
+  FILTERVAL0* {.bitsize:4.}: 0'u .. 15'u
+  FILTERVAL1* {.bitsize:4.}: 0'u .. 15'u
 
 type TCC0_DBGCTRL_Fields* = object
   DBGRUN* {.bitsize:1.}: bool
   RESERVED {.bitsize:1.}: bool
   FDDBD* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:5.}: 0u8 .. 31u8
+  RESERVED1 {.bitsize:5.}: 0'u .. 31'u
 
 type TCC0_EVCTRL_Fields* = object
-  EVACT0* {.bitsize:3.}: 0u8 .. 7u8
-  EVACT1* {.bitsize:3.}: 0u8 .. 7u8
-  CNTSEL* {.bitsize:2.}: 0u8 .. 3u8
+  EVACT0* {.bitsize:3.}: 0'u .. 7'u
+  EVACT1* {.bitsize:3.}: 0'u .. 7'u
+  CNTSEL* {.bitsize:2.}: 0'u .. 3'u
   OVFEO* {.bitsize:1.}: bool
   TRGEO* {.bitsize:1.}: bool
   CNTEO* {.bitsize:1.}: bool
@@ -9914,19 +9914,19 @@ type TCC0_EVCTRL_Fields* = object
   MCEI1* {.bitsize:1.}: bool
   MCEI2* {.bitsize:1.}: bool
   MCEI3* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
   MCEO0* {.bitsize:1.}: bool
   MCEO1* {.bitsize:1.}: bool
   MCEO2* {.bitsize:1.}: bool
   MCEO3* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED2 {.bitsize:4.}: 0'u .. 15'u
 
 type TCC0_INTENCLR_Fields* = object
   OVF* {.bitsize:1.}: bool
   TRG* {.bitsize:1.}: bool
   CNT* {.bitsize:1.}: bool
   ERR* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
   DFS* {.bitsize:1.}: bool
   FAULTA* {.bitsize:1.}: bool
   FAULTB* {.bitsize:1.}: bool
@@ -9936,14 +9936,14 @@ type TCC0_INTENCLR_Fields* = object
   MC1* {.bitsize:1.}: bool
   MC2* {.bitsize:1.}: bool
   MC3* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:12.}: 0u16 .. 4095u16
+  RESERVED1 {.bitsize:12.}: 0'u .. 4095'u
 
 type TCC0_INTENSET_Fields* = object
   OVF* {.bitsize:1.}: bool
   TRG* {.bitsize:1.}: bool
   CNT* {.bitsize:1.}: bool
   ERR* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
   DFS* {.bitsize:1.}: bool
   FAULTA* {.bitsize:1.}: bool
   FAULTB* {.bitsize:1.}: bool
@@ -9953,14 +9953,14 @@ type TCC0_INTENSET_Fields* = object
   MC1* {.bitsize:1.}: bool
   MC2* {.bitsize:1.}: bool
   MC3* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:12.}: 0u16 .. 4095u16
+  RESERVED1 {.bitsize:12.}: 0'u .. 4095'u
 
 type TCC0_INTFLAG_Fields* = object
   OVF* {.bitsize:1.}: bool
   TRG* {.bitsize:1.}: bool
   CNT* {.bitsize:1.}: bool
   ERR* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
   DFS* {.bitsize:1.}: bool
   FAULTA* {.bitsize:1.}: bool
   FAULTB* {.bitsize:1.}: bool
@@ -9970,7 +9970,7 @@ type TCC0_INTFLAG_Fields* = object
   MC1* {.bitsize:1.}: bool
   MC2* {.bitsize:1.}: bool
   MC3* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:12.}: 0u16 .. 4095u16
+  RESERVED1 {.bitsize:12.}: 0'u .. 4095'u
 
 type TCC0_STATUS_Fields* = object
   STOP* {.bitsize:1.}: bool
@@ -9993,31 +9993,31 @@ type TCC0_STATUS_Fields* = object
   CCBV1* {.bitsize:1.}: bool
   CCBV2* {.bitsize:1.}: bool
   CCBV3* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
   CMP0* {.bitsize:1.}: bool
   CMP1* {.bitsize:1.}: bool
   CMP2* {.bitsize:1.}: bool
   CMP3* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED2 {.bitsize:4.}: 0'u .. 15'u
 
 type TCC0_COUNT_Fields* = object
-  COUNT* {.bitsize:24.}: 0u32 .. 16777215u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  COUNT* {.bitsize:24.}: 0'u .. 16777215'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_COUNT_DITH4_Fields* = object
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
-  COUNT* {.bitsize:20.}: 0u32 .. 1048575u32
-  RESERVED1 {.bitsize:8.}: 0u8 .. 255u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
+  COUNT* {.bitsize:20.}: 0'u .. 1048575'u
+  RESERVED1 {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_COUNT_DITH5_Fields* = object
-  RESERVED {.bitsize:5.}: 0u8 .. 31u8
-  COUNT* {.bitsize:19.}: 0u32 .. 524287u32
-  RESERVED1 {.bitsize:8.}: 0u8 .. 255u8
+  RESERVED {.bitsize:5.}: 0'u .. 31'u
+  COUNT* {.bitsize:19.}: 0'u .. 524287'u
+  RESERVED1 {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_COUNT_DITH6_Fields* = object
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
-  COUNT* {.bitsize:18.}: 0u32 .. 262143u32
-  RESERVED1 {.bitsize:8.}: 0u8 .. 255u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
+  COUNT* {.bitsize:18.}: 0'u .. 262143'u
+  RESERVED1 {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_PATT_Fields* = object
   PGE0* {.bitsize:1.}: bool
@@ -10038,64 +10038,64 @@ type TCC0_PATT_Fields* = object
   PGV7* {.bitsize:1.}: bool
 
 type TCC0_WAVE_Fields* = object
-  WAVEGEN* {.bitsize:3.}: 0u8 .. 7u8
+  WAVEGEN* {.bitsize:3.}: 0'u .. 7'u
   RESERVED {.bitsize:1.}: bool
-  RAMP* {.bitsize:2.}: 0u8 .. 3u8
+  RAMP* {.bitsize:2.}: 0'u .. 3'u
   RESERVED1 {.bitsize:1.}: bool
   CIPEREN* {.bitsize:1.}: bool
   CICCEN0* {.bitsize:1.}: bool
   CICCEN1* {.bitsize:1.}: bool
   CICCEN2* {.bitsize:1.}: bool
   CICCEN3* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED2 {.bitsize:4.}: 0'u .. 15'u
   POL0* {.bitsize:1.}: bool
   POL1* {.bitsize:1.}: bool
   POL2* {.bitsize:1.}: bool
   POL3* {.bitsize:1.}: bool
-  RESERVED3 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED3 {.bitsize:4.}: 0'u .. 15'u
   SWAP0* {.bitsize:1.}: bool
   SWAP1* {.bitsize:1.}: bool
   SWAP2* {.bitsize:1.}: bool
   SWAP3* {.bitsize:1.}: bool
-  RESERVED4 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED4 {.bitsize:4.}: 0'u .. 15'u
 
 type TCC0_PER_Fields* = object
-  PER* {.bitsize:24.}: 0u32 .. 16777215u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  PER* {.bitsize:24.}: 0'u .. 16777215'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_PER_DITH4_Fields* = object
-  DITHERCY* {.bitsize:4.}: 0u8 .. 15u8
-  PER* {.bitsize:20.}: 0u32 .. 1048575u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  DITHERCY* {.bitsize:4.}: 0'u .. 15'u
+  PER* {.bitsize:20.}: 0'u .. 1048575'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_PER_DITH5_Fields* = object
-  DITHERCY* {.bitsize:5.}: 0u8 .. 31u8
-  PER* {.bitsize:19.}: 0u32 .. 524287u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  DITHERCY* {.bitsize:5.}: 0'u .. 31'u
+  PER* {.bitsize:19.}: 0'u .. 524287'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_PER_DITH6_Fields* = object
-  DITHERCY* {.bitsize:6.}: 0u8 .. 63u8
-  PER* {.bitsize:18.}: 0u32 .. 262143u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  DITHERCY* {.bitsize:6.}: 0'u .. 63'u
+  PER* {.bitsize:18.}: 0'u .. 262143'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_CC_Fields* = object
-  CC* {.bitsize:24.}: 0u32 .. 16777215u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  CC* {.bitsize:24.}: 0'u .. 16777215'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_CC_DITH4_Fields* = object
-  DITHERCY* {.bitsize:4.}: 0u8 .. 15u8
-  CC* {.bitsize:20.}: 0u32 .. 1048575u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  DITHERCY* {.bitsize:4.}: 0'u .. 15'u
+  CC* {.bitsize:20.}: 0'u .. 1048575'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_CC_DITH5_Fields* = object
-  DITHERCY* {.bitsize:5.}: 0u8 .. 31u8
-  CC* {.bitsize:19.}: 0u32 .. 524287u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  DITHERCY* {.bitsize:5.}: 0'u .. 31'u
+  CC* {.bitsize:19.}: 0'u .. 524287'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_CC_DITH6_Fields* = object
-  DITHERCY* {.bitsize:6.}: 0u8 .. 63u8
-  CC* {.bitsize:18.}: 0u32 .. 262143u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  DITHERCY* {.bitsize:6.}: 0'u .. 63'u
+  CC* {.bitsize:18.}: 0'u .. 262143'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_PATTB_Fields* = object
   PGEB0* {.bitsize:1.}: bool
@@ -10116,64 +10116,64 @@ type TCC0_PATTB_Fields* = object
   PGVB7* {.bitsize:1.}: bool
 
 type TCC0_WAVEB_Fields* = object
-  WAVEGENB* {.bitsize:3.}: 0u8 .. 7u8
+  WAVEGENB* {.bitsize:3.}: 0'u .. 7'u
   RESERVED {.bitsize:1.}: bool
-  RAMPB* {.bitsize:2.}: 0u8 .. 3u8
+  RAMPB* {.bitsize:2.}: 0'u .. 3'u
   RESERVED1 {.bitsize:1.}: bool
   CIPERENB* {.bitsize:1.}: bool
   CICCENB0* {.bitsize:1.}: bool
   CICCENB1* {.bitsize:1.}: bool
   CICCENB2* {.bitsize:1.}: bool
   CICCENB3* {.bitsize:1.}: bool
-  RESERVED2 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED2 {.bitsize:4.}: 0'u .. 15'u
   POLB0* {.bitsize:1.}: bool
   POLB1* {.bitsize:1.}: bool
   POLB2* {.bitsize:1.}: bool
   POLB3* {.bitsize:1.}: bool
-  RESERVED3 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED3 {.bitsize:4.}: 0'u .. 15'u
   SWAPB0* {.bitsize:1.}: bool
   SWAPB1* {.bitsize:1.}: bool
   SWAPB2* {.bitsize:1.}: bool
   SWAPB3* {.bitsize:1.}: bool
-  RESERVED4 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED4 {.bitsize:4.}: 0'u .. 15'u
 
 type TCC0_PERB_Fields* = object
-  PERB* {.bitsize:24.}: 0u32 .. 16777215u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  PERB* {.bitsize:24.}: 0'u .. 16777215'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_PERB_DITH4_Fields* = object
-  DITHERCYB* {.bitsize:4.}: 0u8 .. 15u8
-  PERB* {.bitsize:20.}: 0u32 .. 1048575u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  DITHERCYB* {.bitsize:4.}: 0'u .. 15'u
+  PERB* {.bitsize:20.}: 0'u .. 1048575'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_PERB_DITH5_Fields* = object
-  DITHERCYB* {.bitsize:5.}: 0u8 .. 31u8
-  PERB* {.bitsize:19.}: 0u32 .. 524287u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  DITHERCYB* {.bitsize:5.}: 0'u .. 31'u
+  PERB* {.bitsize:19.}: 0'u .. 524287'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_PERB_DITH6_Fields* = object
-  DITHERCYB* {.bitsize:6.}: 0u8 .. 63u8
-  PERB* {.bitsize:18.}: 0u32 .. 262143u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  DITHERCYB* {.bitsize:6.}: 0'u .. 63'u
+  PERB* {.bitsize:18.}: 0'u .. 262143'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_CCB_Fields* = object
-  CCB* {.bitsize:24.}: 0u32 .. 16777215u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  CCB* {.bitsize:24.}: 0'u .. 16777215'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_CCB_DITH4_Fields* = object
-  DITHERCYB* {.bitsize:4.}: 0u8 .. 15u8
-  CCB* {.bitsize:20.}: 0u32 .. 1048575u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  DITHERCYB* {.bitsize:4.}: 0'u .. 15'u
+  CCB* {.bitsize:20.}: 0'u .. 1048575'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_CCB_DITH5_Fields* = object
-  DITHERCYB* {.bitsize:5.}: 0u8 .. 31u8
-  CCB* {.bitsize:19.}: 0u32 .. 524287u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  DITHERCYB* {.bitsize:5.}: 0'u .. 31'u
+  CCB* {.bitsize:19.}: 0'u .. 524287'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_CCB_DITH6_Fields* = object
-  DITHERCYB* {.bitsize:6.}: 0u8 .. 63u8
-  CCB* {.bitsize:18.}: 0u32 .. 262143u32
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  DITHERCYB* {.bitsize:6.}: 0'u .. 63'u
+  CCB* {.bitsize:18.}: 0'u .. 262143'u
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type TCC0_CTRLA_RESOLUTION* {.pure.} = enum
   NONE = 0x0,
@@ -10792,23 +10792,23 @@ type UsbHost_CTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
   RUNSTDBY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   MODE* {.bitsize:1.}: bool
 
 type UsbHost_SYNCBUSY_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type UsbHost_QOSCTRL_Fields* = object
-  CQOS* {.bitsize:2.}: 0u8 .. 3u8
-  DQOS* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  CQOS* {.bitsize:2.}: 0'u .. 3'u
+  DQOS* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
 
 type UsbHost_CTRLB_Fields* = object
   RESERVED {.bitsize:1.}: bool
   RESUME* {.bitsize:1.}: bool
-  SPDCONF* {.bitsize:2.}: 0u8 .. 3u8
+  SPDCONF* {.bitsize:2.}: 0'u .. 3'u
   RESERVED1 {.bitsize:1.}: bool
   TSTJ* {.bitsize:1.}: bool
   TSTK* {.bitsize:1.}: bool
@@ -10817,30 +10817,30 @@ type UsbHost_CTRLB_Fields* = object
   BUSRESET* {.bitsize:1.}: bool
   VBUSOK* {.bitsize:1.}: bool
   L1RESUME* {.bitsize:1.}: bool
-  RESERVED3 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED3 {.bitsize:4.}: 0'u .. 15'u
 
 type UsbHost_HSOFC_Fields* = object
-  FLENC* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED {.bitsize:3.}: 0u8 .. 7u8
+  FLENC* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED {.bitsize:3.}: 0'u .. 7'u
   FLENCE* {.bitsize:1.}: bool
 
 type UsbHost_STATUS_Fields* = object
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
-  SPEED* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
-  LINESTATE* {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
+  SPEED* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
+  LINESTATE* {.bitsize:2.}: 0'u .. 3'u
 
 type UsbHost_FSMSTATUS_Fields* = object
-  FSMSTATE* {.bitsize:7.}: 0u8 .. 127u8
+  FSMSTATE* {.bitsize:7.}: 0'u .. 127'u
   RESERVED {.bitsize:1.}: bool
 
 type UsbHost_FNUM_Fields* = object
-  MFNUM* {.bitsize:3.}: 0u8 .. 7u8
-  FNUM* {.bitsize:11.}: 0u16 .. 2047u16
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  MFNUM* {.bitsize:3.}: 0'u .. 7'u
+  FNUM* {.bitsize:11.}: 0'u .. 2047'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
 
 type UsbHost_INTENCLR_Fields* = object
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   HSOF* {.bitsize:1.}: bool
   RST* {.bitsize:1.}: bool
   WAKEUP* {.bitsize:1.}: bool
@@ -10849,10 +10849,10 @@ type UsbHost_INTENCLR_Fields* = object
   RAMACER* {.bitsize:1.}: bool
   DCONN* {.bitsize:1.}: bool
   DDISC* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED1 {.bitsize:6.}: 0'u .. 63'u
 
 type UsbHost_INTENSET_Fields* = object
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   HSOF* {.bitsize:1.}: bool
   RST* {.bitsize:1.}: bool
   WAKEUP* {.bitsize:1.}: bool
@@ -10861,10 +10861,10 @@ type UsbHost_INTENSET_Fields* = object
   RAMACER* {.bitsize:1.}: bool
   DCONN* {.bitsize:1.}: bool
   DDISC* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED1 {.bitsize:6.}: 0'u .. 63'u
 
 type UsbHost_INTFLAG_Fields* = object
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
   HSOF* {.bitsize:1.}: bool
   RST* {.bitsize:1.}: bool
   WAKEUP* {.bitsize:1.}: bool
@@ -10873,7 +10873,7 @@ type UsbHost_INTFLAG_Fields* = object
   RAMACER* {.bitsize:1.}: bool
   DCONN* {.bitsize:1.}: bool
   DDISC* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED1 {.bitsize:6.}: 0'u .. 63'u
 
 type UsbHost_PINTSMRY_Fields* = object
   EPINT0* {.bitsize:1.}: bool
@@ -10884,21 +10884,21 @@ type UsbHost_PINTSMRY_Fields* = object
   EPINT5* {.bitsize:1.}: bool
   EPINT6* {.bitsize:1.}: bool
   EPINT7* {.bitsize:1.}: bool
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type UsbHost_PADCAL_Fields* = object
-  TRANSP* {.bitsize:5.}: 0u8 .. 31u8
+  TRANSP* {.bitsize:5.}: 0'u .. 31'u
   RESERVED {.bitsize:1.}: bool
-  TRANSN* {.bitsize:5.}: 0u8 .. 31u8
+  TRANSN* {.bitsize:5.}: 0'u .. 31'u
   RESERVED1 {.bitsize:1.}: bool
-  TRIM* {.bitsize:3.}: 0u8 .. 7u8
+  TRIM* {.bitsize:3.}: 0'u .. 7'u
   RESERVED2 {.bitsize:1.}: bool
 
 type UsbHost_PCFG_Fields* = object
-  PTOKEN* {.bitsize:2.}: 0u8 .. 3u8
+  PTOKEN* {.bitsize:2.}: 0'u .. 3'u
   BK* {.bitsize:1.}: bool
-  PTYPE* {.bitsize:3.}: 0u8 .. 7u8
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  PTYPE* {.bitsize:3.}: 0'u .. 7'u
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
 
 type UsbHost_PSTATUSCLR_Fields* = object
   DTGL* {.bitsize:1.}: bool
@@ -10937,7 +10937,7 @@ type UsbHost_PINTFLAG_Fields* = object
   PERR* {.bitsize:1.}: bool
   TXSTP* {.bitsize:1.}: bool
   STALL* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
 
 type UsbHost_PINTENCLR_Fields* = object
   TRCPT0* {.bitsize:1.}: bool
@@ -10946,7 +10946,7 @@ type UsbHost_PINTENCLR_Fields* = object
   PERR* {.bitsize:1.}: bool
   TXSTP* {.bitsize:1.}: bool
   STALL* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
 
 type UsbHost_PINTENSET_Fields* = object
   TRCPT0* {.bitsize:1.}: bool
@@ -10955,55 +10955,55 @@ type UsbHost_PINTENSET_Fields* = object
   PERR* {.bitsize:1.}: bool
   TXSTP* {.bitsize:1.}: bool
   STALL* {.bitsize:1.}: bool
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
 
 type UsbDevice_CTRLA_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
   RUNSTDBY* {.bitsize:1.}: bool
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
   MODE* {.bitsize:1.}: bool
 
 type UsbDevice_SYNCBUSY_Fields* = object
   SWRST* {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type UsbDevice_QOSCTRL_Fields* = object
-  CQOS* {.bitsize:2.}: 0u8 .. 3u8
-  DQOS* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  CQOS* {.bitsize:2.}: 0'u .. 3'u
+  DQOS* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
 
 type UsbDevice_CTRLB_Fields* = object
   DETACH* {.bitsize:1.}: bool
   UPRSM* {.bitsize:1.}: bool
-  SPDCONF* {.bitsize:2.}: 0u8 .. 3u8
+  SPDCONF* {.bitsize:2.}: 0'u .. 3'u
   NREPLY* {.bitsize:1.}: bool
   TSTJ* {.bitsize:1.}: bool
   TSTK* {.bitsize:1.}: bool
   TSTPCKT* {.bitsize:1.}: bool
   OPMODE2* {.bitsize:1.}: bool
   GNAK* {.bitsize:1.}: bool
-  LPMHDSK* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  LPMHDSK* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
 
 type UsbDevice_DADD_Fields* = object
-  DADD* {.bitsize:7.}: 0u8 .. 127u8
+  DADD* {.bitsize:7.}: 0'u .. 127'u
   ADDEN* {.bitsize:1.}: bool
 
 type UsbDevice_STATUS_Fields* = object
-  RESERVED {.bitsize:2.}: 0u8 .. 3u8
-  SPEED* {.bitsize:2.}: 0u8 .. 3u8
-  RESERVED1 {.bitsize:2.}: 0u8 .. 3u8
-  LINESTATE* {.bitsize:2.}: 0u8 .. 3u8
+  RESERVED {.bitsize:2.}: 0'u .. 3'u
+  SPEED* {.bitsize:2.}: 0'u .. 3'u
+  RESERVED1 {.bitsize:2.}: 0'u .. 3'u
+  LINESTATE* {.bitsize:2.}: 0'u .. 3'u
 
 type UsbDevice_FSMSTATUS_Fields* = object
-  FSMSTATE* {.bitsize:7.}: 0u8 .. 127u8
+  FSMSTATE* {.bitsize:7.}: 0'u .. 127'u
   RESERVED {.bitsize:1.}: bool
 
 type UsbDevice_FNUM_Fields* = object
-  MFNUM* {.bitsize:3.}: 0u8 .. 7u8
-  FNUM* {.bitsize:11.}: 0u16 .. 2047u16
+  MFNUM* {.bitsize:3.}: 0'u .. 7'u
+  FNUM* {.bitsize:11.}: 0'u .. 2047'u
   RESERVED {.bitsize:1.}: bool
   FNCERR* {.bitsize:1.}: bool
 
@@ -11018,7 +11018,7 @@ type UsbDevice_INTENCLR_Fields* = object
   RAMACER* {.bitsize:1.}: bool
   LPMNYET* {.bitsize:1.}: bool
   LPMSUSP* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type UsbDevice_INTENSET_Fields* = object
   SUSPEND* {.bitsize:1.}: bool
@@ -11031,7 +11031,7 @@ type UsbDevice_INTENSET_Fields* = object
   RAMACER* {.bitsize:1.}: bool
   LPMNYET* {.bitsize:1.}: bool
   LPMSUSP* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type UsbDevice_INTFLAG_Fields* = object
   SUSPEND* {.bitsize:1.}: bool
@@ -11044,7 +11044,7 @@ type UsbDevice_INTFLAG_Fields* = object
   RAMACER* {.bitsize:1.}: bool
   LPMNYET* {.bitsize:1.}: bool
   LPMSUSP* {.bitsize:1.}: bool
-  RESERVED {.bitsize:6.}: 0u8 .. 63u8
+  RESERVED {.bitsize:6.}: 0'u .. 63'u
 
 type UsbDevice_EPINTSMRY_Fields* = object
   EPINT0* {.bitsize:1.}: bool
@@ -11055,20 +11055,20 @@ type UsbDevice_EPINTSMRY_Fields* = object
   EPINT5* {.bitsize:1.}: bool
   EPINT6* {.bitsize:1.}: bool
   EPINT7* {.bitsize:1.}: bool
-  RESERVED {.bitsize:8.}: 0u8 .. 255u8
+  RESERVED {.bitsize:8.}: 0'u .. 255'u
 
 type UsbDevice_PADCAL_Fields* = object
-  TRANSP* {.bitsize:5.}: 0u8 .. 31u8
+  TRANSP* {.bitsize:5.}: 0'u .. 31'u
   RESERVED {.bitsize:1.}: bool
-  TRANSN* {.bitsize:5.}: 0u8 .. 31u8
+  TRANSN* {.bitsize:5.}: 0'u .. 31'u
   RESERVED1 {.bitsize:1.}: bool
-  TRIM* {.bitsize:3.}: 0u8 .. 7u8
+  TRIM* {.bitsize:3.}: 0'u .. 7'u
   RESERVED2 {.bitsize:1.}: bool
 
 type UsbDevice_EPCFG_Fields* = object
-  EPTYPE0* {.bitsize:3.}: 0u8 .. 7u8
+  EPTYPE0* {.bitsize:3.}: 0'u .. 7'u
   RESERVED {.bitsize:1.}: bool
-  EPTYPE1* {.bitsize:3.}: 0u8 .. 7u8
+  EPTYPE1* {.bitsize:3.}: 0'u .. 7'u
   NYETDIS* {.bitsize:1.}: bool
 
 type UsbDevice_EPSTATUSCLR_Fields* = object
@@ -11604,31 +11604,31 @@ type WDT_CTRL_Fields* = object
   RESERVED {.bitsize:1.}: bool
   ENABLE* {.bitsize:1.}: bool
   WEN* {.bitsize:1.}: bool
-  RESERVED1 {.bitsize:4.}: 0u8 .. 15u8
+  RESERVED1 {.bitsize:4.}: 0'u .. 15'u
   ALWAYSON* {.bitsize:1.}: bool
 
 type WDT_CONFIG_Fields* = object
-  PER* {.bitsize:4.}: 0u8 .. 15u8
-  WINDOW* {.bitsize:4.}: 0u8 .. 15u8
+  PER* {.bitsize:4.}: 0'u .. 15'u
+  WINDOW* {.bitsize:4.}: 0'u .. 15'u
 
 type WDT_EWCTRL_Fields* = object
-  EWOFFSET* {.bitsize:4.}: 0u8 .. 15u8
-  RESERVED {.bitsize:4.}: 0u8 .. 15u8
+  EWOFFSET* {.bitsize:4.}: 0'u .. 15'u
+  RESERVED {.bitsize:4.}: 0'u .. 15'u
 
 type WDT_INTENCLR_Fields* = object
   EW* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type WDT_INTENSET_Fields* = object
   EW* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type WDT_INTFLAG_Fields* = object
   EW* {.bitsize:1.}: bool
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
 
 type WDT_STATUS_Fields* = object
-  RESERVED {.bitsize:7.}: 0u8 .. 127u8
+  RESERVED {.bitsize:7.}: 0'u .. 127'u
   SYNCBUSY* {.bitsize:1.}: bool
 
 type WDT_CONFIG_PER* {.pure.} = enum

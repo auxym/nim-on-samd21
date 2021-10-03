@@ -3,7 +3,7 @@ import std/strformat
 import std/strutils
 
 const
-  ProjName = "main"
+  ProjName = "src/main"
 
   # samd21a, samd21b, samd21c, samd21d
   SAMD21_Family* = "samd21a"
