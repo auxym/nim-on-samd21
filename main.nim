@@ -6,7 +6,7 @@ import std/volatile
 include startup
 
 const
-  SystemCoreClock = 1_000_000 # Default SAM D21 clock is 1 MHz
+  SystemCoreClock = 1_000_000
   LED_Pin = Pin(group: pgA, num: 17)
   Button1_Pin = Pin(group: pgA, num: 22)
 
@@ -23,6 +23,19 @@ proc delay(millis: int) =
     stopTicks = if millis > (int.high - start): int.high else: start + millis
   while state.msticks < stopTicks:
     discard
+
+proc flashLed(times: Positive) =
+  const td = 100
+
+  LED_pin.setLow
+  delay td
+  for i in 0..<times:
+    LED_pin.setHigh
+    delay td
+    LED_pin.setLow
+    delay td
+
+  delay 1000
 
 proc initClock() =
   # Set the correct number of wait states for 48 MHz @ 3.3v */
@@ -44,10 +57,11 @@ proc initClock() =
   while not SYSCTRL.PCLKSR.read().XOSC32KRDY: discard
 
   # Set GCLK1 divider to 1
-  GCLK.GENDIV.write(GCLK_GENDIV_Fields(
+  GCLK.GENDIV.write GCLK_GENDIV_Fields(
     ID: 1,
     DIV: 1
-  ))
+  )
+  while GCLK.STATUS.read().SYNCBUSY: discard
 
   # Set up GCLK1 to use XOSC32K as source
   GCLK.GENCTRL.write(GCLK_GENCTRL_Fields(
@@ -93,14 +107,16 @@ proc initClock() =
     FUSES_DFLL48M_COARSE_CAL_ADDR = NVMCTRL_OTP4 + 4
     FUSES_DFLL48M_COARSE_CAL_Pos = 26
     FUSES_DFLL48M_COARSE_CAL_Msk = 0x3F'u shl FUSES_DFLL48M_COARSE_CAL_Pos
-    FUSES_DFLL48M_COARSE_CAL_val =
+
+  let coarse = uint8(
       (
         volatileLoad(cast[ptr uint32](FUSES_DFLL48M_COARSE_CAL_ADDR)) and
         FUSES_DFLL48M_COARSE_CAL_Msk
       ) shr FUSES_DFLL48M_COARSE_CAL_Pos
+  )
 
   SYSCTRL.DFLLVAL.modifyIt:
-    it.COARSE = FUSES_DFLL48M_COARSE_CAL_val
+    it.COARSE = coarse
 
   # sync
   while not SYSCTRL.PCLKSR.read().DFLLRDY: discard
@@ -127,15 +143,15 @@ proc initClock() =
   while GCLK.STATUS.read().SYNCBUSY: discard
 
 proc main(): int {.exportc.} =
-  init_clock()
-
   # Configure SysTick timer to fire an interrupt every millisecond
   discard SysTick_Config(SystemCoreClock div 1000)
 
+  LED_pin.setLow
+  init_clock()
+  LED_pin.setHigh
+
   LED_pin.configure(pdOutput)
   Button1_Pin.configure(pdInput, pullUp=true)
-
-  LED_pin.setHigh
 
   # Not used, just to show an example of getting an input pin state
   let pressed: bool = not Button1_Pin.read()
