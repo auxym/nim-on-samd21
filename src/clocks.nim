@@ -18,7 +18,9 @@ proc initDfll48m*() =
   # Enable external 32K crystal oscillator.
   # Write a full value to the XOSC32K register.
   # Unspecified bitfields use the reset value as default.
-  SYSCTRL.XOSC32K.write(XTALEN=true, STARTUP=0x7, EN32K=true)
+  SYSCTRL.XOSC32K.write(
+    XTALEN=true, STARTUP=0x7, EN32K=true, ONDEMAND=false
+  )
 
   # This has to be a separate write as per datasheet section 17.6.3
   SYSCTRL.XOSC32K.modifyIt:
@@ -46,7 +48,7 @@ proc initDfll48m*() =
   # the DFLLCTRL register must be manually reset to this value before
   # configuration.
   while not SYSCTRL.PCLKSR.read().DFLLRDY: discard
-  SYSCTRL.DFLLCTRL.write(ENABLE=true)
+  SYSCTRL.DFLLCTRL.write(ENABLE=true, ONDEMAND=false)
   while not SYSCTRL.PCLKSR.read().DFLLRDY: discard
 
   # Set up the DFLL  multiplier. This tells the DFLL to multiply the 32.768 kHz

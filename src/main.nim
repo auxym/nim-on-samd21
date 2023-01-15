@@ -9,7 +9,7 @@ import device/device
 compileStartup
 
 const
-  SystemCoreClock = 1_000_000
+  SystemCoreClock = 48_000_000
   LED_Pin = Pin(group: pgA, num: 17)
   Button1_Pin = Pin(group: pgA, num: 22)
 
