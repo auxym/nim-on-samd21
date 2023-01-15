@@ -28,24 +28,22 @@ macro configure*(pn: static[Pin], dir: static[PinDirection],
   result = newTree(nnkStmtList)
   let
     cfgReg = newIdentNode("PINCFG" & $pn.group.ord & "_" & $pn.num)
-    pinBit = newLit(1'u32 shl pn.num)
-    muxEn = newLit(muxFcn != muxNone)
+    pinBit = 1'u32 shl pn.num
+    muxEn = muxFcn != muxNone
 
   case dir:
   of pdInput:
-    let
-      dirReg = groupReg("DIRCLR", pn.group)
-      pullUpLit = newLit(pullUp)
+    let dirReg = groupReg("DIRCLR", pn.group)
     result.add:
-        genAst(dirReg, cfgReg, muxEn, pullUpLit):
+        genAst(dirReg, cfgReg, muxEn, pullUp, pinBit):
           PORT.dirReg.write(pinBit)
-          PORT.cfgReg.write(PMUXEN=muxEn, INEN=true, PULLEN=pullUpLit)
+          PORT.cfgReg.write(PMUXEN=muxEn, INEN=true, PULLEN=pullUp)
   of pdOutput:
     let dirReg = groupReg("DIRSET", pn.group)
     result.add:
       genAst(dirReg, cfgReg, muxEn, pinBit):
         PORT.dirReg.write(pinBit)
-        PORT.`cfgReg`.write(PMUXEN=`muxEn`, INEN=false, PULLEN=false)
+        PORT.`cfgReg`.write(PMUXEN=muxEn, INEN=false, PULLEN=false)
 
   if muxFcn != muxNone:
     let

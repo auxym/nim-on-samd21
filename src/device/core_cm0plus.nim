@@ -11,6 +11,10 @@ functions in the core_cm0plus.h file:
 
 https://github.com/ARM-software/CMSIS_5/blob/develop/CMSIS/Core/Include/core_cm0plus.h
 
+Or in the CMSIS online docs:
+
+https://arm-software.github.io/CMSIS_5/Core/html/modules.html
+
 ]#
 
 import std/strformat
@@ -22,8 +26,14 @@ const headerStr = fmt"""
 #define __VTOR_PRESENT             {VTOR_PRESENT.int}
 #define __MPU_PRESENT              {MPU_PRESENT.int}
 
-// This makes the C compiler happy but isn't actually used
-typedef enum {{}} IRQn_Type;
+typedef enum {{
+  Reset_IRQn             =  -15, // Reset Vector, invoked on Power up and warm reset
+  NonMaskableInt_IRQn    =  -14, // Non maskable Interrupt, cannot be stopped or preempted
+  HardFault_IRQn         =  -13, // Hard Fault, all classes of Fault
+  SVCall_IRQn            =   -5, // System Service Call via SVC instruction
+  PendSV_IRQn            =   -2, // Pendable request for system service
+  SysTick_IRQn           =   -1 // System Tick Timer
+}} IRQn_Type;
 
 #include "core_cm0plus.h"
 """
