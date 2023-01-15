@@ -13,7 +13,7 @@ proc initDfll48m*() =
   # Set the correct number of wait states for 48 MHz @ 3.3v */
   # Modify a single bitfield of the CTRLB register
   NVMCTRL.CTRLB.modifyIt:
-    it.RWS = NVMCTRL_CTRLB_RWS.HALF
+    it.RWS = 1.NVMCTRL_CTRLB_RWS
 
   # Enable external 32K crystal oscillator.
   # Write a full value to the XOSC32K register.
@@ -32,10 +32,11 @@ proc initDfll48m*() =
   # Note: field "DIV" is renamed to "DIVx" because "div" is a reserved keyword
   # in Nim.
   GCLK.GENDIV.write(ID=1, DIVx=1)
-  while GCLK.STATUS.read().SYNCBUSY: discard
 
   # Set up GCLK1 to use XOSC32K as source
   GCLK.GENCTRL.write(ID=1, SRC=XOSC32K, IDC=true, GENEN=true)
+
+  # Wait for the write to complete
   while(GCLK.STATUS.read().SYNCBUSY): discard
 
   # Set GCLK1 as source for DFLL
@@ -51,6 +52,7 @@ proc initDfll48m*() =
   # Set up the DFLL  multiplier. This tells the DFLL to multiply the 32.768 kHz
   # reference clock to 48 MHz
   SYSCTRL.DFLLMUL.write(MUL=1465, FSTEP=511, CSTEP=31)
+  while not SYSCTRL.PCLKSR.read().DFLLRDY: discard
 
   # Read factory calibration for DFLLVAL.COARSE The fuse addresses are not
   # included in our SVD-generated device module, so the following addresses were
