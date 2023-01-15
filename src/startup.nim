@@ -12,5 +12,6 @@ macro staticCompile(filepath: static[string]): untyped =
     )
   )
 
-const startupFile {.strdefine.}: string = ""
-staticCompile startup_file
+template compileStartup* =
+  const startupFile {.strdefine.}: string = ""
+  staticCompile startup_file

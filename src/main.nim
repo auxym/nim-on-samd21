@@ -1,8 +1,12 @@
-import port
-import clocks
 import std/volatile
 
-include startup
+import port
+import clocks
+import startup
+import device/device
+
+# Generate {.compile.} call for the startup.c file
+compileStartup
 
 const
   SystemCoreClock = 48_000_000

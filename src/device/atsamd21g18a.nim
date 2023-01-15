@@ -10,7 +10,7 @@ when NimMajor < 2:
 
 # Some information about this device.
 const DEVICE* = "ATSAMD21G18A"
-const CM0PLUS_REV* = "r0p1"
+const CM0PLUS_REV* = 0x0001
 const MPU_PRESENT* = false
 const FPU_PRESENT* = false
 const VTOR_PRESENT* = true
@@ -54,6 +54,12 @@ type IRQn* = enum
   irqAC                =   24 # 
   irqDAC               =   25 # 
   irqI2S               =   27 # 
+
+# Bindings for core header. The corresponding CMSIS header file must be found in
+# the C compiler include path. See comment at the top of the following .nim file
+# for details.
+# The following line may be commented out if these bindings are not required.
+include core_cm0plus
 
 ################################################################################
 # Type definitions for peripheral registers
