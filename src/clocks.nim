@@ -11,13 +11,11 @@ proc initDfll48m*() =
   ]#
 
   # Set the correct number of wait states for 48 MHz @ 3.3v */
-  # Modify a single bitfield of the CTRLB register
   NVMCTRL.CTRLB.modifyIt:
     it.RWS = 1.NVMCTRL_CTRLB_RWS
 
   # Enable external 32K crystal oscillator.
-  # Write a full value to the XOSC32K register.
-  # Unspecified bitfields use the reset value as default.
+  # Note: Explicitly set ONDEMAND=false because the argument default is true
   SYSCTRL.XOSC32K.write(
     XTALEN=true, STARTUP=0x7, EN32K=true, ONDEMAND=false
   )
@@ -31,8 +29,6 @@ proc initDfll48m*() =
   while not SYSCTRL.PCLKSR.read().XOSC32KRDY: discard
 
   # Set GCLK1 divider to 1
-  # Note: field "DIV" is renamed to "DIVx" because "div" is a reserved keyword
-  # in Nim.
   GCLK.GENDIV.write(ID=1, DIVx=1)
 
   # Set up GCLK1 to use XOSC32K as source
@@ -47,6 +43,7 @@ proc initDfll48m*() =
   # This works around a quirk in the hardware (errata 1.2.1) -
   # the DFLLCTRL register must be manually reset to this value before
   # configuration.
+  # Note: Explicitly set ONDEMAND=false because the argument default is true
   while not SYSCTRL.PCLKSR.read().DFLLRDY: discard
   SYSCTRL.DFLLCTRL.write(ENABLE=true, ONDEMAND=false)
   while not SYSCTRL.PCLKSR.read().DFLLRDY: discard
