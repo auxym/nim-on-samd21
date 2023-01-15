@@ -11,60 +11,46 @@ proc initDfll48m*() =
   ]#
 
   # Set the correct number of wait states for 48 MHz @ 3.3v */
+  # Modify a single bitfield of the CTRLB register
   NVMCTRL.CTRLB.modifyIt:
-    it.RWS = 1
+    it.RWS = NVMCTRL_CTRLB_RWS.HALF
 
-  # Enable external 32K crystal oscillator
-  SYSCTRL.XOSC32K.write(SYSCTRL_XOSC32K_Fields(
-    XTALEN: true,
-    STARTUP: 0x7,
-    EN32K: true,
-  ))
+  # Enable external 32K crystal oscillator.
+  # Write a full value to the XOSC32K register.
+  # Unspecified bitfields use the reset value as default.
+  SYSCTRL.XOSC32K.write(XTALEN=true, STARTUP=0x7, EN32K=true)
 
   # This has to be a separate write as per datasheet section 17.6.3
   SYSCTRL.XOSC32K.modifyIt:
     it.ENABLE = true
 
   # Wait for the external crystal to be ready
+  # Read the PCLKSR register and get the XORSC32KRDY bitfield from its value
   while not SYSCTRL.PCLKSR.read().XOSC32KRDY: discard
 
   # Set GCLK1 divider to 1
-  GCLK.GENDIV.write GCLK_GENDIV_Fields(
-    ID: 1,
-    DIV: 1
-  )
+  # Note: field "DIV" is renamed to "DIVx" because "div" is a reserved keyword
+  # in Nim.
+  GCLK.GENDIV.write(ID=1, DIVx=1)
   while GCLK.STATUS.read().SYNCBUSY: discard
 
   # Set up GCLK1 to use XOSC32K as source
-  GCLK.GENCTRL.write(GCLK_GENCTRL_Fields(
-    ID: 1,
-    SRC: GCLK_GENCTRL_SRC.XOSC32K.ord,
-    IDC: true,
-    GENEN: true
-  ))
+  GCLK.GENCTRL.write(ID=1, SRC=XOSC32K, IDC=true, GENEN=true)
   while(GCLK.STATUS.read().SYNCBUSY): discard
 
   # Set GCLK1 as source for DFLL
-  GCLK.CLKCTRL.write(GCLK_CLKCTRL_Fields(
-    ID: GCLK_CLKCTRL_ID.DFLL48.ord,
-    GEN: GCLK_CLKCTRL_GEN.GCLK1.ord,
-    CLKEN: true
-  ))
+  GCLK.CLKCTRL.write(ID=idDFLL48, GEN=GCLK1, CLKEN=true)
 
   # This works around a quirk in the hardware (errata 1.2.1) -
   # the DFLLCTRL register must be manually reset to this value before
   # configuration.
   while not SYSCTRL.PCLKSR.read().DFLLRDY: discard
-  SYSCTRL.DFLLCTRL.write SYSCTRL_DFLLCTRL_Fields(ENABLE: true)
+  SYSCTRL.DFLLCTRL.write(ENABLE=true)
   while not SYSCTRL.PCLKSR.read().DFLLRDY: discard
 
   # Set up the DFLL  multiplier. This tells the DFLL to multiply the 32.768 kHz
   # reference clock to 48 MHz
-  SYSCTRL.DFLLMUL.write SYSCTRL_DFLLMUL_Fields(
-    MUL: 1465,
-    FSTEP: 511,
-    CSTEP: 31
-  )
+  SYSCTRL.DFLLMUL.write(MUL=1465, FSTEP=511, CSTEP=31)
 
   # Read factory calibration for DFLLVAL.COARSE The fuse addresses are not
   # included in our SVD-generated device module, so the following addresses were
@@ -75,8 +61,8 @@ proc initDfll48m*() =
   const
     NVMCTRL_OTP4 = 0x00806020'u
     FUSES_DFLL48M_COARSE_CAL_ADDR = NVMCTRL_OTP4 + 4
-    FUSES_DFLL48M_COARSE_CAL_Pos = 26
-    FUSES_DFLL48M_COARSE_CAL_Msk = 0x3F'u shl FUSES_DFLL48M_COARSE_CAL_Pos
+    FUSES_DFLL48M_COARSE_CAL_Pos = 26'u32
+    FUSES_DFLL48M_COARSE_CAL_Msk = 0x3F'u32 shl FUSES_DFLL48M_COARSE_CAL_Pos
 
   let coarse =
     (
@@ -103,10 +89,5 @@ proc initDfll48m*() =
       pclksr = SYSCTRL.PCLKSR.read()
 
   # Finally, setup GCLK0 (main CPU clock) to use DFLL as source
-  GCLK.GENCTRL.write GCLK_GENCTRL_Fields(
-    ID: 0,
-    SRC: GCLK_GENCTRL_SRC.DFLL48M.ord,
-    IDC: true,
-    GENEN: true,
-  )
+  GCLK.GENCTRL.write(ID=0, SRC=DFLL48M, IDC=true, GENEN=true)
   while GCLK.STATUS.read().SYNCBUSY: discard

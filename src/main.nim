@@ -1,5 +1,4 @@
 import port
-import core_cm0plus
 import clocks
 import std/volatile
 
@@ -11,9 +10,11 @@ const
   Button1_Pin = Pin(group: pgA, num: 22)
 
 type AppState = object
-  msticks: int # Should be good for 50 days
+  msticks: int32 # Should be good for 50 days
 var state {.volatile.} = AppState()
 
+## Handler for systick IRQ
+## Overrides weak function in the startup.c file
 proc SysTick_Handler() {.exportc.} =
   state.msticks.inc
 
@@ -47,7 +48,7 @@ proc main(): int {.exportc.} =
   initDfll48m()
   LED_pin.setHigh
 
-  # Not used, just to show an example of getting an input pin state
+  # Configure a GPIO as input and get its state
   Button1_Pin.configure(pdInput, pullUp=true)
   let pressed: bool = not Button1_Pin.read()
 

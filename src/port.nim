@@ -1,9 +1,12 @@
 # HAL for the Port peripheral
 
-import macros
+import std/macros
+import std/genasts
 import device/device
 
-type PortGroup* = enum pgA, pgB
+type PortGroup* = enum
+  pgA = 0
+  pgB = 1
 
 type PinDirection* = enum pdInput, pdOutput
 
@@ -15,17 +18,12 @@ type Pin* = object
   num*: 0..31
 
 func groupReg(name: string, group: PortGroup): NimNode {.compileTime.} =
-  let regNum = case group:
-      of pgA: 0
-      of pgB: 1
-  result = newIdentNode(name & $regNum)
+  newIdentNode(name & $group.int)
 
-macro configure*(
-  pn: static[Pin],
-  dir: static[PinDirection],
-  pullUp: static[bool] = false,
-  muxFcn: static[PortMuxFcn] = muxNone,
-  ): untyped =
+macro configure*(pn: static[Pin], dir: static[PinDirection],
+                 pullUp: static[bool] = false,
+                 muxFcn: static[PortMuxFcn] = muxNone,
+                 ): untyped =
 
   result = newTree(nnkStmtList)
   let
@@ -38,68 +36,51 @@ macro configure*(
     let
       dirReg = groupReg("DIRCLR", pn.group)
       pullUpLit = newLit(pullUp)
-    result.add quote do:
-      PORT.`dirReg`.write(`pinBit`)
-      PORT.`cfgReg`.write(PORT_PINCFG0_Fields(
-        PMUXEN: `muxEn`,
-        INEN: true,
-        PULLEN: `pullUpLit`,
-      ))
+    result.add:
+        genAst(dirReg, cfgReg, muxEn, pullUpLit):
+          PORT.dirReg.write(pinBit)
+          PORT.cfgReg.write(PMUXEN=muxEn, INEN=true, PULLEN=pullUpLit)
   of pdOutput:
     let dirReg = groupReg("DIRSET", pn.group)
-    result.add quote do:
-      PORT.`dirReg`.write(`pinBit`)
-      PORT.`cfgReg`.write(PORT_PINCFG0_Fields(
-        PMUXEN: `muxEn`,
-        INEN: false,
-        PULLEN: false,
-      ))
+    result.add:
+      genAst(dirReg, cfgReg, muxEn, pinBit):
+        PORT.dirReg.write(pinBit)
+        PORT.`cfgReg`.write(PMUXEN=`muxEn`, INEN=false, PULLEN=false)
 
   if muxFcn != muxNone:
     let
       muxReg = newIdentNode("PMUX" & $pn.group.ord & "_" & $(pn.num div 2))
       muxField = newIdentNode(if (pn.num mod 2 == 0): "PMUXE" else: "PMUXO")
       muxVal = newLit(uint8(muxFcn.ord))
-    result.add quote do:
-      PORT.`muxReg`.modifyIt:
-        it.`muxField` = `muxVal`
+    result.add:
+      genAst(muxReg, muxField, muxVal):
+        PORT.muxReg.modifyIt:
+          it.muxField = muxVal
 
 macro setHigh*(pn: static[Pin]): untyped =
   let
-    regNum = case pn.group:
-      of pgA: 0
-      of pgB: 1
-    regLit = newIdentNode("OUTSET" & $regNum)
+    regLit = groupReg("OUTSET", pn.group)
     val = newLit(1'u32 shl pn.num)
-  result = quote do:
-    PORT.`regLit`.write(`val`)
+  genAst(regLit, val):
+    PORT.regLit.write(val)
 
 macro setLow*(pn: static[Pin]): untyped =
   let
-    regNum = case pn.group:
-      of pgA: 0
-      of pgB: 1
-    regLit = newIdentNode("OUTCLR" & $regNum)
+    regLit = groupReg("OUTCLR", pn.group)
     val = newLit(1'u32 shl pn.num)
-  result = quote do:
-    PORT.`regLit`.write(`val`)
+  genAst(regLit, val):
+    PORT.regLit.write(val)
 
 macro toggle*(pn: static[Pin]): untyped =
   let
-    regNum = case pn.group:
-      of pgA: 0
-      of pgB: 1
-    regLit = newIdentNode("OUTTGL" & $regNum)
+    regLit = groupReg("OUTTGL", pn.group)
     val = newLit(1'u32 shl pn.num)
-  result = quote do:
-    PORT.`regLit`.write(`val`)
+  genAst(regLit, val):
+    PORT.regLit.write(val)
 
 macro read*(pn: static[Pin]): bool =
   let
-    regNum = case pn.group:
-      of pgA: 0
-      of pgB: 1
-    regLit = newIdentNode("IN" & $regNum)
+    regLit = groupReg("IN", pn.group)
     maskLit = newLit(1'u32 shl pn.num)
-  quote do:
-    bool(PORT.`regLit`.read() and `maskLit`)
+  genAst(regLit, maskLit):
+    bool(PORT.regLit.read() and maskLit)
