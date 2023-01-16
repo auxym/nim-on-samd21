@@ -1008,7 +1008,7 @@ type RtcMode0_COUNT_Type = object
 type RtcMode0_COMP_Type = object
   loc: uint
 
-type RtcMode0_Type = object
+type RtcMode0 = object
   CTRL*: RtcMode0_CTRL_Type
   READREQ*: RtcMode0_READREQ_Type
   EVCTRL*: RtcMode0_EVCTRL_Type
@@ -1057,7 +1057,7 @@ type RtcMode1_PER_Type = object
 type RtcMode1_COMP_Type = object
   loc: uint
 
-type RtcMode1_Type = object
+type RtcMode1 = object
   CTRL*: RtcMode1_CTRL_Type
   READREQ*: RtcMode1_READREQ_Type
   EVCTRL*: RtcMode1_EVCTRL_Type
@@ -1108,7 +1108,7 @@ type RtcMode2_ALARM_Type = object
 type RtcMode2_MASK_Type = object
   loc: uint
 
-type RtcMode2_Type = object
+type RtcMode2 = object
   CTRL*: RtcMode2_CTRL_Type
   READREQ*: RtcMode2_READREQ_Type
   EVCTRL*: RtcMode2_EVCTRL_Type
@@ -1123,9 +1123,9 @@ type RtcMode2_Type = object
   MASK0*: RtcMode2_MASK_Type
 
 type RTC_Type = object
-  MODE0*: RtcMode0_Type
-  MODE1*: RtcMode1_Type
-  MODE2*: RtcMode2_Type
+  MODE0*: RtcMode0
+  MODE1*: RtcMode1
+  MODE2*: RtcMode2
 
 type SercomI2cm_CTRLA_Type = object
   loc: uint
@@ -1160,7 +1160,7 @@ type SercomI2cm_DATA_Type = object
 type SercomI2cm_DBGCTRL_Type = object
   loc: uint
 
-type SercomI2cm_Type = object
+type SercomI2cm = object
   CTRLA*: SercomI2cm_CTRLA_Type
   CTRLB*: SercomI2cm_CTRLB_Type
   BAUD*: SercomI2cm_BAUD_Type
@@ -1200,7 +1200,7 @@ type SercomI2cs_ADDR_Type = object
 type SercomI2cs_DATA_Type = object
   loc: uint
 
-type SercomI2cs_Type = object
+type SercomI2cs = object
   CTRLA*: SercomI2cs_CTRLA_Type
   CTRLB*: SercomI2cs_CTRLB_Type
   INTENCLR*: SercomI2cs_INTENCLR_Type
@@ -1244,7 +1244,7 @@ type SercomSpi_DATA_Type = object
 type SercomSpi_DBGCTRL_Type = object
   loc: uint
 
-type SercomSpi_Type = object
+type SercomSpi = object
   CTRLA*: SercomSpi_CTRLA_Type
   CTRLB*: SercomSpi_CTRLB_Type
   BAUD*: SercomSpi_BAUD_Type
@@ -1299,7 +1299,7 @@ type SercomUsart_DATA_Type = object
 type SercomUsart_DBGCTRL_Type = object
   loc: uint
 
-type SercomUsart_Type = object
+type SercomUsart = object
   CTRLA*: SercomUsart_CTRLA_Type
   CTRLB*: SercomUsart_CTRLB_Type
   BAUD*: SercomUsart_BAUD_Type
@@ -1316,10 +1316,10 @@ type SercomUsart_Type = object
   DBGCTRL*: SercomUsart_DBGCTRL_Type
 
 type SERCOM0_Type = object
-  I2CM*: SercomI2cm_Type
-  I2CS*: SercomI2cs_Type
-  SPI*: SercomSpi_Type
-  USART*: SercomUsart_Type
+  I2CM*: SercomI2cm
+  I2CS*: SercomI2cs
+  SPI*: SercomSpi
+  USART*: SercomUsart
 
 type SYSCTRL_INTENCLR_Type = object
   loc: uint
@@ -1445,7 +1445,7 @@ type TcCount8_PER_Type = object
 type TcCount8_CC_Type = object
   loc: uint
 
-type TcCount8_Type = object
+type TcCount8 = object
   CTRLA*: TcCount8_CTRLA_Type
   READREQ*: TcCount8_READREQ_Type
   CTRLBCLR*: TcCount8_CTRLBCLR_Type
@@ -1501,7 +1501,7 @@ type TcCount16_COUNT_Type = object
 type TcCount16_CC_Type = object
   loc: uint
 
-type TcCount16_Type = object
+type TcCount16 = object
   CTRLA*: TcCount16_CTRLA_Type
   READREQ*: TcCount16_READREQ_Type
   CTRLBCLR*: TcCount16_CTRLBCLR_Type
@@ -1556,7 +1556,7 @@ type TcCount32_COUNT_Type = object
 type TcCount32_CC_Type = object
   loc: uint
 
-type TcCount32_Type = object
+type TcCount32 = object
   CTRLA*: TcCount32_CTRLA_Type
   READREQ*: TcCount32_READREQ_Type
   CTRLBCLR*: TcCount32_CTRLBCLR_Type
@@ -1573,9 +1573,9 @@ type TcCount32_Type = object
   CC1*: TcCount32_CC_Type
 
 type TC3_Type = object
-  COUNT8*: TcCount8_Type
-  COUNT16*: TcCount16_Type
-  COUNT32*: TcCount32_Type
+  COUNT8*: TcCount8
+  COUNT16*: TcCount16
+  COUNT32*: TcCount32
 
 type TCC0_CTRLA_Type = object
   loc: uint
@@ -1818,7 +1818,7 @@ type UsbDevice_EPINTENCLR_Type = object
 type UsbDevice_EPINTENSET_Type = object
   loc: uint
 
-type UsbDevice_Type = object
+type UsbDevice = object
   CTRLA*: UsbDevice_CTRLA_Type
   SYNCBUSY*: UsbDevice_SYNCBUSY_Type
   QOSCTRL*: UsbDevice_QOSCTRL_Type
@@ -1959,7 +1959,7 @@ type UsbHost_PINTENCLR_Type = object
 type UsbHost_PINTENSET_Type = object
   loc: uint
 
-type UsbHost_Type = object
+type UsbHost = object
   CTRLA*: UsbHost_CTRLA_Type
   SYNCBUSY*: UsbHost_SYNCBUSY_Type
   QOSCTRL*: UsbHost_QOSCTRL_Type
@@ -2041,8 +2041,8 @@ type UsbHost_Type = object
   PINTENSET7*: UsbHost_PINTENSET_Type
 
 type USB_Type = object
-  DEVICE*: UsbDevice_Type
-  HOST*: UsbHost_Type
+  DEVICE*: UsbDevice
+  HOST*: UsbHost
 
 type WDT_CTRL_Type = object
   loc: uint
@@ -2597,7 +2597,7 @@ const PORT_IOBUS* = PORT_Type(
 )
 
 const RTC* = RTC_Type(
-  MODE0: RtcMode0_Type(
+  MODE0: RtcMode0(
     CTRL: RtcMode0_CTRL_Type(loc: 0x40001400),
     READREQ: RtcMode0_READREQ_Type(loc: 0x40001402),
     EVCTRL: RtcMode0_EVCTRL_Type(loc: 0x40001404),
@@ -2610,7 +2610,7 @@ const RTC* = RTC_Type(
     COUNT: RtcMode0_COUNT_Type(loc: 0x40001410),
     COMP0: RtcMode0_COMP_Type(loc: 0x40001418),
   ),
-  MODE1: RtcMode1_Type(
+  MODE1: RtcMode1(
     CTRL: RtcMode1_CTRL_Type(loc: 0x40001400),
     READREQ: RtcMode1_READREQ_Type(loc: 0x40001402),
     EVCTRL: RtcMode1_EVCTRL_Type(loc: 0x40001404),
@@ -2625,7 +2625,7 @@ const RTC* = RTC_Type(
     COMP0: RtcMode1_COMP_Type(loc: 0x40001418),
     COMP1: RtcMode1_COMP_Type(loc: 0x4000141a),
   ),
-  MODE2: RtcMode2_Type(
+  MODE2: RtcMode2(
     CTRL: RtcMode2_CTRL_Type(loc: 0x40001400),
     READREQ: RtcMode2_READREQ_Type(loc: 0x40001402),
     EVCTRL: RtcMode2_EVCTRL_Type(loc: 0x40001404),
@@ -2642,7 +2642,7 @@ const RTC* = RTC_Type(
 )
 
 const SERCOM0* = SERCOM0_Type(
-  I2CM: SercomI2cm_Type(
+  I2CM: SercomI2cm(
     CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42000800),
     CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42000804),
     BAUD: SercomI2cm_BAUD_Type(loc: 0x4200080c),
@@ -2655,7 +2655,7 @@ const SERCOM0* = SERCOM0_Type(
     DATA: SercomI2cm_DATA_Type(loc: 0x42000828),
     DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42000830),
   ),
-  I2CS: SercomI2cs_Type(
+  I2CS: SercomI2cs(
     CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42000800),
     CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42000804),
     INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42000814),
@@ -2666,7 +2666,7 @@ const SERCOM0* = SERCOM0_Type(
     ADDRx: SercomI2cs_ADDR_Type(loc: 0x42000824),
     DATA: SercomI2cs_DATA_Type(loc: 0x42000828),
   ),
-  SPI: SercomSpi_Type(
+  SPI: SercomSpi(
     CTRLA: SercomSpi_CTRLA_Type(loc: 0x42000800),
     CTRLB: SercomSpi_CTRLB_Type(loc: 0x42000804),
     BAUD: SercomSpi_BAUD_Type(loc: 0x4200080c),
@@ -2679,7 +2679,7 @@ const SERCOM0* = SERCOM0_Type(
     DATA: SercomSpi_DATA_Type(loc: 0x42000828),
     DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42000830),
   ),
-  USART: SercomUsart_Type(
+  USART: SercomUsart(
     CTRLA: SercomUsart_CTRLA_Type(loc: 0x42000800),
     CTRLB: SercomUsart_CTRLB_Type(loc: 0x42000804),
     BAUD: SercomUsart_BAUD_Type(loc: 0x4200080c),
@@ -2698,7 +2698,7 @@ const SERCOM0* = SERCOM0_Type(
 )
 
 const SERCOM1* = SERCOM0_Type(
-  I2CM: SercomI2cm_Type(
+  I2CM: SercomI2cm(
     CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42000c00),
     CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42000c04),
     BAUD: SercomI2cm_BAUD_Type(loc: 0x42000c0c),
@@ -2711,7 +2711,7 @@ const SERCOM1* = SERCOM0_Type(
     DATA: SercomI2cm_DATA_Type(loc: 0x42000c28),
     DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42000c30),
   ),
-  I2CS: SercomI2cs_Type(
+  I2CS: SercomI2cs(
     CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42000c00),
     CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42000c04),
     INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42000c14),
@@ -2722,7 +2722,7 @@ const SERCOM1* = SERCOM0_Type(
     ADDRx: SercomI2cs_ADDR_Type(loc: 0x42000c24),
     DATA: SercomI2cs_DATA_Type(loc: 0x42000c28),
   ),
-  SPI: SercomSpi_Type(
+  SPI: SercomSpi(
     CTRLA: SercomSpi_CTRLA_Type(loc: 0x42000c00),
     CTRLB: SercomSpi_CTRLB_Type(loc: 0x42000c04),
     BAUD: SercomSpi_BAUD_Type(loc: 0x42000c0c),
@@ -2735,7 +2735,7 @@ const SERCOM1* = SERCOM0_Type(
     DATA: SercomSpi_DATA_Type(loc: 0x42000c28),
     DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42000c30),
   ),
-  USART: SercomUsart_Type(
+  USART: SercomUsart(
     CTRLA: SercomUsart_CTRLA_Type(loc: 0x42000c00),
     CTRLB: SercomUsart_CTRLB_Type(loc: 0x42000c04),
     BAUD: SercomUsart_BAUD_Type(loc: 0x42000c0c),
@@ -2754,7 +2754,7 @@ const SERCOM1* = SERCOM0_Type(
 )
 
 const SERCOM2* = SERCOM0_Type(
-  I2CM: SercomI2cm_Type(
+  I2CM: SercomI2cm(
     CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42001000),
     CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42001004),
     BAUD: SercomI2cm_BAUD_Type(loc: 0x4200100c),
@@ -2767,7 +2767,7 @@ const SERCOM2* = SERCOM0_Type(
     DATA: SercomI2cm_DATA_Type(loc: 0x42001028),
     DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42001030),
   ),
-  I2CS: SercomI2cs_Type(
+  I2CS: SercomI2cs(
     CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42001000),
     CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42001004),
     INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42001014),
@@ -2778,7 +2778,7 @@ const SERCOM2* = SERCOM0_Type(
     ADDRx: SercomI2cs_ADDR_Type(loc: 0x42001024),
     DATA: SercomI2cs_DATA_Type(loc: 0x42001028),
   ),
-  SPI: SercomSpi_Type(
+  SPI: SercomSpi(
     CTRLA: SercomSpi_CTRLA_Type(loc: 0x42001000),
     CTRLB: SercomSpi_CTRLB_Type(loc: 0x42001004),
     BAUD: SercomSpi_BAUD_Type(loc: 0x4200100c),
@@ -2791,7 +2791,7 @@ const SERCOM2* = SERCOM0_Type(
     DATA: SercomSpi_DATA_Type(loc: 0x42001028),
     DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42001030),
   ),
-  USART: SercomUsart_Type(
+  USART: SercomUsart(
     CTRLA: SercomUsart_CTRLA_Type(loc: 0x42001000),
     CTRLB: SercomUsart_CTRLB_Type(loc: 0x42001004),
     BAUD: SercomUsart_BAUD_Type(loc: 0x4200100c),
@@ -2810,7 +2810,7 @@ const SERCOM2* = SERCOM0_Type(
 )
 
 const SERCOM3* = SERCOM0_Type(
-  I2CM: SercomI2cm_Type(
+  I2CM: SercomI2cm(
     CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42001400),
     CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42001404),
     BAUD: SercomI2cm_BAUD_Type(loc: 0x4200140c),
@@ -2823,7 +2823,7 @@ const SERCOM3* = SERCOM0_Type(
     DATA: SercomI2cm_DATA_Type(loc: 0x42001428),
     DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42001430),
   ),
-  I2CS: SercomI2cs_Type(
+  I2CS: SercomI2cs(
     CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42001400),
     CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42001404),
     INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42001414),
@@ -2834,7 +2834,7 @@ const SERCOM3* = SERCOM0_Type(
     ADDRx: SercomI2cs_ADDR_Type(loc: 0x42001424),
     DATA: SercomI2cs_DATA_Type(loc: 0x42001428),
   ),
-  SPI: SercomSpi_Type(
+  SPI: SercomSpi(
     CTRLA: SercomSpi_CTRLA_Type(loc: 0x42001400),
     CTRLB: SercomSpi_CTRLB_Type(loc: 0x42001404),
     BAUD: SercomSpi_BAUD_Type(loc: 0x4200140c),
@@ -2847,7 +2847,7 @@ const SERCOM3* = SERCOM0_Type(
     DATA: SercomSpi_DATA_Type(loc: 0x42001428),
     DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42001430),
   ),
-  USART: SercomUsart_Type(
+  USART: SercomUsart(
     CTRLA: SercomUsart_CTRLA_Type(loc: 0x42001400),
     CTRLB: SercomUsart_CTRLB_Type(loc: 0x42001404),
     BAUD: SercomUsart_BAUD_Type(loc: 0x4200140c),
@@ -2866,7 +2866,7 @@ const SERCOM3* = SERCOM0_Type(
 )
 
 const SERCOM4* = SERCOM0_Type(
-  I2CM: SercomI2cm_Type(
+  I2CM: SercomI2cm(
     CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42001800),
     CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42001804),
     BAUD: SercomI2cm_BAUD_Type(loc: 0x4200180c),
@@ -2879,7 +2879,7 @@ const SERCOM4* = SERCOM0_Type(
     DATA: SercomI2cm_DATA_Type(loc: 0x42001828),
     DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42001830),
   ),
-  I2CS: SercomI2cs_Type(
+  I2CS: SercomI2cs(
     CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42001800),
     CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42001804),
     INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42001814),
@@ -2890,7 +2890,7 @@ const SERCOM4* = SERCOM0_Type(
     ADDRx: SercomI2cs_ADDR_Type(loc: 0x42001824),
     DATA: SercomI2cs_DATA_Type(loc: 0x42001828),
   ),
-  SPI: SercomSpi_Type(
+  SPI: SercomSpi(
     CTRLA: SercomSpi_CTRLA_Type(loc: 0x42001800),
     CTRLB: SercomSpi_CTRLB_Type(loc: 0x42001804),
     BAUD: SercomSpi_BAUD_Type(loc: 0x4200180c),
@@ -2903,7 +2903,7 @@ const SERCOM4* = SERCOM0_Type(
     DATA: SercomSpi_DATA_Type(loc: 0x42001828),
     DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42001830),
   ),
-  USART: SercomUsart_Type(
+  USART: SercomUsart(
     CTRLA: SercomUsart_CTRLA_Type(loc: 0x42001800),
     CTRLB: SercomUsart_CTRLB_Type(loc: 0x42001804),
     BAUD: SercomUsart_BAUD_Type(loc: 0x4200180c),
@@ -2922,7 +2922,7 @@ const SERCOM4* = SERCOM0_Type(
 )
 
 const SERCOM5* = SERCOM0_Type(
-  I2CM: SercomI2cm_Type(
+  I2CM: SercomI2cm(
     CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42001c00),
     CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42001c04),
     BAUD: SercomI2cm_BAUD_Type(loc: 0x42001c0c),
@@ -2935,7 +2935,7 @@ const SERCOM5* = SERCOM0_Type(
     DATA: SercomI2cm_DATA_Type(loc: 0x42001c28),
     DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42001c30),
   ),
-  I2CS: SercomI2cs_Type(
+  I2CS: SercomI2cs(
     CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42001c00),
     CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42001c04),
     INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42001c14),
@@ -2946,7 +2946,7 @@ const SERCOM5* = SERCOM0_Type(
     ADDRx: SercomI2cs_ADDR_Type(loc: 0x42001c24),
     DATA: SercomI2cs_DATA_Type(loc: 0x42001c28),
   ),
-  SPI: SercomSpi_Type(
+  SPI: SercomSpi(
     CTRLA: SercomSpi_CTRLA_Type(loc: 0x42001c00),
     CTRLB: SercomSpi_CTRLB_Type(loc: 0x42001c04),
     BAUD: SercomSpi_BAUD_Type(loc: 0x42001c0c),
@@ -2959,7 +2959,7 @@ const SERCOM5* = SERCOM0_Type(
     DATA: SercomSpi_DATA_Type(loc: 0x42001c28),
     DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42001c30),
   ),
-  USART: SercomUsart_Type(
+  USART: SercomUsart(
     CTRLA: SercomUsart_CTRLA_Type(loc: 0x42001c00),
     CTRLB: SercomUsart_CTRLB_Type(loc: 0x42001c04),
     BAUD: SercomUsart_BAUD_Type(loc: 0x42001c0c),
@@ -3001,7 +3001,7 @@ const SYSCTRL* = SYSCTRL_Type(
 )
 
 const TC3* = TC3_Type(
-  COUNT8: TcCount8_Type(
+  COUNT8: TcCount8(
     CTRLA: TcCount8_CTRLA_Type(loc: 0x42002c00),
     READREQ: TcCount8_READREQ_Type(loc: 0x42002c02),
     CTRLBCLR: TcCount8_CTRLBCLR_Type(loc: 0x42002c04),
@@ -3018,7 +3018,7 @@ const TC3* = TC3_Type(
     CC0: TcCount8_CC_Type(loc: 0x42002c18),
     CC1: TcCount8_CC_Type(loc: 0x42002c19),
   ),
-  COUNT16: TcCount16_Type(
+  COUNT16: TcCount16(
     CTRLA: TcCount16_CTRLA_Type(loc: 0x42002c00),
     READREQ: TcCount16_READREQ_Type(loc: 0x42002c02),
     CTRLBCLR: TcCount16_CTRLBCLR_Type(loc: 0x42002c04),
@@ -3034,7 +3034,7 @@ const TC3* = TC3_Type(
     CC0: TcCount16_CC_Type(loc: 0x42002c18),
     CC1: TcCount16_CC_Type(loc: 0x42002c1a),
   ),
-  COUNT32: TcCount32_Type(
+  COUNT32: TcCount32(
     CTRLA: TcCount32_CTRLA_Type(loc: 0x42002c00),
     READREQ: TcCount32_READREQ_Type(loc: 0x42002c02),
     CTRLBCLR: TcCount32_CTRLBCLR_Type(loc: 0x42002c04),
@@ -3053,7 +3053,7 @@ const TC3* = TC3_Type(
 )
 
 const TC4* = TC3_Type(
-  COUNT8: TcCount8_Type(
+  COUNT8: TcCount8(
     CTRLA: TcCount8_CTRLA_Type(loc: 0x42003000),
     READREQ: TcCount8_READREQ_Type(loc: 0x42003002),
     CTRLBCLR: TcCount8_CTRLBCLR_Type(loc: 0x42003004),
@@ -3070,7 +3070,7 @@ const TC4* = TC3_Type(
     CC0: TcCount8_CC_Type(loc: 0x42003018),
     CC1: TcCount8_CC_Type(loc: 0x42003019),
   ),
-  COUNT16: TcCount16_Type(
+  COUNT16: TcCount16(
     CTRLA: TcCount16_CTRLA_Type(loc: 0x42003000),
     READREQ: TcCount16_READREQ_Type(loc: 0x42003002),
     CTRLBCLR: TcCount16_CTRLBCLR_Type(loc: 0x42003004),
@@ -3086,7 +3086,7 @@ const TC4* = TC3_Type(
     CC0: TcCount16_CC_Type(loc: 0x42003018),
     CC1: TcCount16_CC_Type(loc: 0x4200301a),
   ),
-  COUNT32: TcCount32_Type(
+  COUNT32: TcCount32(
     CTRLA: TcCount32_CTRLA_Type(loc: 0x42003000),
     READREQ: TcCount32_READREQ_Type(loc: 0x42003002),
     CTRLBCLR: TcCount32_CTRLBCLR_Type(loc: 0x42003004),
@@ -3105,7 +3105,7 @@ const TC4* = TC3_Type(
 )
 
 const TC5* = TC3_Type(
-  COUNT8: TcCount8_Type(
+  COUNT8: TcCount8(
     CTRLA: TcCount8_CTRLA_Type(loc: 0x42003400),
     READREQ: TcCount8_READREQ_Type(loc: 0x42003402),
     CTRLBCLR: TcCount8_CTRLBCLR_Type(loc: 0x42003404),
@@ -3122,7 +3122,7 @@ const TC5* = TC3_Type(
     CC0: TcCount8_CC_Type(loc: 0x42003418),
     CC1: TcCount8_CC_Type(loc: 0x42003419),
   ),
-  COUNT16: TcCount16_Type(
+  COUNT16: TcCount16(
     CTRLA: TcCount16_CTRLA_Type(loc: 0x42003400),
     READREQ: TcCount16_READREQ_Type(loc: 0x42003402),
     CTRLBCLR: TcCount16_CTRLBCLR_Type(loc: 0x42003404),
@@ -3138,7 +3138,7 @@ const TC5* = TC3_Type(
     CC0: TcCount16_CC_Type(loc: 0x42003418),
     CC1: TcCount16_CC_Type(loc: 0x4200341a),
   ),
-  COUNT32: TcCount32_Type(
+  COUNT32: TcCount32(
     CTRLA: TcCount32_CTRLA_Type(loc: 0x42003400),
     READREQ: TcCount32_READREQ_Type(loc: 0x42003402),
     CTRLBCLR: TcCount32_CTRLBCLR_Type(loc: 0x42003404),
@@ -3352,7 +3352,7 @@ const TCC2* = TCC0_Type(
 )
 
 const USB* = USB_Type(
-  DEVICE: UsbDevice_Type(
+  DEVICE: UsbDevice(
     CTRLA: UsbDevice_CTRLA_Type(loc: 0x41005000),
     SYNCBUSY: UsbDevice_SYNCBUSY_Type(loc: 0x41005002),
     QOSCTRL: UsbDevice_QOSCTRL_Type(loc: 0x41005003),
@@ -3424,7 +3424,7 @@ const USB* = USB_Type(
     EPINTENCLR7: UsbDevice_EPINTENCLR_Type(loc: 0x410051e8),
     EPINTENSET7: UsbDevice_EPINTENSET_Type(loc: 0x410051e9),
   ),
-  HOST: UsbHost_Type(
+  HOST: UsbHost(
     CTRLA: UsbHost_CTRLA_Type(loc: 0x41005000),
     SYNCBUSY: UsbHost_SYNCBUSY_Type(loc: 0x41005002),
     QOSCTRL: UsbHost_QOSCTRL_Type(loc: 0x41005003),
