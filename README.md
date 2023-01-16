@@ -123,11 +123,6 @@ Note: for families other than `samd21a`, you will need to get the device support
 pack from https://packs.download.microchip.com/ and extract the `include` and
 `gcc` directories for your family under `./lib/atmel/{family}/`.
 
-## TODO
-
-* Get USB serial working, including the Arduino-style 1200bps touch-to-reset trick
-* Do something actually useful :)
-
 ## License
 
 Released under the terms of the MIT license, see the `LICENSE` file for details.
