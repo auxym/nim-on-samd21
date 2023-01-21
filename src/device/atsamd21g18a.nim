@@ -1008,7 +1008,7 @@ type RtcMode0_COUNT_Type = object
 type RtcMode0_COMP_Type = object
   loc: uint
 
-type RtcMode0 = object
+type RtcMode0_Type = object
   CTRL*: RtcMode0_CTRL_Type
   READREQ*: RtcMode0_READREQ_Type
   EVCTRL*: RtcMode0_EVCTRL_Type
@@ -1057,7 +1057,7 @@ type RtcMode1_PER_Type = object
 type RtcMode1_COMP_Type = object
   loc: uint
 
-type RtcMode1 = object
+type RtcMode1_Type = object
   CTRL*: RtcMode1_CTRL_Type
   READREQ*: RtcMode1_READREQ_Type
   EVCTRL*: RtcMode1_EVCTRL_Type
@@ -1108,7 +1108,7 @@ type RtcMode2_ALARM_Type = object
 type RtcMode2_MASK_Type = object
   loc: uint
 
-type RtcMode2 = object
+type RtcMode2_Type = object
   CTRL*: RtcMode2_CTRL_Type
   READREQ*: RtcMode2_READREQ_Type
   EVCTRL*: RtcMode2_EVCTRL_Type
@@ -1123,9 +1123,9 @@ type RtcMode2 = object
   MASK0*: RtcMode2_MASK_Type
 
 type RTC_Type = object
-  MODE0*: RtcMode0
-  MODE1*: RtcMode1
-  MODE2*: RtcMode2
+  MODE0*: RtcMode0_Type
+  MODE1*: RtcMode1_Type
+  MODE2*: RtcMode2_Type
 
 type SercomI2cm_CTRLA_Type = object
   loc: uint
@@ -1160,7 +1160,7 @@ type SercomI2cm_DATA_Type = object
 type SercomI2cm_DBGCTRL_Type = object
   loc: uint
 
-type SercomI2cm = object
+type SercomI2cm_Type = object
   CTRLA*: SercomI2cm_CTRLA_Type
   CTRLB*: SercomI2cm_CTRLB_Type
   BAUD*: SercomI2cm_BAUD_Type
@@ -1200,7 +1200,7 @@ type SercomI2cs_ADDR_Type = object
 type SercomI2cs_DATA_Type = object
   loc: uint
 
-type SercomI2cs = object
+type SercomI2cs_Type = object
   CTRLA*: SercomI2cs_CTRLA_Type
   CTRLB*: SercomI2cs_CTRLB_Type
   INTENCLR*: SercomI2cs_INTENCLR_Type
@@ -1244,7 +1244,7 @@ type SercomSpi_DATA_Type = object
 type SercomSpi_DBGCTRL_Type = object
   loc: uint
 
-type SercomSpi = object
+type SercomSpi_Type = object
   CTRLA*: SercomSpi_CTRLA_Type
   CTRLB*: SercomSpi_CTRLB_Type
   BAUD*: SercomSpi_BAUD_Type
@@ -1299,7 +1299,7 @@ type SercomUsart_DATA_Type = object
 type SercomUsart_DBGCTRL_Type = object
   loc: uint
 
-type SercomUsart = object
+type SercomUsart_Type = object
   CTRLA*: SercomUsart_CTRLA_Type
   CTRLB*: SercomUsart_CTRLB_Type
   BAUD*: SercomUsart_BAUD_Type
@@ -1316,10 +1316,10 @@ type SercomUsart = object
   DBGCTRL*: SercomUsart_DBGCTRL_Type
 
 type SERCOM0_Type = object
-  I2CM*: SercomI2cm
-  I2CS*: SercomI2cs
-  SPI*: SercomSpi
-  USART*: SercomUsart
+  I2CM*: SercomI2cm_Type
+  I2CS*: SercomI2cs_Type
+  SPI*: SercomSpi_Type
+  USART*: SercomUsart_Type
 
 type SYSCTRL_INTENCLR_Type = object
   loc: uint
@@ -1445,7 +1445,7 @@ type TcCount8_PER_Type = object
 type TcCount8_CC_Type = object
   loc: uint
 
-type TcCount8 = object
+type TcCount8_Type = object
   CTRLA*: TcCount8_CTRLA_Type
   READREQ*: TcCount8_READREQ_Type
   CTRLBCLR*: TcCount8_CTRLBCLR_Type
@@ -1501,7 +1501,7 @@ type TcCount16_COUNT_Type = object
 type TcCount16_CC_Type = object
   loc: uint
 
-type TcCount16 = object
+type TcCount16_Type = object
   CTRLA*: TcCount16_CTRLA_Type
   READREQ*: TcCount16_READREQ_Type
   CTRLBCLR*: TcCount16_CTRLBCLR_Type
@@ -1556,7 +1556,7 @@ type TcCount32_COUNT_Type = object
 type TcCount32_CC_Type = object
   loc: uint
 
-type TcCount32 = object
+type TcCount32_Type = object
   CTRLA*: TcCount32_CTRLA_Type
   READREQ*: TcCount32_READREQ_Type
   CTRLBCLR*: TcCount32_CTRLBCLR_Type
@@ -1573,9 +1573,9 @@ type TcCount32 = object
   CC1*: TcCount32_CC_Type
 
 type TC3_Type = object
-  COUNT8*: TcCount8
-  COUNT16*: TcCount16
-  COUNT32*: TcCount32
+  COUNT8*: TcCount8_Type
+  COUNT16*: TcCount16_Type
+  COUNT32*: TcCount32_Type
 
 type TCC0_CTRLA_Type = object
   loc: uint
@@ -1818,7 +1818,7 @@ type UsbDevice_EPINTENCLR_Type = object
 type UsbDevice_EPINTENSET_Type = object
   loc: uint
 
-type UsbDevice = object
+type UsbDevice_Type = object
   CTRLA*: UsbDevice_CTRLA_Type
   SYNCBUSY*: UsbDevice_SYNCBUSY_Type
   QOSCTRL*: UsbDevice_QOSCTRL_Type
@@ -1959,7 +1959,7 @@ type UsbHost_PINTENCLR_Type = object
 type UsbHost_PINTENSET_Type = object
   loc: uint
 
-type UsbHost = object
+type UsbHost_Type = object
   CTRLA*: UsbHost_CTRLA_Type
   SYNCBUSY*: UsbHost_SYNCBUSY_Type
   QOSCTRL*: UsbHost_QOSCTRL_Type
@@ -2041,8 +2041,8 @@ type UsbHost = object
   PINTENSET7*: UsbHost_PINTENSET_Type
 
 type USB_Type = object
-  DEVICE*: UsbDevice
-  HOST*: UsbHost
+  DEVICE*: UsbDevice_Type
+  HOST*: UsbHost_Type
 
 type WDT_CTRL_Type = object
   loc: uint
@@ -2597,7 +2597,7 @@ const PORT_IOBUS* = PORT_Type(
 )
 
 const RTC* = RTC_Type(
-  MODE0: RtcMode0(
+  MODE0: RtcMode0_Type(
     CTRL: RtcMode0_CTRL_Type(loc: 0x40001400),
     READREQ: RtcMode0_READREQ_Type(loc: 0x40001402),
     EVCTRL: RtcMode0_EVCTRL_Type(loc: 0x40001404),
@@ -2610,7 +2610,7 @@ const RTC* = RTC_Type(
     COUNT: RtcMode0_COUNT_Type(loc: 0x40001410),
     COMP0: RtcMode0_COMP_Type(loc: 0x40001418),
   ),
-  MODE1: RtcMode1(
+  MODE1: RtcMode1_Type(
     CTRL: RtcMode1_CTRL_Type(loc: 0x40001400),
     READREQ: RtcMode1_READREQ_Type(loc: 0x40001402),
     EVCTRL: RtcMode1_EVCTRL_Type(loc: 0x40001404),
@@ -2625,7 +2625,7 @@ const RTC* = RTC_Type(
     COMP0: RtcMode1_COMP_Type(loc: 0x40001418),
     COMP1: RtcMode1_COMP_Type(loc: 0x4000141a),
   ),
-  MODE2: RtcMode2(
+  MODE2: RtcMode2_Type(
     CTRL: RtcMode2_CTRL_Type(loc: 0x40001400),
     READREQ: RtcMode2_READREQ_Type(loc: 0x40001402),
     EVCTRL: RtcMode2_EVCTRL_Type(loc: 0x40001404),
@@ -2642,7 +2642,7 @@ const RTC* = RTC_Type(
 )
 
 const SERCOM0* = SERCOM0_Type(
-  I2CM: SercomI2cm(
+  I2CM: SercomI2cm_Type(
     CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42000800),
     CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42000804),
     BAUD: SercomI2cm_BAUD_Type(loc: 0x4200080c),
@@ -2655,7 +2655,7 @@ const SERCOM0* = SERCOM0_Type(
     DATA: SercomI2cm_DATA_Type(loc: 0x42000828),
     DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42000830),
   ),
-  I2CS: SercomI2cs(
+  I2CS: SercomI2cs_Type(
     CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42000800),
     CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42000804),
     INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42000814),
@@ -2666,7 +2666,7 @@ const SERCOM0* = SERCOM0_Type(
     ADDRx: SercomI2cs_ADDR_Type(loc: 0x42000824),
     DATA: SercomI2cs_DATA_Type(loc: 0x42000828),
   ),
-  SPI: SercomSpi(
+  SPI: SercomSpi_Type(
     CTRLA: SercomSpi_CTRLA_Type(loc: 0x42000800),
     CTRLB: SercomSpi_CTRLB_Type(loc: 0x42000804),
     BAUD: SercomSpi_BAUD_Type(loc: 0x4200080c),
@@ -2679,7 +2679,7 @@ const SERCOM0* = SERCOM0_Type(
     DATA: SercomSpi_DATA_Type(loc: 0x42000828),
     DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42000830),
   ),
-  USART: SercomUsart(
+  USART: SercomUsart_Type(
     CTRLA: SercomUsart_CTRLA_Type(loc: 0x42000800),
     CTRLB: SercomUsart_CTRLB_Type(loc: 0x42000804),
     BAUD: SercomUsart_BAUD_Type(loc: 0x4200080c),
@@ -2698,7 +2698,7 @@ const SERCOM0* = SERCOM0_Type(
 )
 
 const SERCOM1* = SERCOM0_Type(
-  I2CM: SercomI2cm(
+  I2CM: SercomI2cm_Type(
     CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42000c00),
     CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42000c04),
     BAUD: SercomI2cm_BAUD_Type(loc: 0x42000c0c),
@@ -2711,7 +2711,7 @@ const SERCOM1* = SERCOM0_Type(
     DATA: SercomI2cm_DATA_Type(loc: 0x42000c28),
     DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42000c30),
   ),
-  I2CS: SercomI2cs(
+  I2CS: SercomI2cs_Type(
     CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42000c00),
     CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42000c04),
     INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42000c14),
@@ -2722,7 +2722,7 @@ const SERCOM1* = SERCOM0_Type(
     ADDRx: SercomI2cs_ADDR_Type(loc: 0x42000c24),
     DATA: SercomI2cs_DATA_Type(loc: 0x42000c28),
   ),
-  SPI: SercomSpi(
+  SPI: SercomSpi_Type(
     CTRLA: SercomSpi_CTRLA_Type(loc: 0x42000c00),
     CTRLB: SercomSpi_CTRLB_Type(loc: 0x42000c04),
     BAUD: SercomSpi_BAUD_Type(loc: 0x42000c0c),
@@ -2735,7 +2735,7 @@ const SERCOM1* = SERCOM0_Type(
     DATA: SercomSpi_DATA_Type(loc: 0x42000c28),
     DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42000c30),
   ),
-  USART: SercomUsart(
+  USART: SercomUsart_Type(
     CTRLA: SercomUsart_CTRLA_Type(loc: 0x42000c00),
     CTRLB: SercomUsart_CTRLB_Type(loc: 0x42000c04),
     BAUD: SercomUsart_BAUD_Type(loc: 0x42000c0c),
@@ -2754,7 +2754,7 @@ const SERCOM1* = SERCOM0_Type(
 )
 
 const SERCOM2* = SERCOM0_Type(
-  I2CM: SercomI2cm(
+  I2CM: SercomI2cm_Type(
     CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42001000),
     CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42001004),
     BAUD: SercomI2cm_BAUD_Type(loc: 0x4200100c),
@@ -2767,7 +2767,7 @@ const SERCOM2* = SERCOM0_Type(
     DATA: SercomI2cm_DATA_Type(loc: 0x42001028),
     DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42001030),
   ),
-  I2CS: SercomI2cs(
+  I2CS: SercomI2cs_Type(
     CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42001000),
     CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42001004),
     INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42001014),
@@ -2778,7 +2778,7 @@ const SERCOM2* = SERCOM0_Type(
     ADDRx: SercomI2cs_ADDR_Type(loc: 0x42001024),
     DATA: SercomI2cs_DATA_Type(loc: 0x42001028),
   ),
-  SPI: SercomSpi(
+  SPI: SercomSpi_Type(
     CTRLA: SercomSpi_CTRLA_Type(loc: 0x42001000),
     CTRLB: SercomSpi_CTRLB_Type(loc: 0x42001004),
     BAUD: SercomSpi_BAUD_Type(loc: 0x4200100c),
@@ -2791,7 +2791,7 @@ const SERCOM2* = SERCOM0_Type(
     DATA: SercomSpi_DATA_Type(loc: 0x42001028),
     DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42001030),
   ),
-  USART: SercomUsart(
+  USART: SercomUsart_Type(
     CTRLA: SercomUsart_CTRLA_Type(loc: 0x42001000),
     CTRLB: SercomUsart_CTRLB_Type(loc: 0x42001004),
     BAUD: SercomUsart_BAUD_Type(loc: 0x4200100c),
@@ -2810,7 +2810,7 @@ const SERCOM2* = SERCOM0_Type(
 )
 
 const SERCOM3* = SERCOM0_Type(
-  I2CM: SercomI2cm(
+  I2CM: SercomI2cm_Type(
     CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42001400),
     CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42001404),
     BAUD: SercomI2cm_BAUD_Type(loc: 0x4200140c),
@@ -2823,7 +2823,7 @@ const SERCOM3* = SERCOM0_Type(
     DATA: SercomI2cm_DATA_Type(loc: 0x42001428),
     DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42001430),
   ),
-  I2CS: SercomI2cs(
+  I2CS: SercomI2cs_Type(
     CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42001400),
     CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42001404),
     INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42001414),
@@ -2834,7 +2834,7 @@ const SERCOM3* = SERCOM0_Type(
     ADDRx: SercomI2cs_ADDR_Type(loc: 0x42001424),
     DATA: SercomI2cs_DATA_Type(loc: 0x42001428),
   ),
-  SPI: SercomSpi(
+  SPI: SercomSpi_Type(
     CTRLA: SercomSpi_CTRLA_Type(loc: 0x42001400),
     CTRLB: SercomSpi_CTRLB_Type(loc: 0x42001404),
     BAUD: SercomSpi_BAUD_Type(loc: 0x4200140c),
@@ -2847,7 +2847,7 @@ const SERCOM3* = SERCOM0_Type(
     DATA: SercomSpi_DATA_Type(loc: 0x42001428),
     DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42001430),
   ),
-  USART: SercomUsart(
+  USART: SercomUsart_Type(
     CTRLA: SercomUsart_CTRLA_Type(loc: 0x42001400),
     CTRLB: SercomUsart_CTRLB_Type(loc: 0x42001404),
     BAUD: SercomUsart_BAUD_Type(loc: 0x4200140c),
@@ -2866,7 +2866,7 @@ const SERCOM3* = SERCOM0_Type(
 )
 
 const SERCOM4* = SERCOM0_Type(
-  I2CM: SercomI2cm(
+  I2CM: SercomI2cm_Type(
     CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42001800),
     CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42001804),
     BAUD: SercomI2cm_BAUD_Type(loc: 0x4200180c),
@@ -2879,7 +2879,7 @@ const SERCOM4* = SERCOM0_Type(
     DATA: SercomI2cm_DATA_Type(loc: 0x42001828),
     DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42001830),
   ),
-  I2CS: SercomI2cs(
+  I2CS: SercomI2cs_Type(
     CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42001800),
     CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42001804),
     INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42001814),
@@ -2890,7 +2890,7 @@ const SERCOM4* = SERCOM0_Type(
     ADDRx: SercomI2cs_ADDR_Type(loc: 0x42001824),
     DATA: SercomI2cs_DATA_Type(loc: 0x42001828),
   ),
-  SPI: SercomSpi(
+  SPI: SercomSpi_Type(
     CTRLA: SercomSpi_CTRLA_Type(loc: 0x42001800),
     CTRLB: SercomSpi_CTRLB_Type(loc: 0x42001804),
     BAUD: SercomSpi_BAUD_Type(loc: 0x4200180c),
@@ -2903,7 +2903,7 @@ const SERCOM4* = SERCOM0_Type(
     DATA: SercomSpi_DATA_Type(loc: 0x42001828),
     DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42001830),
   ),
-  USART: SercomUsart(
+  USART: SercomUsart_Type(
     CTRLA: SercomUsart_CTRLA_Type(loc: 0x42001800),
     CTRLB: SercomUsart_CTRLB_Type(loc: 0x42001804),
     BAUD: SercomUsart_BAUD_Type(loc: 0x4200180c),
@@ -2922,7 +2922,7 @@ const SERCOM4* = SERCOM0_Type(
 )
 
 const SERCOM5* = SERCOM0_Type(
-  I2CM: SercomI2cm(
+  I2CM: SercomI2cm_Type(
     CTRLA: SercomI2cm_CTRLA_Type(loc: 0x42001c00),
     CTRLB: SercomI2cm_CTRLB_Type(loc: 0x42001c04),
     BAUD: SercomI2cm_BAUD_Type(loc: 0x42001c0c),
@@ -2935,7 +2935,7 @@ const SERCOM5* = SERCOM0_Type(
     DATA: SercomI2cm_DATA_Type(loc: 0x42001c28),
     DBGCTRL: SercomI2cm_DBGCTRL_Type(loc: 0x42001c30),
   ),
-  I2CS: SercomI2cs(
+  I2CS: SercomI2cs_Type(
     CTRLA: SercomI2cs_CTRLA_Type(loc: 0x42001c00),
     CTRLB: SercomI2cs_CTRLB_Type(loc: 0x42001c04),
     INTENCLR: SercomI2cs_INTENCLR_Type(loc: 0x42001c14),
@@ -2946,7 +2946,7 @@ const SERCOM5* = SERCOM0_Type(
     ADDRx: SercomI2cs_ADDR_Type(loc: 0x42001c24),
     DATA: SercomI2cs_DATA_Type(loc: 0x42001c28),
   ),
-  SPI: SercomSpi(
+  SPI: SercomSpi_Type(
     CTRLA: SercomSpi_CTRLA_Type(loc: 0x42001c00),
     CTRLB: SercomSpi_CTRLB_Type(loc: 0x42001c04),
     BAUD: SercomSpi_BAUD_Type(loc: 0x42001c0c),
@@ -2959,7 +2959,7 @@ const SERCOM5* = SERCOM0_Type(
     DATA: SercomSpi_DATA_Type(loc: 0x42001c28),
     DBGCTRL: SercomSpi_DBGCTRL_Type(loc: 0x42001c30),
   ),
-  USART: SercomUsart(
+  USART: SercomUsart_Type(
     CTRLA: SercomUsart_CTRLA_Type(loc: 0x42001c00),
     CTRLB: SercomUsart_CTRLB_Type(loc: 0x42001c04),
     BAUD: SercomUsart_BAUD_Type(loc: 0x42001c0c),
@@ -3001,7 +3001,7 @@ const SYSCTRL* = SYSCTRL_Type(
 )
 
 const TC3* = TC3_Type(
-  COUNT8: TcCount8(
+  COUNT8: TcCount8_Type(
     CTRLA: TcCount8_CTRLA_Type(loc: 0x42002c00),
     READREQ: TcCount8_READREQ_Type(loc: 0x42002c02),
     CTRLBCLR: TcCount8_CTRLBCLR_Type(loc: 0x42002c04),
@@ -3018,7 +3018,7 @@ const TC3* = TC3_Type(
     CC0: TcCount8_CC_Type(loc: 0x42002c18),
     CC1: TcCount8_CC_Type(loc: 0x42002c19),
   ),
-  COUNT16: TcCount16(
+  COUNT16: TcCount16_Type(
     CTRLA: TcCount16_CTRLA_Type(loc: 0x42002c00),
     READREQ: TcCount16_READREQ_Type(loc: 0x42002c02),
     CTRLBCLR: TcCount16_CTRLBCLR_Type(loc: 0x42002c04),
@@ -3034,7 +3034,7 @@ const TC3* = TC3_Type(
     CC0: TcCount16_CC_Type(loc: 0x42002c18),
     CC1: TcCount16_CC_Type(loc: 0x42002c1a),
   ),
-  COUNT32: TcCount32(
+  COUNT32: TcCount32_Type(
     CTRLA: TcCount32_CTRLA_Type(loc: 0x42002c00),
     READREQ: TcCount32_READREQ_Type(loc: 0x42002c02),
     CTRLBCLR: TcCount32_CTRLBCLR_Type(loc: 0x42002c04),
@@ -3053,7 +3053,7 @@ const TC3* = TC3_Type(
 )
 
 const TC4* = TC3_Type(
-  COUNT8: TcCount8(
+  COUNT8: TcCount8_Type(
     CTRLA: TcCount8_CTRLA_Type(loc: 0x42003000),
     READREQ: TcCount8_READREQ_Type(loc: 0x42003002),
     CTRLBCLR: TcCount8_CTRLBCLR_Type(loc: 0x42003004),
@@ -3070,7 +3070,7 @@ const TC4* = TC3_Type(
     CC0: TcCount8_CC_Type(loc: 0x42003018),
     CC1: TcCount8_CC_Type(loc: 0x42003019),
   ),
-  COUNT16: TcCount16(
+  COUNT16: TcCount16_Type(
     CTRLA: TcCount16_CTRLA_Type(loc: 0x42003000),
     READREQ: TcCount16_READREQ_Type(loc: 0x42003002),
     CTRLBCLR: TcCount16_CTRLBCLR_Type(loc: 0x42003004),
@@ -3086,7 +3086,7 @@ const TC4* = TC3_Type(
     CC0: TcCount16_CC_Type(loc: 0x42003018),
     CC1: TcCount16_CC_Type(loc: 0x4200301a),
   ),
-  COUNT32: TcCount32(
+  COUNT32: TcCount32_Type(
     CTRLA: TcCount32_CTRLA_Type(loc: 0x42003000),
     READREQ: TcCount32_READREQ_Type(loc: 0x42003002),
     CTRLBCLR: TcCount32_CTRLBCLR_Type(loc: 0x42003004),
@@ -3105,7 +3105,7 @@ const TC4* = TC3_Type(
 )
 
 const TC5* = TC3_Type(
-  COUNT8: TcCount8(
+  COUNT8: TcCount8_Type(
     CTRLA: TcCount8_CTRLA_Type(loc: 0x42003400),
     READREQ: TcCount8_READREQ_Type(loc: 0x42003402),
     CTRLBCLR: TcCount8_CTRLBCLR_Type(loc: 0x42003404),
@@ -3122,7 +3122,7 @@ const TC5* = TC3_Type(
     CC0: TcCount8_CC_Type(loc: 0x42003418),
     CC1: TcCount8_CC_Type(loc: 0x42003419),
   ),
-  COUNT16: TcCount16(
+  COUNT16: TcCount16_Type(
     CTRLA: TcCount16_CTRLA_Type(loc: 0x42003400),
     READREQ: TcCount16_READREQ_Type(loc: 0x42003402),
     CTRLBCLR: TcCount16_CTRLBCLR_Type(loc: 0x42003404),
@@ -3138,7 +3138,7 @@ const TC5* = TC3_Type(
     CC0: TcCount16_CC_Type(loc: 0x42003418),
     CC1: TcCount16_CC_Type(loc: 0x4200341a),
   ),
-  COUNT32: TcCount32(
+  COUNT32: TcCount32_Type(
     CTRLA: TcCount32_CTRLA_Type(loc: 0x42003400),
     READREQ: TcCount32_READREQ_Type(loc: 0x42003402),
     CTRLBCLR: TcCount32_CTRLBCLR_Type(loc: 0x42003404),
@@ -3352,7 +3352,7 @@ const TCC2* = TCC0_Type(
 )
 
 const USB* = USB_Type(
-  DEVICE: UsbDevice(
+  DEVICE: UsbDevice_Type(
     CTRLA: UsbDevice_CTRLA_Type(loc: 0x41005000),
     SYNCBUSY: UsbDevice_SYNCBUSY_Type(loc: 0x41005002),
     QOSCTRL: UsbDevice_QOSCTRL_Type(loc: 0x41005003),
@@ -3424,7 +3424,7 @@ const USB* = USB_Type(
     EPINTENCLR7: UsbDevice_EPINTENCLR_Type(loc: 0x410051e8),
     EPINTENSET7: UsbDevice_EPINTENSET_Type(loc: 0x410051e9),
   ),
-  HOST: UsbHost(
+  HOST: UsbHost_Type(
     CTRLA: UsbHost_CTRLA_Type(loc: 0x41005000),
     SYNCBUSY: UsbHost_SYNCBUSY_Type(loc: 0x41005002),
     QOSCTRL: UsbHost_QOSCTRL_Type(loc: 0x41005003),
@@ -3536,33 +3536,33 @@ type
   AC_COMPCTRL_Fields* = distinct uint32
   AC_SCALER_Fields* = distinct uint8
 
-type AC_STATUSA_WSTATE0* = enum
+type AC_STATUSA_WSTATE0* {.size: 1.} = enum
   ABOVE = 0x0,
   INSIDE = 0x1,
   BELOW = 0x2,
 
-type AC_STATUSC_WSTATE0* = enum
+type AC_STATUSC_WSTATE0* {.size: 1.} = enum
   ABOVE = 0x0,
   INSIDE = 0x1,
   BELOW = 0x2,
 
-type AC_WINCTRL_WINTSEL0* = enum
+type AC_WINCTRL_WINTSEL0* {.size: 1.} = enum
   ABOVE = 0x0,
   INSIDE = 0x1,
   BELOW = 0x2,
   OUTSIDE = 0x3,
 
-type AC_COMPCTRL_SPEED* = enum
+type AC_COMPCTRL_SPEED* {.size: 4.} = enum
   LOW = 0x0,
   HIGH = 0x1,
 
-type AC_COMPCTRL_INTSEL* = enum
+type AC_COMPCTRL_INTSEL* {.size: 4.} = enum
   TOGGLE = 0x0,
   RISING = 0x1,
   FALLING = 0x2,
   EOC = 0x3,
 
-type AC_COMPCTRL_MUXNEG* = enum
+type AC_COMPCTRL_MUXNEG* {.size: 4.} = enum
   muxPIN0 = 0x0,
   muxPIN1 = 0x1,
   muxPIN2 = 0x2,
@@ -3572,18 +3572,18 @@ type AC_COMPCTRL_MUXNEG* = enum
   muxBANDGAP = 0x6,
   muxDAC = 0x7,
 
-type AC_COMPCTRL_MUXPOS* = enum
+type AC_COMPCTRL_MUXPOS* {.size: 4.} = enum
   PIN0 = 0x0,
   PIN1 = 0x1,
   PIN2 = 0x2,
   PIN3 = 0x3,
 
-type AC_COMPCTRL_OUT* = enum
+type AC_COMPCTRL_OUT* {.size: 4.} = enum
   OFF = 0x0,
   ASYNC = 0x1,
   SYNC = 0x2,
 
-type AC_COMPCTRL_FLEN* = enum
+type AC_COMPCTRL_FLEN* {.size: 4.} = enum
   OFF = 0x0,
   MAJ3 = 0x1,
   MAJ5 = 0x2,
@@ -4099,14 +4099,14 @@ type
   ADC_CALIB_Fields* = distinct uint16
   ADC_DBGCTRL_Fields* = distinct uint8
 
-type ADC_REFCTRL_REFSEL* = enum
+type ADC_REFCTRL_REFSEL* {.size: 1.} = enum
   INT1V = 0x0,
   INTVCC0 = 0x1,
   INTVCC1 = 0x2,
   AREFA = 0x3,
   AREFB = 0x4,
 
-type ADC_AVGCTRL_SAMPLENUM* = enum
+type ADC_AVGCTRL_SAMPLENUM* {.size: 1.} = enum
   x1 = 0x0,
   x2 = 0x1,
   x4 = 0x2,
@@ -4119,13 +4119,13 @@ type ADC_AVGCTRL_SAMPLENUM* = enum
   x512 = 0x9,
   x1024 = 0xa,
 
-type ADC_CTRLB_RESSEL* = enum
+type ADC_CTRLB_RESSEL* {.size: 2.} = enum
   x12BIT = 0x0,
   x16BIT = 0x1,
   x10BIT = 0x2,
   x8BIT = 0x3,
 
-type ADC_CTRLB_PRESCALER* = enum
+type ADC_CTRLB_PRESCALER* {.size: 2.} = enum
   DIV4 = 0x0,
   DIV8 = 0x1,
   DIV16 = 0x2,
@@ -4135,14 +4135,14 @@ type ADC_CTRLB_PRESCALER* = enum
   DIV256 = 0x6,
   DIV512 = 0x7,
 
-type ADC_WINCTRL_WINMODE* = enum
+type ADC_WINCTRL_WINMODE* {.size: 1.} = enum
   DISABLE = 0x0,
   MODE1 = 0x1,
   MODE2 = 0x2,
   MODE3 = 0x3,
   MODE4 = 0x4,
 
-type ADC_INPUTCTRL_MUXPOS* = enum
+type ADC_INPUTCTRL_MUXPOS* {.size: 4.} = enum
   muxPIN0 = 0x0,
   muxPIN1 = 0x1,
   muxPIN2 = 0x2,
@@ -4169,7 +4169,7 @@ type ADC_INPUTCTRL_MUXPOS* = enum
   muxSCALEDIOVCC = 0x1b,
   muxDAC = 0x1c,
 
-type ADC_INPUTCTRL_MUXNEG* = enum
+type ADC_INPUTCTRL_MUXNEG* {.size: 4.} = enum
   PIN0 = 0x0,
   PIN1 = 0x1,
   PIN2 = 0x2,
@@ -4181,7 +4181,7 @@ type ADC_INPUTCTRL_MUXNEG* = enum
   GND = 0x18,
   IOGND = 0x19,
 
-type ADC_INPUTCTRL_GAIN* = enum
+type ADC_INPUTCTRL_GAIN* {.size: 4.} = enum
   x1X = 0x0,
   x2X = 0x1,
   x4X = 0x2,
@@ -4917,7 +4917,7 @@ type
   DAC_INTFLAG_Fields* = distinct uint8
   DAC_STATUS_Fields* = distinct uint8
 
-type DAC_CTRLB_REFSEL* = enum
+type DAC_CTRLB_REFSEL* {.size: 1.} = enum
   INT1V = 0x0,
   AVCC = 0x1,
   VREFP = 0x2,
@@ -5269,38 +5269,38 @@ type
   DMAC_CHINTFLAG_Fields* = distinct uint8
   DMAC_CHSTATUS_Fields* = distinct uint8
 
-type DMAC_CRCCTRL_CRCBEATSIZE* = enum
+type DMAC_CRCCTRL_CRCBEATSIZE* {.size: 2.} = enum
   BYTE = 0x0,
   HWORD = 0x1,
   WORD = 0x2,
 
-type DMAC_CRCCTRL_CRCPOLY* = enum
+type DMAC_CRCCTRL_CRCPOLY* {.size: 2.} = enum
   CRC16 = 0x0,
   CRC32 = 0x1,
 
-type DMAC_CRCCTRL_CRCSRC* = enum
+type DMAC_CRCCTRL_CRCSRC* {.size: 2.} = enum
   NOACT = 0x0,
   IO = 0x1,
 
-type DMAC_QOSCTRL_WRBQOS* = enum
+type DMAC_QOSCTRL_WRBQOS* {.size: 1.} = enum
   DISABLE = 0x0,
   LOW = 0x1,
   MEDIUM = 0x2,
   HIGH = 0x3,
 
-type DMAC_QOSCTRL_FQOS* = enum
+type DMAC_QOSCTRL_FQOS* {.size: 1.} = enum
   DISABLE = 0x0,
   LOW = 0x1,
   MEDIUM = 0x2,
   HIGH = 0x3,
 
-type DMAC_QOSCTRL_DQOS* = enum
+type DMAC_QOSCTRL_DQOS* {.size: 1.} = enum
   DISABLE = 0x0,
   LOW = 0x1,
   MEDIUM = 0x2,
   HIGH = 0x3,
 
-type DMAC_CHCTRLB_EVACT* = enum
+type DMAC_CHCTRLB_EVACT* {.size: 4.} = enum
   NOACT = 0x0,
   TRIG = 0x1,
   CTRIG = 0x2,
@@ -5309,21 +5309,21 @@ type DMAC_CHCTRLB_EVACT* = enum
   RESUME = 0x5,
   SSKIP = 0x6,
 
-type DMAC_CHCTRLB_LVL* = enum
+type DMAC_CHCTRLB_LVL* {.size: 4.} = enum
   LVL0 = 0x0,
   LVL1 = 0x1,
   LVL2 = 0x2,
   LVL3 = 0x3,
 
-type DMAC_CHCTRLB_TRIGSRC* = enum
+type DMAC_CHCTRLB_TRIGSRC* {.size: 4.} = enum
   DISABLE = 0x0,
 
-type DMAC_CHCTRLB_TRIGACT* = enum
+type DMAC_CHCTRLB_TRIGACT* {.size: 4.} = enum
   BLOCKx = 0x0,
   BEAT = 0x2,
   TRANSACTION = 0x3,
 
-type DMAC_CHCTRLB_CMD* = enum
+type DMAC_CHCTRLB_CMD* {.size: 4.} = enum
   NOACT = 0x0,
   SUSPEND = 0x1,
   RESUME = 0x2,
@@ -6692,7 +6692,7 @@ type
   EIC_WAKEUP_Fields* = distinct uint32
   EIC_CONFIG_Fields* = distinct uint32
 
-type EIC_NMICTRL_NMISENSE* = enum
+type EIC_NMICTRL_NMISENSE* {.size: 1.} = enum
   NONE = 0x0,
   RISE = 0x1,
   FALL = 0x2,
@@ -6700,7 +6700,7 @@ type EIC_NMICTRL_NMISENSE* = enum
   HIGH = 0x4,
   LOW = 0x5,
 
-type EIC_CONFIG_SENSE0* = enum
+type EIC_CONFIG_SENSE0* {.size: 4.} = enum
   NONE = 0x0,
   RISE = 0x1,
   FALL = 0x2,
@@ -6708,7 +6708,7 @@ type EIC_CONFIG_SENSE0* = enum
   HIGH = 0x4,
   LOW = 0x5,
 
-type EIC_CONFIG_SENSE1* = enum
+type EIC_CONFIG_SENSE1* {.size: 4.} = enum
   NONE = 0x0,
   RISE = 0x1,
   FALL = 0x2,
@@ -6716,7 +6716,7 @@ type EIC_CONFIG_SENSE1* = enum
   HIGH = 0x4,
   LOW = 0x5,
 
-type EIC_CONFIG_SENSE2* = enum
+type EIC_CONFIG_SENSE2* {.size: 4.} = enum
   NONE = 0x0,
   RISE = 0x1,
   FALL = 0x2,
@@ -6724,7 +6724,7 @@ type EIC_CONFIG_SENSE2* = enum
   HIGH = 0x4,
   LOW = 0x5,
 
-type EIC_CONFIG_SENSE3* = enum
+type EIC_CONFIG_SENSE3* {.size: 4.} = enum
   NONE = 0x0,
   RISE = 0x1,
   FALL = 0x2,
@@ -6732,7 +6732,7 @@ type EIC_CONFIG_SENSE3* = enum
   HIGH = 0x4,
   LOW = 0x5,
 
-type EIC_CONFIG_SENSE4* = enum
+type EIC_CONFIG_SENSE4* {.size: 4.} = enum
   NONE = 0x0,
   RISE = 0x1,
   FALL = 0x2,
@@ -6740,7 +6740,7 @@ type EIC_CONFIG_SENSE4* = enum
   HIGH = 0x4,
   LOW = 0x5,
 
-type EIC_CONFIG_SENSE5* = enum
+type EIC_CONFIG_SENSE5* {.size: 4.} = enum
   NONE = 0x0,
   RISE = 0x1,
   FALL = 0x2,
@@ -6748,7 +6748,7 @@ type EIC_CONFIG_SENSE5* = enum
   HIGH = 0x4,
   LOW = 0x5,
 
-type EIC_CONFIG_SENSE6* = enum
+type EIC_CONFIG_SENSE6* {.size: 4.} = enum
   NONE = 0x0,
   RISE = 0x1,
   FALL = 0x2,
@@ -6756,7 +6756,7 @@ type EIC_CONFIG_SENSE6* = enum
   HIGH = 0x4,
   LOW = 0x5,
 
-type EIC_CONFIG_SENSE7* = enum
+type EIC_CONFIG_SENSE7* {.size: 4.} = enum
   NONE = 0x0,
   RISE = 0x1,
   FALL = 0x2,
@@ -7933,18 +7933,18 @@ type
   EVSYS_INTENSET_Fields* = distinct uint32
   EVSYS_INTFLAG_Fields* = distinct uint32
 
-type EVSYS_CHANNEL_PATH* = enum
+type EVSYS_CHANNEL_PATH* {.size: 4.} = enum
   SYNCHRONOUS = 0x0,
   RESYNCHRONIZED = 0x1,
   ASYNCHRONOUS = 0x2,
 
-type EVSYS_CHANNEL_EDGSEL* = enum
+type EVSYS_CHANNEL_EDGSEL* {.size: 4.} = enum
   NO_EVT_OUTPUT = 0x0,
   RISING_EDGE = 0x1,
   FALLING_EDGE = 0x2,
   BOTH_EDGES = 0x3,
 
-type EVSYS_USER_CHANNEL* = enum
+type EVSYS_USER_CHANNEL* {.size: 2.} = enum
   x0 = 0x0,
 
 proc write*(reg: EVSYS_CTRL_Type, val: EVSYS_CTRL_Fields) {.inline.} =
@@ -8920,7 +8920,7 @@ type
   GCLK_GENCTRL_Fields* = distinct uint32
   GCLK_GENDIV_Fields* = distinct uint32
 
-type GCLK_CLKCTRL_ID* = enum
+type GCLK_CLKCTRL_ID* {.size: 2.} = enum
   idDFLL48 = 0x0,
   idFDPLL = 0x1,
   idFDPLL32K = 0x2,
@@ -8958,7 +8958,7 @@ type GCLK_CLKCTRL_ID* = enum
   idI2S_0 = 0x23,
   idI2S_1 = 0x24,
 
-type GCLK_CLKCTRL_GEN* = enum
+type GCLK_CLKCTRL_GEN* {.size: 2.} = enum
   GCLK0 = 0x0,
   GCLK1 = 0x1,
   GCLK2 = 0x2,
@@ -8969,7 +8969,7 @@ type GCLK_CLKCTRL_GEN* = enum
   GCLK7 = 0x7,
   GCLK8 = 0x8,
 
-type GCLK_GENCTRL_SRC* = enum
+type GCLK_GENCTRL_SRC* {.size: 4.} = enum
   XOSC = 0x0,
   GCLKIN = 0x1,
   GCLKGEN1 = 0x2,
@@ -9245,57 +9245,57 @@ type
   I2S_SYNCBUSY_Fields* = distinct uint16
   I2S_SERCTRL_Fields* = distinct uint32
 
-type I2S_CLKCTRL_SLOTSIZE* = enum
+type I2S_CLKCTRL_SLOTSIZE* {.size: 4.} = enum
   x8 = 0x0,
   x16 = 0x1,
   x24 = 0x2,
   x32 = 0x3,
 
-type I2S_CLKCTRL_FSWIDTH* = enum
+type I2S_CLKCTRL_FSWIDTH* {.size: 4.} = enum
   SLOT = 0x0,
   HALF = 0x1,
   BIT = 0x2,
   BURST = 0x3,
 
-type I2S_CLKCTRL_BITDELAY* = enum
+type I2S_CLKCTRL_BITDELAY* {.size: 4.} = enum
   bitLJ = 0x0,
   bitI2S = 0x1,
 
-type I2S_CLKCTRL_FSSEL* = enum
+type I2S_CLKCTRL_FSSEL* {.size: 4.} = enum
   SCKDIV = 0x0,
   FSPIN = 0x1,
 
-type I2S_CLKCTRL_SCKSEL* = enum
+type I2S_CLKCTRL_SCKSEL* {.size: 4.} = enum
   MCKDIV = 0x0,
   SCKPIN = 0x1,
 
-type I2S_CLKCTRL_MCKSEL* = enum
+type I2S_CLKCTRL_MCKSEL* {.size: 4.} = enum
   mckGCLK = 0x0,
   mckMCKPIN = 0x1,
 
-type I2S_SERCTRL_SERMODE* = enum
+type I2S_SERCTRL_SERMODE* {.size: 4.} = enum
   RX = 0x0,
   TX = 0x1,
   PDM2 = 0x2,
 
-type I2S_SERCTRL_TXDEFAULT* = enum
+type I2S_SERCTRL_TXDEFAULT* {.size: 4.} = enum
   ZERO = 0x0,
   ONE = 0x1,
   HIZ = 0x3,
 
-type I2S_SERCTRL_TXSAME* = enum
+type I2S_SERCTRL_TXSAME* {.size: 4.} = enum
   ZERO = 0x0,
   SAME = 0x1,
 
-type I2S_SERCTRL_CLKSEL* = enum
+type I2S_SERCTRL_CLKSEL* {.size: 4.} = enum
   CLK0 = 0x0,
   CLK1 = 0x1,
 
-type I2S_SERCTRL_SLOTADJ* = enum
+type I2S_SERCTRL_SLOTADJ* {.size: 4.} = enum
   RIGHT = 0x0,
   LEFT = 0x1,
 
-type I2S_SERCTRL_DATASIZE* = enum
+type I2S_SERCTRL_DATASIZE* {.size: 4.} = enum
   x32 = 0x0,
   x24 = 0x1,
   x20 = 0x2,
@@ -9305,25 +9305,25 @@ type I2S_SERCTRL_DATASIZE* = enum
   x8 = 0x6,
   x8C = 0x7,
 
-type I2S_SERCTRL_WORDADJ* = enum
+type I2S_SERCTRL_WORDADJ* {.size: 4.} = enum
   RIGHT = 0x0,
   LEFT = 0x1,
 
-type I2S_SERCTRL_EXTEND* = enum
+type I2S_SERCTRL_EXTEND* {.size: 4.} = enum
   ZERO = 0x0,
   ONE = 0x1,
   MSBIT = 0x2,
   LSBIT = 0x3,
 
-type I2S_SERCTRL_BITREV* = enum
+type I2S_SERCTRL_BITREV* {.size: 4.} = enum
   MSBIT = 0x0,
   LSBIT = 0x1,
 
-type I2S_SERCTRL_MONO* = enum
+type I2S_SERCTRL_MONO* {.size: 4.} = enum
   STEREO = 0x0,
   MONO = 0x1,
 
-type I2S_SERCTRL_DMA* = enum
+type I2S_SERCTRL_DMA* {.size: 4.} = enum
   SINGLE = 0x0,
   MULTIPLE = 0x1,
 
@@ -10387,7 +10387,7 @@ type
   NVMCTRL_STATUS_Fields* = distinct uint16
   NVMCTRL_ADDR_Fields* = distinct uint32
 
-type NVMCTRL_CTRLA_CMD* = enum
+type NVMCTRL_CTRLA_CMD* {.size: 2.} = enum
   ER = 0x2,
   WP = 0x4,
   EAR = 0x5,
@@ -10402,25 +10402,25 @@ type NVMCTRL_CTRLA_CMD* = enum
   SSB = 0x45,
   INVALL = 0x46,
 
-type NVMCTRL_CTRLA_CMDEX* = enum
+type NVMCTRL_CTRLA_CMDEX* {.size: 2.} = enum
   KEY = 0xa5,
 
-type NVMCTRL_CTRLB_RWS* = enum
+type NVMCTRL_CTRLB_RWS* {.size: 4.} = enum
   SINGLE = 0x0,
   HALF = 0x1,
   DUAL = 0x2,
 
-type NVMCTRL_CTRLB_SLEEPPRM* = enum
+type NVMCTRL_CTRLB_SLEEPPRM* {.size: 4.} = enum
   WAKEONACCESS = 0x0,
   WAKEUPINSTANT = 0x1,
   DISABLED = 0x3,
 
-type NVMCTRL_CTRLB_READMODE* = enum
+type NVMCTRL_CTRLB_READMODE* {.size: 4.} = enum
   NO_MISS_PENALTY = 0x0,
   LOW_POWER = 0x1,
   DETERMINISTIC = 0x2,
 
-type NVMCTRL_PARAM_PSZ* = enum
+type NVMCTRL_PARAM_PSZ* {.size: 4.} = enum
   x8 = 0x0,
   x16 = 0x1,
   x32 = 0x2,
@@ -10831,12 +10831,12 @@ type
   PM_INTFLAG_Fields* = distinct uint8
   PM_RCAUSE_Fields* = distinct uint8
 
-type PM_SLEEP_IDLE* = enum
+type PM_SLEEP_IDLE* {.size: 1.} = enum
   CPU = 0x0,
   AHB = 0x1,
   APB = 0x2,
 
-type PM_CPUSEL_CPUDIV* = enum
+type PM_CPUSEL_CPUDIV* {.size: 1.} = enum
   DIV1 = 0x0,
   DIV2 = 0x1,
   DIV4 = 0x2,
@@ -10846,7 +10846,7 @@ type PM_CPUSEL_CPUDIV* = enum
   DIV64 = 0x6,
   DIV128 = 0x7,
 
-type PM_APBASEL_APBADIV* = enum
+type PM_APBASEL_APBADIV* {.size: 1.} = enum
   DIV1 = 0x0,
   DIV2 = 0x1,
   DIV4 = 0x2,
@@ -10856,7 +10856,7 @@ type PM_APBASEL_APBADIV* = enum
   DIV64 = 0x6,
   DIV128 = 0x7,
 
-type PM_APBBSEL_APBBDIV* = enum
+type PM_APBBSEL_APBBDIV* {.size: 1.} = enum
   DIV1 = 0x0,
   DIV2 = 0x1,
   DIV4 = 0x2,
@@ -10866,7 +10866,7 @@ type PM_APBBSEL_APBBDIV* = enum
   DIV64 = 0x6,
   DIV128 = 0x7,
 
-type PM_APBCSEL_APBCDIV* = enum
+type PM_APBCSEL_APBCDIV* {.size: 1.} = enum
   DIV1 = 0x0,
   DIV2 = 0x1,
   DIV4 = 0x2,
@@ -11586,7 +11586,7 @@ type
   PORT_PMUX0_Fields* = distinct uint8
   PORT_PINCFG0_Fields* = distinct uint8
 
-type PORT_PMUX0_PMUXE* = enum
+type PORT_PMUX0_PMUXE* {.size: 1.} = enum
   A = 0x0,
   B = 0x1,
   C = 0x2,
@@ -11596,7 +11596,7 @@ type PORT_PMUX0_PMUXE* = enum
   G = 0x6,
   H = 0x7,
 
-type PORT_PMUX0_PMUXO* = enum
+type PORT_PMUX0_PMUXO* {.size: 1.} = enum
   A = 0x0,
   B = 0x1,
   C = 0x2,
@@ -11908,12 +11908,12 @@ type
   RtcMode2_ALARM_Fields* = distinct uint32
   RtcMode2_MASK_Fields* = distinct uint8
 
-type RtcMode0_CTRL_MODE* = enum
+type RtcMode0_CTRL_MODE* {.size: 2.} = enum
   COUNT32 = 0x0,
   COUNT16 = 0x1,
   CLOCK = 0x2,
 
-type RtcMode0_CTRL_PRESCALER* = enum
+type RtcMode0_CTRL_PRESCALER* {.size: 2.} = enum
   DIV1 = 0x0,
   DIV2 = 0x1,
   DIV4 = 0x2,
@@ -11926,12 +11926,12 @@ type RtcMode0_CTRL_PRESCALER* = enum
   DIV512 = 0x9,
   DIV1024 = 0xa,
 
-type RtcMode1_CTRL_MODE* = enum
+type RtcMode1_CTRL_MODE* {.size: 2.} = enum
   COUNT32 = 0x0,
   COUNT16 = 0x1,
   CLOCK = 0x2,
 
-type RtcMode1_CTRL_PRESCALER* = enum
+type RtcMode1_CTRL_PRESCALER* {.size: 2.} = enum
   DIV1 = 0x0,
   DIV2 = 0x1,
   DIV4 = 0x2,
@@ -11944,12 +11944,12 @@ type RtcMode1_CTRL_PRESCALER* = enum
   DIV512 = 0x9,
   DIV1024 = 0xa,
 
-type RtcMode2_CTRL_MODE* = enum
+type RtcMode2_CTRL_MODE* {.size: 2.} = enum
   COUNT32 = 0x0,
   COUNT16 = 0x1,
   CLOCK = 0x2,
 
-type RtcMode2_CTRL_PRESCALER* = enum
+type RtcMode2_CTRL_PRESCALER* {.size: 2.} = enum
   DIV1 = 0x0,
   DIV2 = 0x1,
   DIV4 = 0x2,
@@ -11962,15 +11962,15 @@ type RtcMode2_CTRL_PRESCALER* = enum
   DIV512 = 0x9,
   DIV1024 = 0xa,
 
-type RtcMode2_CLOCK_HOUR* = enum
+type RtcMode2_CLOCK_HOUR* {.size: 4.} = enum
   houAM = 0x0,
   houPM = 0x10,
 
-type RtcMode2_ALARM_HOUR* = enum
+type RtcMode2_ALARM_HOUR* {.size: 4.} = enum
   houAM = 0x0,
   houPM = 0x10,
 
-type RtcMode2_MASK_SEL* = enum
+type RtcMode2_MASK_SEL* {.size: 1.} = enum
   OFF = 0x0,
   SS = 0x1,
   MMSS = 0x2,
@@ -13606,7 +13606,7 @@ type
   SercomUsart_DATA_Fields* = distinct uint16
   SercomUsart_DBGCTRL_Fields* = distinct uint8
 
-type SercomI2cm_CTRLA_MODE* = enum
+type SercomI2cm_CTRLA_MODE* {.size: 4.} = enum
   USART_EXT_CLK = 0x0,
   USART_INT_CLK = 0x1,
   SPI_SLAVE = 0x2,
@@ -13614,7 +13614,7 @@ type SercomI2cm_CTRLA_MODE* = enum
   I2C_SLAVE = 0x4,
   I2C_MASTER = 0x5,
 
-type SercomI2cs_CTRLA_MODE* = enum
+type SercomI2cs_CTRLA_MODE* {.size: 4.} = enum
   USART_EXT_CLK = 0x0,
   USART_INT_CLK = 0x1,
   SPI_SLAVE = 0x2,
@@ -13622,7 +13622,7 @@ type SercomI2cs_CTRLA_MODE* = enum
   I2C_SLAVE = 0x4,
   I2C_MASTER = 0x5,
 
-type SercomSpi_CTRLA_MODE* = enum
+type SercomSpi_CTRLA_MODE* {.size: 4.} = enum
   USART_EXT_CLK = 0x0,
   USART_INT_CLK = 0x1,
   SPI_SLAVE = 0x2,
@@ -13630,7 +13630,7 @@ type SercomSpi_CTRLA_MODE* = enum
   I2C_SLAVE = 0x4,
   I2C_MASTER = 0x5,
 
-type SercomUsart_CTRLA_MODE* = enum
+type SercomUsart_CTRLA_MODE* {.size: 4.} = enum
   USART_EXT_CLK = 0x0,
   USART_INT_CLK = 0x1,
   SPI_SLAVE = 0x2,
@@ -16022,31 +16022,31 @@ type
   SYSCTRL_DPLLCTRLB_Fields* = distinct uint32
   SYSCTRL_DPLLSTATUS_Fields* = distinct uint8
 
-type SYSCTRL_XOSC_GAIN* = enum
+type SYSCTRL_XOSC_GAIN* {.size: 2.} = enum
   x0 = 0x0,
   x1 = 0x1,
   x2 = 0x2,
   x3 = 0x3,
   x4 = 0x4,
 
-type SYSCTRL_OSC8M_PRESC* = enum
+type SYSCTRL_OSC8M_PRESC* {.size: 4.} = enum
   x0 = 0x0,
   x1 = 0x1,
   x2 = 0x2,
   x3 = 0x3,
 
-type SYSCTRL_OSC8M_FRANGE* = enum
+type SYSCTRL_OSC8M_FRANGE* {.size: 4.} = enum
   x0 = 0x0,
   x1 = 0x1,
   x2 = 0x2,
   x3 = 0x3,
 
-type SYSCTRL_BOD33_ACTION* = enum
+type SYSCTRL_BOD33_ACTION* {.size: 4.} = enum
   NONE = 0x0,
   RESET = 0x1,
   INTERRUPT = 0x2,
 
-type SYSCTRL_BOD33_PSEL* = enum
+type SYSCTRL_BOD33_PSEL* {.size: 4.} = enum
   DIV2 = 0x0,
   DIV4 = 0x1,
   DIV8 = 0x2,
@@ -16064,18 +16064,18 @@ type SYSCTRL_BOD33_PSEL* = enum
   DIV32K = 0xe,
   DIV64K = 0xf,
 
-type SYSCTRL_DPLLCTRLB_FILTER* = enum
+type SYSCTRL_DPLLCTRLB_FILTER* {.size: 4.} = enum
   DEFAULT = 0x0,
   LBFILT = 0x1,
   HBFILT = 0x2,
   HDFILT = 0x3,
 
-type SYSCTRL_DPLLCTRLB_REFCLK* = enum
+type SYSCTRL_DPLLCTRLB_REFCLK* {.size: 4.} = enum
   refREF0 = 0x0,
   refREF1 = 0x1,
   refGCLK = 0x2,
 
-type SYSCTRL_DPLLCTRLB_LTIME* = enum
+type SYSCTRL_DPLLCTRLB_LTIME* {.size: 4.} = enum
   DEFAULT = 0x0,
   x8MS = 0x4,
   x9MS = 0x5,
@@ -17659,18 +17659,18 @@ type
   TcCount32_INTFLAG_Fields* = distinct uint8
   TcCount32_STATUS_Fields* = distinct uint8
 
-type TcCount8_CTRLA_MODE* = enum
+type TcCount8_CTRLA_MODE* {.size: 2.} = enum
   COUNT16 = 0x0,
   COUNT8 = 0x1,
   COUNT32 = 0x2,
 
-type TcCount8_CTRLA_WAVEGEN* = enum
+type TcCount8_CTRLA_WAVEGEN* {.size: 2.} = enum
   NFRQ = 0x0,
   MFRQ = 0x1,
   NPWM = 0x2,
   MPWM = 0x3,
 
-type TcCount8_CTRLA_PRESCALER* = enum
+type TcCount8_CTRLA_PRESCALER* {.size: 2.} = enum
   DIV1 = 0x0,
   DIV2 = 0x1,
   DIV4 = 0x2,
@@ -17680,22 +17680,22 @@ type TcCount8_CTRLA_PRESCALER* = enum
   DIV256 = 0x6,
   DIV1024 = 0x7,
 
-type TcCount8_CTRLA_PRESCSYNC* = enum
+type TcCount8_CTRLA_PRESCSYNC* {.size: 2.} = enum
   preGCLK = 0x0,
   prePRESC = 0x1,
   preRESYNC = 0x2,
 
-type TcCount8_CTRLBCLR_CMD* = enum
+type TcCount8_CTRLBCLR_CMD* {.size: 1.} = enum
   NONE = 0x0,
   RETRIGGER = 0x1,
   STOP = 0x2,
 
-type TcCount8_CTRLBSET_CMD* = enum
+type TcCount8_CTRLBSET_CMD* {.size: 1.} = enum
   NONE = 0x0,
   RETRIGGER = 0x1,
   STOP = 0x2,
 
-type TcCount8_EVCTRL_EVACT* = enum
+type TcCount8_EVCTRL_EVACT* {.size: 2.} = enum
   OFF = 0x0,
   RETRIGGER = 0x1,
   COUNT = 0x2,
@@ -17703,18 +17703,18 @@ type TcCount8_EVCTRL_EVACT* = enum
   PPW = 0x5,
   PWP = 0x6,
 
-type TcCount16_CTRLA_MODE* = enum
+type TcCount16_CTRLA_MODE* {.size: 2.} = enum
   COUNT16 = 0x0,
   COUNT8 = 0x1,
   COUNT32 = 0x2,
 
-type TcCount16_CTRLA_WAVEGEN* = enum
+type TcCount16_CTRLA_WAVEGEN* {.size: 2.} = enum
   NFRQ = 0x0,
   MFRQ = 0x1,
   NPWM = 0x2,
   MPWM = 0x3,
 
-type TcCount16_CTRLA_PRESCALER* = enum
+type TcCount16_CTRLA_PRESCALER* {.size: 2.} = enum
   DIV1 = 0x0,
   DIV2 = 0x1,
   DIV4 = 0x2,
@@ -17724,22 +17724,22 @@ type TcCount16_CTRLA_PRESCALER* = enum
   DIV256 = 0x6,
   DIV1024 = 0x7,
 
-type TcCount16_CTRLA_PRESCSYNC* = enum
+type TcCount16_CTRLA_PRESCSYNC* {.size: 2.} = enum
   preGCLK = 0x0,
   prePRESC = 0x1,
   preRESYNC = 0x2,
 
-type TcCount16_CTRLBCLR_CMD* = enum
+type TcCount16_CTRLBCLR_CMD* {.size: 1.} = enum
   NONE = 0x0,
   RETRIGGER = 0x1,
   STOP = 0x2,
 
-type TcCount16_CTRLBSET_CMD* = enum
+type TcCount16_CTRLBSET_CMD* {.size: 1.} = enum
   NONE = 0x0,
   RETRIGGER = 0x1,
   STOP = 0x2,
 
-type TcCount16_EVCTRL_EVACT* = enum
+type TcCount16_EVCTRL_EVACT* {.size: 2.} = enum
   OFF = 0x0,
   RETRIGGER = 0x1,
   COUNT = 0x2,
@@ -17747,18 +17747,18 @@ type TcCount16_EVCTRL_EVACT* = enum
   PPW = 0x5,
   PWP = 0x6,
 
-type TcCount32_CTRLA_MODE* = enum
+type TcCount32_CTRLA_MODE* {.size: 2.} = enum
   COUNT16 = 0x0,
   COUNT8 = 0x1,
   COUNT32 = 0x2,
 
-type TcCount32_CTRLA_WAVEGEN* = enum
+type TcCount32_CTRLA_WAVEGEN* {.size: 2.} = enum
   NFRQ = 0x0,
   MFRQ = 0x1,
   NPWM = 0x2,
   MPWM = 0x3,
 
-type TcCount32_CTRLA_PRESCALER* = enum
+type TcCount32_CTRLA_PRESCALER* {.size: 2.} = enum
   DIV1 = 0x0,
   DIV2 = 0x1,
   DIV4 = 0x2,
@@ -17768,22 +17768,22 @@ type TcCount32_CTRLA_PRESCALER* = enum
   DIV256 = 0x6,
   DIV1024 = 0x7,
 
-type TcCount32_CTRLA_PRESCSYNC* = enum
+type TcCount32_CTRLA_PRESCSYNC* {.size: 2.} = enum
   preGCLK = 0x0,
   prePRESC = 0x1,
   preRESYNC = 0x2,
 
-type TcCount32_CTRLBCLR_CMD* = enum
+type TcCount32_CTRLBCLR_CMD* {.size: 1.} = enum
   NONE = 0x0,
   RETRIGGER = 0x1,
   STOP = 0x2,
 
-type TcCount32_CTRLBSET_CMD* = enum
+type TcCount32_CTRLBSET_CMD* {.size: 1.} = enum
   NONE = 0x0,
   RETRIGGER = 0x1,
   STOP = 0x2,
 
-type TcCount32_EVCTRL_EVACT* = enum
+type TcCount32_EVCTRL_EVACT* {.size: 2.} = enum
   OFF = 0x0,
   RETRIGGER = 0x1,
   COUNT = 0x2,
@@ -19682,13 +19682,13 @@ type
   TCC0_CCB_DITH5_Fields* = distinct uint32
   TCC0_CCB_DITH6_Fields* = distinct uint32
 
-type TCC0_CTRLA_RESOLUTION* = enum
+type TCC0_CTRLA_RESOLUTION* {.size: 4.} = enum
   NONE = 0x0,
   DITH4 = 0x1,
   DITH5 = 0x2,
   DITH6 = 0x3,
 
-type TCC0_CTRLA_PRESCALER* = enum
+type TCC0_CTRLA_PRESCALER* {.size: 4.} = enum
   DIV1 = 0x0,
   DIV2 = 0x1,
   DIV4 = 0x2,
@@ -19698,62 +19698,62 @@ type TCC0_CTRLA_PRESCALER* = enum
   DIV256 = 0x6,
   DIV1024 = 0x7,
 
-type TCC0_CTRLA_PRESCSYNC* = enum
+type TCC0_CTRLA_PRESCSYNC* {.size: 4.} = enum
   preGCLK = 0x0,
   prePRESC = 0x1,
   preRESYNC = 0x2,
 
-type TCC0_CTRLBCLR_IDXCMD* = enum
+type TCC0_CTRLBCLR_IDXCMD* {.size: 1.} = enum
   DISABLE = 0x0,
   SET = 0x1,
   CLEAR = 0x2,
   HOLD = 0x3,
 
-type TCC0_CTRLBCLR_CMD* = enum
+type TCC0_CTRLBCLR_CMD* {.size: 1.} = enum
   NONE = 0x0,
   RETRIGGER = 0x1,
   STOP = 0x2,
   UPDATE = 0x3,
   READSYNC = 0x4,
 
-type TCC0_CTRLBSET_IDXCMD* = enum
+type TCC0_CTRLBSET_IDXCMD* {.size: 1.} = enum
   DISABLE = 0x0,
   SET = 0x1,
   CLEAR = 0x2,
   HOLD = 0x3,
 
-type TCC0_CTRLBSET_CMD* = enum
+type TCC0_CTRLBSET_CMD* {.size: 1.} = enum
   NONE = 0x0,
   RETRIGGER = 0x1,
   STOP = 0x2,
   UPDATE = 0x3,
   READSYNC = 0x4,
 
-type TCC0_FCTRLA_SRC* = enum
+type TCC0_FCTRLA_SRC* {.size: 4.} = enum
   DISABLE = 0x0,
   ENABLE = 0x1,
   INVERT = 0x2,
   ALTFAULT = 0x3,
 
-type TCC0_FCTRLA_BLANK* = enum
+type TCC0_FCTRLA_BLANK* {.size: 4.} = enum
   NONE = 0x0,
   RISE = 0x1,
   FALL = 0x2,
   BOTH = 0x3,
 
-type TCC0_FCTRLA_HALT* = enum
+type TCC0_FCTRLA_HALT* {.size: 4.} = enum
   DISABLE = 0x0,
   HW = 0x1,
   SW = 0x2,
   NR = 0x3,
 
-type TCC0_FCTRLA_CHSEL* = enum
+type TCC0_FCTRLA_CHSEL* {.size: 4.} = enum
   CC0 = 0x0,
   CC1 = 0x1,
   CC2 = 0x2,
   CC3 = 0x3,
 
-type TCC0_FCTRLA_CAPTURE* = enum
+type TCC0_FCTRLA_CAPTURE* {.size: 4.} = enum
   DISABLE = 0x0,
   CAPT = 0x1,
   CAPTMIN = 0x2,
@@ -19762,31 +19762,31 @@ type TCC0_FCTRLA_CAPTURE* = enum
   LOCMAX = 0x5,
   DERIV0 = 0x6,
 
-type TCC0_FCTRLB_SRC* = enum
+type TCC0_FCTRLB_SRC* {.size: 4.} = enum
   DISABLE = 0x0,
   ENABLE = 0x1,
   INVERT = 0x2,
   ALTFAULT = 0x3,
 
-type TCC0_FCTRLB_BLANK* = enum
+type TCC0_FCTRLB_BLANK* {.size: 4.} = enum
   NONE = 0x0,
   RISE = 0x1,
   FALL = 0x2,
   BOTH = 0x3,
 
-type TCC0_FCTRLB_HALT* = enum
+type TCC0_FCTRLB_HALT* {.size: 4.} = enum
   DISABLE = 0x0,
   HW = 0x1,
   SW = 0x2,
   NR = 0x3,
 
-type TCC0_FCTRLB_CHSEL* = enum
+type TCC0_FCTRLB_CHSEL* {.size: 4.} = enum
   CC0 = 0x0,
   CC1 = 0x1,
   CC2 = 0x2,
   CC3 = 0x3,
 
-type TCC0_FCTRLB_CAPTURE* = enum
+type TCC0_FCTRLB_CAPTURE* {.size: 4.} = enum
   DISABLE = 0x0,
   CAPT = 0x1,
   CAPTMIN = 0x2,
@@ -19795,7 +19795,7 @@ type TCC0_FCTRLB_CAPTURE* = enum
   LOCMAX = 0x5,
   DERIV0 = 0x6,
 
-type TCC0_EVCTRL_EVACT0* = enum
+type TCC0_EVCTRL_EVACT0* {.size: 4.} = enum
   OFF = 0x0,
   RETRIGGER = 0x1,
   COUNTEV = 0x2,
@@ -19804,7 +19804,7 @@ type TCC0_EVCTRL_EVACT0* = enum
   COUNT = 0x5,
   FAULT = 0x7,
 
-type TCC0_EVCTRL_EVACT1* = enum
+type TCC0_EVCTRL_EVACT1* {.size: 4.} = enum
   OFF = 0x0,
   RETRIGGER = 0x1,
   DIR = 0x2,
@@ -19814,13 +19814,13 @@ type TCC0_EVCTRL_EVACT1* = enum
   PWP = 0x6,
   FAULT = 0x7,
 
-type TCC0_EVCTRL_CNTSEL* = enum
+type TCC0_EVCTRL_CNTSEL* {.size: 4.} = enum
   START = 0x0,
   ENDx = 0x1,
   BETWEEN = 0x2,
   BOUNDARY = 0x3,
 
-type TCC0_WAVE_WAVEGEN* = enum
+type TCC0_WAVE_WAVEGEN* {.size: 4.} = enum
   NFRQ = 0x0,
   MFRQ = 0x1,
   NPWM = 0x2,
@@ -19829,12 +19829,12 @@ type TCC0_WAVE_WAVEGEN* = enum
   DSBOTH = 0x6,
   DSTOP = 0x7,
 
-type TCC0_WAVE_RAMP* = enum
+type TCC0_WAVE_RAMP* {.size: 4.} = enum
   RAMP1 = 0x0,
   RAMP2A = 0x1,
   RAMP2 = 0x2,
 
-type TCC0_WAVEB_WAVEGENB* = enum
+type TCC0_WAVEB_WAVEGENB* {.size: 4.} = enum
   NFRQ = 0x0,
   MFRQ = 0x1,
   NPWM = 0x2,
@@ -19843,7 +19843,7 @@ type TCC0_WAVEB_WAVEGENB* = enum
   DSBOTH = 0x6,
   DSTOP = 0x7,
 
-type TCC0_WAVEB_RAMPB* = enum
+type TCC0_WAVEB_RAMPB* {.size: 4.} = enum
   RAMP1 = 0x0,
   RAMP2A = 0x1,
   RAMP2 = 0x2,
@@ -22976,45 +22976,45 @@ type
   UsbHost_PINTENCLR_Fields* = distinct uint8
   UsbHost_PINTENSET_Fields* = distinct uint8
 
-type UsbDevice_CTRLA_MODE* = enum
+type UsbDevice_CTRLA_MODE* {.size: 1.} = enum
   modDEVICE = 0x0,
   modHOST = 0x1,
 
-type UsbDevice_QOSCTRL_CQOS* = enum
+type UsbDevice_QOSCTRL_CQOS* {.size: 1.} = enum
   DISABLE = 0x0,
   LOW = 0x1,
   MEDIUM = 0x2,
   HIGH = 0x3,
 
-type UsbDevice_QOSCTRL_DQOS* = enum
+type UsbDevice_QOSCTRL_DQOS* {.size: 1.} = enum
   DISABLE = 0x0,
   LOW = 0x1,
   MEDIUM = 0x2,
   HIGH = 0x3,
 
-type UsbDevice_CTRLB_SPDCONF* = enum
+type UsbDevice_CTRLB_SPDCONF* {.size: 2.} = enum
   FS = 0x0,
   LS = 0x1,
   HS = 0x2,
   HSTM = 0x3,
 
-type UsbDevice_CTRLB_LPMHDSK* = enum
+type UsbDevice_CTRLB_LPMHDSK* {.size: 2.} = enum
   NO = 0x0,
   ACK = 0x1,
   NYET = 0x2,
   STALL = 0x3,
 
-type UsbDevice_STATUS_SPEED* = enum
+type UsbDevice_STATUS_SPEED* {.size: 1.} = enum
   FS = 0x0,
   HS = 0x1,
   LS = 0x2,
 
-type UsbDevice_STATUS_LINESTATE* = enum
+type UsbDevice_STATUS_LINESTATE* {.size: 1.} = enum
   x0 = 0x0,
   x1 = 0x1,
   x2 = 0x2,
 
-type UsbDevice_FSMSTATUS_FSMSTATE* = enum
+type UsbDevice_FSMSTATUS_FSMSTATE* {.size: 1.} = enum
   OFF = 0x1,
   ON = 0x2,
   SUSPEND = 0x4,
@@ -23023,27 +23023,27 @@ type UsbDevice_FSMSTATUS_FSMSTATE* = enum
   UPRESUME = 0x20,
   RESET = 0x40,
 
-type UsbHost_CTRLA_MODE* = enum
+type UsbHost_CTRLA_MODE* {.size: 1.} = enum
   modDEVICE = 0x0,
   modHOST = 0x1,
 
-type UsbHost_QOSCTRL_CQOS* = enum
+type UsbHost_QOSCTRL_CQOS* {.size: 1.} = enum
   DISABLE = 0x0,
   LOW = 0x1,
   MEDIUM = 0x2,
   HIGH = 0x3,
 
-type UsbHost_QOSCTRL_DQOS* = enum
+type UsbHost_QOSCTRL_DQOS* {.size: 1.} = enum
   DISABLE = 0x0,
   LOW = 0x1,
   MEDIUM = 0x2,
   HIGH = 0x3,
 
-type UsbHost_CTRLB_SPDCONF* = enum
+type UsbHost_CTRLB_SPDCONF* {.size: 2.} = enum
   NORMAL = 0x0,
   FS = 0x3,
 
-type UsbHost_FSMSTATUS_FSMSTATE* = enum
+type UsbHost_FSMSTATUS_FSMSTATE* {.size: 1.} = enum
   OFF = 0x1,
   ON = 0x2,
   SUSPEND = 0x4,
@@ -25280,7 +25280,7 @@ type
   WDT_INTFLAG_Fields* = distinct uint8
   WDT_STATUS_Fields* = distinct uint8
 
-type WDT_CONFIG_PER* = enum
+type WDT_CONFIG_PER* {.size: 1.} = enum
   x8 = 0x0,
   x16 = 0x1,
   x32 = 0x2,
@@ -25294,7 +25294,7 @@ type WDT_CONFIG_PER* = enum
   x8K = 0xa,
   x16K = 0xb,
 
-type WDT_CONFIG_WINDOW* = enum
+type WDT_CONFIG_WINDOW* {.size: 1.} = enum
   x8 = 0x0,
   x16 = 0x1,
   x32 = 0x2,
@@ -25308,7 +25308,7 @@ type WDT_CONFIG_WINDOW* = enum
   x8K = 0xa,
   x16K = 0xb,
 
-type WDT_EWCTRL_EWOFFSET* = enum
+type WDT_EWCTRL_EWOFFSET* {.size: 1.} = enum
   x8 = 0x0,
   x16 = 0x1,
   x32 = 0x2,
@@ -25322,7 +25322,7 @@ type WDT_EWCTRL_EWOFFSET* = enum
   x8K = 0xa,
   x16K = 0xb,
 
-type WDT_CLEAR_CLEAR* = enum
+type WDT_CLEAR_CLEAR* {.size: 1.} = enum
   KEY = 0xa5,
 
 proc read*(reg: WDT_CTRL_Type): WDT_CTRL_Fields {.inline.} =
@@ -25433,8 +25433,8 @@ template modifyIt*(reg: WDT_INTFLAG_Type, op: untyped): untyped =
 proc read*(reg: WDT_STATUS_Type): WDT_STATUS_Fields {.inline.} =
   volatileLoad(cast[ptr WDT_STATUS_Fields](reg.loc))
 
-proc write*(reg: WDT_CLEAR_Type, val: uint8) {.inline.} =
-  volatileStore(cast[ptr uint8](reg.loc), val)
+proc write*(reg: WDT_CLEAR_Type, val: WDT_CLEAR_CLEAR) {.inline.} =
+  volatileStore(cast[ptr WDT_CLEAR_CLEAR](reg.loc), val)
 
 func ENABLE*(r: WDT_CTRL_Fields): bool {.inline.} =
   r.uint8.bitsliced(1 .. 1).bool
