@@ -49,12 +49,12 @@ func findUsartMuxPad(inst: SercomInstance, txPin, rxPin: Pin): UsartMuxConfig {.
 
 macro initUsart(sercomInst: static[SercomInstance], txPin, rxPin: static[Pin],
                 baud: static[Natural], sync: static[bool] = false,
-                dataBits: static[range[5..9]] = 8,
-                parity: static[bool] = false, stopBits: static[range[1..2]]
-                ): untyped =
+                dataBits: static[int] = 8, parity: static[bool] = false,
+                stopBits: static[int] = 1): untyped =
   let muxPadCfg = findUsartMuxPad(sercomInst, txPin, rxPin)
-  if muxPadCfg.rxMux == muxNone or muxPadCfg.txMux == muxNone:
-    {.error: "Invalid pins for USART".}
+  echo muxPadCfg
+  #if muxPadCfg.rxMux == muxNone or muxPadCfg.txMux == muxNone:
+  #  {.error: "Invalid pins for USART".}
   let
     pmSercomFieldIdent = ident("SERCOM" & $sercomInst.int & "Field")
     clkctrlSercomId = ident("idSERCOM" & $sercomInst.int & "CORE")
@@ -63,12 +63,12 @@ macro initUsart(sercomInst: static[SercomInstance], txPin, rxPin: static[Pin],
     rxMuxLit = muxPadCfg.rxMux.newLit
     txPadLit = muxPadCfg.txPad.newLit
     rxPadLit = muxPadCfg.rxPad.newLit
-    chsizeLit = newLit(if dataBits < 8: dataBits.int elif dataBits == 8: 0 else: 1)
-    stopBitsLit = newLit(stopBits.int - 1)
-
+    chsize = [5: 5, 6: 6, 7: 7, 8: 0, 9: 1][dataBits]
+    sbmode = [1: false, 2: true][stopBits]
 
   result = genAst(pmSercomFieldIdent, clkctrlSercomId, txMuxLit, rxMuxLit,
-                  txPadLit, rxPadLit, chsizeLit, stopBitsLit):
+                  txPadLit, rxPadLit, chsize, sbmode, txPin, rxPin, parity,
+                  baud, sercomPeriphIdent):
     # Unmask APB clock for Sercom instance in PM
     PM.APBCMASK.modifyIt: it.pmSercomFieldIdent = true
 
@@ -80,12 +80,12 @@ macro initUsart(sercomInst: static[SercomInstance], txPin, rxPin: static[Pin],
     rxPin.configure(dir=pdInput, pullUp=false, muxFcn=rxMuxLit)
 
     # Reset the sercom peripheral prior to configuring and wait for sync
-    SERCOM0.USART.CTRLA.modifyIt: it.SWRST = true
-    while SERCOM0.USART.SYNCBUSY.SWRST or SERCOM0.USART.CTRLA.SWRST:
+    sercomPeriphIdent.USART.CTRLA.modifyIt: it.SWRST = true
+    while sercomPeriphIdent.USART.SYNCBUSY.read().SWRST or SERCOM0.USART.CTRLA.read().SWRST:
       discard
 
-    SERCOM0.USART.CTRLA.write(
-      MODE=USART_INT_CLK,
+    sercomPeriphIdent.USART.CTRLA.write(
+      MODE=SercomUsart_CTRLA_MODE.USART_INT_CLK,
       SAMPR=0, # 16X oversampling with arithmetic baud generation
       TXPO=(if txPadLit == 0: 0x0 else: 0x1),
       RXPO=rxPadLit,
@@ -94,15 +94,18 @@ macro initUsart(sercomInst: static[SercomInstance], txPin, rxPin: static[Pin],
       DORD=true, # LSB-first bit order
     )
 
-    SERCOM0.USART.CTRLB.write(
-      CHSIZE=chsizeLit,
-      SBMODE=stopBitsLit,
+    sercomPeriphIdent.USART.CTRLB.write(
+      CHSIZE=chsize,
+      SBMODE=sbmode,
       TXEN=true,
       RXEN=true
     )
 
-    SERCOM0.BAUD.write uint16(65536 * (1 - 16 * baud div getSystemClock().int))
+    sercomPeriphIdent.USART.BAUD.write uint16.high - uint16((16'i64 * 65536'i64 * baud.int64) div getSystemClock().int64)
 
     # Enable and wait for sync
-    SERCOM0.CTRLA.ENABLE = true
-    while SERCOM0.SYNCBUSY.ENABLE: disable
+    sercomPeriphIdent.USART.CTRLA.modifyIt: it.ENABLE = true
+    while sercomPeriphIdent.USART.SYNCBUSY.read().ENABLE: discard
+
+expandMacros:
+  initUsart(sercom0, txPin=pin("PA10"), rxPin=pin("PA11"), baud=9600)
