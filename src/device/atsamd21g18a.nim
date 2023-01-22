@@ -66,43 +66,43 @@ include core_cm0plus
 ################################################################################
 # Type definitions for peripheral registers
 ################################################################################
-type AC_CTRLA_Type = object
+type AC_CTRLA_Type* = object
   loc: uint
 
-type AC_CTRLB_Type = object
+type AC_CTRLB_Type* = object
   loc: uint
 
-type AC_EVCTRL_Type = object
+type AC_EVCTRL_Type* = object
   loc: uint
 
-type AC_INTENCLR_Type = object
+type AC_INTENCLR_Type* = object
   loc: uint
 
-type AC_INTENSET_Type = object
+type AC_INTENSET_Type* = object
   loc: uint
 
-type AC_INTFLAG_Type = object
+type AC_INTFLAG_Type* = object
   loc: uint
 
-type AC_STATUSA_Type = object
+type AC_STATUSA_Type* = object
   loc: uint
 
-type AC_STATUSB_Type = object
+type AC_STATUSB_Type* = object
   loc: uint
 
-type AC_STATUSC_Type = object
+type AC_STATUSC_Type* = object
   loc: uint
 
-type AC_WINCTRL_Type = object
+type AC_WINCTRL_Type* = object
   loc: uint
 
-type AC_COMPCTRL_Type = object
+type AC_COMPCTRL_Type* = object
   loc: uint
 
-type AC_SCALER_Type = object
+type AC_SCALER_Type* = object
   loc: uint
 
-type AC_Type = object
+type AC_Type* = object
   CTRLA*: AC_CTRLA_Type
   CTRLB*: AC_CTRLB_Type
   EVCTRL*: AC_EVCTRL_Type
@@ -118,67 +118,67 @@ type AC_Type = object
   SCALER0*: AC_SCALER_Type
   SCALER1*: AC_SCALER_Type
 
-type ADC_CTRLA_Type = object
+type ADC_CTRLA_Type* = object
   loc: uint
 
-type ADC_REFCTRL_Type = object
+type ADC_REFCTRL_Type* = object
   loc: uint
 
-type ADC_AVGCTRL_Type = object
+type ADC_AVGCTRL_Type* = object
   loc: uint
 
-type ADC_SAMPCTRL_Type = object
+type ADC_SAMPCTRL_Type* = object
   loc: uint
 
-type ADC_CTRLB_Type = object
+type ADC_CTRLB_Type* = object
   loc: uint
 
-type ADC_WINCTRL_Type = object
+type ADC_WINCTRL_Type* = object
   loc: uint
 
-type ADC_SWTRIG_Type = object
+type ADC_SWTRIG_Type* = object
   loc: uint
 
-type ADC_INPUTCTRL_Type = object
+type ADC_INPUTCTRL_Type* = object
   loc: uint
 
-type ADC_EVCTRL_Type = object
+type ADC_EVCTRL_Type* = object
   loc: uint
 
-type ADC_INTENCLR_Type = object
+type ADC_INTENCLR_Type* = object
   loc: uint
 
-type ADC_INTENSET_Type = object
+type ADC_INTENSET_Type* = object
   loc: uint
 
-type ADC_INTFLAG_Type = object
+type ADC_INTFLAG_Type* = object
   loc: uint
 
-type ADC_STATUS_Type = object
+type ADC_STATUS_Type* = object
   loc: uint
 
-type ADC_RESULT_Type = object
+type ADC_RESULT_Type* = object
   loc: uint
 
-type ADC_WINLT_Type = object
+type ADC_WINLT_Type* = object
   loc: uint
 
-type ADC_WINUT_Type = object
+type ADC_WINUT_Type* = object
   loc: uint
 
-type ADC_GAINCORR_Type = object
+type ADC_GAINCORR_Type* = object
   loc: uint
 
-type ADC_OFFSETCORR_Type = object
+type ADC_OFFSETCORR_Type* = object
   loc: uint
 
-type ADC_CALIB_Type = object
+type ADC_CALIB_Type* = object
   loc: uint
 
-type ADC_DBGCTRL_Type = object
+type ADC_DBGCTRL_Type* = object
   loc: uint
 
-type ADC_Type = object
+type ADC_Type* = object
   CTRLA*: ADC_CTRLA_Type
   REFCTRL*: ADC_REFCTRL_Type
   AVGCTRL*: ADC_AVGCTRL_Type
@@ -200,34 +200,34 @@ type ADC_Type = object
   CALIB*: ADC_CALIB_Type
   DBGCTRL*: ADC_DBGCTRL_Type
 
-type DAC_CTRLA_Type = object
+type DAC_CTRLA_Type* = object
   loc: uint
 
-type DAC_CTRLB_Type = object
+type DAC_CTRLB_Type* = object
   loc: uint
 
-type DAC_EVCTRL_Type = object
+type DAC_EVCTRL_Type* = object
   loc: uint
 
-type DAC_INTENCLR_Type = object
+type DAC_INTENCLR_Type* = object
   loc: uint
 
-type DAC_INTENSET_Type = object
+type DAC_INTENSET_Type* = object
   loc: uint
 
-type DAC_INTFLAG_Type = object
+type DAC_INTFLAG_Type* = object
   loc: uint
 
-type DAC_STATUS_Type = object
+type DAC_STATUS_Type* = object
   loc: uint
 
-type DAC_DATA_Type = object
+type DAC_DATA_Type* = object
   loc: uint
 
-type DAC_DATABUF_Type = object
+type DAC_DATABUF_Type* = object
   loc: uint
 
-type DAC_Type = object
+type DAC_Type* = object
   CTRLA*: DAC_CTRLA_Type
   CTRLB*: DAC_CTRLB_Type
   EVCTRL*: DAC_EVCTRL_Type
@@ -238,76 +238,76 @@ type DAC_Type = object
   DATA*: DAC_DATA_Type
   DATABUF*: DAC_DATABUF_Type
 
-type DMAC_CTRL_Type = object
+type DMAC_CTRL_Type* = object
   loc: uint
 
-type DMAC_CRCCTRL_Type = object
+type DMAC_CRCCTRL_Type* = object
   loc: uint
 
-type DMAC_CRCDATAIN_Type = object
+type DMAC_CRCDATAIN_Type* = object
   loc: uint
 
-type DMAC_CRCCHKSUM_Type = object
+type DMAC_CRCCHKSUM_Type* = object
   loc: uint
 
-type DMAC_CRCSTATUS_Type = object
+type DMAC_CRCSTATUS_Type* = object
   loc: uint
 
-type DMAC_DBGCTRL_Type = object
+type DMAC_DBGCTRL_Type* = object
   loc: uint
 
-type DMAC_QOSCTRL_Type = object
+type DMAC_QOSCTRL_Type* = object
   loc: uint
 
-type DMAC_SWTRIGCTRL_Type = object
+type DMAC_SWTRIGCTRL_Type* = object
   loc: uint
 
-type DMAC_PRICTRL0_Type = object
+type DMAC_PRICTRL0_Type* = object
   loc: uint
 
-type DMAC_INTPEND_Type = object
+type DMAC_INTPEND_Type* = object
   loc: uint
 
-type DMAC_INTSTATUS_Type = object
+type DMAC_INTSTATUS_Type* = object
   loc: uint
 
-type DMAC_BUSYCH_Type = object
+type DMAC_BUSYCH_Type* = object
   loc: uint
 
-type DMAC_PENDCH_Type = object
+type DMAC_PENDCH_Type* = object
   loc: uint
 
-type DMAC_ACTIVE_Type = object
+type DMAC_ACTIVE_Type* = object
   loc: uint
 
-type DMAC_BASEADDR_Type = object
+type DMAC_BASEADDR_Type* = object
   loc: uint
 
-type DMAC_WRBADDR_Type = object
+type DMAC_WRBADDR_Type* = object
   loc: uint
 
-type DMAC_CHID_Type = object
+type DMAC_CHID_Type* = object
   loc: uint
 
-type DMAC_CHCTRLA_Type = object
+type DMAC_CHCTRLA_Type* = object
   loc: uint
 
-type DMAC_CHCTRLB_Type = object
+type DMAC_CHCTRLB_Type* = object
   loc: uint
 
-type DMAC_CHINTENCLR_Type = object
+type DMAC_CHINTENCLR_Type* = object
   loc: uint
 
-type DMAC_CHINTENSET_Type = object
+type DMAC_CHINTENSET_Type* = object
   loc: uint
 
-type DMAC_CHINTFLAG_Type = object
+type DMAC_CHINTFLAG_Type* = object
   loc: uint
 
-type DMAC_CHSTATUS_Type = object
+type DMAC_CHSTATUS_Type* = object
   loc: uint
 
-type DMAC_Type = object
+type DMAC_Type* = object
   CTRL*: DMAC_CTRL_Type
   CRCCTRL*: DMAC_CRCCTRL_Type
   CRCDATAIN*: DMAC_CRCDATAIN_Type
@@ -332,70 +332,70 @@ type DMAC_Type = object
   CHINTFLAG*: DMAC_CHINTFLAG_Type
   CHSTATUS*: DMAC_CHSTATUS_Type
 
-type DSU_CTRL_Type = object
+type DSU_CTRL_Type* = object
   loc: uint
 
-type DSU_STATUSA_Type = object
+type DSU_STATUSA_Type* = object
   loc: uint
 
-type DSU_STATUSB_Type = object
+type DSU_STATUSB_Type* = object
   loc: uint
 
-type DSU_ADDR_Type = object
+type DSU_ADDR_Type* = object
   loc: uint
 
-type DSU_LENGTH_Type = object
+type DSU_LENGTH_Type* = object
   loc: uint
 
-type DSU_DATA_Type = object
+type DSU_DATA_Type* = object
   loc: uint
 
-type DSU_DCC_Type = object
+type DSU_DCC_Type* = object
   loc: uint
 
-type DSU_DID_Type = object
+type DSU_DID_Type* = object
   loc: uint
 
-type DSU_ENTRY_Type = object
+type DSU_ENTRY_Type* = object
   loc: uint
 
-type DSU_ENTRY1_Type = object
+type DSU_ENTRY1_Type* = object
   loc: uint
 
-type DSU_END_Type = object
+type DSU_END_Type* = object
   loc: uint
 
-type DSU_MEMTYPE_Type = object
+type DSU_MEMTYPE_Type* = object
   loc: uint
 
-type DSU_PID4_Type = object
+type DSU_PID4_Type* = object
   loc: uint
 
-type DSU_PID0_Type = object
+type DSU_PID0_Type* = object
   loc: uint
 
-type DSU_PID1_Type = object
+type DSU_PID1_Type* = object
   loc: uint
 
-type DSU_PID2_Type = object
+type DSU_PID2_Type* = object
   loc: uint
 
-type DSU_PID3_Type = object
+type DSU_PID3_Type* = object
   loc: uint
 
-type DSU_CID0_Type = object
+type DSU_CID0_Type* = object
   loc: uint
 
-type DSU_CID1_Type = object
+type DSU_CID1_Type* = object
   loc: uint
 
-type DSU_CID2_Type = object
+type DSU_CID2_Type* = object
   loc: uint
 
-type DSU_CID3_Type = object
+type DSU_CID3_Type* = object
   loc: uint
 
-type DSU_Type = object
+type DSU_Type* = object
   CTRL*: DSU_CTRL_Type
   STATUSA*: DSU_STATUSA_Type
   STATUSB*: DSU_STATUSB_Type
@@ -419,37 +419,37 @@ type DSU_Type = object
   CID2*: DSU_CID2_Type
   CID3*: DSU_CID3_Type
 
-type EIC_CTRL_Type = object
+type EIC_CTRL_Type* = object
   loc: uint
 
-type EIC_STATUS_Type = object
+type EIC_STATUS_Type* = object
   loc: uint
 
-type EIC_NMICTRL_Type = object
+type EIC_NMICTRL_Type* = object
   loc: uint
 
-type EIC_NMIFLAG_Type = object
+type EIC_NMIFLAG_Type* = object
   loc: uint
 
-type EIC_EVCTRL_Type = object
+type EIC_EVCTRL_Type* = object
   loc: uint
 
-type EIC_INTENCLR_Type = object
+type EIC_INTENCLR_Type* = object
   loc: uint
 
-type EIC_INTENSET_Type = object
+type EIC_INTENSET_Type* = object
   loc: uint
 
-type EIC_INTFLAG_Type = object
+type EIC_INTFLAG_Type* = object
   loc: uint
 
-type EIC_WAKEUP_Type = object
+type EIC_WAKEUP_Type* = object
   loc: uint
 
-type EIC_CONFIG_Type = object
+type EIC_CONFIG_Type* = object
   loc: uint
 
-type EIC_Type = object
+type EIC_Type* = object
   CTRL*: EIC_CTRL_Type
   STATUS*: EIC_STATUS_Type
   NMICTRL*: EIC_NMICTRL_Type
@@ -462,28 +462,28 @@ type EIC_Type = object
   CONFIG0*: EIC_CONFIG_Type
   CONFIG1*: EIC_CONFIG_Type
 
-type EVSYS_CTRL_Type = object
+type EVSYS_CTRL_Type* = object
   loc: uint
 
-type EVSYS_CHANNEL_Type = object
+type EVSYS_CHANNEL_Type* = object
   loc: uint
 
-type EVSYS_USER_Type = object
+type EVSYS_USER_Type* = object
   loc: uint
 
-type EVSYS_CHSTATUS_Type = object
+type EVSYS_CHSTATUS_Type* = object
   loc: uint
 
-type EVSYS_INTENCLR_Type = object
+type EVSYS_INTENCLR_Type* = object
   loc: uint
 
-type EVSYS_INTENSET_Type = object
+type EVSYS_INTENSET_Type* = object
   loc: uint
 
-type EVSYS_INTFLAG_Type = object
+type EVSYS_INTFLAG_Type* = object
   loc: uint
 
-type EVSYS_Type = object
+type EVSYS_Type* = object
   CTRL*: EVSYS_CTRL_Type
   CHANNEL*: EVSYS_CHANNEL_Type
   USER*: EVSYS_USER_Type
@@ -492,38 +492,38 @@ type EVSYS_Type = object
   INTENSET*: EVSYS_INTENSET_Type
   INTFLAG*: EVSYS_INTFLAG_Type
 
-type GCLK_CTRL_Type = object
+type GCLK_CTRL_Type* = object
   loc: uint
 
-type GCLK_STATUS_Type = object
+type GCLK_STATUS_Type* = object
   loc: uint
 
-type GCLK_CLKCTRL_Type = object
+type GCLK_CLKCTRL_Type* = object
   loc: uint
 
-type GCLK_GENCTRL_Type = object
+type GCLK_GENCTRL_Type* = object
   loc: uint
 
-type GCLK_GENDIV_Type = object
+type GCLK_GENDIV_Type* = object
   loc: uint
 
-type GCLK_Type = object
+type GCLK_Type* = object
   CTRL*: GCLK_CTRL_Type
   STATUS*: GCLK_STATUS_Type
   CLKCTRL*: GCLK_CLKCTRL_Type
   GENCTRL*: GCLK_GENCTRL_Type
   GENDIV*: GCLK_GENDIV_Type
 
-type HMATRIX_PRAS_Type = object
+type HMATRIX_PRAS_Type* = object
   loc: uint
 
-type HMATRIX_PRBS_Type = object
+type HMATRIX_PRBS_Type* = object
   loc: uint
 
-type HMATRIX_SFR_Type = object
+type HMATRIX_SFR_Type* = object
   loc: uint
 
-type HMATRIX_Type = object
+type HMATRIX_Type* = object
   PRAS0*: HMATRIX_PRAS_Type
   PRBS0*: HMATRIX_PRBS_Type
   PRAS1*: HMATRIX_PRAS_Type
@@ -573,31 +573,31 @@ type HMATRIX_Type = object
   SFR14*: HMATRIX_SFR_Type
   SFR15*: HMATRIX_SFR_Type
 
-type I2S_CTRLA_Type = object
+type I2S_CTRLA_Type* = object
   loc: uint
 
-type I2S_CLKCTRL_Type = object
+type I2S_CLKCTRL_Type* = object
   loc: uint
 
-type I2S_INTENCLR_Type = object
+type I2S_INTENCLR_Type* = object
   loc: uint
 
-type I2S_INTENSET_Type = object
+type I2S_INTENSET_Type* = object
   loc: uint
 
-type I2S_INTFLAG_Type = object
+type I2S_INTFLAG_Type* = object
   loc: uint
 
-type I2S_SYNCBUSY_Type = object
+type I2S_SYNCBUSY_Type* = object
   loc: uint
 
-type I2S_SERCTRL_Type = object
+type I2S_SERCTRL_Type* = object
   loc: uint
 
-type I2S_DATA_Type = object
+type I2S_DATA_Type* = object
   loc: uint
 
-type I2S_Type = object
+type I2S_Type* = object
   CTRLA*: I2S_CTRLA_Type
   CLKCTRL0*: I2S_CLKCTRL_Type
   CLKCTRL1*: I2S_CLKCTRL_Type
@@ -610,82 +610,82 @@ type I2S_Type = object
   DATA0*: I2S_DATA_Type
   DATA1*: I2S_DATA_Type
 
-type MTB_POSITION_Type = object
+type MTB_POSITION_Type* = object
   loc: uint
 
-type MTB_MASTER_Type = object
+type MTB_MASTER_Type* = object
   loc: uint
 
-type MTB_FLOW_Type = object
+type MTB_FLOW_Type* = object
   loc: uint
 
-type MTB_BASE_Type = object
+type MTB_BASE_Type* = object
   loc: uint
 
-type MTB_ITCTRL_Type = object
+type MTB_ITCTRL_Type* = object
   loc: uint
 
-type MTB_CLAIMSET_Type = object
+type MTB_CLAIMSET_Type* = object
   loc: uint
 
-type MTB_CLAIMCLR_Type = object
+type MTB_CLAIMCLR_Type* = object
   loc: uint
 
-type MTB_LOCKACCESS_Type = object
+type MTB_LOCKACCESS_Type* = object
   loc: uint
 
-type MTB_LOCKSTATUS_Type = object
+type MTB_LOCKSTATUS_Type* = object
   loc: uint
 
-type MTB_AUTHSTATUS_Type = object
+type MTB_AUTHSTATUS_Type* = object
   loc: uint
 
-type MTB_DEVARCH_Type = object
+type MTB_DEVARCH_Type* = object
   loc: uint
 
-type MTB_DEVID_Type = object
+type MTB_DEVID_Type* = object
   loc: uint
 
-type MTB_DEVTYPE_Type = object
+type MTB_DEVTYPE_Type* = object
   loc: uint
 
-type MTB_PID4_Type = object
+type MTB_PID4_Type* = object
   loc: uint
 
-type MTB_PID5_Type = object
+type MTB_PID5_Type* = object
   loc: uint
 
-type MTB_PID6_Type = object
+type MTB_PID6_Type* = object
   loc: uint
 
-type MTB_PID7_Type = object
+type MTB_PID7_Type* = object
   loc: uint
 
-type MTB_PID0_Type = object
+type MTB_PID0_Type* = object
   loc: uint
 
-type MTB_PID1_Type = object
+type MTB_PID1_Type* = object
   loc: uint
 
-type MTB_PID2_Type = object
+type MTB_PID2_Type* = object
   loc: uint
 
-type MTB_PID3_Type = object
+type MTB_PID3_Type* = object
   loc: uint
 
-type MTB_CID0_Type = object
+type MTB_CID0_Type* = object
   loc: uint
 
-type MTB_CID1_Type = object
+type MTB_CID1_Type* = object
   loc: uint
 
-type MTB_CID2_Type = object
+type MTB_CID2_Type* = object
   loc: uint
 
-type MTB_CID3_Type = object
+type MTB_CID3_Type* = object
   loc: uint
 
-type MTB_Type = object
+type MTB_Type* = object
   POSITION*: MTB_POSITION_Type
   MASTER*: MTB_MASTER_Type
   FLOW*: MTB_FLOW_Type
@@ -712,34 +712,34 @@ type MTB_Type = object
   CID2*: MTB_CID2_Type
   CID3*: MTB_CID3_Type
 
-type NVMCTRL_CTRLA_Type = object
+type NVMCTRL_CTRLA_Type* = object
   loc: uint
 
-type NVMCTRL_CTRLB_Type = object
+type NVMCTRL_CTRLB_Type* = object
   loc: uint
 
-type NVMCTRL_PARAM_Type = object
+type NVMCTRL_PARAM_Type* = object
   loc: uint
 
-type NVMCTRL_INTENCLR_Type = object
+type NVMCTRL_INTENCLR_Type* = object
   loc: uint
 
-type NVMCTRL_INTENSET_Type = object
+type NVMCTRL_INTENSET_Type* = object
   loc: uint
 
-type NVMCTRL_INTFLAG_Type = object
+type NVMCTRL_INTFLAG_Type* = object
   loc: uint
 
-type NVMCTRL_STATUS_Type = object
+type NVMCTRL_STATUS_Type* = object
   loc: uint
 
-type NVMCTRL_ADDR_Type = object
+type NVMCTRL_ADDR_Type* = object
   loc: uint
 
-type NVMCTRL_LOCK_Type = object
+type NVMCTRL_LOCK_Type* = object
   loc: uint
 
-type NVMCTRL_Type = object
+type NVMCTRL_Type* = object
   CTRLA*: NVMCTRL_CTRLA_Type
   CTRLB*: NVMCTRL_CTRLB_Type
   PARAM*: NVMCTRL_PARAM_Type
@@ -750,59 +750,59 @@ type NVMCTRL_Type = object
   ADDRx*: NVMCTRL_ADDR_Type
   LOCK*: NVMCTRL_LOCK_Type
 
-type PAC0_WPCLR_Type = object
+type PAC0_WPCLR_Type* = object
   loc: uint
 
-type PAC0_WPSET_Type = object
+type PAC0_WPSET_Type* = object
   loc: uint
 
-type PAC0_Type = object
+type PAC0_Type* = object
   WPCLR*: PAC0_WPCLR_Type
   WPSET*: PAC0_WPSET_Type
 
-type PM_CTRL_Type = object
+type PM_CTRL_Type* = object
   loc: uint
 
-type PM_SLEEP_Type = object
+type PM_SLEEP_Type* = object
   loc: uint
 
-type PM_CPUSEL_Type = object
+type PM_CPUSEL_Type* = object
   loc: uint
 
-type PM_APBASEL_Type = object
+type PM_APBASEL_Type* = object
   loc: uint
 
-type PM_APBBSEL_Type = object
+type PM_APBBSEL_Type* = object
   loc: uint
 
-type PM_APBCSEL_Type = object
+type PM_APBCSEL_Type* = object
   loc: uint
 
-type PM_AHBMASK_Type = object
+type PM_AHBMASK_Type* = object
   loc: uint
 
-type PM_APBAMASK_Type = object
+type PM_APBAMASK_Type* = object
   loc: uint
 
-type PM_APBBMASK_Type = object
+type PM_APBBMASK_Type* = object
   loc: uint
 
-type PM_APBCMASK_Type = object
+type PM_APBCMASK_Type* = object
   loc: uint
 
-type PM_INTENCLR_Type = object
+type PM_INTENCLR_Type* = object
   loc: uint
 
-type PM_INTENSET_Type = object
+type PM_INTENSET_Type* = object
   loc: uint
 
-type PM_INTFLAG_Type = object
+type PM_INTFLAG_Type* = object
   loc: uint
 
-type PM_RCAUSE_Type = object
+type PM_RCAUSE_Type* = object
   loc: uint
 
-type PM_Type = object
+type PM_Type* = object
   CTRL*: PM_CTRL_Type
   SLEEP*: PM_SLEEP_Type
   CPUSEL*: PM_CPUSEL_Type
@@ -818,46 +818,46 @@ type PM_Type = object
   INTFLAG*: PM_INTFLAG_Type
   RCAUSE*: PM_RCAUSE_Type
 
-type PORT_DIR_Type = object
+type PORT_DIR_Type* = object
   loc: uint
 
-type PORT_DIRCLR_Type = object
+type PORT_DIRCLR_Type* = object
   loc: uint
 
-type PORT_DIRSET_Type = object
+type PORT_DIRSET_Type* = object
   loc: uint
 
-type PORT_DIRTGL_Type = object
+type PORT_DIRTGL_Type* = object
   loc: uint
 
-type PORT_OUT_Type = object
+type PORT_OUT_Type* = object
   loc: uint
 
-type PORT_OUTCLR_Type = object
+type PORT_OUTCLR_Type* = object
   loc: uint
 
-type PORT_OUTSET_Type = object
+type PORT_OUTSET_Type* = object
   loc: uint
 
-type PORT_OUTTGL_Type = object
+type PORT_OUTTGL_Type* = object
   loc: uint
 
-type PORT_IN_Type = object
+type PORT_IN_Type* = object
   loc: uint
 
-type PORT_CTRL_Type = object
+type PORT_CTRL_Type* = object
   loc: uint
 
-type PORT_WRCONFIG_Type = object
+type PORT_WRCONFIG_Type* = object
   loc: uint
 
-type PORT_PMUX0_Type = object
+type PORT_PMUX0_Type* = object
   loc: uint
 
-type PORT_PINCFG0_Type = object
+type PORT_PINCFG0_Type* = object
   loc: uint
 
-type PORT_Type = object
+type PORT_Type* = object
   DIR0*: PORT_DIR_Type
   DIRCLR0*: PORT_DIRCLR_Type
   DIRSET0*: PORT_DIRSET_Type
@@ -977,40 +977,40 @@ type PORT_Type = object
   PINCFG1_30*: PORT_PINCFG0_Type
   PINCFG1_31*: PORT_PINCFG0_Type
 
-type RtcMode0_CTRL_Type = object
+type RtcMode0_CTRL_Type* = object
   loc: uint
 
-type RtcMode0_READREQ_Type = object
+type RtcMode0_READREQ_Type* = object
   loc: uint
 
-type RtcMode0_EVCTRL_Type = object
+type RtcMode0_EVCTRL_Type* = object
   loc: uint
 
-type RtcMode0_INTENCLR_Type = object
+type RtcMode0_INTENCLR_Type* = object
   loc: uint
 
-type RtcMode0_INTENSET_Type = object
+type RtcMode0_INTENSET_Type* = object
   loc: uint
 
-type RtcMode0_INTFLAG_Type = object
+type RtcMode0_INTFLAG_Type* = object
   loc: uint
 
-type RtcMode0_STATUS_Type = object
+type RtcMode0_STATUS_Type* = object
   loc: uint
 
-type RtcMode0_DBGCTRL_Type = object
+type RtcMode0_DBGCTRL_Type* = object
   loc: uint
 
-type RtcMode0_FREQCORR_Type = object
+type RtcMode0_FREQCORR_Type* = object
   loc: uint
 
-type RtcMode0_COUNT_Type = object
+type RtcMode0_COUNT_Type* = object
   loc: uint
 
-type RtcMode0_COMP_Type = object
+type RtcMode0_COMP_Type* = object
   loc: uint
 
-type RtcMode0_Type = object
+type RtcMode0_Type* = object
   CTRL*: RtcMode0_CTRL_Type
   READREQ*: RtcMode0_READREQ_Type
   EVCTRL*: RtcMode0_EVCTRL_Type
@@ -1023,43 +1023,43 @@ type RtcMode0_Type = object
   COUNT*: RtcMode0_COUNT_Type
   COMP0*: RtcMode0_COMP_Type
 
-type RtcMode1_CTRL_Type = object
+type RtcMode1_CTRL_Type* = object
   loc: uint
 
-type RtcMode1_READREQ_Type = object
+type RtcMode1_READREQ_Type* = object
   loc: uint
 
-type RtcMode1_EVCTRL_Type = object
+type RtcMode1_EVCTRL_Type* = object
   loc: uint
 
-type RtcMode1_INTENCLR_Type = object
+type RtcMode1_INTENCLR_Type* = object
   loc: uint
 
-type RtcMode1_INTENSET_Type = object
+type RtcMode1_INTENSET_Type* = object
   loc: uint
 
-type RtcMode1_INTFLAG_Type = object
+type RtcMode1_INTFLAG_Type* = object
   loc: uint
 
-type RtcMode1_STATUS_Type = object
+type RtcMode1_STATUS_Type* = object
   loc: uint
 
-type RtcMode1_DBGCTRL_Type = object
+type RtcMode1_DBGCTRL_Type* = object
   loc: uint
 
-type RtcMode1_FREQCORR_Type = object
+type RtcMode1_FREQCORR_Type* = object
   loc: uint
 
-type RtcMode1_COUNT_Type = object
+type RtcMode1_COUNT_Type* = object
   loc: uint
 
-type RtcMode1_PER_Type = object
+type RtcMode1_PER_Type* = object
   loc: uint
 
-type RtcMode1_COMP_Type = object
+type RtcMode1_COMP_Type* = object
   loc: uint
 
-type RtcMode1_Type = object
+type RtcMode1_Type* = object
   CTRL*: RtcMode1_CTRL_Type
   READREQ*: RtcMode1_READREQ_Type
   EVCTRL*: RtcMode1_EVCTRL_Type
@@ -1074,43 +1074,43 @@ type RtcMode1_Type = object
   COMP0*: RtcMode1_COMP_Type
   COMP1*: RtcMode1_COMP_Type
 
-type RtcMode2_CTRL_Type = object
+type RtcMode2_CTRL_Type* = object
   loc: uint
 
-type RtcMode2_READREQ_Type = object
+type RtcMode2_READREQ_Type* = object
   loc: uint
 
-type RtcMode2_EVCTRL_Type = object
+type RtcMode2_EVCTRL_Type* = object
   loc: uint
 
-type RtcMode2_INTENCLR_Type = object
+type RtcMode2_INTENCLR_Type* = object
   loc: uint
 
-type RtcMode2_INTENSET_Type = object
+type RtcMode2_INTENSET_Type* = object
   loc: uint
 
-type RtcMode2_INTFLAG_Type = object
+type RtcMode2_INTFLAG_Type* = object
   loc: uint
 
-type RtcMode2_STATUS_Type = object
+type RtcMode2_STATUS_Type* = object
   loc: uint
 
-type RtcMode2_DBGCTRL_Type = object
+type RtcMode2_DBGCTRL_Type* = object
   loc: uint
 
-type RtcMode2_FREQCORR_Type = object
+type RtcMode2_FREQCORR_Type* = object
   loc: uint
 
-type RtcMode2_CLOCK_Type = object
+type RtcMode2_CLOCK_Type* = object
   loc: uint
 
-type RtcMode2_ALARM_Type = object
+type RtcMode2_ALARM_Type* = object
   loc: uint
 
-type RtcMode2_MASK_Type = object
+type RtcMode2_MASK_Type* = object
   loc: uint
 
-type RtcMode2_Type = object
+type RtcMode2_Type* = object
   CTRL*: RtcMode2_CTRL_Type
   READREQ*: RtcMode2_READREQ_Type
   EVCTRL*: RtcMode2_EVCTRL_Type
@@ -1124,45 +1124,45 @@ type RtcMode2_Type = object
   ALARM0*: RtcMode2_ALARM_Type
   MASK0*: RtcMode2_MASK_Type
 
-type RTC_Type = object
+type RTC_Type* = object
   MODE0*: RtcMode0_Type
   MODE1*: RtcMode1_Type
   MODE2*: RtcMode2_Type
 
-type SercomI2cm_CTRLA_Type = object
+type SercomI2cm_CTRLA_Type* = object
   loc: uint
 
-type SercomI2cm_CTRLB_Type = object
+type SercomI2cm_CTRLB_Type* = object
   loc: uint
 
-type SercomI2cm_BAUD_Type = object
+type SercomI2cm_BAUD_Type* = object
   loc: uint
 
-type SercomI2cm_INTENCLR_Type = object
+type SercomI2cm_INTENCLR_Type* = object
   loc: uint
 
-type SercomI2cm_INTENSET_Type = object
+type SercomI2cm_INTENSET_Type* = object
   loc: uint
 
-type SercomI2cm_INTFLAG_Type = object
+type SercomI2cm_INTFLAG_Type* = object
   loc: uint
 
-type SercomI2cm_STATUS_Type = object
+type SercomI2cm_STATUS_Type* = object
   loc: uint
 
-type SercomI2cm_SYNCBUSY_Type = object
+type SercomI2cm_SYNCBUSY_Type* = object
   loc: uint
 
-type SercomI2cm_ADDR_Type = object
+type SercomI2cm_ADDR_Type* = object
   loc: uint
 
-type SercomI2cm_DATA_Type = object
+type SercomI2cm_DATA_Type* = object
   loc: uint
 
-type SercomI2cm_DBGCTRL_Type = object
+type SercomI2cm_DBGCTRL_Type* = object
   loc: uint
 
-type SercomI2cm_Type = object
+type SercomI2cm_Type* = object
   CTRLA*: SercomI2cm_CTRLA_Type
   CTRLB*: SercomI2cm_CTRLB_Type
   BAUD*: SercomI2cm_BAUD_Type
@@ -1175,34 +1175,34 @@ type SercomI2cm_Type = object
   DATA*: SercomI2cm_DATA_Type
   DBGCTRL*: SercomI2cm_DBGCTRL_Type
 
-type SercomI2cs_CTRLA_Type = object
+type SercomI2cs_CTRLA_Type* = object
   loc: uint
 
-type SercomI2cs_CTRLB_Type = object
+type SercomI2cs_CTRLB_Type* = object
   loc: uint
 
-type SercomI2cs_INTENCLR_Type = object
+type SercomI2cs_INTENCLR_Type* = object
   loc: uint
 
-type SercomI2cs_INTENSET_Type = object
+type SercomI2cs_INTENSET_Type* = object
   loc: uint
 
-type SercomI2cs_INTFLAG_Type = object
+type SercomI2cs_INTFLAG_Type* = object
   loc: uint
 
-type SercomI2cs_STATUS_Type = object
+type SercomI2cs_STATUS_Type* = object
   loc: uint
 
-type SercomI2cs_SYNCBUSY_Type = object
+type SercomI2cs_SYNCBUSY_Type* = object
   loc: uint
 
-type SercomI2cs_ADDR_Type = object
+type SercomI2cs_ADDR_Type* = object
   loc: uint
 
-type SercomI2cs_DATA_Type = object
+type SercomI2cs_DATA_Type* = object
   loc: uint
 
-type SercomI2cs_Type = object
+type SercomI2cs_Type* = object
   CTRLA*: SercomI2cs_CTRLA_Type
   CTRLB*: SercomI2cs_CTRLB_Type
   INTENCLR*: SercomI2cs_INTENCLR_Type
@@ -1213,40 +1213,40 @@ type SercomI2cs_Type = object
   ADDRx*: SercomI2cs_ADDR_Type
   DATA*: SercomI2cs_DATA_Type
 
-type SercomSpi_CTRLA_Type = object
+type SercomSpi_CTRLA_Type* = object
   loc: uint
 
-type SercomSpi_CTRLB_Type = object
+type SercomSpi_CTRLB_Type* = object
   loc: uint
 
-type SercomSpi_BAUD_Type = object
+type SercomSpi_BAUD_Type* = object
   loc: uint
 
-type SercomSpi_INTENCLR_Type = object
+type SercomSpi_INTENCLR_Type* = object
   loc: uint
 
-type SercomSpi_INTENSET_Type = object
+type SercomSpi_INTENSET_Type* = object
   loc: uint
 
-type SercomSpi_INTFLAG_Type = object
+type SercomSpi_INTFLAG_Type* = object
   loc: uint
 
-type SercomSpi_STATUS_Type = object
+type SercomSpi_STATUS_Type* = object
   loc: uint
 
-type SercomSpi_SYNCBUSY_Type = object
+type SercomSpi_SYNCBUSY_Type* = object
   loc: uint
 
-type SercomSpi_ADDR_Type = object
+type SercomSpi_ADDR_Type* = object
   loc: uint
 
-type SercomSpi_DATA_Type = object
+type SercomSpi_DATA_Type* = object
   loc: uint
 
-type SercomSpi_DBGCTRL_Type = object
+type SercomSpi_DBGCTRL_Type* = object
   loc: uint
 
-type SercomSpi_Type = object
+type SercomSpi_Type* = object
   CTRLA*: SercomSpi_CTRLA_Type
   CTRLB*: SercomSpi_CTRLB_Type
   BAUD*: SercomSpi_BAUD_Type
@@ -1259,49 +1259,49 @@ type SercomSpi_Type = object
   DATA*: SercomSpi_DATA_Type
   DBGCTRL*: SercomSpi_DBGCTRL_Type
 
-type SercomUsart_CTRLA_Type = object
+type SercomUsart_CTRLA_Type* = object
   loc: uint
 
-type SercomUsart_CTRLB_Type = object
+type SercomUsart_CTRLB_Type* = object
   loc: uint
 
-type SercomUsart_BAUD_Type = object
+type SercomUsart_BAUD_Type* = object
   loc: uint
 
-type SercomUsart_BAUD_FRAC_MODE_Type = object
+type SercomUsart_BAUD_FRAC_MODE_Type* = object
   loc: uint
 
-type SercomUsart_BAUD_FRACFP_MODE_Type = object
+type SercomUsart_BAUD_FRACFP_MODE_Type* = object
   loc: uint
 
-type SercomUsart_BAUD_USARTFP_MODE_Type = object
+type SercomUsart_BAUD_USARTFP_MODE_Type* = object
   loc: uint
 
-type SercomUsart_RXPL_Type = object
+type SercomUsart_RXPL_Type* = object
   loc: uint
 
-type SercomUsart_INTENCLR_Type = object
+type SercomUsart_INTENCLR_Type* = object
   loc: uint
 
-type SercomUsart_INTENSET_Type = object
+type SercomUsart_INTENSET_Type* = object
   loc: uint
 
-type SercomUsart_INTFLAG_Type = object
+type SercomUsart_INTFLAG_Type* = object
   loc: uint
 
-type SercomUsart_STATUS_Type = object
+type SercomUsart_STATUS_Type* = object
   loc: uint
 
-type SercomUsart_SYNCBUSY_Type = object
+type SercomUsart_SYNCBUSY_Type* = object
   loc: uint
 
-type SercomUsart_DATA_Type = object
+type SercomUsart_DATA_Type* = object
   loc: uint
 
-type SercomUsart_DBGCTRL_Type = object
+type SercomUsart_DBGCTRL_Type* = object
   loc: uint
 
-type SercomUsart_Type = object
+type SercomUsart_Type* = object
   CTRLA*: SercomUsart_CTRLA_Type
   CTRLB*: SercomUsart_CTRLB_Type
   BAUD*: SercomUsart_BAUD_Type
@@ -1317,73 +1317,73 @@ type SercomUsart_Type = object
   DATA*: SercomUsart_DATA_Type
   DBGCTRL*: SercomUsart_DBGCTRL_Type
 
-type SERCOM0_Type = object
+type SERCOM0_Type* = object
   I2CM*: SercomI2cm_Type
   I2CS*: SercomI2cs_Type
   SPI*: SercomSpi_Type
   USART*: SercomUsart_Type
 
-type SYSCTRL_INTENCLR_Type = object
+type SYSCTRL_INTENCLR_Type* = object
   loc: uint
 
-type SYSCTRL_INTENSET_Type = object
+type SYSCTRL_INTENSET_Type* = object
   loc: uint
 
-type SYSCTRL_INTFLAG_Type = object
+type SYSCTRL_INTFLAG_Type* = object
   loc: uint
 
-type SYSCTRL_PCLKSR_Type = object
+type SYSCTRL_PCLKSR_Type* = object
   loc: uint
 
-type SYSCTRL_XOSC_Type = object
+type SYSCTRL_XOSC_Type* = object
   loc: uint
 
-type SYSCTRL_XOSC32K_Type = object
+type SYSCTRL_XOSC32K_Type* = object
   loc: uint
 
-type SYSCTRL_OSC32K_Type = object
+type SYSCTRL_OSC32K_Type* = object
   loc: uint
 
-type SYSCTRL_OSCULP32K_Type = object
+type SYSCTRL_OSCULP32K_Type* = object
   loc: uint
 
-type SYSCTRL_OSC8M_Type = object
+type SYSCTRL_OSC8M_Type* = object
   loc: uint
 
-type SYSCTRL_DFLLCTRL_Type = object
+type SYSCTRL_DFLLCTRL_Type* = object
   loc: uint
 
-type SYSCTRL_DFLLVAL_Type = object
+type SYSCTRL_DFLLVAL_Type* = object
   loc: uint
 
-type SYSCTRL_DFLLMUL_Type = object
+type SYSCTRL_DFLLMUL_Type* = object
   loc: uint
 
-type SYSCTRL_DFLLSYNC_Type = object
+type SYSCTRL_DFLLSYNC_Type* = object
   loc: uint
 
-type SYSCTRL_BOD33_Type = object
+type SYSCTRL_BOD33_Type* = object
   loc: uint
 
-type SYSCTRL_VREG_Type = object
+type SYSCTRL_VREG_Type* = object
   loc: uint
 
-type SYSCTRL_VREF_Type = object
+type SYSCTRL_VREF_Type* = object
   loc: uint
 
-type SYSCTRL_DPLLCTRLA_Type = object
+type SYSCTRL_DPLLCTRLA_Type* = object
   loc: uint
 
-type SYSCTRL_DPLLRATIO_Type = object
+type SYSCTRL_DPLLRATIO_Type* = object
   loc: uint
 
-type SYSCTRL_DPLLCTRLB_Type = object
+type SYSCTRL_DPLLCTRLB_Type* = object
   loc: uint
 
-type SYSCTRL_DPLLSTATUS_Type = object
+type SYSCTRL_DPLLSTATUS_Type* = object
   loc: uint
 
-type SYSCTRL_Type = object
+type SYSCTRL_Type* = object
   INTENCLR*: SYSCTRL_INTENCLR_Type
   INTENSET*: SYSCTRL_INTENSET_Type
   INTFLAG*: SYSCTRL_INTFLAG_Type
@@ -1405,49 +1405,49 @@ type SYSCTRL_Type = object
   DPLLCTRLB*: SYSCTRL_DPLLCTRLB_Type
   DPLLSTATUS*: SYSCTRL_DPLLSTATUS_Type
 
-type TcCount8_CTRLA_Type = object
+type TcCount8_CTRLA_Type* = object
   loc: uint
 
-type TcCount8_READREQ_Type = object
+type TcCount8_READREQ_Type* = object
   loc: uint
 
-type TcCount8_CTRLBCLR_Type = object
+type TcCount8_CTRLBCLR_Type* = object
   loc: uint
 
-type TcCount8_CTRLBSET_Type = object
+type TcCount8_CTRLBSET_Type* = object
   loc: uint
 
-type TcCount8_CTRLC_Type = object
+type TcCount8_CTRLC_Type* = object
   loc: uint
 
-type TcCount8_DBGCTRL_Type = object
+type TcCount8_DBGCTRL_Type* = object
   loc: uint
 
-type TcCount8_EVCTRL_Type = object
+type TcCount8_EVCTRL_Type* = object
   loc: uint
 
-type TcCount8_INTENCLR_Type = object
+type TcCount8_INTENCLR_Type* = object
   loc: uint
 
-type TcCount8_INTENSET_Type = object
+type TcCount8_INTENSET_Type* = object
   loc: uint
 
-type TcCount8_INTFLAG_Type = object
+type TcCount8_INTFLAG_Type* = object
   loc: uint
 
-type TcCount8_STATUS_Type = object
+type TcCount8_STATUS_Type* = object
   loc: uint
 
-type TcCount8_COUNT_Type = object
+type TcCount8_COUNT_Type* = object
   loc: uint
 
-type TcCount8_PER_Type = object
+type TcCount8_PER_Type* = object
   loc: uint
 
-type TcCount8_CC_Type = object
+type TcCount8_CC_Type* = object
   loc: uint
 
-type TcCount8_Type = object
+type TcCount8_Type* = object
   CTRLA*: TcCount8_CTRLA_Type
   READREQ*: TcCount8_READREQ_Type
   CTRLBCLR*: TcCount8_CTRLBCLR_Type
@@ -1464,46 +1464,46 @@ type TcCount8_Type = object
   CC0*: TcCount8_CC_Type
   CC1*: TcCount8_CC_Type
 
-type TcCount16_CTRLA_Type = object
+type TcCount16_CTRLA_Type* = object
   loc: uint
 
-type TcCount16_READREQ_Type = object
+type TcCount16_READREQ_Type* = object
   loc: uint
 
-type TcCount16_CTRLBCLR_Type = object
+type TcCount16_CTRLBCLR_Type* = object
   loc: uint
 
-type TcCount16_CTRLBSET_Type = object
+type TcCount16_CTRLBSET_Type* = object
   loc: uint
 
-type TcCount16_CTRLC_Type = object
+type TcCount16_CTRLC_Type* = object
   loc: uint
 
-type TcCount16_DBGCTRL_Type = object
+type TcCount16_DBGCTRL_Type* = object
   loc: uint
 
-type TcCount16_EVCTRL_Type = object
+type TcCount16_EVCTRL_Type* = object
   loc: uint
 
-type TcCount16_INTENCLR_Type = object
+type TcCount16_INTENCLR_Type* = object
   loc: uint
 
-type TcCount16_INTENSET_Type = object
+type TcCount16_INTENSET_Type* = object
   loc: uint
 
-type TcCount16_INTFLAG_Type = object
+type TcCount16_INTFLAG_Type* = object
   loc: uint
 
-type TcCount16_STATUS_Type = object
+type TcCount16_STATUS_Type* = object
   loc: uint
 
-type TcCount16_COUNT_Type = object
+type TcCount16_COUNT_Type* = object
   loc: uint
 
-type TcCount16_CC_Type = object
+type TcCount16_CC_Type* = object
   loc: uint
 
-type TcCount16_Type = object
+type TcCount16_Type* = object
   CTRLA*: TcCount16_CTRLA_Type
   READREQ*: TcCount16_READREQ_Type
   CTRLBCLR*: TcCount16_CTRLBCLR_Type
@@ -1519,46 +1519,46 @@ type TcCount16_Type = object
   CC0*: TcCount16_CC_Type
   CC1*: TcCount16_CC_Type
 
-type TcCount32_CTRLA_Type = object
+type TcCount32_CTRLA_Type* = object
   loc: uint
 
-type TcCount32_READREQ_Type = object
+type TcCount32_READREQ_Type* = object
   loc: uint
 
-type TcCount32_CTRLBCLR_Type = object
+type TcCount32_CTRLBCLR_Type* = object
   loc: uint
 
-type TcCount32_CTRLBSET_Type = object
+type TcCount32_CTRLBSET_Type* = object
   loc: uint
 
-type TcCount32_CTRLC_Type = object
+type TcCount32_CTRLC_Type* = object
   loc: uint
 
-type TcCount32_DBGCTRL_Type = object
+type TcCount32_DBGCTRL_Type* = object
   loc: uint
 
-type TcCount32_EVCTRL_Type = object
+type TcCount32_EVCTRL_Type* = object
   loc: uint
 
-type TcCount32_INTENCLR_Type = object
+type TcCount32_INTENCLR_Type* = object
   loc: uint
 
-type TcCount32_INTENSET_Type = object
+type TcCount32_INTENSET_Type* = object
   loc: uint
 
-type TcCount32_INTFLAG_Type = object
+type TcCount32_INTFLAG_Type* = object
   loc: uint
 
-type TcCount32_STATUS_Type = object
+type TcCount32_STATUS_Type* = object
   loc: uint
 
-type TcCount32_COUNT_Type = object
+type TcCount32_COUNT_Type* = object
   loc: uint
 
-type TcCount32_CC_Type = object
+type TcCount32_CC_Type* = object
   loc: uint
 
-type TcCount32_Type = object
+type TcCount32_Type* = object
   CTRLA*: TcCount32_CTRLA_Type
   READREQ*: TcCount32_READREQ_Type
   CTRLBCLR*: TcCount32_CTRLBCLR_Type
@@ -1574,126 +1574,126 @@ type TcCount32_Type = object
   CC0*: TcCount32_CC_Type
   CC1*: TcCount32_CC_Type
 
-type TC3_Type = object
+type TC3_Type* = object
   COUNT8*: TcCount8_Type
   COUNT16*: TcCount16_Type
   COUNT32*: TcCount32_Type
 
-type TCC0_CTRLA_Type = object
+type TCC0_CTRLA_Type* = object
   loc: uint
 
-type TCC0_CTRLBCLR_Type = object
+type TCC0_CTRLBCLR_Type* = object
   loc: uint
 
-type TCC0_CTRLBSET_Type = object
+type TCC0_CTRLBSET_Type* = object
   loc: uint
 
-type TCC0_SYNCBUSY_Type = object
+type TCC0_SYNCBUSY_Type* = object
   loc: uint
 
-type TCC0_FCTRLA_Type = object
+type TCC0_FCTRLA_Type* = object
   loc: uint
 
-type TCC0_FCTRLB_Type = object
+type TCC0_FCTRLB_Type* = object
   loc: uint
 
-type TCC0_WEXCTRL_Type = object
+type TCC0_WEXCTRL_Type* = object
   loc: uint
 
-type TCC0_DRVCTRL_Type = object
+type TCC0_DRVCTRL_Type* = object
   loc: uint
 
-type TCC0_DBGCTRL_Type = object
+type TCC0_DBGCTRL_Type* = object
   loc: uint
 
-type TCC0_EVCTRL_Type = object
+type TCC0_EVCTRL_Type* = object
   loc: uint
 
-type TCC0_INTENCLR_Type = object
+type TCC0_INTENCLR_Type* = object
   loc: uint
 
-type TCC0_INTENSET_Type = object
+type TCC0_INTENSET_Type* = object
   loc: uint
 
-type TCC0_INTFLAG_Type = object
+type TCC0_INTFLAG_Type* = object
   loc: uint
 
-type TCC0_STATUS_Type = object
+type TCC0_STATUS_Type* = object
   loc: uint
 
-type TCC0_COUNT_Type = object
+type TCC0_COUNT_Type* = object
   loc: uint
 
-type TCC0_COUNT_DITH4_Type = object
+type TCC0_COUNT_DITH4_Type* = object
   loc: uint
 
-type TCC0_COUNT_DITH5_Type = object
+type TCC0_COUNT_DITH5_Type* = object
   loc: uint
 
-type TCC0_COUNT_DITH6_Type = object
+type TCC0_COUNT_DITH6_Type* = object
   loc: uint
 
-type TCC0_PATT_Type = object
+type TCC0_PATT_Type* = object
   loc: uint
 
-type TCC0_WAVE_Type = object
+type TCC0_WAVE_Type* = object
   loc: uint
 
-type TCC0_PER_Type = object
+type TCC0_PER_Type* = object
   loc: uint
 
-type TCC0_PER_DITH4_Type = object
+type TCC0_PER_DITH4_Type* = object
   loc: uint
 
-type TCC0_PER_DITH5_Type = object
+type TCC0_PER_DITH5_Type* = object
   loc: uint
 
-type TCC0_PER_DITH6_Type = object
+type TCC0_PER_DITH6_Type* = object
   loc: uint
 
-type TCC0_CC_Type = object
+type TCC0_CC_Type* = object
   loc: uint
 
-type TCC0_CC_DITH4_Type = object
+type TCC0_CC_DITH4_Type* = object
   loc: uint
 
-type TCC0_CC_DITH5_Type = object
+type TCC0_CC_DITH5_Type* = object
   loc: uint
 
-type TCC0_CC_DITH6_Type = object
+type TCC0_CC_DITH6_Type* = object
   loc: uint
 
-type TCC0_PATTB_Type = object
+type TCC0_PATTB_Type* = object
   loc: uint
 
-type TCC0_WAVEB_Type = object
+type TCC0_WAVEB_Type* = object
   loc: uint
 
-type TCC0_PERB_Type = object
+type TCC0_PERB_Type* = object
   loc: uint
 
-type TCC0_PERB_DITH4_Type = object
+type TCC0_PERB_DITH4_Type* = object
   loc: uint
 
-type TCC0_PERB_DITH5_Type = object
+type TCC0_PERB_DITH5_Type* = object
   loc: uint
 
-type TCC0_PERB_DITH6_Type = object
+type TCC0_PERB_DITH6_Type* = object
   loc: uint
 
-type TCC0_CCB_Type = object
+type TCC0_CCB_Type* = object
   loc: uint
 
-type TCC0_CCB_DITH4_Type = object
+type TCC0_CCB_DITH4_Type* = object
   loc: uint
 
-type TCC0_CCB_DITH5_Type = object
+type TCC0_CCB_DITH5_Type* = object
   loc: uint
 
-type TCC0_CCB_DITH6_Type = object
+type TCC0_CCB_DITH6_Type* = object
   loc: uint
 
-type TCC0_Type = object
+type TCC0_Type* = object
   CTRLA*: TCC0_CTRLA_Type
   CTRLBCLR*: TCC0_CTRLBCLR_Type
   CTRLBSET*: TCC0_CTRLBSET_Type
@@ -1757,70 +1757,70 @@ type TCC0_Type = object
   CCB3_DITH5*: TCC0_CCB_DITH5_Type
   CCB3_DITH6*: TCC0_CCB_DITH6_Type
 
-type UsbDevice_CTRLA_Type = object
+type UsbDevice_CTRLA_Type* = object
   loc: uint
 
-type UsbDevice_SYNCBUSY_Type = object
+type UsbDevice_SYNCBUSY_Type* = object
   loc: uint
 
-type UsbDevice_QOSCTRL_Type = object
+type UsbDevice_QOSCTRL_Type* = object
   loc: uint
 
-type UsbDevice_CTRLB_Type = object
+type UsbDevice_CTRLB_Type* = object
   loc: uint
 
-type UsbDevice_DADD_Type = object
+type UsbDevice_DADD_Type* = object
   loc: uint
 
-type UsbDevice_STATUS_Type = object
+type UsbDevice_STATUS_Type* = object
   loc: uint
 
-type UsbDevice_FSMSTATUS_Type = object
+type UsbDevice_FSMSTATUS_Type* = object
   loc: uint
 
-type UsbDevice_FNUM_Type = object
+type UsbDevice_FNUM_Type* = object
   loc: uint
 
-type UsbDevice_INTENCLR_Type = object
+type UsbDevice_INTENCLR_Type* = object
   loc: uint
 
-type UsbDevice_INTENSET_Type = object
+type UsbDevice_INTENSET_Type* = object
   loc: uint
 
-type UsbDevice_INTFLAG_Type = object
+type UsbDevice_INTFLAG_Type* = object
   loc: uint
 
-type UsbDevice_EPINTSMRY_Type = object
+type UsbDevice_EPINTSMRY_Type* = object
   loc: uint
 
-type UsbDevice_DESCADD_Type = object
+type UsbDevice_DESCADD_Type* = object
   loc: uint
 
-type UsbDevice_PADCAL_Type = object
+type UsbDevice_PADCAL_Type* = object
   loc: uint
 
-type UsbDevice_EPCFG_Type = object
+type UsbDevice_EPCFG_Type* = object
   loc: uint
 
-type UsbDevice_EPSTATUSCLR_Type = object
+type UsbDevice_EPSTATUSCLR_Type* = object
   loc: uint
 
-type UsbDevice_EPSTATUSSET_Type = object
+type UsbDevice_EPSTATUSSET_Type* = object
   loc: uint
 
-type UsbDevice_EPSTATUS_Type = object
+type UsbDevice_EPSTATUS_Type* = object
   loc: uint
 
-type UsbDevice_EPINTFLAG_Type = object
+type UsbDevice_EPINTFLAG_Type* = object
   loc: uint
 
-type UsbDevice_EPINTENCLR_Type = object
+type UsbDevice_EPINTENCLR_Type* = object
   loc: uint
 
-type UsbDevice_EPINTENSET_Type = object
+type UsbDevice_EPINTENSET_Type* = object
   loc: uint
 
-type UsbDevice_Type = object
+type UsbDevice_Type* = object
   CTRLA*: UsbDevice_CTRLA_Type
   SYNCBUSY*: UsbDevice_SYNCBUSY_Type
   QOSCTRL*: UsbDevice_QOSCTRL_Type
@@ -1892,76 +1892,76 @@ type UsbDevice_Type = object
   EPINTENCLR7*: UsbDevice_EPINTENCLR_Type
   EPINTENSET7*: UsbDevice_EPINTENSET_Type
 
-type UsbHost_CTRLA_Type = object
+type UsbHost_CTRLA_Type* = object
   loc: uint
 
-type UsbHost_SYNCBUSY_Type = object
+type UsbHost_SYNCBUSY_Type* = object
   loc: uint
 
-type UsbHost_QOSCTRL_Type = object
+type UsbHost_QOSCTRL_Type* = object
   loc: uint
 
-type UsbHost_CTRLB_Type = object
+type UsbHost_CTRLB_Type* = object
   loc: uint
 
-type UsbHost_HSOFC_Type = object
+type UsbHost_HSOFC_Type* = object
   loc: uint
 
-type UsbHost_STATUS_Type = object
+type UsbHost_STATUS_Type* = object
   loc: uint
 
-type UsbHost_FSMSTATUS_Type = object
+type UsbHost_FSMSTATUS_Type* = object
   loc: uint
 
-type UsbHost_FNUM_Type = object
+type UsbHost_FNUM_Type* = object
   loc: uint
 
-type UsbHost_FLENHIGH_Type = object
+type UsbHost_FLENHIGH_Type* = object
   loc: uint
 
-type UsbHost_INTENCLR_Type = object
+type UsbHost_INTENCLR_Type* = object
   loc: uint
 
-type UsbHost_INTENSET_Type = object
+type UsbHost_INTENSET_Type* = object
   loc: uint
 
-type UsbHost_INTFLAG_Type = object
+type UsbHost_INTFLAG_Type* = object
   loc: uint
 
-type UsbHost_PINTSMRY_Type = object
+type UsbHost_PINTSMRY_Type* = object
   loc: uint
 
-type UsbHost_DESCADD_Type = object
+type UsbHost_DESCADD_Type* = object
   loc: uint
 
-type UsbHost_PADCAL_Type = object
+type UsbHost_PADCAL_Type* = object
   loc: uint
 
-type UsbHost_PCFG_Type = object
+type UsbHost_PCFG_Type* = object
   loc: uint
 
-type UsbHost_BINTERVAL_Type = object
+type UsbHost_BINTERVAL_Type* = object
   loc: uint
 
-type UsbHost_PSTATUSCLR_Type = object
+type UsbHost_PSTATUSCLR_Type* = object
   loc: uint
 
-type UsbHost_PSTATUSSET_Type = object
+type UsbHost_PSTATUSSET_Type* = object
   loc: uint
 
-type UsbHost_PSTATUS_Type = object
+type UsbHost_PSTATUS_Type* = object
   loc: uint
 
-type UsbHost_PINTFLAG_Type = object
+type UsbHost_PINTFLAG_Type* = object
   loc: uint
 
-type UsbHost_PINTENCLR_Type = object
+type UsbHost_PINTENCLR_Type* = object
   loc: uint
 
-type UsbHost_PINTENSET_Type = object
+type UsbHost_PINTENSET_Type* = object
   loc: uint
 
-type UsbHost_Type = object
+type UsbHost_Type* = object
   CTRLA*: UsbHost_CTRLA_Type
   SYNCBUSY*: UsbHost_SYNCBUSY_Type
   QOSCTRL*: UsbHost_QOSCTRL_Type
@@ -2042,35 +2042,35 @@ type UsbHost_Type = object
   PINTENCLR7*: UsbHost_PINTENCLR_Type
   PINTENSET7*: UsbHost_PINTENSET_Type
 
-type USB_Type = object
+type USB_Type* = object
   DEVICE*: UsbDevice_Type
   HOST*: UsbHost_Type
 
-type WDT_CTRL_Type = object
+type WDT_CTRL_Type* = object
   loc: uint
 
-type WDT_CONFIG_Type = object
+type WDT_CONFIG_Type* = object
   loc: uint
 
-type WDT_EWCTRL_Type = object
+type WDT_EWCTRL_Type* = object
   loc: uint
 
-type WDT_INTENCLR_Type = object
+type WDT_INTENCLR_Type* = object
   loc: uint
 
-type WDT_INTENSET_Type = object
+type WDT_INTENSET_Type* = object
   loc: uint
 
-type WDT_INTFLAG_Type = object
+type WDT_INTFLAG_Type* = object
   loc: uint
 
-type WDT_STATUS_Type = object
+type WDT_STATUS_Type* = object
   loc: uint
 
-type WDT_CLEAR_Type = object
+type WDT_CLEAR_Type* = object
   loc: uint
 
-type WDT_Type = object
+type WDT_Type* = object
   CTRL*: WDT_CTRL_Type
   CONFIG*: WDT_CONFIG_Type
   EWCTRL*: WDT_EWCTRL_Type
