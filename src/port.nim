@@ -82,3 +82,48 @@ macro read*(pn: static[Pin]): bool =
     maskLit = newLit(1'u32 shl pn.num)
   genAst(regLit, maskLit):
     bool(PORT.regLit.read() and maskLit)
+
+
+type
+  MuxFunctionDescKind* = enum
+    mdNone
+    mdEIC
+    mdREF
+    mdADC
+    mdAC
+    mdPTC
+    mdDAC
+    mdSERCOM
+    mdTC
+    mdTCC
+    mdI2S
+    mdMCK
+    mdSCK
+    mdUS
+    mdSWCLK
+    mdSWDIO
+    mdGCLK
+
+  MuxFunctionDesc* = object
+    case kind*: MuxFunctionDescKind
+    of mdSERCOM:
+      sercomInst*: Natural
+      pad*: Natural
+    else:
+      discard
+
+# Datasheet table 7-1
+# Only access this const from compile-time funcs so that it is not included
+# in the compiled binary.
+# TODO: Fill out the full table
+const MuxTableAbcd = block:
+  var t: array[PortGroup, array[0..31, array[PortMuxFcn, MuxFunctionDesc]]]
+  t[pgA][10][muxC] = MuxFunctionDesc(kind: mdSERCOM, sercomInst: 0, pad: 2)
+  t[pgA][10][muxD] = MuxFunctionDesc(kind: mdSERCOM, sercomInst: 2, pad: 2)
+  t[pgA][11][muxC] = MuxFunctionDesc(kind: mdSERCOM, sercomInst: 0, pad: 3)
+  t[pgA][11][muxD] = MuxFunctionDesc(kind: mdSERCOM, sercomInst: 2, pad: 3)
+  t
+
+
+func getMuxFunction*(p: Pin, fcn: PortMuxFcn): MuxFunctionDesc {.compileTime.} =
+  MuxTableAbcd[p.group][p.num][fcn]

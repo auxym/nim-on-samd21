@@ -3,6 +3,8 @@
 import std/volatile
 import std/bitops
 
+export volatile
+
 {.hint[name]: off.}
 
 when NimMajor < 2:

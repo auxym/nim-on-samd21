@@ -1,14 +1,16 @@
 import device/device
 
-import volatile
+type Hz = distinct Natural
+
+var sysClock = 1_000_000.Hz
+proc getSystemClock*: Hz = sysClock
+
 
 proc initDfll48m*() =
-  #[ Initialize the 48 MHz DFLL clock  and set it as main CPU clock
-
-  This code was translated verbatim from a blog post by Thea Flowers, see:
-  https://blog.thea.codes/understanding-the-sam-d21-clocks/
-
-  ]#
+  ## Initialize the 48 MHz DFLL clock and set it as main CPU clock (GCLK0)
+  ##
+  ## This code was translated verbatim from a blog post by Thea Flowers, see:
+  ## https://blog.thea.codes/understanding-the-sam-d21-clocks/
 
   # Set the correct number of wait states for 48 MHz @ 3.3v */
   NVMCTRL.CTRLB.modifyIt:
@@ -25,7 +27,6 @@ proc initDfll48m*() =
     it.ENABLE = true
 
   # Wait for the external crystal to be ready
-  # Read the PCLKSR register and get the XORSC32KRDY bitfield from its value
   while not SYSCTRL.PCLKSR.read().XOSC32KRDY: discard
 
   # Set GCLK1 divider to 1
@@ -53,7 +54,7 @@ proc initDfll48m*() =
   SYSCTRL.DFLLMUL.write(MUL=1465, FSTEP=511, CSTEP=31)
   while not SYSCTRL.PCLKSR.read().DFLLRDY: discard
 
-  # Read factory calibration for DFLLVAL.COARSE The fuse addresses are not
+  # Read factory calibration for DFLLVAL.COARSE. The fuse addresses are not
   # included in our SVD-generated device module, so the following addresses were
   # lifted directly from the files samd21a/include/samd21g18a.h and
   # samd21a/include/component/nvmctrl.h. I did grep the headers for all SAMD21
@@ -92,3 +93,5 @@ proc initDfll48m*() =
   # Finally, setup GCLK0 (main CPU clock) to use DFLL as source
   GCLK.GENCTRL.write(ID=0, SRC=DFLL48M, IDC=true, GENEN=true)
   while GCLK.STATUS.read().SYNCBUSY: discard
+
+  sysClock = 48_000_000.Hz

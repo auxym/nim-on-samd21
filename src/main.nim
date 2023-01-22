@@ -9,7 +9,6 @@ import device/device
 compileStartup
 
 const
-  SystemCoreClock = 48_000_000
   LED_Pin = Pin(group: pgA, num: 17)
   Button1_Pin = Pin(group: pgA, num: 22)
 
@@ -44,13 +43,13 @@ proc flashLed(times: Positive) =
 proc main(): int {.exportc.} =
   LED_pin.configure(pdOutput)
 
-  # Configure SysTick timer to fire an interrupt every millisecond
-  discard SysTick_Config(SystemCoreClock div 1000)
-
   # Set main CPU clock to 48 MHz
   LED_pin.setLow
   initDfll48m()
   LED_pin.setHigh
+
+  # Configure SysTick timer to fire an interrupt every millisecond
+  discard SysTick_Config(getSystemClock.int div 1000)
 
   # Configure a GPIO as input and get its state
   Button1_Pin.configure(pdInput, pullUp=true)
