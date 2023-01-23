@@ -21,7 +21,6 @@ when hostCpu == "arm" and hostOs == "any":
   switch("define", "noSignalHandler")
   switch("opt", "size")
   switch("gc", "arc")
-  switch("noMain")
 
   switch("passC", "-mthumb -mcpu=cortex-m0plus")
   switch("passC", "--specs=nano.specs") # Use newlib-nano header at compile-time
