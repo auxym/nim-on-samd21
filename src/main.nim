@@ -41,3 +41,4 @@ proc main() {.exportc.} =
   while true:
     delay(1000)
     LED_Pin.toggle
+    uart.write("hello\n")
