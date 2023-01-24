@@ -10,7 +10,7 @@ import device/device
 # Generate {.compile.} call for the startup.c file
 compileStartup
 
-proc main() =
+proc main() {.exportc.} =
   LEDPin.configure(pdOutput)
 
   # Set main CPU clock to 48 MHz
