@@ -11,7 +11,6 @@ type
 
   UsartInstance* = object
     sercom: SercomInstance
-    regs: SercomUsart_Type
 
   ParityMode* = enum pmNone, pmEven, pmOdd
 
@@ -28,8 +27,16 @@ const
   sercom4* = 4.SercomInstance
   sercom5* = 5.SercomInstance
 
+  sercomPeriphs: array[SercomInstance, SERCOM0_Type] = [
+    SERCOM0, SERCOM1, SERCOM2, SERCOM3, SERCOM4, SERCOM5
+  ]
+
 
 var rxBuffers: array[SercomInstance, CircularBuffer]
+
+
+func regs(u: UsartInstance): SercomUsart_Type =
+  sercomPeriphs[u.sercom].USART
 
 
 proc newCircularBuffer(cap: Natural): CircularBuffer =
@@ -75,6 +82,11 @@ proc pop(cb: CircularBuffer, data: var byte): bool =
     result = true
 
 
+proc reset(cb: CircularBuffer) =
+  cb.head = 0
+  cb.tail = 0
+
+
 type UsartMuxConfig = object
   txMux: PortMuxFcn
   txPad: int
@@ -82,12 +94,8 @@ type UsartMuxConfig = object
   rxPad: int
 
 
-macro asUsart*(sercom: static[SercomInstance]): UsartInstance =
-  let
-    sercomPeriphIdent = ident("SERCOM" & $sercom.int)
-    sercomLit = ident("sercom" & $sercom.int)
-  genAst(sercomLit, sercomPeriphIdent):
-    UsartInstance(sercom: sercomLit, regs: sercomPeriphIdent.USART)
+func asUsart*(sercom: SercomInstance): UsartInstance =
+  UsartInstance(sercom: sercom)
 
 
 func findUsartMuxPad(inst: SercomInstance, txPin, rxPin: Pin): UsartMuxConfig {.compileTime.} =
@@ -112,22 +120,10 @@ func findUsartMuxPad(inst: SercomInstance, txPin, rxPin: Pin): UsartMuxConfig {.
         return
 
 
-func initUsartIsr(usart: UsartInstance, cap: Natural): NimNode {.compileTime.} =
-  let
-    procName = ident("usartSercom" & $usart.sercom.int & "Isr")
-    sercomRegs = newDotExpr(ident("SERCOM" & $usart.sercom.int), ident"USART")
-
-  result = genAst(sercomVal=usart.sercom.int, cap, procName, sercomRegs):
-    rxBuffers[sercomVal.SercomInstance] = newCircularBuffer[cap]
-    proc procName() {.exportc.} =
-      if sercomRegs.INTFLAG.read().RXC:
-        rxBuffers[sercomVal.SercomInstance].add sercomRegs.DATA.read().DATA
-
-
 macro init*(usart: static[UsartInstance], txPin, rxPin: static[Pin],
             baud: Natural, dataBits: range[5..8] = 8,
             stopBits: range[1..2] = 1, parity: ParityMode = pmNone,
-            ): untyped =
+            rxBufSize: Natural = 128): untyped =
   ## Configure and initialize a SERCOM peripheral as USART.
   ##
   ## Only asynchronous mode is supported for the moment.
@@ -141,62 +137,70 @@ macro init*(usart: static[UsartInstance], txPin, rxPin: static[Pin],
     raise newException(ValueError, "Invalid pins for USART")
 
   let
-    pmSercomFieldIdent = ident("SERCOM" & $usart.sercom.int & "Field")
-    clkctrlSercomId = ident("idSERCOM" & $usart.sercom.int & "CORE")
-    sercomPeriphIdent = ident("SERCOM" & $usart.sercom.int)
+    sercomVal = usart.sercom.int
+    pmSercomFieldIdent = ident("SERCOM" & $sercomVal & "Field")
+    clkctrlSercomId = ident("idSERCOM" & $sercomVal & "CORE")
+    sercomPeriphIdent = ident("SERCOM" & $sercomVal)
     txMuxLit = muxPadCfg.txMux.newLit
     rxMuxLit = muxPadCfg.rxMux.newLit
     txPadLit = muxPadCfg.txPad.newLit
     rxPadLit = muxPadCfg.rxPad.newLit
     chsize = genAst(dataBits): [5: 5'u32, 6: 6, 7: 7, 8: 0, 9: 1][dataBits]
     sbmode = genAst(stopBits): [1: false, 2: true][stopBits]
+    irq = newDotExpr(ident"IRQn", ident("irqSERCOM" & $sercomVal))
 
   result = newStmtList()
-  result.add initUsartIsr(usart, 128)
 
-  result.add:
-    genAst(pmSercomFieldIdent, clkctrlSercomId, txMuxLit, rxMuxLit,
+  result = genAst(pmSercomFieldIdent, clkctrlSercomId, txMuxLit, rxMuxLit,
                   txPadLit, rxPadLit, chsize, sbmode, txPin, rxPin, parity,
-                  baud, sercomPeriphIdent):
-      # Unmask APB clock for Sercom instance in PM
-      PM.APBCMASK.modifyIt: it.pmSercomFieldIdent = true
+                  baud, sercomPeriphIdent, rxBufSize, sercomVal, irq):
 
-      # Set GCLK0 as clock source for the Sercom
-      GCLK.CLKCTRL.write(clkctrlSercomId, GEN=GCLK0, CLKEN=true)
+    # Unmask APB clock for Sercom instance in PM
+    PM.APBCMASK.modifyIt: it.pmSercomFieldIdent = true
 
-      # Configure pins
-      txPin.configure(dir=pdOutput, pullUp=false, muxFcn=txMuxLit)
-      rxPin.configure(dir=pdInput, pullUp=false, muxFcn=rxMuxLit)
+    # Set GCLK0 as clock source for the Sercom
+    GCLK.CLKCTRL.write(clkctrlSercomId, GEN=GCLK0, CLKEN=true)
 
-      # Reset the sercom peripheral prior to configuring and wait for sync
-      sercomPeriphIdent.USART.CTRLA.modifyIt: it.SWRST = true
-      while sercomPeriphIdent.USART.SYNCBUSY.read().SWRST or SERCOM0.USART.CTRLA.read().SWRST:
-        discard
+    # Configure pins
+    txPin.configure(dir=pdOutput, pullUp=false, muxFcn=txMuxLit)
+    rxPin.configure(dir=pdInput, pullUp=false, muxFcn=rxMuxLit)
 
-      sercomPeriphIdent.USART.CTRLA.write(
-        MODE=SercomUsart_CTRLA_MODE.USART_INT_CLK,
-        SAMPR=0, # 16X oversampling with arithmetic baud generation
-        TXPO=(if txPadLit == 0: 0x0 else: 0x1),
-        RXPO=rxPadLit,
-        FORM=(parity != pmNone).uint32,
-        CMODE=false, # Async
-        DORD=true, # LSB-first bit order
-      )
+    # Reset the sercom peripheral prior to configuring and wait for sync
+    sercomPeriphIdent.USART.CTRLA.modifyIt: it.SWRST = true
+    while sercomPeriphIdent.USART.SYNCBUSY.read().SWRST or SERCOM0.USART.CTRLA.read().SWRST:
+      discard
 
-      sercomPeriphIdent.USART.CTRLB.write(
-        CHSIZE=chsize,
-        SBMODE=sbmode,
-        PMODE=(parity == pmOdd),
-        TXEN=true,
-        RXEN=true
-      )
+    sercomPeriphIdent.USART.CTRLA.write(
+      MODE=SercomUsart_CTRLA_MODE.USART_INT_CLK,
+      SAMPR=0, # 16X oversampling with arithmetic baud generation
+      TXPO=(if txPadLit == 0: 0x0 else: 0x1),
+      RXPO=rxPadLit,
+      FORM=(parity != pmNone).uint32,
+      CMODE=false, # Async
+      DORD=true, # LSB-first bit order
+    )
 
-      # Set baud rate
-      sercomPeriphIdent.USART.BAUD.write uint16.high - uint16((16'i64 * 65536'i64 * baud.int64) div getSystemClock().int64)
+    sercomPeriphIdent.USART.CTRLB.write(
+      CHSIZE=chsize,
+      SBMODE=sbmode,
+      PMODE=(parity == pmOdd),
+      TXEN=true,
+      RXEN=true
+    )
 
-      # Enable and wait for sync
-      sercomPeriphIdent.USART.CTRLA.modifyIt: it.ENABLE = true
-      while sercomPeriphIdent.USART.SYNCBUSY.read().ENABLE: discard
+    # Set baud rate
+    sercomPeriphIdent.USART.BAUD.write uint16.high - uint16((16'i64 * 65536'i64 * baud.int64) div getSystemClock().int64)
+
+    # Initialize RX buffer
+    rxBuffers[sercomVal.SercomInstance] = newCircularBuffer(rxBufSize)
+
+    # Enable and wait for sync
+    sercomPeriphIdent.USART.CTRLA.modifyIt: it.ENABLE = true
+    while sercomPeriphIdent.USART.SYNCBUSY.read().ENABLE: discard
+
+    # Enable SERCOMx IRQ and set the interrupt enable flag for receive complete (RXC)
+    NVIC_EnableIRQ(irq)
+    sercomPeriphIdent.USART.INTENSET.write(RXC=true)
 
 
 proc write*(u: UsartInstance, c: char) {.inline.} =
@@ -247,3 +251,25 @@ proc readAllBytes*(u: UsartInstance): seq[byte] =
   var t: byte
   while rxBuffers[u.sercom].pop(t):
     result.add t
+
+proc clearRxBuffer*(u: UsartInstance) =
+  rxBuffers[u.sercom].reset()
+
+
+# Interrupt service routines
+
+proc sercomIsr(s: SercomInstance) =
+  # Note: we use the .USART cluster here, but according to the datasheet,
+  # the DATA and INTFLAG registers are at the same offset in the USART/
+  # SPI/I2C clusters, so this should work for all modes.
+  let regs = sercomPeriphs[s].USART
+  if regs.INTFLAG.read().RXC:
+    let b = (regs.DATA.read().uint16 and 0x00FF'u16).byte
+    discard rxBuffers[s].add b
+
+proc SERCOM0_Handler {.exportc.} = sercomIsr(sercom0)
+proc SERCOM1_Handler {.exportc.} = sercomIsr(sercom1)
+proc SERCOM2_Handler {.exportc.} = sercomIsr(sercom2)
+proc SERCOM3_Handler {.exportc.} = sercomIsr(sercom3)
+proc SERCOM4_Handler {.exportc.} = sercomIsr(sercom4)
+proc SERCOM5_Handler {.exportc.} = sercomIsr(sercom5)
