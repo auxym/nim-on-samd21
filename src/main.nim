@@ -1,5 +1,3 @@
-import std/volatile
-
 import port
 import clocks
 import startup
