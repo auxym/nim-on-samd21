@@ -1,8 +1,8 @@
 import device/device
 
 type
-  Hz = distinct Natural
-  ms = distinct uint64
+  Hz* = distinct Natural
+  ms* = distinct uint64
 
 var
   sysClock = 1_000_000.Hz
@@ -12,13 +12,14 @@ var
 proc `+`*(a, b: ms): ms {.borrow.}
 proc `-`*(a, b: ms): ms {.borrow.}
 proc `<`*(a, b: ms): bool {.borrow.}
-proc inc*(a: var ms; b = 1) {.borrow.}
+proc `$`*(a: ms): string {.borrow.}
+proc inc*(a: var ms; b = 1.ms) = a = a + b
 
 
 proc getSystemClock*: Hz = sysClock
 
 
-proc timeBootms: ms = msticks
+proc timeBootms*: ms = msticks
 
 
 ## Handler for systick IRQ
@@ -27,9 +28,8 @@ proc SysTick_Handler() {.exportc.} =
   msticks.inc
 
 
-proc delay*(millis: Natural) =
-  let
-    stopTicks = timeBootms() + millis.ms
+proc delay*(millis: ms) =
+  let stopTicks = timeBootms() + millis
   while timeBootms() < stopTicks:
     discard
 

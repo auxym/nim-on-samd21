@@ -216,43 +216,53 @@ proc write*(u: UsartInstance, s: openArray[char]) =
 
 
 proc available*(u: UsartInstance): int =
+  ## Number of bytes available to read in the receive buffer
   rxBuffers[u.sercom].len
 
 
 proc rxEmpty*(u: UsartInstance): bool =
+  ## Check if receive buffer is empty
   rxBuffers[u.sercom].isEmpty
 
 
-proc readByte*(u: UsartInstance, data: var byte): bool =
-  rxBuffers[u.sercom].pop(data)
+proc read*[T: char or byte](u: UsartInstance, data: var T): bool =
+  ## Read a single byte or char from the receive buffer into the variable
+  ## `data`. Return `true` if a byte or char was successfully read, never
+  ## blocks.
+  var b: byte
+  if rxBuffers[u.sercom].pop(b):
+    data = b.T
+    result = true
 
 
-proc readChar*(u: UsartInstance, data: var char): bool =
-  var tmp: byte
-  result = rxBuffers[u.sercom].pop(tmp)
-  if result: data = tmp.char
-
-
-proc read*[T: char or byte](u: UsartInstance, data: var openArray[T]): bool =
+proc read*[T: char or byte](u: UsartInstance, data: var openArray[T]): Natural =
+  ## Read all available data from the UART, up to the maximum capacity of
+  ## `data`. Return the number of bytes/chars that were read.
   var
     t: byte
     i = 0
-  while rxBuffers[u.sercom].pop(t) and i <= data.high:
+  while i <= data.high and rxBuffers[u.sercom].pop(t):
     data[i] = t.T
+    inc i
+  result = i
 
 
 proc readAllString*(u: UsartInstance): string =
+  ## Read all available data and return a string.
   var t: byte
   while rxBuffers[u.sercom].pop(t):
     result.add t.char
 
 
 proc readAllBytes*(u: UsartInstance): seq[byte] =
+  ## Read all available data and return as a byte sequence.
   var t: byte
   while rxBuffers[u.sercom].pop(t):
     result.add t
 
+
 proc clearRxBuffer*(u: UsartInstance) =
+  ## Empty all existing data in the receive buffer.
   rxBuffers[u.sercom].reset()
 
 
