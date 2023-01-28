@@ -1,9 +1,7 @@
 import port
 import sercom
+import clocks
 import device/device
-
-type AppState = object
-  msticks: int32 # Should be good for 50 days
 
 const
   # LED and button pins on Adafruit Feather M0 Radio
@@ -12,20 +10,6 @@ const
 
   uart* = sercom0.asUsart
 
-var
-  state {.volatile.} = AppState()
-
-## Handler for systick IRQ
-## Overrides weak function in the startup.c file
-proc SysTick_Handler() {.exportc.} =
-  state.msticks.inc
-
-proc delay*(millis: int) =
-  let
-    start = state.msticks
-    stopTicks = if millis > (int.high - start): int.high else: start + millis
-  while state.msticks < stopTicks:
-    discard
 
 proc flashLed*(times: Positive) =
   # Useful for debugging via blink codes :)

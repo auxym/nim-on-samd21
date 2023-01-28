@@ -1,9 +1,37 @@
 import device/device
 
-type Hz = distinct Natural
+type
+  Hz = distinct Natural
+  ms = distinct uint64
 
-var sysClock = 1_000_000.Hz
+var
+  sysClock = 1_000_000.Hz
+  msticks {.volatile.}: ms
+
+
+proc `+`*(a, b: ms): ms {.borrow.}
+proc `-`*(a, b: ms): ms {.borrow.}
+proc `<`*(a, b: ms): bool {.borrow.}
+proc inc*(a: var ms; b = 1) {.borrow.}
+
+
 proc getSystemClock*: Hz = sysClock
+
+
+proc timeBootms: ms = msticks
+
+
+## Handler for systick IRQ
+## Overrides weak function in the startup.c file
+proc SysTick_Handler() {.exportc.} =
+  msticks.inc
+
+
+proc delay*(millis: Natural) =
+  let
+    stopTicks = timeBootms() + millis.ms
+  while timeBootms() < stopTicks:
+    discard
 
 
 proc initDfll48m*() =
