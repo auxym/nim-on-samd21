@@ -41,15 +41,30 @@ proc echoTask =
     cur = buf.low
 
 
+proc buttonTask =
+  var state {.global.}: bool
+
+  # button is configured with a pull-up, so will read low (false) when pressed
+  let buttonPressed = not Button1Pin.read()
+
+  if (not state) and buttonPressed:
+    # Rising edge
+    state = true
+    flashLed 3
+  elif state and not buttonPressed:
+    state = false
+
+
 var tasks = [
   Task(period: 1000.ms, fcn: ledToggleTask),
   Task(period: 1000.ms, fcn: helloTask),
   Task(period: 20.ms, fcn: echoTask),
+  Task(period: 5.ms, fcn: buttonTask),
 ]
 
 # Configure GPIOs
 LEDPin.configure(pdOutput)
-Button1_Pin.configure(pdInput, pullUp=true)
+Button1Pin.configure(pdInput, pull=pullUp)
 
 # Set main CPU clock to 48 MHz
 LEDPin.setLow

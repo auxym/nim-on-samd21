@@ -162,8 +162,8 @@ macro init*(usart: static[UsartInstance], txPin, rxPin: static[Pin],
     GCLK.CLKCTRL.write(clkctrlSercomId, GEN=GCLK0, CLKEN=true)
 
     # Configure pins
-    txPin.configure(dir=pdOutput, pullUp=false, muxFcn=txMuxLit)
-    rxPin.configure(dir=pdInput, pullUp=false, muxFcn=rxMuxLit)
+    txPin.configure(dir=pdOutput, muxFcn=txMuxLit)
+    rxPin.configure(dir=pdInput, pull=pullNone, muxFcn=rxMuxLit)
 
     # Reset the sercom peripheral prior to configuring and wait for sync
     sercomPeriphIdent.USART.CTRLA.modifyIt: it.SWRST = true

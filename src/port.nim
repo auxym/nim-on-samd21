@@ -5,18 +5,21 @@ import std/genasts
 import std/strutils
 import device/device
 
-type PortGroup* = enum
-  pgA = 0
-  pgB = 1
+type
+  PortGroup* = enum
+    pgA = 0
+    pgB = 1
 
-type PinDirection* = enum pdInput, pdOutput
+  PinDirection* = enum pdInput, pdOutput
 
-type PortMuxFcn* = enum
-  muxA, muxB, muxC, muxD, muxE, muxF, muxG, muxH, muxNone
+  PortMuxFcn* = enum
+    muxA, muxB, muxC, muxD, muxE, muxF, muxG, muxH, muxNone
 
-type Pin* = object
-  group*: PortGroup
-  num*: 0..31
+  PullKind* = enum pullNone, pullUp, pullDown
+
+  Pin* = object
+    group*: PortGroup
+    num*: 0..31
 
 macro pin*(s: static[string]): Pin =
   assert s.len == 4 and s[0] == 'P' and s[1] in {'A', 'B'}
@@ -30,9 +33,8 @@ func groupReg(name: string, group: PortGroup): NimNode {.compileTime.} =
   newIdentNode(name & $group.int)
 
 macro configure*(pn: static[Pin], dir: static[PinDirection],
-                 pullUp: static[bool] = false,
-                 muxFcn: static[PortMuxFcn] = muxNone,
-                 ): untyped =
+                 pull: static[PullKind] = pullNone,
+                 muxFcn: static[PortMuxFcn] = muxNone): untyped =
 
   result = newTree(nnkStmtList)
   let
@@ -42,19 +44,32 @@ macro configure*(pn: static[Pin], dir: static[PinDirection],
 
   case dir:
   of pdInput:
-    let dirReg = groupReg("DIRCLR", pn.group)
+    let
+      dirReg = groupReg("DIRCLR", pn.group)
+      pullEn = pull != pullNone
     result.add:
-        genAst(dirReg, cfgReg, muxEn, pullUp, pinBit):
+        genAst(dirReg, cfgReg, muxEn, pullEn, pinBit):
           PORT.dirReg.write(pinBit)
-          PORT.cfgReg.write(PMUXEN=muxEn, INEN=true, PULLEN=pullUp)
+          PORT.cfgReg.write(PMUXEN=muxEn, INEN=true, PULLEN=pullEn)
+    if pullEn:
+      # According to DS table 23-2, write 1 to OUT for pull-up or 0 for pull-down
+      let
+        outVal = newLit(1'u32 shl pn.num)
+        outReg = case pull:
+          of pullUp: groupReg("OUTSET", pn.group)
+          of pullDown: groupReg("OUTCLR", pn.group)
+          of pullNone: groupReg("OUTCLR", pn.group) # ignore
+      result.add:
+        genAst(outReg, outVal):
+          PORT.outReg.write outVal
   of pdOutput:
     let dirReg = groupReg("DIRSET", pn.group)
     result.add:
       genAst(dirReg, cfgReg, muxEn, pinBit):
         PORT.dirReg.write(pinBit)
-        PORT.`cfgReg`.write(PMUXEN=muxEn, INEN=false, PULLEN=false)
+        PORT.cfgReg.write(PMUXEN=muxEn, INEN=false, PULLEN=false)
 
-  if muxFcn != muxNone:
+  if muxEn:
     let
       muxReg = ident("PMUX" & $pn.group.ord & "_" & $(pn.num div 2))
       muxField = ident(if (pn.num mod 2 == 0): "PMUXE" else: "PMUXO")
@@ -65,12 +80,14 @@ macro configure*(pn: static[Pin], dir: static[PinDirection],
         PORT.muxReg.modifyIt:
           it.muxField = muxVal
 
+
 macro setHigh*(pn: static[Pin]): untyped =
   let
     regLit = groupReg("OUTSET", pn.group)
     val = newLit(1'u32 shl pn.num)
   genAst(regLit, val):
     PORT.regLit.write(val)
+
 
 macro setLow*(pn: static[Pin]): untyped =
   let
@@ -79,12 +96,14 @@ macro setLow*(pn: static[Pin]): untyped =
   genAst(regLit, val):
     PORT.regLit.write(val)
 
+
 macro toggle*(pn: static[Pin]): untyped =
   let
     regLit = groupReg("OUTTGL", pn.group)
     val = newLit(1'u32 shl pn.num)
   genAst(regLit, val):
     PORT.regLit.write(val)
+
 
 macro read*(pn: static[Pin]): bool =
   let
