@@ -20,8 +20,7 @@ when hostCpu == "arm" and hostOs == "any":
   switch("define", "useMalloc")
   switch("define", "noSignalHandler")
   switch("opt", "size")
-  switch("gc", "arc")
-  switch("noMain")
+  switch("mm", "arc")
 
   switch("passC", "-mthumb -mcpu=cortex-m0plus")
   switch("passC", "--specs=nano.specs") # Use newlib-nano header at compile-time

@@ -2,6 +2,7 @@
 
 import std/macros
 import std/genasts
+import std/strutils
 import device/device
 
 type PortGroup* = enum
@@ -11,11 +12,19 @@ type PortGroup* = enum
 type PinDirection* = enum pdInput, pdOutput
 
 type PortMuxFcn* = enum
-  muxA, muxB, muxC, muxD, muxE, muxF, muxG, muxH, muxI, muxNone
+  muxA, muxB, muxC, muxD, muxE, muxF, muxG, muxH, muxNone
 
 type Pin* = object
   group*: PortGroup
   num*: 0..31
+
+macro pin*(s: static[string]): Pin =
+  assert s.len == 4 and s[0] == 'P' and s[1] in {'A', 'B'}
+  let grp = case s[1]:
+    of 'A': pgA
+    of 'B': pgB
+    else: pgA
+  result = newLit(Pin(group: grp, num: s[2..3].parseInt))
 
 func groupReg(name: string, group: PortGroup): NimNode {.compileTime.} =
   newIdentNode(name & $group.int)
@@ -47,9 +56,10 @@ macro configure*(pn: static[Pin], dir: static[PinDirection],
 
   if muxFcn != muxNone:
     let
-      muxReg = newIdentNode("PMUX" & $pn.group.ord & "_" & $(pn.num div 2))
-      muxField = newIdentNode(if (pn.num mod 2 == 0): "PMUXE" else: "PMUXO")
-      muxVal = newLit(uint8(muxFcn.ord))
+      muxReg = ident("PMUX" & $pn.group.ord & "_" & $(pn.num div 2))
+      muxField = ident(if (pn.num mod 2 == 0): "PMUXE" else: "PMUXO")
+      muxFieldTyp = ident("PORT_PMUX0_" & $muxField)
+      muxVal = newCall(muxFieldTyp, muxFcn.ord.newLit)
     result.add:
       genAst(muxReg, muxField, muxVal):
         PORT.muxReg.modifyIt:
@@ -82,3 +92,48 @@ macro read*(pn: static[Pin]): bool =
     maskLit = newLit(1'u32 shl pn.num)
   genAst(regLit, maskLit):
     bool(PORT.regLit.read() and maskLit)
+
+
+type
+  MuxFunctionDescKind* = enum
+    mdNone
+    mdEIC
+    mdREF
+    mdADC
+    mdAC
+    mdPTC
+    mdDAC
+    mdSERCOM
+    mdTC
+    mdTCC
+    mdI2S
+    mdMCK
+    mdSCK
+    mdUS
+    mdSWCLK
+    mdSWDIO
+    mdGCLK
+
+  MuxFunctionDesc* = object
+    case kind*: MuxFunctionDescKind
+    of mdSERCOM:
+      sercomInst*: Natural
+      pad*: Natural
+    else:
+      discard
+
+# Datasheet table 7-1
+# Only access this const from compile-time funcs so that it is not included
+# in the compiled binary.
+# TODO: Fill out the full table
+const MuxTableAbcd = block:
+  var t: array[PortGroup, array[0..31, array[PortMuxFcn, MuxFunctionDesc]]]
+  t[pgA][10][muxC] = MuxFunctionDesc(kind: mdSERCOM, sercomInst: 0, pad: 2)
+  t[pgA][10][muxD] = MuxFunctionDesc(kind: mdSERCOM, sercomInst: 2, pad: 2)
+  t[pgA][11][muxC] = MuxFunctionDesc(kind: mdSERCOM, sercomInst: 0, pad: 3)
+  t[pgA][11][muxD] = MuxFunctionDesc(kind: mdSERCOM, sercomInst: 2, pad: 3)
+  t
+
+
+func getMuxFunction*(p: Pin, fcn: PortMuxFcn): MuxFunctionDesc {.compileTime.} =
+  MuxTableAbcd[p.group][p.num][fcn]
