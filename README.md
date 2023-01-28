@@ -13,6 +13,17 @@ Cortex-M devices (STM32, etc).
 `device/atsamd21g18a.nim` module, which provides a fast, type-safe, idiomatic
 Nim interface to the SAM D21's full set of peripheral registers.
 
+## Features
+
+* GPIO (port) driver leveraging Nim's macro system for zero-cost abstraction
+
+* DFLL clock used to run the MCU at it's maximum frequency of 48 MHz, thanks
+  to [Thea Flower's
+  code](https://blog.thea.codes/understanding-the-sam-d21-clocks/), translated to
+  pure Nim.
+
+* UART driver in pure Nim, also leveraging macros for compile-time setup.
+
 ## Building
 
 ### Install Nim
@@ -135,7 +146,7 @@ information.
 
 (and suggested reading)
 
-1. Thea Flowers, in particular her [linker script](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/)
+1. Thea Flowers' blog, in particular her [linker script](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/)
    which is used directly in this repository. Her blog contains many more great
    articles on the SAM D21, check it out!
 
