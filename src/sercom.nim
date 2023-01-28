@@ -32,7 +32,7 @@ const
   ]
 
 
-var rxBuffers: array[SercomInstance, CircularBuffer]
+var rxBuffers {.volatile.}: array[SercomInstance, CircularBuffer]
 
 
 func regs(u: UsartInstance): SercomUsart_Type =
