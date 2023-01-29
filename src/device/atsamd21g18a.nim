@@ -57,12 +57,6 @@ type IRQn* = enum
   irqDAC               =   25 # 
   irqI2S               =   27 # 
 
-# Bindings for core header. The corresponding CMSIS header file must be found in
-# the C compiler include path. See comment at the top of the following .nim file
-# for details.
-# The following line may be commented out if these bindings are not required.
-include core_cm0plus
-
 ################################################################################
 # Type definitions for peripheral registers
 ################################################################################

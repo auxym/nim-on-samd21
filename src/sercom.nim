@@ -5,6 +5,8 @@ import ./device/device
 import ./port
 import ./clocks
 
+# Ideally we'd use a bunch of bindSym to avoid this
+export device
 
 type
   SercomInstance* = distinct range[0..5]

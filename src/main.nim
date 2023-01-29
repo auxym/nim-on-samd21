@@ -3,7 +3,7 @@ import clocks
 import startup
 import sercom
 import common
-import device/device
+import device/core_cm0plus
 
 # Generate {.compile.} call for the startup.c file
 compileStartup
