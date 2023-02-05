@@ -9,7 +9,8 @@ const
 switch("outdir", "./build")
 switch("arm.any.gcc.exe", "arm-none-eabi-gcc")
 switch("arm.any.gcc.linkerexe", "arm-none-eabi-gcc")
-switch("gcc.options.linker", "") # Prevent Nim from passing -ldl
+switch("arm.any.gcc.options.always", "-w  -fmax-errors=3")
+switch("arm.any.gcc.options.linker", "") # Prevent Nim from passing -ldl
 
 
 task build, "Build for MCU target":
