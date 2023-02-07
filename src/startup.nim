@@ -1,4 +1,6 @@
 import std/macros
+import device/device
+import device/strutils
 
 macro staticCompile(filepath: static[string]): untyped =
   ## Generate a {.compile.} pragma invocation based on static string.
@@ -15,3 +17,9 @@ macro staticCompile(filepath: static[string]): untyped =
 const startupFile {.strdefine.}: string = ""
 template compileStartup* =
   staticCompile startupFile
+
+#static:
+#  echo compiles(newDotExpr(ident"device", ident"ADC"))
+#  echo compiles(device.ADC0)
+
+func enumSymbolExists[T: enum](s: string)
