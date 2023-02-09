@@ -7,23 +7,29 @@ const
   samd21Family* = "samd21" & samd21Variant[^1].toLowerAscii
 
 switch("outdir", "./build")
+
+# For Mac OSX, where gcc is not the default C compiler for Nim
+switch("cc", "gcc")
+
+# Cross-compiler toolchain set-up
 switch("arm.any.gcc.exe", "arm-none-eabi-gcc")
 switch("arm.any.gcc.linkerexe", "arm-none-eabi-gcc")
-switch("arm.any.gcc.options.always", "-w  -fmax-errors=3")
-switch("arm.any.gcc.options.linker", "") # Prevent Nim from passing -ldl
+switch("arm.any.gcc.options.always", "-w  -fmax-errors=3 -mthumb -mcpu=cortex-m0plus")
+switch("arm.any.gcc.options.linker", "-mthumb -mcpu=cortex-m0plus --specs=nano.specs --specs=nosys.specs")
 
 
 task build, "Build for MCU target":
   switch("os", "any")
   switch("cpu", "arm")
+  switch("threads", "off")
   switch("define", "danger")
   switch("define", "useMalloc")
   switch("define", "noSignalHandler")
   switch("opt", "size")
   switch("mm", "arc")
 
-  switch("passC", "-mthumb -mcpu=cortex-m0plus")
-  switch("passC", "--specs=nano.specs") # Use newlib-nano header at compile-time
+  # Place each function in its own section, which allows the linker to
+  # eliminate unused sections. See --gc-sections link flag
   switch("passC", "-ffunction-sections -fdata-sections")
 
   # This is used by the startup.nim module to emit a {.compile.} pragma in order
@@ -40,14 +46,17 @@ task build, "Build for MCU target":
   # Specific to samd21g18a.h header, prevents including system header
   switch("passC", "-DDONT_USE_CMSIS_INIT")
 
+  # Include dirs so that CMSIS and atmel headers are found
   switch("passC", "-I./lib/CMSIS/Core/Include")
   switch("passC", "-I" & joinPath("lib", "atmel", samd21Family, "include"))
 
-  switch("passL", "-mthumb -mcpu=cortex-m0plus")
-  switch("passL", "--specs=nano.specs") # Link against newlib-nano libc
-  switch("passL", "--specs=nosys.specs") # Link against libnosys syscall stubs
+  # Eliminate unused code sections at link time
   switch("passL", "-Wl,--gc-sections")
 
+  # Generate linker map file with cross-references
+  switch("passL", "-Wl,-Map=build/main.map -Wl,--cref")
+
+  # Linker script
   const linkerScript = &"./lib/linker/{samd21Variant.toLowerAscii}.ld"
   switch("passL", "-T" & linkerScript)
 
