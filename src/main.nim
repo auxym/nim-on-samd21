@@ -3,6 +3,7 @@ import clocks
 import startup
 import sercom
 import common
+import syscalls
 import device/core_cm0plus
 
 # Generate {.compile.} call for the startup.c file
@@ -21,6 +22,7 @@ proc ledToggleTask =
 
 proc helloTask =
   uart.write "hello\r\n"
+  echo "hello from stdout"
 
 
 proc echoTask =
@@ -83,6 +85,9 @@ uart.init(
   stopBits=1,
   parity=pmNone
 )
+
+# Use UART for stdin/stdout, "echo" writes to uart
+enableUsartStdio uart
 
 # Allocate a seq to ensure that malloc() works
 var a = newSeqOfCap[int](48)
