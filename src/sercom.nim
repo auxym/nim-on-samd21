@@ -212,9 +212,14 @@ proc write*(u: UsartInstance, c: char) {.inline.} =
   u.regs.DATA.write(c.uint16)
 
 
-proc write*(u: UsartInstance, s: openArray[char]) =
-  ## Write a string or char seq/array to uart
+proc write*[T: cstring or openArray[char]](u: UsartInstance, s: T) =
+  ## Write a string, cstring or char seq/array to uart
   for c in s: u.write c
+
+
+proc write*(u: UsartInstance, s: openArray[byte]) =
+  ## Write a string or char seq/array to uart
+  for c in s: u.write char(c)
 
 
 proc available*(u: UsartInstance): int =
