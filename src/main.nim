@@ -21,8 +21,7 @@ proc ledToggleTask =
 
 
 proc helloTask =
-  uart.write "hello\r\n"
-  echo "hello from stdout"
+  echo "hello\r\n".cstring
 
 
 proc echoTask =

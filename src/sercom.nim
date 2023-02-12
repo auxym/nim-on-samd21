@@ -217,6 +217,16 @@ proc write*[T: char or byte](u: UsartInstance, s: openArray[T]) =
   for c in s: u.write c
 
 
+proc write*(u: UsartInstance, s: string) =
+  ## Write a string, cstring or char seq/array to uart
+  for c in s: u.write c
+
+
+proc write*(u: UsartInstance, s: cstring) =
+  ## Write a string, cstring or char seq/array to uart
+  for c in s: u.write c
+
+
 proc available*(u: UsartInstance): int =
   ## Number of bytes available to read in the receive buffer
   rxBuffers[u.sercom].len

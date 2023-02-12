@@ -5,6 +5,9 @@
 {.used.}
 
 import sercom
+#import system/ansi_c
+
+#type Restrict {.importc: "const void *__restrict".} = object
 
 var
   uartAsStdio: bool = false
@@ -21,27 +24,36 @@ proc disableUsartStdio* =
 
 
 ## close: return an error code
-proc close_r(fd: cint): cint {.exportc: "_close_r".} = -1
+#proc close_r(fd: cint): cint {.exportc: "_close_r".} = -1
 
 
 ## lseek: 0 return value implies empty file
-proc lseek_r(fd: cint): cint {.exportc: "_lseek_r".} = 0
+#proc lseek_r(fd: cint): cint {.exportc: "_lseek_r".} = 0
 
 
 ## write: use UART as stdout if defined
-proc write_r(fd: cint, buf: cstring, count: cint): cint {.exportc: "_write_r".} =
+proc write*(fd: cint, buf: pointer, count: cint): cint {.exportc: "_write".} =
   if not uartAsStdio:
     return 0
-  for c in buf:
-    stdioUartInst.write c
+  let bufArr = cast[ptr UncheckedArray[byte]](buf)
+  for i in 0 ..< count:
+    stdioUartInst.write bufArr[i]
     inc result
-    if result >= count:
-      break
+
+
+#proc fwriteImpl(buf: Restrict, size, n: csize_t, f: CFilePtr): csize_t {.exportc: "fwrite".} =
+#  # Note: newlib's fwrite is re-entrant
+#  if not uartAsStdio:
+#    return 0
+#  let bufArr = cast[ptr UncheckedArray[byte]](buf)
+#  for i in 0 ..< (n * size):
+#    stdioUartInst.write bufArr[i]
+#    inc result
 
 
 ## read: use UART as stdout if defined
-proc read_r(fd: cint, buf: var cstring, count: cint): cint {.exportc: "_read_r".} =
-  if not uartAsStdio:
-    return 0
-  while result < count and stdioUartInst.read(buf[result]):
-    inc result
+#proc read(fd: cint, buf: var cstring, count: cint): cint {.exportc: "_read".} =
+#  if not uartAsStdio:
+#    return 0
+#  while result < count and stdioUartInst.read(buf[result]):
+#    inc result
