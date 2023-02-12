@@ -24,11 +24,14 @@ proc disableUsartStdio* =
 
 
 ## close: return an error code
-#proc close_r(fd: cint): cint {.exportc: "_close_r".} = -1
+proc close(fd: cint): cint {.exportc: "_close".} = -1
 
 
 ## lseek: 0 return value implies empty file
-#proc lseek_r(fd: cint): cint {.exportc: "_lseek_r".} = 0
+proc lseek(fd: cint): cint {.exportc: "_lseek".} = 0
+
+
+proc isatty(fd: cint): cint {.exportc: "_lseek".} = 0
 
 
 ## write: use UART as stdout if defined
@@ -41,19 +44,10 @@ proc write*(fd: cint, buf: pointer, count: cint): cint {.exportc: "_write".} =
     inc result
 
 
-#proc fwriteImpl(buf: Restrict, size, n: csize_t, f: CFilePtr): csize_t {.exportc: "fwrite".} =
-#  # Note: newlib's fwrite is re-entrant
-#  if not uartAsStdio:
-#    return 0
-#  let bufArr = cast[ptr UncheckedArray[byte]](buf)
-#  for i in 0 ..< (n * size):
-#    stdioUartInst.write bufArr[i]
-#    inc result
-
-
 ## read: use UART as stdout if defined
-#proc read(fd: cint, buf: var cstring, count: cint): cint {.exportc: "_read".} =
-#  if not uartAsStdio:
-#    return 0
-#  while result < count and stdioUartInst.read(buf[result]):
-#    inc result
+proc read(fd: cint, buf: pointer, count: cint): cint {.exportc: "_read".} =
+  if not uartAsStdio:
+    return 0
+  var bufArr = cast[ptr UncheckedArray[byte]](buf)
+  while result < count and stdioUartInst.read(bufArr[result]):
+    inc result
