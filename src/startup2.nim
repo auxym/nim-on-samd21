@@ -1,3 +1,4 @@
+import device/armcm0p
 
 let
   etext {.importc: "_etext".}: uint32
@@ -7,17 +8,23 @@ let
   ezero {.importc: "_ezero".}: uint32
   sfixed {.importc: "_sfixed".}: uint32
 
+proc cmain {.importc: "main".}
+proc libc_init_array {.importc: "__libc_init_array".}
+
 
 proc Reset_Handler {.exportc.} =
   template mloc(x: untyped): untyped =
     ## Get address of something as bare unsigned integer
     cast[uint](unsafeAddr x)
 
+  template wordArray(x: untyped): untyped =
+    cast[ptr UncheckedArray[uint32]](unsafeAddr x)
+
   # Initialize the relocate segment
   block:
     var
-      src = cast[ptr UncheckedArray[uint32]](etext.unsafeAddr)
-      dest = cast[ptr UncheckedArray[uint32]](srelocate.unsafeAddr)
+      src = wordArray etext
+      dest = wordArray srelocate
       i = 0
     while mloc(dest[i]) < mloc(erelocate):
       dest[i] = src[i]
@@ -27,11 +34,19 @@ proc Reset_Handler {.exportc.} =
   block:
     var
       i = 0
-      dest = cast[ptr UncheckedArray[uint32]](szero)
+      dest = wordArray szero
     while mloc(dest[i]) < mloc(ezero):
       dest[i] = 0
       inc i
 
   # Set the vector table base address
-  block:
-    let vectorsAddr = mloc sfixed
+  SCB.VTOR.write(tblOff=mloc(sfixed).uint32)
+
+  # Initialize libc
+  libc_init_array()
+
+  # Call main
+  cmain()
+
+  # If main exits, infinite loop
+  while true: discard
