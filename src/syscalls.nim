@@ -35,7 +35,7 @@ proc isatty(fd: cint): cint {.exportc: "_isatty".} = 0
 
 
 ## Stub: return an error code
-proc fstatStub(a1: cint; a2: var Stat): cint {.exportc: "fstat".} = -1
+proc fstatStub(a1: cint; a2: var Stat): cint {.exportc: "_fstat".} = -1
 
 
 ## write: use UART as stdout if defined

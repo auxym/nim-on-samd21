@@ -21,7 +21,8 @@ proc ledToggleTask =
 
 
 proc helloTask =
-  echo "hello\r\n".cstring
+  # echo is redirected to UART
+  echo "hello"
 
 
 proc echoTask =
@@ -87,9 +88,6 @@ uart.init(
 
 # Use UART for stdin/stdout, "echo" writes to uart
 enableUsartStdio uart
-
-# Allocate a seq to ensure that malloc() works
-var a = newSeqOfCap[int](48)
 
 while true:
   for task in tasks.mitems:
