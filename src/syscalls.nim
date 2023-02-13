@@ -1,13 +1,12 @@
 
 # Implement some stub syscalls to prevent unimplemented warnings from newlib-libnosys.
+# Also provide functionality to redirect stdin/stdout to a UART
 # Based on: https://interrupt.memfault.com/blog/boostrapping-libc-with-newlib
 
 {.used.}
 
 import sercom
-#import system/ansi_c
-
-#type Restrict {.importc: "const void *__restrict".} = object
+import std/posix # For the Stat type
 
 var
   uartAsStdio: bool = false
@@ -31,7 +30,12 @@ proc close(fd: cint): cint {.exportc: "_close".} = -1
 proc lseek(fd: cint): cint {.exportc: "_lseek".} = 0
 
 
-proc isatty(fd: cint): cint {.exportc: "_lseek".} = 0
+## Stub: always return 0 (not a TTY)
+proc isatty(fd: cint): cint {.exportc: "_isatty".} = 0
+
+
+## Stub: return an error code
+proc fstatStub(a1: cint; a2: var Stat): cint {.exportc: "fstat".} = -1
 
 
 ## write: use UART as stdout if defined
