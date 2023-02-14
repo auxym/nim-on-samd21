@@ -205,15 +205,25 @@ macro init*(usart: static[UsartInstance], txPin, rxPin: static[Pin],
     sercomPeriphIdent.USART.INTENSET.write(RXC=true)
 
 
-proc write*(u: UsartInstance, c: char) {.inline.} =
+proc write*[T: char or byte](u: UsartInstance, c: T) {.inline.} =
   ## Write a char to uart
   # Wait for data register empty
   while not u.regs.INTFLAG.read().DRE: discard
   u.regs.DATA.write(c.uint16)
 
 
-proc write*(u: UsartInstance, s: openArray[char]) =
-  ## Write a string or char seq/array to uart
+proc write*[T: char or byte](u: UsartInstance, s: openArray[T]) =
+  ## Write a string, cstring or char seq/array to uart
+  for c in s: u.write c
+
+
+proc write*(u: UsartInstance, s: string) =
+  ## Write a string, cstring or char seq/array to uart
+  for c in s: u.write c
+
+
+proc write*(u: UsartInstance, s: cstring) =
+  ## Write a string, cstring or char seq/array to uart
   for c in s: u.write c
 
 

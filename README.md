@@ -24,6 +24,8 @@ Nim interface to the SAM D21's full set of peripheral registers.
 
 * UART driver in pure Nim, also leveraging macros for compile-time setup.
 
+* stdin and stdout (native `echo`) redirected to UART.
+
 ## Building
 
 ### Install Nim
@@ -43,9 +45,9 @@ arm-none-eabi-newlib
 I assume similar packages are available for other distributions but their
 exact name may vary.
 
-For Windows and Mac OS, while this repository has not been tested using these
-OSes, [this page](https://mynewt.apache.org/latest/get_started/native_install/cross_tools.html)
-provides instructions to install the `arm-none-eabi` toolchain.
+For Windows or macOS, see [Arm GNU Toolchain Downloads](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads).
+Download and install the "AArch32 bare-metal target (arm-none-eabi)" toolchain. Note:
+compiling this project on macOS was not tested, but let me know if it works for you.
 
 ### Build
 
